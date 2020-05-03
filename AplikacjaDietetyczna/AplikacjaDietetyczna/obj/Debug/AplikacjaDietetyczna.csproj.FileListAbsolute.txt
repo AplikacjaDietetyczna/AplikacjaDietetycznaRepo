@@ -47,3 +47,5 @@ C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Ap
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml

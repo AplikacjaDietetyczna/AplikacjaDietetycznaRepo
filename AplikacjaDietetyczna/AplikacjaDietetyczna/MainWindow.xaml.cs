@@ -26,6 +26,8 @@ namespace AplikacjaDietetyczna
         public MainWindow()
         {
             InitializeComponent();
+            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza prog
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
