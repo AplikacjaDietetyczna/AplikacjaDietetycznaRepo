@@ -9,7 +9,8 @@
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
-        MouseDown="Window_MouseDown">
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -46,6 +47,7 @@
                 <StackPanel Orientation="Horizontal">
 
                     <TextBox FontFamily="Helvetica"
+                         Name="TextBoxUser"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -75,6 +77,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <PasswordBox FontFamily="Helvetica"
+                         Name="TextBoxPassword"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
