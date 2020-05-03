@@ -41,7 +41,7 @@ namespace AplikacjaDietetyczna
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            /*
                       AzureDB.openConnection();
                       AzureDB.sql = "select * from users";
                       AzureDB.cmd.CommandType = CommandType.Text;
@@ -55,6 +55,7 @@ namespace AplikacjaDietetyczna
                           TextBoxPassword.Password = AzureDB.dt.Rows[0]["user_password"].ToString();
                       }
                       AzureDB.closeConnection();
+                      */
                       
         }
     }
