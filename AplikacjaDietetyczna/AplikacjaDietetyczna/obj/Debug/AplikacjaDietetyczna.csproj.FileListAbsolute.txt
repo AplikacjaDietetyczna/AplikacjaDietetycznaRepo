@@ -45,3 +45,5 @@ C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Ap
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
 C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
+C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
