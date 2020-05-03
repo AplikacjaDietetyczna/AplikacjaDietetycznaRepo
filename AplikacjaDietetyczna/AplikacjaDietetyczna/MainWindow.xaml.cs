@@ -42,8 +42,20 @@ namespace AplikacjaDietetyczna
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             
-
-            
+                      AzureDB.openConnection();
+                      AzureDB.sql = "select * from users";
+                      AzureDB.cmd.CommandType = CommandType.Text;
+                      AzureDB.cmd.CommandText = AzureDB.sql;
+                      AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                      AzureDB.dt = new DataTable();
+                      AzureDB.da.Fill(AzureDB.dt);
+                      if (AzureDB.dt.Rows.Count > 0)
+                      {
+                          TextBoxUser.Text = AzureDB.dt.Rows[0]["user_login"].ToString();
+                          TextBoxPassword.Password = AzureDB.dt.Rows[0]["user_password"].ToString();
+                      }
+                      AzureDB.closeConnection();
+                      
         }
     }
 }
