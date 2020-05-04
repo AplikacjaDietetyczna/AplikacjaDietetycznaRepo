@@ -26,7 +26,7 @@ namespace AplikacjaDietetyczna
         public MainWindow()
         {
             InitializeComponent();
-            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza prog
+            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza program
 
         }
 
@@ -64,7 +64,7 @@ namespace AplikacjaDietetyczna
         private void Login_Click(object sender, RoutedEventArgs e)
         {
 
-            String message = "Podano nieprawidłowe dane logowania";
+            String message = "Podano nieprawidłowe dane logowania!"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
             try
             {
                 AzureDB.openConnection();
