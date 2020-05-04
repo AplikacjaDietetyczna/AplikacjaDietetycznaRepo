@@ -63,22 +63,31 @@ namespace AplikacjaDietetyczna
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-           
-            AzureDB.openConnection();
-            AzureDB.sql = "select ID_User from Users where Login = "+TextBoxUser.Text+"  AND Password = "+TextBoxPassword.Password+"";
-            AzureDB.cmd.CommandType = CommandType.Text;
-            AzureDB.cmd.CommandText = AzureDB.sql;
-            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
-            AzureDB.dt = new DataTable();
-            AzureDB.da.Fill(AzureDB.dt);
-            if (AzureDB.dt.Rows.Count > 0)
-            {
-                string Login  = AzureDB.dt.Rows[0]["user_login"].ToString();
-                TextBoxPassword.Password = AzureDB.dt.Rows[0]["user_password"].ToString();
-            }
-            AzureDB.closeConnection();
 
-            Console.WriteLine(TextBoxUser.Text);
+            String message = "Podano nieprawidłowe dane logowania";
+            try
+            {
+                AzureDB.openConnection();
+
+                AzureDB.sql = ("select ID_User from Users where Login = " + TextBoxUser.Text + "  AND Password = " + TextBoxPassword.Password + "");
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.rd = AzureDB.cmd.ExecuteReader();
+                if (AzureDB.rd.Read())
+                {
+                    string Login = AzureDB.rd["ID_User"].ToString();
+                    Console.WriteLine(Login);
+                    message = "1";
+                }
+
+                AzureDB.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message.ToString();
+            }
+
+           
         }
     }
 }
