@@ -50,3 +50,4 @@ C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Ap
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.g.cs
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.baml

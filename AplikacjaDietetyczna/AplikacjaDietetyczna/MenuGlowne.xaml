@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaDietetyczna"
         mc:Ignorable="d"
-        Title="MenuGlowne" Height="450" Width="800">
+        Title="MenuGlowne" Height="900" Width="1200"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        >
+
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="5" Grid.RowSpan="1" Height="450" Margin="0,0,0,-0.4" VerticalAlignment="Bottom">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#1225ff" Offset="1.5"/>
+                    </LinearGradientBrush>
+                   
+                </Border.Background>
+            </Border>
+            <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="428,195,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="196" Width="357" FontSize="48"/>
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
     </Grid>
 </Window>
