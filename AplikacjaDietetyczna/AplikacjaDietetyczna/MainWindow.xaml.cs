@@ -48,7 +48,7 @@ namespace AplikacjaDietetyczna
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            //To jest testowo, by się szybciej logować. Potem trzeba będzie to usunąć
                       AzureDB.openConnection();
                       AzureDB.sql = "select top 1 * from Users";
                       AzureDB.cmd.CommandType = CommandType.Text;
@@ -81,8 +81,10 @@ namespace AplikacjaDietetyczna
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
                 if (AzureDB.rd.Read())
                 {
-                  FunkcjeGlobalne.ID = AzureDB.rd["ID_User"].ToString();
+                    FunkcjeGlobalne.ID = AzureDB.rd["ID_User"].ToString();
                     Console.WriteLine(FunkcjeGlobalne.ID); //Do testowania
+                    FunkcjeGlobalne.IsAdmin = AzureDB.rd["IsAdmin"].ToString();
+                    Console.WriteLine(FunkcjeGlobalne.IsAdmin); //Do testowania
                     message = "1";
                 }
 

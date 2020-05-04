@@ -28,7 +28,7 @@
                 </Border.Background>
             </Border>
             <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="428,195,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="196" Width="357" FontSize="48" Loaded="PokazID_Loaded"/>
-
+            <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="790,165,0,0" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="196" Width="357" FontSize="48" Loaded="PokazAdmin_Loaded"/>
 
 
 
