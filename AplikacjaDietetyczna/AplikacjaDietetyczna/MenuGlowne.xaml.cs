@@ -29,5 +29,11 @@ namespace AplikacjaDietetyczna
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void PokazID_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            
+        }
     }
 }
