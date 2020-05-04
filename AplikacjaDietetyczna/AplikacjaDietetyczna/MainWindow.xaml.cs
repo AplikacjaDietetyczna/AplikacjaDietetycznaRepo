@@ -15,20 +15,25 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using AplikacjaDietetyczna.Klasy;
+using AplikacjaDietetyczna;
 
 namespace AplikacjaDietetyczna
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    /// 
+    
+     
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza prog
-
-        }
+           
+            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza program
+    }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -59,6 +64,44 @@ namespace AplikacjaDietetyczna
                       AzureDB.closeConnection();
                       */
                       
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            
+            String message = "Podano nieprawidłowe dane logowania!"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
+            try
+            {
+                
+                AzureDB.openConnection();
+
+                AzureDB.sql = ("select ID_User from Users where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "'");
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.rd = AzureDB.cmd.ExecuteReader();
+                if (AzureDB.rd.Read())
+                {
+                  FunkcjeGlobalne.ID = AzureDB.rd["ID_User"].ToString();
+                    Console.WriteLine(FunkcjeGlobalne.ID); //Do testowania
+                    message = "1";
+                }
+
+                AzureDB.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message.ToString();
+            }
+            if(message == "1")
+            {
+                MenuGlowne menuGlowne = new MenuGlowne();
+                menuGlowne.Show();
+                this.Close();
+            }
+            else
+            MessageBox.Show(message, "Info");
+
+
         }
     }
 }
