@@ -75,7 +75,7 @@ namespace AplikacjaDietetyczna
                 
                 AzureDB.openConnection();
 
-                AzureDB.sql = ("select ID_User from Users where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "'");
+                AzureDB.sql = ("select ID_User, IsAdmin from Users where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "'");
                 AzureDB.cmd.CommandType = CommandType.Text;
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
