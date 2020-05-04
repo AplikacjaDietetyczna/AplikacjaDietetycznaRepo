@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AplikacjaDietetyczna.Klasy;
 
 namespace AplikacjaDietetyczna
 {
@@ -32,7 +33,7 @@ namespace AplikacjaDietetyczna
 
         private void PokazID_Loaded(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
+            PokazID.Text = "ID zalogowanego usera to: " +FunkcjeGlobalne.ID;
             
         }
     }
