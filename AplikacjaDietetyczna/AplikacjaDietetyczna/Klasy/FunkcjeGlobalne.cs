@@ -9,5 +9,6 @@ namespace AplikacjaDietetyczna.Klasy
    public class FunkcjeGlobalne
     {
         public static string ID { get; set; }
+        public static string IsAdmin { get; set; }
     }
 }
