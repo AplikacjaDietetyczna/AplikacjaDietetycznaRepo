@@ -69,14 +69,14 @@ namespace AplikacjaDietetyczna
             {
                 AzureDB.openConnection();
 
-                AzureDB.sql = ("select ID_User from Users where Login = " + TextBoxUser.Text + "  AND Password = " + TextBoxPassword.Password + "");
+                AzureDB.sql = ("select ID_User from Users where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "'");
                 AzureDB.cmd.CommandType = CommandType.Text;
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
                 if (AzureDB.rd.Read())
                 {
-                    string Login = AzureDB.rd["ID_User"].ToString();
-                    Console.WriteLine(Login);
+                    string ID = AzureDB.rd["ID_User"].ToString();
+                    Console.WriteLine(ID); //Do testowania
                     message = "1";
                 }
 
@@ -86,8 +86,16 @@ namespace AplikacjaDietetyczna
             {
                 message = ex.Message.ToString();
             }
+            if(message == "1")
+            {
+                MenuGlowne menuGlowne = new MenuGlowne();
+                menuGlowne.Show();
+                this.Close();
+            }
+            else
+            MessageBox.Show(message, "Info");
 
-           
+
         }
     }
 }
