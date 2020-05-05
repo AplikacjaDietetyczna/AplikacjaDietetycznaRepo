@@ -105,5 +105,12 @@ namespace AplikacjaDietetyczna
 
 
         }
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+
+                Rejestracja rejestracja = new Rejestracja();
+                rejestracja.Show();
+           
+        }
     }
 }
