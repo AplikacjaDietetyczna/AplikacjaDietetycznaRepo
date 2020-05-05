@@ -1,0 +1,165 @@
+﻿<Window x:Class="AplikacjaDietetyczna.Rejestracja"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplikacjaDietetyczna"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.RowSpan="2" Height="450" Margin="0,0,0,-0.4" VerticalAlignment="Bottom">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#1225ff" Offset="1.5"/>
+                    </LinearGradientBrush>
+
+                </Border.Background>
+            </Border>
+
+
+            <StackPanel VerticalAlignment="Center">
+                <iconPacks:PackIconMaterial Kind="Food"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White" Height="80"
+                                 Width="80"/>
+                <TextBlock Text="Rejestracja" FontWeight="Light"
+                           FontFamily="helvetica" FontSize="22" Foreground="White"
+                           HorizontalAlignment="Center"/>
+
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBox FontFamily="Helvetica"
+                         Name="TextBoxUser"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Text="Nazwa użytkownika"
+                         Height="25"
+                         Margin="63,0,0,0"/>
+
+                    <iconPacks:PackIconMaterial Kind="Account"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+
+                </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                    <PasswordBox FontFamily="Helvetica"
+                         Name="TextBoxPassword"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Password="Password"
+                         Height="25"
+                         Margin="63,0,0,0"
+                     />
+                    <iconPacks:PackIconMaterial Kind="Lock"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                    <PasswordBox FontFamily="Helvetica"
+                         Name="TextBoxPassword2"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Password="Password"
+                         Height="25"
+                         Margin="63,0,0,0"
+                     />
+                    <iconPacks:PackIconMaterial Kind="Lock"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBox FontFamily="Helvetica"
+                         Name="EMail"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Text="Podaj E-Mail"
+                         Height="25"
+                         Margin="63,0,0,0"/>
+                </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,25,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Width="100" Height="40" Content="Zarejestruj" Margin="20,0,30,0"/>
+                    <Button Width="100" Height="40" Content="Anuluj" Margin="100,0,30,0"/>
+
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>
