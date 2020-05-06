@@ -38,8 +38,12 @@ namespace AplikacjaDietetyczna
         }
         private void Rejestracja_Click(object sender, RoutedEventArgs e)
         {
-
-
+            AzureDB.openConnection();
+            //AzureDB.sql = "INSERT INTO Users (ID_User, Login, Password, Email) VALUES (5, '"+TextBoxUser.Text+"', '"+TextBoxPassword.Password + "', '"+EMail.Text+ "')";
+            AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('Sasek', 'haslo', 'gmail@gmail.com', 18, 180, 'M')";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.closeConnection();
 
 
         }
