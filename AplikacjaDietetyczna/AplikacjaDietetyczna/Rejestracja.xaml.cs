@@ -64,12 +64,12 @@ namespace AplikacjaDietetyczna
                         try//dodawanie uzytkownika do bazy
                         {
                             AzureDB.openConnection();
-                            AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', 18, 180, 'M')";
+                            AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', "+Wiek.Text+", "+Wzrost.Text+", '"+Plec.Text+"')";
                             AzureDB.cmd.CommandType = CommandType.Text;
                             AzureDB.cmd.CommandText = AzureDB.sql;
                             AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
                             AzureDB.closeConnection();
-                            MessageBox.Show("Użytkownik " + TextBoxUser + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();
                         }
                         catch (Exception ex)//jesli baza nie dziala
