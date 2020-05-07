@@ -69,6 +69,8 @@ namespace AplikacjaDietetyczna
                             AzureDB.cmd.CommandText = AzureDB.sql;
                             AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
                             AzureDB.closeConnection();
+                            MessageBox.Show("Użytkownik " + TextBoxUser + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
                         }
                         catch (Exception ex)//jesli baza nie dziala
                         {
@@ -92,8 +94,7 @@ namespace AplikacjaDietetyczna
                 MessageBox.Show("Podany użytkownik just istnieje", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             AzureDB.closeConnection();
-            MessageBox.Show("Użytkownik został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
-            this.Close();
+
 
 
         }
