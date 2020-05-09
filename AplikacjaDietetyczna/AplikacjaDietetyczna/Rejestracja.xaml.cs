@@ -41,6 +41,17 @@ namespace AplikacjaDietetyczna
         }
         private void Rejestracja_Click(object sender, RoutedEventArgs e)
         {
+
+            string Plec = "M";
+
+            if (PlecMezczyzna.IsChecked == true)
+            {
+                Plec = "M";
+            }
+            if (PlecKobieta.IsChecked == true)
+            {
+                Plec = "K";
+            }
             //regex sprawdzajacy poprawność maila
             string email = EMail.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -64,10 +75,12 @@ namespace AplikacjaDietetyczna
                         try//dodawanie uzytkownika do bazy
                         {
                             AzureDB.openConnection();
-                            //AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', "+Wiek.Text+", "+Wzrost.Text+", '"+Plec.Text+"')";
+                            AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', "+Wiek.Text+", "+Wzrost.Text+", '"+Plec+"')";
                             AzureDB.cmd.CommandType = CommandType.Text;
                             AzureDB.cmd.CommandText = AzureDB.sql;
                             AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                            //Insert do wagi, która zawiera informację o aktualnej dacie
+
                             AzureDB.closeConnection();
                             MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();

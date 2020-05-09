@@ -293,6 +293,7 @@
 
             </StackPanel>
             <RadioButton GroupName="Plec"
+                         Name="PlecMezczyzna"
                          Content="Mężczyzna"
                          Opacity="0.9"
                          FontSize="13"
@@ -307,6 +308,7 @@
                          IsChecked="True"/>
             
             <RadioButton GroupName="Plec"
+                         Name="PlecKobieta"
                          Content="Kobieta"
                          Opacity="0.9"
                          FontSize="13"
