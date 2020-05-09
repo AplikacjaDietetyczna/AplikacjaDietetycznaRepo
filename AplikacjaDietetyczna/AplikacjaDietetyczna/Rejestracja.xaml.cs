@@ -102,5 +102,7 @@ namespace AplikacjaDietetyczna
         {
             this.Close();
         }
+
+      
     }
 }

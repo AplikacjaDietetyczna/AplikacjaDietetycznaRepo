@@ -27,6 +27,8 @@
                     </LinearGradientBrush>
 
                 </Border.Background>
+
+
             </Border>
 
 
@@ -48,7 +50,7 @@
                 <StackPanel Orientation="Horizontal">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Wpisz login"
+                         Watermark="Podaj login"
                          Name="TextBoxUser"
                          FontSize="20"
                          FontWeight="Light"
@@ -140,7 +142,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj E-Mail"
+                         Watermark="Podaj e-mail"
                          Name="EMail"
                          FontSize="20"
                          FontWeight="Light"
@@ -167,7 +169,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj Wiek"
+                         Watermark="Podaj wiek"
                          Name="Wiek"
                          FontSize="20"
                          FontWeight="Light"
@@ -194,7 +196,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj Wzrost (cm)"
+                         Watermark="Podaj wzrost (cm)"
                          Name="Wzrost"
                          FontSize="20"
                          FontWeight="Light"
@@ -220,9 +222,9 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
-                    <xctk:WatermarkTextBox FontFamily="Helvetica"              
-                         Watermark="Podaj Płeć(K/M)"
-                         Name="Plec"
+                    <xctk:WatermarkTextBox FontFamily="Helvetica"
+                         Watermark="Podaj wagę (kg)"
+                         Name="Waga"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -234,6 +236,38 @@
                          Opacity="0.9"
                          Height="30"
                          Margin="63,0,0,0"/>
+
+                    <iconPacks:PackIconMaterial Kind="Weight"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+                    
+                    
+                </StackPanel>
+                
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                    <TextBox FontFamily="Helvetica"              
+                         Text="Płeć"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="63,0,0,0"
+                         IsReadOnly="True"/>
+                    
                     <iconPacks:PackIconMaterial Kind="GenderMaleFemale"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
@@ -258,7 +292,14 @@
 
 
             </StackPanel>
-
+            <RadioButton GroupName="Plec" Content="Mężczyzna" Opacity="0.9" FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         
+                         Background="AliceBlue"
+                         Foreground="White"
+                         BorderThickness="0" Margin="87,372.8,0,0" Grid.Row="1" VerticalAlignment="Top" />
+            <RadioButton GroupName="Plec" Content="Kobieta" HorizontalAlignment="Left" Margin="233,363.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
 
 
