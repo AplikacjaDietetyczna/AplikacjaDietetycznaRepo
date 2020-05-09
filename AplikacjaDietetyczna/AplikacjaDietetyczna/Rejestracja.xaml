@@ -58,9 +58,9 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Text=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"/>
 
                     <iconPacks:PackIconMaterial Kind="Account"
@@ -89,17 +89,24 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Password=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"
                      />
+                    
                     <iconPacks:PackIconMaterial Kind="Lock"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
 
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkPasswordBox FontFamily="Helvetica"
@@ -113,9 +120,9 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Password=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"
                      />
                     <iconPacks:PackIconMaterial Kind="Lock"
@@ -124,6 +131,12 @@
                                  Foreground="White"/>
 
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
@@ -137,14 +150,20 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="Email"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
@@ -158,14 +177,20 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="BabyCarriage"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
@@ -179,14 +204,20 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="HumanMaleHeight"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"              
@@ -200,8 +231,8 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="GenderMaleFemale"
                                  VerticalAlignment="Center"
