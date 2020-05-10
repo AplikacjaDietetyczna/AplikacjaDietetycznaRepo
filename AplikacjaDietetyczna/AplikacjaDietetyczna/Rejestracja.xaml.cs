@@ -66,7 +66,7 @@ namespace AplikacjaDietetyczna
             string email = EMail.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match emailMatch = regex.Match(email);
-            Regex wysokosc = new Regex(@"\d{ 2, 3 }");
+            Regex wysokosc = new Regex(@"\d{2,3}");
             Match wysokoscMatch = wysokosc.Match(Wzrost.Text);
             //sprawdzanie czy dany uzytkownik juz jest w bazie (nie zwraca uwagi na duże litery i mozliwe ze trzeba bedzie to zmienic)
             AzureDB.openConnection();
