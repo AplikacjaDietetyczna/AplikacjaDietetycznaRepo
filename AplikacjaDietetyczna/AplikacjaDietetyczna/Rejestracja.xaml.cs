@@ -105,7 +105,6 @@ namespace AplikacjaDietetyczna
 
                             AzureDB.closeConnection();
                             MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
-                            this.Close();
                         }
                         catch (Exception ex)//jesli baza nie dziala
                         {
@@ -113,6 +112,13 @@ namespace AplikacjaDietetyczna
                                + Environment.NewLine + "opis: " + ex.Message.ToString(), "Rejestracja"
                                , MessageBoxButton.OK, MessageBoxImage.Error);
                         }
+                        finally
+                        {
+                            MainWindow mainWindow = new MainWindow();
+                            mainWindow.Show();
+                            this.Close();
+                        }
+
                     }
                     else
                     {
@@ -128,13 +134,14 @@ namespace AplikacjaDietetyczna
             {
                 MessageBox.Show("Podany użytkownik just istnieje", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            AzureDB.closeConnection();
 
 
 
         }
         private void Anuluj_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
 
