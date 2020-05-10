@@ -29,6 +29,14 @@ namespace AplikacjaDietetyczna
         public Rejestracja()
         {
             InitializeComponent();
+            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    Close();
+                }
+
+            }; //Wyłącza program
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
