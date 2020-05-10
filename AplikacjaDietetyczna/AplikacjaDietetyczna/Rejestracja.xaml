@@ -27,6 +27,8 @@
                     </LinearGradientBrush>
 
                 </Border.Background>
+
+
             </Border>
 
 
@@ -48,7 +50,7 @@
                 <StackPanel Orientation="Horizontal">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Wpisz login"
+                         Watermark="Podaj login"
                          Name="TextBoxUser"
                          FontSize="20"
                          FontWeight="Light"
@@ -58,9 +60,9 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Text=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"/>
 
                     <iconPacks:PackIconMaterial Kind="Account"
@@ -89,17 +91,24 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Password=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"
                      />
+                    
                     <iconPacks:PackIconMaterial Kind="Lock"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
 
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkPasswordBox FontFamily="Helvetica"
@@ -113,9 +122,9 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
+                         Opacity="0.9"
                          Password=""
-                         Height="25"
+                         Height="30"
                          Margin="63,0,0,0"
                      />
                     <iconPacks:PackIconMaterial Kind="Lock"
@@ -124,10 +133,16 @@
                                  Foreground="White"/>
 
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj E-Mail"
+                         Watermark="Podaj e-mail"
                          Name="EMail"
                          FontSize="20"
                          FontWeight="Light"
@@ -137,18 +152,24 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="Email"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj Wiek"
+                         Watermark="Podaj wiek"
                          Name="Wiek"
                          FontSize="20"
                          FontWeight="Light"
@@ -158,18 +179,24 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="BabyCarriage"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                     <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj Wzrost (cm)"
+                         Watermark="Podaj wzrost (cm)"
                          Name="Wzrost"
                          FontSize="20"
                          FontWeight="Light"
@@ -179,19 +206,25 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
                     <iconPacks:PackIconMaterial Kind="HumanMaleHeight"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
                 </StackPanel>
+
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
-                    <xctk:WatermarkTextBox FontFamily="Helvetica"              
-                         Watermark="Podaj Płeć(K/M)"
-                         Name="Plec"
+                    <xctk:WatermarkTextBox FontFamily="Helvetica"
+                         Watermark="Podaj wagę (kg)"
+                         Name="Waga"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -200,9 +233,41 @@
                          Foreground="White"
                          BorderThickness="0"
                          Width="235"
-                         Opacity="0.5"
-                         Height="25"
+                         Opacity="0.9"
+                         Height="30"
                          Margin="63,0,0,0"/>
+
+                    <iconPacks:PackIconMaterial Kind="Weight"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+                    
+                    
+                </StackPanel>
+                
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6"/>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                    <TextBox FontFamily="Helvetica"              
+                         Text="Płeć"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="63,0,0,0"
+                         IsReadOnly="True"/>
+                    
                     <iconPacks:PackIconMaterial Kind="GenderMaleFemale"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
@@ -218,16 +283,43 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0"/>
-                <StackPanel Orientation="Horizontal" Margin="0,70,0,0">
-                    <Button Name="Zarejestruj" Width="100" Height="40" Content="Zarejestruj" Margin="20,0,30,0" Click="Rejestracja_Click"/>
-                    <Button Name="Anuluj" Width="100" Height="40" Content="Anuluj" Margin="100,0,30,0" Click="Anuluj_Click"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Name="Anuluj" Width="100" Height="40" Content="Anuluj" Margin="20,0,30,0" Click="Anuluj_Click"/>
+                    <Button Name="Zarejestruj" Width="100" Height="40" Content="Zarejestruj" Margin="100,0,30,0" Click="Rejestracja_Click"/>
+                   
 
                 </StackPanel>
 
 
-
             </StackPanel>
-
+            <RadioButton GroupName="Plec"
+                         Name="PlecMezczyzna"
+                         Content="Mężczyzna"
+                         Opacity="0.9"
+                         FontSize="13"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         Background="AliceBlue"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Margin="115,369.8,0,0"
+                         Grid.Row="1"
+                         VerticalAlignment="Top"
+                         IsChecked="True"/>
+            
+            <RadioButton GroupName="Plec"
+                         Name="PlecKobieta"
+                         Content="Kobieta"
+                         Opacity="0.9"
+                         FontSize="13"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         Background="AliceBlue"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Margin="212,369.8,0,0"
+                         Grid.Row="1"
+                         VerticalAlignment="Top" />
 
 
 

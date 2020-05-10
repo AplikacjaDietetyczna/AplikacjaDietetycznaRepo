@@ -110,7 +110,8 @@ namespace AplikacjaDietetyczna
 
                 Rejestracja rejestracja = new Rejestracja();
                 rejestracja.Show();
-           
+                this.Close();
+
         }
     }
 }
