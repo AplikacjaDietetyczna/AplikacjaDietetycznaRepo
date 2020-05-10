@@ -41,9 +41,11 @@ namespace AplikacjaDietetyczna
         }
         private void Rejestracja_Click(object sender, RoutedEventArgs e)
         {
-
+            string UserID = "b";
+            string Haslo = TextBoxPassword.Password;
+            string Login = TextBoxUser.Text;
             string Plec = "M";
-
+           
             if (PlecMezczyzna.IsChecked == true)
             {
                 Plec = "M";
@@ -74,12 +76,32 @@ namespace AplikacjaDietetyczna
                     {
                         try//dodawanie uzytkownika do bazy
                         {
+                            DateTime datetime = DateTime.Now;
                             AzureDB.openConnection();
                             AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', "+Wiek.Text+", "+Wzrost.Text+", '"+Plec+"')";
                             AzureDB.cmd.CommandType = CommandType.Text;
                             AzureDB.cmd.CommandText = AzureDB.sql;
                             AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                            AzureDB.closeConnection();
                             //Insert do wagi, która zawiera informację o aktualnej dacie
+
+                            //Pobranie ID dopiero co dodanego Usera
+                            AzureDB.openConnection();
+                            AzureDB.sql = "SELECT top 1 ID_User FROM Users WHERE Login='" + Login + "' AND Password='" + Haslo + "'";
+                            AzureDB.cmd.CommandText = AzureDB.sql;
+                            AzureDB.rd = AzureDB.cmd.ExecuteReader();
+                            if (AzureDB.rd.Read())
+                            {
+                                UserID = AzureDB.rd["ID_User"].ToString();
+                                Console.WriteLine(UserID); //Do testowania
+                            }
+                            AzureDB.closeConnection(); //Nie mam pojęcia czy za każdym razem trzeba zamykać połączenie czy da się to zrobić jakoś mądrzej
+                            //Dodanie wagi dla tego Usera
+                            AzureDB.openConnection();
+                            AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + UserID + "', '" + Waga.Text + "', '" + datetime + "')";
+                            AzureDB.cmd.CommandType = CommandType.Text;
+                            AzureDB.cmd.CommandText = AzureDB.sql;
+                            AzureDB.cmd.ExecuteNonQuery();
 
                             AzureDB.closeConnection();
                             MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
