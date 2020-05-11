@@ -12,16 +12,7 @@
 
 
     <Grid>
-
-
-
-
-
-
-
-
         <Grid>
-
             <Border CornerRadius="5"  Height="640" Margin="166,0,-14,0" VerticalAlignment="Bottom">
                 <Border.Background>
                     <LinearGradientBrush>
@@ -39,17 +30,9 @@
             </Grid>
             <Grid x:Name="GridMenu" Width="180" HorizontalAlignment="Left" Background="#FF5C99D6">
 
-
-                
+  
             </Grid>
         </Grid>
-
-
-
-
-
-
-
 
 
     </Grid>
