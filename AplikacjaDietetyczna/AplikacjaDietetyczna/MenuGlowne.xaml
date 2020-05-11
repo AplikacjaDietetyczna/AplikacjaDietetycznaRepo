@@ -22,7 +22,7 @@
 
         <Grid>
 
-            <Border CornerRadius="5"  Height="700" Margin="0,0,0,-0.4" VerticalAlignment="Bottom">
+            <Border CornerRadius="5"  Height="640" Margin="166,0,-14,0" VerticalAlignment="Bottom">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -32,15 +32,16 @@
                 </Border.Background>
             </Border>
 
-            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010"/>
+            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="635" Width="1325"/>
             <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
-                </Grid.Effect>
                 <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
                 <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="813,10,0,-16" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
             </Grid>
-            
+            <Grid x:Name="GridMenu" Width="180" HorizontalAlignment="Left" Background="#FF5C99D6">
+
+
+                
+            </Grid>
         </Grid>
 
 
