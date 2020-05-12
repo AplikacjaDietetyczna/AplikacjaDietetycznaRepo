@@ -145,3 +145,5 @@ C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDi
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.g.cs
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.baml
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Style\ButtonModern.baml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlMain.g.cs
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlMain.baml

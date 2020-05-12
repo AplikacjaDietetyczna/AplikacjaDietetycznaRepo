@@ -83,6 +83,9 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlMain.xaml.cs">
+      <DependentUpon>UserControlMain.xaml</DependentUpon>
+    </Compile>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rejestracja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,8 +147,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
