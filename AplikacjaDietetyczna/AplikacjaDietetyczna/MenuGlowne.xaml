@@ -37,10 +37,16 @@
                     </Grid>
 
                     <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                        <ListViewItem x:Name="ItemMain"  Height="60">
+                        <ListViewItem  Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
                                 <TextBlock Text="Posiłki" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemPodsumowanie"  Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Podsumowanie" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
                             </StackPanel>
                         </ListViewItem>
                     </ListView>

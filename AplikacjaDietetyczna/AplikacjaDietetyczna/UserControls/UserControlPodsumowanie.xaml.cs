@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AplikacjaDietetyczna.UserControls
 {
     /// <summary>
-    /// Interaction logic for UserControlMain.xaml
+    /// Interaction logic for UserControlPodsumowanie.xaml
     /// </summary>
-    public partial class UserControlMain : UserControl
+    public partial class UserControlPodsumowanie : UserControl
     {
-        public UserControlMain()
+        public UserControlPodsumowanie()
         {
             InitializeComponent();
         }

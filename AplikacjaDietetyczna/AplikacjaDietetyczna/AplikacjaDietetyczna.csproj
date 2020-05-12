@@ -98,8 +98,8 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlMain.xaml.cs">
-      <DependentUpon>UserControlMain.xaml</DependentUpon>
+    <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
+      <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
     </Compile>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
@@ -127,7 +127,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\UserControlMain.xaml">
+    <Page Include="UserControls\UserControlPodsumowanie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

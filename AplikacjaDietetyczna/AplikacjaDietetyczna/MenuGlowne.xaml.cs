@@ -52,7 +52,7 @@ namespace AplikacjaDietetyczna
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemMain":
-                    usc = new UserControls.UserControlMain();
+                    usc = new UserControls.UserControlPodsumowanie();
                     GridMain.Children.Add(usc);
                     break;
                 default:
