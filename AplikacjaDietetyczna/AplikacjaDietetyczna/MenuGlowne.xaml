@@ -24,7 +24,7 @@
                 </Border.Background>
             </Border>
 
-            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="635" Width="1325"/>
+            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="640" Width="1220"/>
             <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
                 <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
                 <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="813,10,0,-16" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
