@@ -1,7 +1,6 @@
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
@@ -147,3 +146,4 @@ C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDi
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Style\ButtonModern.baml
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlMain.g.cs
 C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlMain.baml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
