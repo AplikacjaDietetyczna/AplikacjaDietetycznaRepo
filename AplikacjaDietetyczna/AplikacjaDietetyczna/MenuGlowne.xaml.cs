@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AplikacjaDietetyczna.Klasy;
-
 namespace AplikacjaDietetyczna
 {
     /// <summary>
@@ -42,6 +41,22 @@ namespace AplikacjaDietetyczna
             {
 
                 PokazAdmin.Text = "User jest adminem";
+            }
+        }
+
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UserControl usc = null;
+            GridMain.Children.Clear();
+
+            switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
+            {
+                case "ItemPodsumowanie":
+                    usc = new UserControls.UserControlPodsumowanie();
+                    GridMain.Children.Add(usc);
+                    break;
+                default:
+                    break;
             }
         }
     }

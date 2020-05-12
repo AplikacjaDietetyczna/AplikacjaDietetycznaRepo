@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- Motyw przycisku w Modern UI -->
-                <ResourceDictionary Source="ButtonModern.xaml"/>
+                <ResourceDictionary Source="Style/ButtonModern.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
