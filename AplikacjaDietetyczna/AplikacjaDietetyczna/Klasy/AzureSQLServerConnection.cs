@@ -50,9 +50,11 @@ namespace AplikacjaDietetyczna.Klasy
                     con.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //
+                MessageBox.Show("wystapil blad z rozłączeniem bazy."
+                    + Environment.NewLine + "opis: " + ex.Message.ToString(), "Connect to SQL Server"
+                    , MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }

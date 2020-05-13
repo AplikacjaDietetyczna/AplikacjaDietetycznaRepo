@@ -4,42 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaDietetyczna"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MenuGlowne" Height="900" Width="1200"
+        Title="MenuGlowne" Height="700" Width="1400"
         AllowsTransparency="True" Background="Transparent"
-        WindowStyle="None" ResizeMode="NoResize"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
 
 
     <Grid>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Border CornerRadius="5" Grid.RowSpan="1" Height="450" Margin="0,0,0,-0.4" VerticalAlignment="Bottom">
+            <Border CornerRadius="5"  Height="640" Margin="152,0,0,0" VerticalAlignment="Bottom">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
                         <GradientStop Color="#1225ff" Offset="1.5"/>
                     </LinearGradientBrush>
-                   
+
                 </Border.Background>
             </Border>
-            <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="428,195,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="196" Width="357" FontSize="48" Loaded="PokazID_Loaded"/>
-            <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="790,165,0,0" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="196" Width="357" FontSize="48" Loaded="PokazAdmin_Loaded"/>
 
+            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="640" Width="1220"/>
+            <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
+                <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
+                <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="813,10,0,-16" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
+            </Grid>
 
+            <Grid x:Name="GridMenu" Width="180" HorizontalAlignment="Left" Background="#FF5C99D6">
+                <StackPanel>
+                    <Grid Height="150" Background="#FF5C99D6" RenderTransformOrigin="0.5,0.5">
+                        <iconPacks:PackIconMaterial Kind="Food" Height="118" Width="160" Margin="10,10,0,0"/>
+                    </Grid>
 
-
-
-
-
-
-
-
+                    <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                        <ListViewItem  Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Posiłki" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemPodsumowanie"  Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Podsumowanie" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </Grid>
         </Grid>
+
 
     </Grid>
 </Window>
