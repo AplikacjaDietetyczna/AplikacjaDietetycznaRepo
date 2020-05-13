@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace AplikacjaDietetyczna
     /// </summary>
     public partial class MenuGlowne : Window
     {
+        DataGrid grid = null;//potrzebne do wyświetlana danych
         public MenuGlowne()
         {
             InitializeComponent();
@@ -43,9 +46,10 @@ namespace AplikacjaDietetyczna
                 PokazAdmin.Text = "User jest adminem";
             }
         }
-
+      
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             UserControl usc = null;
             GridMain.Children.Clear();
 
@@ -55,9 +59,33 @@ namespace AplikacjaDietetyczna
                     usc = new UserControls.UserControlPodsumowanie();
                     GridMain.Children.Add(usc);
                     break;
+                case "Dodaj"://wyswietlanie wszystkich elementow z bazy danych niestety SubmitChanges tutaj nie zadziala
+                    try
+                    {
+                        grid = new DataGrid();
+                        AzureDB.openConnection();
+                        AzureDB.sql = "select * from Posilki";
+                        AzureDB.cmd.CommandType = CommandType.Text;
+                        AzureDB.cmd.CommandText = AzureDB.sql;
+                        AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                        AzureDB.dt = new DataTable();
+                        AzureDB.da.Fill(AzureDB.dt);
+                        grid.ItemsSource = AzureDB.dt.DefaultView;
+                        GridMain.Children.Add(grid);
+                        AzureDB.closeConnection();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    break;
                 default:
                     break;
             }
+        }
+
+        private void Zatwierdz(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
