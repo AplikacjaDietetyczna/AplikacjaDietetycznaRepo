@@ -104,12 +104,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="..\..\..\..\..\Desktop\apka dietetyczna\KalkulatorBMI.xaml.cs">
+      <DependentUpon>KalkulatorBMI.xaml</DependentUpon>
+      <Link>KalkulatorBMI.xaml.cs</Link>
+    </Compile>
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
       <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
     </Compile>
+    <Page Include="..\..\..\..\..\Desktop\apka dietetyczna\KalkulatorBMI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Link>KalkulatorBMI.xaml</Link>
+    </Page>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
