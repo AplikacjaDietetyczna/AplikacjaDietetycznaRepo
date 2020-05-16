@@ -18,7 +18,7 @@ namespace AplikacjaDietetyczna
     /// <summary>
     /// Logika interakcji dla klasy KalkulatorBMI.xaml
     /// </summary>
-    public partial class KalkulatorBMI : Page
+    public partial class KalkulatorBMI : UserControl
     {
         public KalkulatorBMI()
         {
