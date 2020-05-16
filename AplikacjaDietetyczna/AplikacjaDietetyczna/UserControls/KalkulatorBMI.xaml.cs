@@ -24,5 +24,10 @@ namespace AplikacjaDietetyczna
         {
             InitializeComponent();
         }
+
+        private void TextBoxWagaBMI_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

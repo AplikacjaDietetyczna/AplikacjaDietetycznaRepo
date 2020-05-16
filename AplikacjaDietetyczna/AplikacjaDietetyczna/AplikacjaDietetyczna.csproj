@@ -104,7 +104,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="KalkulatorBMI.xaml.cs">
+    <Compile Include="UserControls\KalkulatorBMI.xaml.cs">
       <DependentUpon>KalkulatorBMI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Rejestracja.xaml.cs">
@@ -113,7 +113,7 @@
     <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
       <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
     </Compile>
-    <Page Include="KalkulatorBMI.xaml">
+    <Page Include="UserControls\KalkulatorBMI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
