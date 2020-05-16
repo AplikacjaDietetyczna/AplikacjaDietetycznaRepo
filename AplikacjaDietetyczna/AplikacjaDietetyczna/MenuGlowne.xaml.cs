@@ -22,6 +22,7 @@ namespace AplikacjaDietetyczna
     public partial class MenuGlowne : Window
     {
         DataGrid grid = null;//potrzebne do wyświetlana danych
+        TextBox tekstsql;
         public MenuGlowne()
         {
             InitializeComponent();
@@ -64,6 +65,14 @@ namespace AplikacjaDietetyczna
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
+                case "Sql": //otwieranie query
+                    TextBox tekstsql = new TextBox();
+                    GridMain.Children.Add(tekstsql);
+                    tekstsql.Name = "sqlzapytanie";
+                    tekstsql.Text = "INSERT INTO [dbo].[Posilki] (Nazwa,Kalorie) VALUES('Nazwa', ilosc kalorii);";
+                    tekstsql.TextWrapping = TextWrapping.Wrap;
+                    tekstsql.KeyDown += Zatwierdz;
+                    break;
                 case "ItemPodsumowanie":
                     usc = new UserControls.UserControlPodsumowanie();
                     GridMain.Children.Add(usc);
@@ -71,7 +80,7 @@ namespace AplikacjaDietetyczna
                 case "Dodaj"://wyswietlanie wszystkich elementow z bazy danych niestety SubmitChanges tutaj nie zadziala
                     try
                     {
-                        grid = new DataGrid();
+                        DataGrid grid = new DataGrid();
                         AzureDB.openConnection();
                         AzureDB.sql = "select * from Posilki";
                         AzureDB.cmd.CommandType = CommandType.Text;
@@ -93,10 +102,28 @@ namespace AplikacjaDietetyczna
             }
         }
 
-        private void Zatwierdz(object sender, RoutedEventArgs e)
+        private void Zatwierdz(Object sender, KeyEventArgs e)//wykonywanie query za pomoca entera
         {
-                SqlQuery sql = new SqlQuery();
-                sql.Show();
+            if (e.Key == Key.Enter)
+            {
+                try
+                {
+                    TextBox txtbox1; //potrzebne by przenies text z elementu docelowego
+                    txtbox1 = (TextBox)e.Source;
+                    string zapytanie;
+                    zapytanie = txtbox1.Text;
+                    AzureDB.openConnection();
+                    AzureDB.sql = zapytanie;
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                    AzureDB.closeConnection();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Niepoprawne Query", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }
