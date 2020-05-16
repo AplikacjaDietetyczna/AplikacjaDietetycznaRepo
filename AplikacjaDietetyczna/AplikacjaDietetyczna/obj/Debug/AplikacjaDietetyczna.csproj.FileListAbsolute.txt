@@ -153,3 +153,5 @@ C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\Apl
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.xml
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml

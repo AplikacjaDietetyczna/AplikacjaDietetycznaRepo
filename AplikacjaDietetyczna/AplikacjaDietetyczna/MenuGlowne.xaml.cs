@@ -36,6 +36,15 @@ namespace AplikacjaDietetyczna
         private void PokazID_Loaded(object sender, RoutedEventArgs e)
         {
             PokazID.Text = "ID zalogowanego usera to: " + FunkcjeGlobalne.ID;
+            /*
+            if(FunkcjeGlobalne.IsAdmin != "1")
+            {
+                Dodaj.IsEnabled = false;
+                Dodaj.Opacity = 0;
+                SQL.IsEnabled = false;
+                SQL.Opacity = 0;
+            }
+            */
 
         }
         private void PokazAdmin_Loaded(object sender, RoutedEventArgs e)
@@ -86,6 +95,8 @@ namespace AplikacjaDietetyczna
 
         private void Zatwierdz(object sender, RoutedEventArgs e)
         {
+                SqlQuery sql = new SqlQuery();
+                sql.Show();
         }
     }
 }

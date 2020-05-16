@@ -107,9 +107,16 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SqlQuery.xaml.cs">
+      <DependentUpon>SqlQuery.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
       <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
     </Compile>
+    <Page Include="SqlQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
