@@ -118,8 +118,12 @@ namespace AplikacjaDietetyczna
                     AzureDB.cmd.CommandText = AzureDB.sql;
                     AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
                     AzureDB.closeConnection();
+                    MessageBox.Show("Komenda została wykonana poprawnie", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
+                    //czysci textboxa po poprawnym wykonaniu
+                    TextBox tb = (TextBox)sender;
+                    tb.Text = string.Empty;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Niepoprawne Query", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
