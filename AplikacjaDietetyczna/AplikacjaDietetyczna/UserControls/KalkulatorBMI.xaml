@@ -40,7 +40,7 @@
 
 
 
-        <StackPanel Margin="0,137,0,0">
+        <StackPanel Margin="0,137,0,32" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal">
 
                 <xctk:WatermarkTextBox FontFamily="Helvetica"
@@ -188,7 +188,10 @@
                         Background="White"
                         Opacity="0.6" Margin="-255,0,300,0"/>
 
-
+            <StackPanel Orientation="Horizontal" Margin="300,0,0,0" Height="83">
+                <Button Name="PoliczBMI" Width="100" Height="40" Content="PoliczBMI" Margin="100,0,30,0" />
+                    
+            </StackPanel>
 
         </StackPanel>
     </Grid>
