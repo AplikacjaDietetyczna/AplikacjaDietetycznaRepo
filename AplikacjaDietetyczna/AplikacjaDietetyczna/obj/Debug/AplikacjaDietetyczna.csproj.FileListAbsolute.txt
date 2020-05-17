@@ -155,3 +155,9 @@ C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\Apl
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.dll
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.xml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
+C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml
