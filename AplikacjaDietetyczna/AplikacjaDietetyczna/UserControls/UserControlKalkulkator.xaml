@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="700" d:DesignWidth="1400">
     <Grid>
-        <Border CornerRadius="5"  Height="450" VerticalAlignment="Bottom">
+        <Border CornerRadius="5"  Height="700" VerticalAlignment="Bottom">
             <Border.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -31,32 +31,7 @@
         </StackPanel>
 
         <StackPanel RenderTransformOrigin="0.501,0.556" Margin="0,134,0,0">
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-
-                <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj wiek"
-                         Name="Wiek"
-                         FontSize="20"
-                         FontWeight="Light"
-                         HorizontalAlignment="Center"
-                         HorizontalContentAlignment="Left"
-                         Background="Transparent"
-                         Foreground="White"
-                         BorderThickness="0"
-                         Width="235"
-                         Opacity="0.9"
-                         Height="30"
-                         Margin="40,0,0,0"/>
-                <iconPacks:PackIconMaterial Kind="BabyCarriage"
-                                 VerticalAlignment="Center"
-                                 HorizontalAlignment="Center"
-                                 Foreground="White"/>
-            </StackPanel>
-
-            <Border Width="250"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.6" Margin="-470,0,0,0"/>
+            
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
@@ -148,7 +123,7 @@
 
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0"/>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="140">
                 <Button x:Name="policzBMI" Width="100" Height="40" Content="Policz BMI" Margin="193,0,30,0"/>
                 <Button x:Name="pobierzDane" Width="125" Height="40" Content="Pobierz dane z profilu" Margin="-443,0,0,0"/>
 
@@ -166,7 +141,7 @@
                          Background="AliceBlue"
                          Foreground="White"
                          BorderThickness="0"
-                         Margin="90,317,0,0"
+                         Margin="90,265,0,0"
                          Grid.Row="1"
                          VerticalAlignment="Top"
                          IsChecked="True"/>
@@ -181,9 +156,11 @@
                          Background="AliceBlue"
                          Foreground="White"
                          BorderThickness="0"
-                         Margin="180,317,0,0"
+                         Margin="180,265,0,0"
                          Grid.Row="1"
                          VerticalAlignment="Top" />
+        
+        
 
     </Grid>
 </UserControl>
