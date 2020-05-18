@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -23,6 +24,15 @@ namespace AplikacjaDietetyczna.UserControls
         public UserControlKalkulkator()
         {
             InitializeComponent();
+        }
+
+        private void policzBMI_Click(object sender, RoutedEventArgs e)
+        {
+            float Waga = float.Parse(waga.Text);
+            float Wzrost = float.Parse(wzrost.Text);
+            float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
+            wynik.Text = Convert.ToString(Wynik);
+
         }
     }
 }

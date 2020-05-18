@@ -36,8 +36,8 @@
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                 <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Podaj wzrost (cm)"
-                         Name="Wzrost"
+                         Watermark="Podaj wzrost (Cm)"
+                         Name="wzrost"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -64,7 +64,7 @@
 
                 <xctk:WatermarkTextBox FontFamily="Helvetica"
                          Watermark="Podaj wagę (kg)"
-                         Name="Waga"
+                         Name="waga"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -122,9 +122,8 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,60,0,0">
 
-                <xctk:WatermarkTextBox FontFamily="Helvetica"
-                         Watermark="Wynik"
-                         Name="Wynik"
+                <TextBox x:Name="wynik" FontFamily="Helvetica"
+                         Text="Wynik"
                          FontSize="20"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -135,7 +134,8 @@
                          Width="235"
                          Opacity="0.9"
                          Height="30"
-                         Margin="40,0,0,0"/>
+                         Margin="40,0,0,0"
+                         IsReadOnly="True"/>
                 <iconPacks:PackIconMaterial Kind="Equal"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
@@ -150,7 +150,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="50"/>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="128" RenderTransformOrigin="0.501,0.453">
-                <Button x:Name="policzBMI" Width="160" Height="55" Content="Policz BMI" FontSize="25" Margin="300,0,30,0"/>
+                <Button x:Name="policzBMI" Width="160" Height="55" Content="Policz BMI" FontSize="25" Margin="300,0,30,0" Click="policzBMI_Click"/>
                 <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0"/>
 
             </StackPanel>
