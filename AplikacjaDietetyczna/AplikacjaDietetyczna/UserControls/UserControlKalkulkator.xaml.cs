@@ -21,6 +21,7 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlKalkulkator : UserControl
     {
+        Type t = typeof(string);
         public UserControlKalkulkator()
         {
             InitializeComponent();
@@ -28,11 +29,18 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void policzBMI_Click(object sender, RoutedEventArgs e)
         {
-            float Waga = float.Parse(waga.Text);
-            float Wzrost = float.Parse(wzrost.Text);
-            float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
-            wynik.Text = Convert.ToString(Wynik);
-
+            Type t = typeof(string);
+            if (waga.Text.GetType() == t || wzrost.Text.GetType() == t)
+            {
+                poleError.Text = "Źle podana waga lub wzrost!";
+            }
+            else
+            {
+                float Waga = float.Parse(waga.Text);
+                float Wzrost = float.Parse(wzrost.Text);
+                float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
+                wynik.Text = Convert.ToString(Wynik);
+            }
         }
     }
 }

@@ -113,12 +113,30 @@
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
             </StackPanel>
-
-
             <Border Width="250"
                         Height="2"
                         Background="White"
                         Opacity="0.6" Margin="-885,0,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
+
+                <TextBox x:Name="poleError" FontFamily="Helvetica"              
+                         Text=""
+                        
+                         FontSize="15"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Red"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="40,0,0,0"
+                         IsReadOnly="True"/>
+
+
+            </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,60,0,0">
 
