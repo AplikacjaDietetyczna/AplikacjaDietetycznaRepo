@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
-5-1092432502
+6-1940574636
 
-11858704467
+121315552196
 271962962924
-Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlPodsumowanie.xaml;
+Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlKalkulkator.xaml;UserControls\UserControlPodsumowanie.xaml;
 
-False
+True
 

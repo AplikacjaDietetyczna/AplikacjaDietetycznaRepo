@@ -107,6 +107,9 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlKalkulkator.xaml.cs">
+      <DependentUpon>UserControlKalkulkator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
       <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rejestracja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlKalkulkator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
