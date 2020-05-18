@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\KUBA\source\repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Release\
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Release\
 AplikacjaDietetyczna
 none
 false
 TRACE
-C:\Users\KUBA\source\repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
-6-1287097669
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
+6822259871
 
-11-1014778280
-271164869282
-UserControls\KalkulatorBMI.xaml;Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlPodsumowanie.xaml;
+11-993963365
+271962962924
+Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlKalkulator.xaml;UserControls\UserControlPodsumowanie.xaml;
 
 True
 
