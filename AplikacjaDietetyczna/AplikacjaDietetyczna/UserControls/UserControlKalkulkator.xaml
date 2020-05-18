@@ -24,11 +24,166 @@
                                  HorizontalAlignment="Center"
                                  Foreground="White" Height="80"
                                  Width="80"/>
-            <TextBlock Text="Rejestracja" FontWeight="Light"
+            <TextBlock Text="Kalkulator BMI" FontWeight="Light"
                            FontFamily="helvetica" FontSize="22" Foreground="White"
                            HorizontalAlignment="Center"/>
 
         </StackPanel>
+
+        <StackPanel RenderTransformOrigin="0.501,0.556" Margin="0,134,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                <xctk:WatermarkTextBox FontFamily="Helvetica"
+                         Watermark="Podaj wiek"
+                         Name="Wiek"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="40,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="BabyCarriage"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+            </StackPanel>
+
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6" Margin="-470,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                <xctk:WatermarkTextBox FontFamily="Helvetica"
+                         Watermark="Podaj wzrost (cm)"
+                         Name="Wzrost"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="40,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="HumanMaleHeight"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+            </StackPanel>
+
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6" Margin="-470,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                <xctk:WatermarkTextBox FontFamily="Helvetica"
+                         Watermark="Podaj wagę (kg)"
+                         Name="Waga"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="40,0,0,0"/>
+
+                <iconPacks:PackIconMaterial Kind="Weight"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+
+
+            </StackPanel>
+
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6" Margin="-470,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+                <TextBox FontFamily="Helvetica"              
+                         Text="Płeć"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="40,0,0,0"
+                         IsReadOnly="True"/>
+
+                <iconPacks:PackIconMaterial Kind="GenderMaleFemale"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"/>
+            </StackPanel>
+
+
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.6" Margin="-470,0,0,0"/>
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button x:Name="policzBMI" Width="100" Height="40" Content="Policz BMI" Margin="193,0,30,0"/>
+                <Button x:Name="pobierzDane" Width="125" Height="40" Content="Pobierz dane z profilu" Margin="-443,0,0,0"/>
+
+            </StackPanel>
+
+
+        </StackPanel>
+        <RadioButton GroupName="Plec"
+                         Name="PlecMezczyzna"
+                         Content="Mężczyzna"
+                         Opacity="0.9"
+                         FontSize="13"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         Background="AliceBlue"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Margin="90,317,0,0"
+                         Grid.Row="1"
+                         VerticalAlignment="Top"
+                         IsChecked="True"/>
+
+        <RadioButton GroupName="Plec"
+                         Name="PlecKobieta"
+                         Content="Kobieta"
+                         Opacity="0.9"
+                         FontSize="13"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         Background="AliceBlue"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Margin="180,317,0,0"
+                         Grid.Row="1"
+                         VerticalAlignment="Top" />
 
     </Grid>
 </UserControl>

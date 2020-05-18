@@ -78,10 +78,10 @@ namespace AplikacjaDietetyczna
                         MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     break;
-                case "Kalkulator":
-                    UserControl calcBMI = new UserControls.KalkulatorBMI();
-                    GridMain.Children.Add(usc);
-                    break;
+                //case "Kalkulator":
+                //    UserControl calcBMI = new UserControls.KalkulatorBMI();
+                //    GridMain.Children.Add(usc);
+                //    break;
                 default:
                     break;
             }
