@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AplikacjaDietetyczna
+namespace AplikacjaDietetyczna.UserControls
 {
     /// <summary>
-    /// Logika interakcji dla klasy KalkulatorBMI.xaml
+    /// Logika interakcji dla klasy UserControlKalkulator.xaml
     /// </summary>
-    public partial class KalkulatorBMI : UserControl
+    public partial class UserControlKalkulator : UserControl
     {
-        public KalkulatorBMI()
+        public UserControlKalkulator()
         {
             InitializeComponent();
-        }
-
-        private void TextBoxWagaBMI_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

@@ -49,7 +49,6 @@ namespace AplikacjaDietetyczna
       
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
             UserControl usc = null;
             GridMain.Children.Clear();
 
@@ -78,6 +77,10 @@ namespace AplikacjaDietetyczna
                     {
                         MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
+                    break;
+                case "Kalkulator":
+                    UserControl calcBMI = new UserControls.KalkulatorBMI();
+                    GridMain.Children.Add(usc);
                     break;
                 default:
                     break;
