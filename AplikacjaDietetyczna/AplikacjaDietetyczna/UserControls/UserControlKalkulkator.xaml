@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Border CornerRadius="5"  Height="450" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#1225ff" Offset="1.5"/>
+                </LinearGradientBrush>
+
+            </Border.Background>
+        </Border>
     </Grid>
 </UserControl>
