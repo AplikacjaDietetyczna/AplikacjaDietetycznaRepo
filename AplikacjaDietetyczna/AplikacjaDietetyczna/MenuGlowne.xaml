@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid>
-            <Border CornerRadius="5"  Height="640" Margin="152,0,0,0" VerticalAlignment="Bottom">
+            <Border CornerRadius="5"  Height="640" Margin="180,0,0,0" VerticalAlignment="Bottom">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>

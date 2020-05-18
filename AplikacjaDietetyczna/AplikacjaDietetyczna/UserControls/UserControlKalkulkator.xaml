@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="1400">
+             d:DesignHeight="640" d:DesignWidth="1220">
     <Grid>
         <Border CornerRadius="5"  Height="640" VerticalAlignment="Bottom">
             <Border.Background>
@@ -25,9 +25,8 @@
                                  Foreground="White" Height="100"
                                  Width="200"/>
             <TextBlock Text="Kalkulator BMI" FontWeight="Light"
-                           FontFamily="helvetica" FontSize="40" Foreground="White"
-                           HorizontalAlignment="Center" Height="74" Margin="580,0"/>
-
+                                FontFamily="hervetica" FontSize="40" Foreground="White"
+                                HorizontalAlignment="Center" Height="66" Margin="60,0,0,0" Width="300" />
         </StackPanel>
 
         <StackPanel RenderTransformOrigin="0.501,0.556" Margin="0,193,0,0">
@@ -58,7 +57,7 @@
             <Border Width="250"
                         Height="2"
                         Background="White"
-                        Opacity="0.6" Margin="-470,0,0,0"/>
+                        Opacity="0.6" Margin="-885,0,0,0"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
@@ -88,7 +87,7 @@
             <Border Width="250"
                         Height="2"
                         Background="White"
-                        Opacity="0.6" Margin="-470,0,0,0"/>
+                        Opacity="0.6" Margin="-885,0,0,0"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
@@ -118,14 +117,14 @@
             <Border Width="250"
                         Height="2"
                         Background="White"
-                        Opacity="0.6" Margin="-470,0,0,0"/>
+                        Opacity="0.6" Margin="-885,0,0,0"/>
 
 
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="128"/>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="142" RenderTransformOrigin="0.501,0.453">
-                <Button x:Name="policzBMI" Width="160" Height="70" Content="Policz BMI" FontSize="25" Margin="300,0,30,0"/>
-                <Button x:Name="pobierzDane" Width="250" Height="70" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0"/>
+                <Button x:Name="policzBMI" Width="160" Height="55" Content="Policz BMI" FontSize="25" Margin="300,0,30,0"/>
+                <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0"/>
 
             </StackPanel>
 
@@ -141,7 +140,7 @@
                          Background="AliceBlue"
                          Foreground="White"
                          BorderThickness="0"
-                         Margin="90,265,0,0"
+                         Margin="90,322,0,0"
                          Grid.Row="1"
                          VerticalAlignment="Top"
                          IsChecked="True"/>
@@ -156,7 +155,7 @@
                          Background="AliceBlue"
                          Foreground="White"
                          BorderThickness="0"
-                         Margin="180,265,0,0"
+                         Margin="180,322,0,0"
                          Grid.Row="1"
                          VerticalAlignment="Top" />
 
