@@ -10,5 +10,11 @@ namespace AplikacjaDietetyczna.Klasy
     {
         public static string ID { get; set; }
         public static string IsAdmin { get; set; }
+        public static string Plec { get; set; }
+        public static string Wiek { get; set; }
+        public static string Wzrost { get; set; }
+        public static string Waga { get; set; }
+        public static string Login { get; set; }
+
     }
 }
