@@ -1,163 +1,55 @@
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.g.resources
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.Properties.Resources.resources
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.baml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.baml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.g.cs
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.baml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\ButtonModern.baml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.baml
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.g.resources
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.Properties.Resources.resources
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CoreCompileInputs.cache
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
-C:\Users\Buchy\Documents\GitHub\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\ButtonModern.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.g.resources
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.Properties.Resources.resources
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CoreCompileInputs.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.g.resources
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.Properties.Resources.resources
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CoreCompileInputs.cache
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.Toolkit.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.Toolkit.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.baml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Style\ButtonModern.baml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Style\ButtonModern.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.baml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
-C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
-C:\Users\Pajfu\Desktop\Notatki\6 semestr\6_sem\Aplikacja Dietetyczna\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe.config
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.exe
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\AplikacjaDietetyczna.pdb
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.xml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csprojAssemblyReference.cache
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlKalkulkator.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.cache
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna_MarkupCompile.lref
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\App.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\SqlQuery.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Style\ButtonModern.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MainWindow.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\MenuGlowne.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\Rejestracja.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlKalkulkator.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPodsumowanie.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.g.resources
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.Properties.Resources.resources
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.exe
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.pdb
