@@ -24,5 +24,23 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            String message = "Nie udało się wyliczyć zapotrzebowania dziennego";
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+
+                message = ex.Message.ToString();
+            }
+
+
+
+        }
+
     }
 }

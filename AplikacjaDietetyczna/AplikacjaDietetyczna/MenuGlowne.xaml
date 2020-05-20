@@ -14,28 +14,19 @@
 
     <Grid>
         <Grid>
+            <Border CornerRadius="0"  Height="640" Margin="180,0,0,0" VerticalAlignment="Bottom" >
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#1225ff" Offset="1.5"/>
+                    </LinearGradientBrush>
 
-
-            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="640" Width="1220">
-                <StackPanel>
-                    <Grid Height="561" Background="#FF5C99D6" RenderTransformOrigin="0,0">
-
-                        <Border CornerRadius="0"  Height="643" VerticalAlignment="Bottom" Margin="0,-5,0,-77" >
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#7be9f6" Offset="0.0"/>
-                                    <GradientStop Color="#1225ff" Offset="1.5"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                        </Border>
-
-                    </Grid>
-
-                </StackPanel>
+                </Border.Background>
+            </Border>
 
 
 
-            </Grid>
+            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="640" Width="1220"/>
 
             <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
                 <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
