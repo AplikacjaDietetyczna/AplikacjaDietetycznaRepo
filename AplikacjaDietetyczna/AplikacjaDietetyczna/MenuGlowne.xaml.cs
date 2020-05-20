@@ -27,6 +27,8 @@ namespace AplikacjaDietetyczna
         {
             InitializeComponent();
             PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza program
+            UserControl usc = new UserControls.UserControlPosilki();
+            GridMain.Children.Add(usc);
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -100,7 +102,13 @@ namespace AplikacjaDietetyczna
                     UserControl calc = new UserControls.UserControlKalkulkator();
                     GridMain.Children.Add(calc);
                     break;
+                case "Posilki":
+                    usc = new UserControls.UserControlPosilki();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
+                    usc = new UserControls.UserControlPosilki();
+                    GridMain.Children.Add(usc);
                     break;
             }
         }
