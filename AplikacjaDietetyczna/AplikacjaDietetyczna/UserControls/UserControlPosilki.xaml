@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220"
              Loaded="Window_LoadedZapotrzebowanie">
+    
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
@@ -77,6 +78,7 @@
 
 
         </StackPanel>
+        <TextBox x:Name="KalorieSniadanie" HorizontalAlignment="Left" Height="23" Margin="207,283,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
 
 
