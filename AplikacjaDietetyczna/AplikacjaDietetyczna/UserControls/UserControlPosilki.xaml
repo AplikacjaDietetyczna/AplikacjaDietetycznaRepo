@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220"
-             Loaded="Window_LoadedZapotrzebowanie"
-             Loaded="Window_LoadedDekorator">
+             Loaded="Window_LoadedZapotrzebowanie">
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
