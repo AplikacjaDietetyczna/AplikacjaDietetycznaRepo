@@ -38,7 +38,7 @@ namespace AplikacjaDietetyczna
 
         private void PokazID_Loaded(object sender, RoutedEventArgs e)
         {
-            PokazID.Text = "ID zalogowanego usera to: " + FunkcjeGlobalne.ID;
+            PokazID.Text = "Witaj, " + FunkcjeGlobalne.Login;
             /*
             if(FunkcjeGlobalne.IsAdmin != "1")
             {
