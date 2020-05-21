@@ -5,11 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="1220">
+             d:DesignHeight="640" d:DesignWidth="1220"
+             Loaded="Window_Loaded">
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
-                
+
             </Grid>
             <Grid Background="White" Height="75">
                 <TextBox FontFamily="Helvetica"
@@ -24,7 +25,8 @@
                          Width="235"
                          Opacity="0.5"
                          Text="Kalorie:"
-                         Height="25" Margin="26,26,954.2,24"/>
+                         Height="25" Margin="26,26,954.2,24"
+                         IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxBialka"
@@ -38,7 +40,8 @@
                          Width="235"
                          Opacity="0.5"
                          Text="Białka:"
-                         Height="25" Margin="296,26,684.2,24"/>
+                         Height="25" Margin="296,26,684.2,24" 
+                         IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxTluszcze"
@@ -52,7 +55,8 @@
                          Width="235"
                          Opacity="0.5"
                          Text="Tłuszcze:"
-                         Height="25" Margin="347,26,218,24"/>
+                         Height="25" Margin="347,26,218,24" 
+                         IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxWeglowodany"
@@ -63,10 +67,11 @@
                          Background="Transparent"
                          Foreground="Black"
                          BorderThickness="0"
-                         Width="235"
+                         Width="299"
                          Opacity="0.5"
                          Text="Weglowodany:"
-                         Height="25" Margin="869,26,111.2,24"/>
+                         Height="25" Margin="823,26,98,24" 
+                         IsReadOnly="True"/>
 
             </Grid>
 
@@ -81,6 +86,6 @@
 
     </Grid>
 
- 
-    
+
+
 </UserControl>
