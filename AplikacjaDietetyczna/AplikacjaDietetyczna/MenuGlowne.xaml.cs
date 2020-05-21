@@ -27,6 +27,8 @@ namespace AplikacjaDietetyczna
         {
             InitializeComponent();
             PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape) Close(); }; //Wyłącza program
+            UserControl usc = new UserControls.UserControlPosilki();
+            GridMain.Children.Add(usc);
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -36,7 +38,7 @@ namespace AplikacjaDietetyczna
 
         private void PokazID_Loaded(object sender, RoutedEventArgs e)
         {
-            PokazID.Text = "ID zalogowanego usera to: " + FunkcjeGlobalne.ID;
+            PokazID.Text = "Witaj, " + FunkcjeGlobalne.Login;
             /*
             if(FunkcjeGlobalne.IsAdmin != "1")
             {
@@ -59,7 +61,6 @@ namespace AplikacjaDietetyczna
       
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
             UserControl usc = null;
             GridMain.Children.Clear();
 
@@ -97,7 +98,17 @@ namespace AplikacjaDietetyczna
                         MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     break;
+                case "Kalkulator":
+                    UserControl calc = new UserControls.UserControlKalkulkator();
+                    GridMain.Children.Add(calc);
+                    break;
+                case "Posilki":
+                    usc = new UserControls.UserControlPosilki();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
+                    usc = new UserControls.UserControlPosilki();
+                    GridMain.Children.Add(usc);
                     break;
             }
         }
@@ -129,5 +140,7 @@ namespace AplikacjaDietetyczna
                 }
             }
         }
+
+
     }
 }

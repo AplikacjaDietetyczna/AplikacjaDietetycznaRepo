@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="AplikacjaDietetyczna.UserControls.UserControlPosilki"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1220"
+             Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel>
+            <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
+
+            </Grid>
+            <Grid Background="White" Height="75">
+                <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxKalorie"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Text="Kalorie:"
+                         Height="25" Margin="26,26,954.2,24"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxBialka"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Text="Białka:"
+                         Height="25" Margin="296,26,684.2,24" 
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxTluszcze"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.5"
+                         Text="Tłuszcze:"
+                         Height="25" Margin="347,26,218,24" 
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxWeglowodany"
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="299"
+                         Opacity="0.5"
+                         Text="Weglowodany:"
+                         Height="25" Margin="823,26,98,24" 
+                         IsReadOnly="True"/>
+
+            </Grid>
+
+
+        </StackPanel>
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+</UserControl>

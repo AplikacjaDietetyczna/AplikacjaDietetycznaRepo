@@ -110,8 +110,14 @@
     <Compile Include="SqlQuery.xaml.cs">
       <DependentUpon>SqlQuery.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlKalkulkator.xaml.cs">
+      <DependentUpon>UserControlKalkulkator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlPodsumowanie.xaml.cs">
       <DependentUpon>UserControlPodsumowanie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlPosilki.xaml.cs">
+      <DependentUpon>UserControlPosilki.xaml</DependentUpon>
     </Compile>
     <Page Include="SqlQuery.xaml">
       <SubType>Designer</SubType>
@@ -143,7 +149,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UserControlKalkulkator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\UserControlPodsumowanie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlPosilki.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

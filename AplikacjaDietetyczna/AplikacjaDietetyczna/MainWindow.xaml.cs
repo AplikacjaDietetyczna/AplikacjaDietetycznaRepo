@@ -85,16 +85,19 @@ namespace AplikacjaDietetyczna
                 
                 AzureDB.openConnection();
 
-                AzureDB.sql = ("select ID_User, IsAdmin from Users where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "'");
+                AzureDB.sql = ("SELECT TOP 1 * FROM USERS INNER JOIN Waga ON Users.ID_User = Waga.ID_User where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "' ORDER BY Waga desc");
                 AzureDB.cmd.CommandType = CommandType.Text;
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
                 if (AzureDB.rd.Read())
                 {
                     FunkcjeGlobalne.ID = AzureDB.rd["ID_User"].ToString();
-                    Console.WriteLine(FunkcjeGlobalne.ID); //Do testowania
                     FunkcjeGlobalne.IsAdmin = AzureDB.rd["IsAdmin"].ToString();
-                    Console.WriteLine(FunkcjeGlobalne.IsAdmin); //Do testowania
+                    FunkcjeGlobalne.Login = AzureDB.rd["Login"].ToString();
+                    FunkcjeGlobalne.Wiek = AzureDB.rd["Wiek"].ToString();
+                    FunkcjeGlobalne.Wzrost = AzureDB.rd["Wzrost"].ToString();
+                    FunkcjeGlobalne.Waga = AzureDB.rd["Waga"].ToString();
+                    FunkcjeGlobalne.Plec = AzureDB.rd["Plec"].ToString();
                     message = "1";
                 }
 

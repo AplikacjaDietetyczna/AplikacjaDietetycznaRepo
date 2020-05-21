@@ -37,7 +37,7 @@
                              TextWrapping="Wrap"
                          Opacity="0.5"
                          Text="INSERT INTO [dbo].[Posilki] (Nazwa,Kalorie)
-VALUES ('Nazwa',ilosc kalorii);"
+                        VALUES ('Nazwa',ilosc kalorii);"
                          Height="75"
                          Margin="63,20,0,0"/>
 

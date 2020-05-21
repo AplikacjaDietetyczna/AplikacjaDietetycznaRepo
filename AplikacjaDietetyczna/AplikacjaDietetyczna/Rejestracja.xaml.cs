@@ -29,7 +29,8 @@ namespace AplikacjaDietetyczna
         public Rejestracja()
         {
             InitializeComponent();
-            PreviewKeyDown += (s, e) => { if (e.Key == Key.Escape)
+            PreviewKeyDown += (s, e) => {
+                if (e.Key == Key.Escape)
                 {
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
@@ -53,7 +54,7 @@ namespace AplikacjaDietetyczna
             string Haslo = TextBoxPassword.Password;
             string Login = TextBoxUser.Text;
             string Plec = "M";
-           
+
             if (PlecMezczyzna.IsChecked == true)
             {
                 Plec = "M";
@@ -70,7 +71,7 @@ namespace AplikacjaDietetyczna
             Match wysokoscMatch = wysokosc.Match(Wzrost.Text);
             //sprawdzanie czy dany uzytkownik juz jest w bazie (nie zwraca uwagi na duże litery i mozliwe ze trzeba bedzie to zmienic)
             AzureDB.openConnection();
-            AzureDB.sql = "select top 1 * from Users where Login='"+TextBoxUser.Text+"'";
+            AzureDB.sql = "select top 1 * from Users where Login='" + TextBoxUser.Text + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
@@ -81,56 +82,57 @@ namespace AplikacjaDietetyczna
             {
                 if (wysokoscMatch.Success)
                 {
-                    if (TextBoxPassword.Password == TextBoxPassword2.Password&& TextBoxPassword.Password.Length>7)//sprawdza wymogi do hasla
+                    if (TextBoxPassword.Password == TextBoxPassword2.Password && TextBoxPassword.Password.Length > 7)//sprawdza wymogi do hasla
                     {
                         if (emailMatch.Success)//sprawdza regexa do maila(jesli uzytkownika nie ma, haslo jest dobre)
                         {
                             try//dodawanie uzytkownika do bazy
                             {
-                            DateTime datetime = DateTime.Now;
-                            AzureDB.openConnection();
-                            AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', "+Wiek.Text+", "+Wzrost.Text+", '"+Plec+"')";
-                            AzureDB.cmd.CommandType = CommandType.Text;
-                            AzureDB.cmd.CommandText = AzureDB.sql;
-                            AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
-                            AzureDB.closeConnection();
-                            //Insert do wagi, która zawiera informację o aktualnej dacie
+                                DateTime dateTime = DateTime.Now;
+                                string sqlFormattedDate = dateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                                AzureDB.openConnection();
+                                AzureDB.sql = "INSERT INTO Users (Login, Password, Email, Wiek, Wzrost, Plec) VALUES ('" + TextBoxUser.Text + "', '" + TextBoxPassword.Password + "', '" + EMail.Text + "', " + Wiek.Text + ", " + Wzrost.Text + ", '" + Plec + "')";
+                                AzureDB.cmd.CommandType = CommandType.Text;
+                                AzureDB.cmd.CommandText = AzureDB.sql;
+                                AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                                AzureDB.closeConnection();
+                                //Insert do wagi, która zawiera informację o aktualnej dacie
 
-                            //Pobranie ID dopiero co dodanego Usera
-                            AzureDB.openConnection();
-                            AzureDB.sql = "SELECT top 1 ID_User FROM Users WHERE Login='" + Login + "' AND Password='" + Haslo + "'";
-                            AzureDB.cmd.CommandText = AzureDB.sql;
-                            AzureDB.rd = AzureDB.cmd.ExecuteReader();
-                            if (AzureDB.rd.Read())
-                            {
-                                UserID = AzureDB.rd["ID_User"].ToString();
-                                Console.WriteLine(UserID); //Do testowania
+                                //Pobranie ID dopiero co dodanego Usera
+                                AzureDB.openConnection();
+                                AzureDB.sql = "SELECT top 1 ID_User FROM Users WHERE Login='" + Login + "' AND Password='" + Haslo + "'";
+                                AzureDB.cmd.CommandText = AzureDB.sql;
+                                AzureDB.rd = AzureDB.cmd.ExecuteReader();
+                                if (AzureDB.rd.Read())
+                                {
+                                    UserID = AzureDB.rd["ID_User"].ToString();
+                                    Console.WriteLine(UserID); //Do testowania
+                                }
+                                AzureDB.closeConnection(); //Nie mam pojęcia czy za każdym razem trzeba zamykać połączenie czy da się to zrobić jakoś mądrzej
+                                                           //Dodanie wagi dla tego Usera
+                                AzureDB.openConnection();
+                                AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + UserID + "', '" + Waga.Text + "', '" + sqlFormattedDate + "')";
+                                AzureDB.cmd.CommandType = CommandType.Text;
+                                AzureDB.cmd.CommandText = AzureDB.sql;
+                                AzureDB.cmd.ExecuteNonQuery();
+
+                                AzureDB.closeConnection();
+                                MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
                             }
-                            AzureDB.closeConnection(); //Nie mam pojęcia czy za każdym razem trzeba zamykać połączenie czy da się to zrobić jakoś mądrzej
-                            //Dodanie wagi dla tego Usera
-                            AzureDB.openConnection();
-                            AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + UserID + "', '" + Waga.Text + "', '" + datetime + "')";
-                            AzureDB.cmd.CommandType = CommandType.Text;
-                            AzureDB.cmd.CommandText = AzureDB.sql;
-                            AzureDB.cmd.ExecuteNonQuery();
+                            catch (Exception ex)//jesli baza nie dziala
+                            {
+                                MessageBox.Show("Błąd przy rejestracji"
+                                   + Environment.NewLine + "opis: " + ex.Message.ToString(), "Rejestracja"
+                                   , MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                            finally
+                            {
+                                MainWindow mainWindow = new MainWindow();
+                                mainWindow.Show();
+                                this.Close();
+                            }
 
-                            AzureDB.closeConnection();
-                            MessageBox.Show("Użytkownik " + TextBoxUser.Text + " został poprawnie utworzony.", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Information);
                         }
-                        catch (Exception ex)//jesli baza nie dziala
-                        {
-                            MessageBox.Show("Błąd przy rejestracji"
-                               + Environment.NewLine + "opis: " + ex.Message.ToString(), "Rejestracja"
-                               , MessageBoxButton.OK, MessageBoxImage.Error);
-                        }
-                        finally
-                        {
-                            MainWindow mainWindow = new MainWindow();
-                            mainWindow.Show();
-                            this.Close();
-                        }
-
-                    }
 
                         else
                         {
@@ -143,11 +145,11 @@ namespace AplikacjaDietetyczna
                     }
 
 
-                    }
-                 else
-                    {
+                }
+                else
+                {
                     MessageBox.Show("Wzrost powinien być liczbą maksymalnie trzycyfrową", "Rejestracja", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                }
             }
             else
             {
@@ -164,6 +166,6 @@ namespace AplikacjaDietetyczna
             this.Close();
         }
 
-      
+
     }
 }
