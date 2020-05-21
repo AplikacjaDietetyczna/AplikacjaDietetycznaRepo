@@ -26,8 +26,9 @@ namespace AplikacjaDietetyczna.UserControls
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
+            //Zapotrzebowanie dzienne
             String message = "Nie udało się wyliczyć zapotrzebowania dziennego";
             try
             {
@@ -53,7 +54,6 @@ namespace AplikacjaDietetyczna.UserControls
                 TextBoxTluszcze.Text = "Tłuszcze: Ile / " + Tluszcze + " g";
                 TextBoxWeglowodany.Text = "Węglowodany: Ile / " + Weglowodany + " g";
 
-
             }
             catch (Exception ex)
             {
@@ -62,7 +62,42 @@ namespace AplikacjaDietetyczna.UserControls
             }
 
 
+
+
         }
+
+
+        private void Window_LoadedDekorator(object sender, RoutedEventArgs e)
+        {
+           // Zapisanie dzisiejszej daty do zmiennej oraz przeformatowanie jej do formatu SQLowego
+            DateTime dateTime = DateTime.Now;
+            string sqlFormattedDate = dateTime.ToString("yyyy-MM-dd");
+
+            AzureDB.openConnection();
+            AzureDB.sql = "SELECT Login, Users.ID_User, TypPosilku, Nazwa, Data, NazwaProduktu, Ilosc FROM Users +" +
+            "INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User+" +
+            "INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku+" +
+            "INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu+" +
+            "WHERE Users.ID_User ="+ FunkcjeGlobalne.ID+" AND Data = "+sqlFormattedDate;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.rd = AzureDB.cmd.ExecuteReader();
+            if (AzureDB.rd.Read())
+            {
+                //UserID = AzureDB.rd["ID_User"].ToString();
+                //Console.WriteLine(UserID); //Do testowania
+            }
+            AzureDB.closeConnection();
+
+
+
+
+
+
+
+
+        }
+
+
 
     }
 }
