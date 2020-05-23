@@ -16,5 +16,6 @@ namespace AplikacjaDietetyczna.Klasy
         public static string Waga { get; set; }
         public static string Login { get; set; }
 
+        public static string NazwaPosilku { get; set; }
     }
 }
