@@ -7,11 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220"
              Loaded="Window_LoadedZapotrzebowanie">
-    
+
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
-                <Button Content="Poprzedni dzień" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Width="104" Height="36" Click="Button_Click"/>
+                <Button Content="Poprzedni dzień" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Width="104" Height="36" Click="MinusDay"/>
+                <TextBox x:Name="TextBoxCurrentDate" HorizontalAlignment="Left" Height="52" Margin="468,30,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top" Width="222"/>
+                <Button Content="Następny dzień" HorizontalAlignment="Left" Margin="1081,287,0,0" VerticalAlignment="Top" Width="104" Height="36" Click="PlusDay"/>
 
             </Grid>
             <Grid Background="White" Height="75">
