@@ -112,6 +112,11 @@ namespace AplikacjaDietetyczna.Klasy
             //    return base.CalculateTluszcze() + IloscTluszcze;
             //}
 
+            public override string GetName(string PosilekNazwa)
+            {
+                return base.GetName(PosilekNazwa)  + PosilekNazwa;
+            }
+
             public override double CalculateWeglowodany(double IloscWeglowodany)
             {
                 return base.CalculateWeglowodany(IloscWeglowodany) + IloscWeglowodany;

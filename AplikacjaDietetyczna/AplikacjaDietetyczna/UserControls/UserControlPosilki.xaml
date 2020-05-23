@@ -12,7 +12,19 @@
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
 
-
+                <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxCurrentDate"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="212"
+                         Opacity="0.8"
+                         Text="Dzisiejsza data" Margin="504,10,503.8,505"
+                         IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="Sniadanie"
@@ -23,9 +35,9 @@
                          Background="Transparent"
                          Foreground="Black"
                          BorderThickness="0"
-                         Width="146"
+                         Width="147"
                          Opacity="0.8"
-                         Text="Śniadanie" Margin="29,70,1044.8,445"
+                         Text="Śniadanie" Margin="29,70,1043.8,445"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -97,7 +109,7 @@
                          BorderThickness="0"
                          Width="1066"
                          Opacity="0.8"
-                         Text="" Margin="34,120,119.8,406"
+                         Text="Produkty:" Margin="34,120,119.8,406"
                          IsReadOnly="True"/>
 
 
@@ -135,7 +147,7 @@
 
 
                 <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
-                <TextBox x:Name="TextBoxCurrentDate" HorizontalAlignment="Left" Height="23" Margin="458,10,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top" Width="112"/>
+
                 <Button Content="" HorizontalAlignment="Left" Margin="1195,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay"/>
                 <Button Content="Dodaj" HorizontalAlignment="Left" Margin="1143,76,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
 
