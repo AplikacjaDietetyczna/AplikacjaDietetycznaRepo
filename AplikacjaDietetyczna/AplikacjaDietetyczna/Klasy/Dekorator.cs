@@ -21,7 +21,7 @@ namespace AplikacjaDietetyczna.Klasy
 
         }
 
-        public class Sniadanie : Posilek
+        public class TypPosilku : Posilek
         {
             public override string GetName(string PosilekNazwa)
             {

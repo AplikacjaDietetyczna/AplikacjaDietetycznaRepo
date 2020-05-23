@@ -11,9 +11,134 @@
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
-                <Button Content="Poprzedni dzień" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Width="104" Height="36" Click="MinusDay"/>
-                <TextBox x:Name="TextBoxCurrentDate" HorizontalAlignment="Left" Height="52" Margin="468,30,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top" Width="222"/>
-                <Button Content="Następny dzień" HorizontalAlignment="Left" Margin="1081,287,0,0" VerticalAlignment="Top" Width="104" Height="36" Click="PlusDay"/>
+
+
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="Sniadanie"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="146"
+                         Opacity="0.8"
+                         Text="Śniadanie" Margin="29,70,1044.8,445"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="SniadanieKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="200,76,865.8,453"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="SniadanieBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="350,76,711.8,453"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="SniadanieTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="500,76,553.8,453"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="SniadanieWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="650,76,395.8,453"
+                         IsReadOnly="True"/>
+
+
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="SniadanieProdukty"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="1066"
+                         Opacity="0.8"
+                         Text="" Margin="34,120,119.8,406"
+                         IsReadOnly="True"/>
+
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="Lunch"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Lunch" Margin="34,226,1027.8,304"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="Obiad"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Obiad" Margin="34,313,1027.8,217"
+                         IsReadOnly="True"/>
+
+
+
+
+
+
+                <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
+                <TextBox x:Name="TextBoxCurrentDate" HorizontalAlignment="Left" Height="23" Margin="458,10,0,0" TextWrapping="Wrap" Text="Data" VerticalAlignment="Top" Width="112"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay"/>
+                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="1143,76,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+
 
             </Grid>
             <Grid Background="White" Height="75">
@@ -81,7 +206,6 @@
 
 
         </StackPanel>
-        <TextBox x:Name="KalorieSniadanie" HorizontalAlignment="Left" Height="23" Margin="207,283,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
 
 
