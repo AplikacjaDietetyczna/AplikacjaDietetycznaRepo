@@ -54,7 +54,7 @@
                         </ListViewItem>
                         <ListViewItem x:Name="Dodaj"  Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Administracja" VerticalAlignment="Center" Margin="20 10"/>
+                                <TextBlock Text="Wyświetl tabele" VerticalAlignment="Center" Margin="20 10"/>
                                 <iconPacks:PackIconMaterial Kind="Wrench" Height="25" Width="25" Margin="10"/>
                             </StackPanel>
                         </ListViewItem>

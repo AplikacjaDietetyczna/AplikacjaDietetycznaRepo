@@ -79,24 +79,8 @@ namespace AplikacjaDietetyczna
                     GridMain.Children.Add(usc);
                     break;
                 case "Dodaj"://wyswietlanie wszystkich elementow z bazy danych niestety SubmitChanges tutaj nie zadziala
-                    try
-                    {
-                        DataGrid grid = new DataGrid();
-                        AzureDB.openConnection();
-                        AzureDB.sql = "select * from Posilki";
-                        AzureDB.cmd.CommandType = CommandType.Text;
-                        AzureDB.cmd.CommandText = AzureDB.sql;
-                        AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
-                        AzureDB.dt = new DataTable();
-                        AzureDB.da.Fill(AzureDB.dt);
-                        grid.ItemsSource = AzureDB.dt.DefaultView;
-                        GridMain.Children.Add(grid);
-                        AzureDB.closeConnection();
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    UserControl sql = new UserControls.UserControlSQL();
+                    GridMain.Children.Add(sql);
                     break;
                 case "Kalkulator":
                     UserControl calc = new UserControls.UserControlKalkulkator();
