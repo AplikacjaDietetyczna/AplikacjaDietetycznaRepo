@@ -120,6 +120,9 @@
     <Compile Include="UserControls\UserControlPosilki.xaml.cs">
       <DependentUpon>UserControlPosilki.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSQL.xaml.cs">
+      <DependentUpon>UserControlSQL.xaml</DependentUpon>
+    </Compile>
     <Page Include="SqlQuery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControlPosilki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlSQL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
