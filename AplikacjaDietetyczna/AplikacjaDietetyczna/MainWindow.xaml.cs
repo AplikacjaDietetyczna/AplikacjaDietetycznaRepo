@@ -78,11 +78,9 @@ namespace AplikacjaDietetyczna
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            
             String message = "Podano nieprawidłowe dane logowania!"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
             try
             {
-                
                 AzureDB.openConnection();
 
                 AzureDB.sql = ("SELECT TOP 1 * FROM USERS INNER JOIN Waga ON Users.ID_User = Waga.ID_User where Login =  '"  + TextBoxUser.Text + "'  AND Password = '" + TextBoxPassword.Password + "' ORDER BY Waga desc");
@@ -98,6 +96,7 @@ namespace AplikacjaDietetyczna
                     FunkcjeGlobalne.Wzrost = AzureDB.rd["Wzrost"].ToString();
                     FunkcjeGlobalne.Waga = AzureDB.rd["Waga"].ToString();
                     FunkcjeGlobalne.Plec = AzureDB.rd["Plec"].ToString();
+                    FunkcjeGlobalne.Data = "0";
                     message = "1";
                 }
 

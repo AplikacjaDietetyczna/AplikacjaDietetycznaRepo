@@ -26,14 +26,21 @@ namespace AplikacjaDietetyczna.UserControls
             InitializeComponent();
         }
 
+        public DateTime GetDate(int n)
+        {
+
+            DateTime dateTime = DateTime.Now.AddDays(n);
+            return dateTime;
+        }
+
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
             string WeglowodanyString = "";
             string KalorieString = "";
             double KalorieZapotrzebowanie = 0;
             // Zapisanie dzisiejszej daty do zmiennej oraz przeformatowanie jej do formatu SQLowego
-            DateTime dateTime = DateTime.Now;
-            string sqlFormattedDate = dateTime.ToString("yyyy-MM-dd");
+           
+            string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
 
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
@@ -41,7 +48,7 @@ namespace AplikacjaDietetyczna.UserControls
 
 
                 AzureDB.openConnection();
-                AzureDB.sql = "SELECT Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20";
+                AzureDB.sql = "SELECT Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '"+sqlFormattedDate+"'";
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -59,8 +66,6 @@ namespace AplikacjaDietetyczna.UserControls
                 Dekorator.Posilek sniadanie2 = new Dekorator.Sniadanie();
                 sniadanie2 = new Dekorator.PosilekDekorator(sniadanie2);
 
-                KalorieZapotrzebowanie = sniadanie2.CalculateWeglowodany(12);
-                KalorieZapotrzebowanie = sniadanie2.CalculateWeglowodany(12);
             }
             catch (Exception ex)
             {
@@ -94,7 +99,7 @@ namespace AplikacjaDietetyczna.UserControls
                 double Tluszcze = Math.Round((Double)DzienneZapotrzebowanie * 0.30, 2);
                 double Weglowodany = Math.Round((Double)DzienneZapotrzebowanie * 0.55, 2);
 
-                TextBoxKalorie.Text = "Kalorie: "+KalorieZapotrzebowanie+" / " + Kalorie + " kcal";
+                TextBoxKalorie.Text = "Kalorie: Ile / " + Kalorie + " kcal";
                 TextBoxBialka.Text = "Białka: Ile / " + Bialka + " g";
                 TextBoxTluszcze.Text = "Tłuszcze: Ile / " + Tluszcze + " g";
                 TextBoxWeglowodany.Text = "Węglowodany: Ile / " + Weglowodany + " g";
@@ -118,10 +123,14 @@ namespace AplikacjaDietetyczna.UserControls
 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
 
-     
+           FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
+           
 
 
-
+        }
     }
 }
