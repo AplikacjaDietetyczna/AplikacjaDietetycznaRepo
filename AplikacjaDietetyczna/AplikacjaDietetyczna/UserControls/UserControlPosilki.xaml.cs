@@ -83,8 +83,10 @@ namespace AplikacjaDietetyczna.UserControls
                 }
                 AzureDB.closeConnection();
 
-                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+
+                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
+                SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
 
 
 
@@ -191,11 +193,12 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.closeConnection();
 
 
-                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
+                SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
 
 
-             
+
 
 
 
