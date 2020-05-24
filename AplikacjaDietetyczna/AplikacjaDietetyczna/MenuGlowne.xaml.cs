@@ -79,6 +79,10 @@ namespace AplikacjaDietetyczna
                         MessageBox.Show("Błąd połaczenia", "Baza", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     break;
+                case "Profil użytkownika":
+                    usc =  new UserControls.UserControlProfil();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     break;
             }
