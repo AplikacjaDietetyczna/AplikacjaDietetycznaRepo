@@ -36,7 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
-        string TypPosilku = "Sniadanie";
+            int TypPosilku = 1;
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
@@ -52,7 +52,7 @@ namespace AplikacjaDietetyczna.UserControls
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
-                do
+                while (TypPosilku < 6)
                 {
 
 
@@ -66,7 +66,8 @@ namespace AplikacjaDietetyczna.UserControls
                     {
                         while (AzureDB.rd.Read())
                         {
-                            SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
+                            SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                            SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
                             if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                             {
                                 SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
@@ -89,16 +90,16 @@ namespace AplikacjaDietetyczna.UserControls
                     AzureDB.closeConnection();
 
 
-                    if (TypPosilku == "Obiad")
+                    if (TypPosilku == 3)
                     {
                         ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
                         ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        TypPosilku = "Koniec";
+                        TypPosilku = 6;
                     }
 
 
-                    if (TypPosilku == "Sniadanie")
+                    if (TypPosilku == 1)
                     {
                         SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
@@ -107,9 +108,9 @@ namespace AplikacjaDietetyczna.UserControls
                         SniadanieProdukty = "";
                         SniadanieKalorieD = 0;
                         SniadanieNazwa = "";
-                        TypPosilku = "Obiad";
+                        TypPosilku = TypPosilku + 2;
                     }
-                } while (TypPosilku != "Koniec");
+                }
 
 
 
@@ -198,7 +199,8 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
+                        SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()),SniadanieIlosc);
                         if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                         {
                             SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);

@@ -12,7 +12,7 @@ namespace AplikacjaDietetyczna.Klasy
 
         public abstract class Posilek
         {
-            public abstract double CalculateKalorie(double IloscKalorie);
+            public abstract double CalculateKalorie(double IloscKalorie, double Ilosc);
 
             //public abstract double CalculateBialka();
             //public abstract double CalculateTluszcze();
@@ -38,7 +38,7 @@ namespace AplikacjaDietetyczna.Klasy
                 else return "";
             }
 
-            public override double CalculateKalorie(double IloscKalorie)
+            public override double CalculateKalorie(double IloscKalorie, double Ilosc)
             {
                 return 0;
             }
@@ -81,9 +81,9 @@ namespace AplikacjaDietetyczna.Klasy
             {
                 return _posilek.GetFullName(PosilekNazwa, Produkty);
             }
-            public override double CalculateKalorie(double IloscKalorie)
+            public override double CalculateKalorie(double IloscKalorie, double Ilosc)
             {
-                return _posilek.CalculateKalorie(IloscKalorie);
+                return _posilek.CalculateKalorie(IloscKalorie,Ilosc);
             }
 
             //public override double CalculateBialka()
@@ -111,9 +111,9 @@ namespace AplikacjaDietetyczna.Klasy
 
             }
 
-            public override double CalculateKalorie(double IloscKalorie)
+            public override double CalculateKalorie(double IloscKalorie, double Ilosc)
             {
-                return base.CalculateKalorie(IloscKalorie) + IloscKalorie;
+                return base.CalculateKalorie(IloscKalorie, Ilosc) + IloscKalorie * Ilosc;
             }
             //public override double CalculateBialka(double IloscBialka)
             //{
