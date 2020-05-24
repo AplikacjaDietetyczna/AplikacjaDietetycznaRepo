@@ -26,6 +26,7 @@ namespace AplikacjaDietetyczna.UserControls
             InitializeComponent();
         }
 
+      
         public DateTime GetDate(int n)
         {
 
@@ -38,15 +39,19 @@ namespace AplikacjaDietetyczna.UserControls
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
+            string SniadanieProdukty = "";
+            string SniadanieNazwa = "";
+            int SniadanieIlosc = 0;
+            string SniadaniePodanie = "";
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
             {
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
-                sniadanie = new Dekorator.PosilekDekorator(sniadanie);
+                sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
                 AzureDB.openConnection();
-                AzureDB.sql = "SELECT NazwaProduktu, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
+                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -54,20 +59,20 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        //UserID = AzureDB.rd["ID_User"].ToString();
-                        //Console.WriteLine(UserID); //Do testowania
                         SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
-
-                        // SniadanieKalorie.Text =  Convert.ToString(SniadanieKalorieD);
                         Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
-                        //SniadanieProdukty.Text += AzureDB.rd["NazwaProduktu"].ToString();
-                        SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
+
+                        SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
+                        SniadanieProdukty += AzureDB.rd["NazwaProduktu"].ToString();
+                        SniadanieProdukty += ", ";
+                        SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                        SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
+                        //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
                     }
                 }
                 AzureDB.closeConnection();
 
-
-
+                SniadanieTekst.Text = sniadanie.GetName(SniadanieNazwa, SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
 
 
             }
@@ -86,6 +91,8 @@ namespace AplikacjaDietetyczna.UserControls
             String message = "Nie udało się wyliczyć zapotrzebowania dziennego";
             try
             {
+
+
                 //Harris-Benedict
                 //Mężczyźni: 66.5 + (13.75 * waga) + (5.003 * wzrost) - (6.775 * wiek) Kobiety: 655.1 + (9.563 * waga) + (1.85 * wzrost)-(4.676 * wiek)
                 double DzienneZapotrzebowanie = 0;
@@ -114,14 +121,6 @@ namespace AplikacjaDietetyczna.UserControls
 
                 message = ex.Message.ToString();
             }
-
-
-
-
-
-
-
-
 
 
         }
@@ -131,18 +130,22 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
 
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
-            double SniadanieKalorieD =0;
+            double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
+            string SniadanieProdukty = "";
+            string SniadanieNazwa = "";
+            int SniadanieIlosc = 0;
+            string SniadaniePodanie = "";
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
             {
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
-                sniadanie = new Dekorator.PosilekDekorator(sniadanie);
+                sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
                 AzureDB.openConnection();
-                AzureDB.sql = "SELECT NazwaProduktu, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
+                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -150,21 +153,21 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        //UserID = AzureDB.rd["ID_User"].ToString();
-                        //Console.WriteLine(UserID); //Do testowania
                         SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
-                       
-                       // SniadanieKalorie.Text =  Convert.ToString(SniadanieKalorieD);
                         Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
-                        //SniadanieProdukty.Text += AzureDB.rd["NazwaProduktu"].ToString();
-                       sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
+
+                        SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
+                        SniadanieProdukty += AzureDB.rd["NazwaProduktu"].ToString();
+                        SniadanieProdukty += ", ";
+                        SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                        SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
+                        //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
                     }
                 }
                 AzureDB.closeConnection();
 
-                SniadanieProdukty.Text = sniadanie.GetName("Jajko");
-               
-                Console.WriteLine(sniadanie.GetName("Jajko"));
+                SniadanieTekst.Text = sniadanie.GetName(SniadanieNazwa, SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+
 
             }
             catch (Exception ex)
@@ -182,6 +185,8 @@ namespace AplikacjaDietetyczna.UserControls
             String message = "Nie udało się wyliczyć zapotrzebowania dziennego";
             try
             {
+
+
                 //Harris-Benedict
                 //Mężczyźni: 66.5 + (13.75 * waga) + (5.003 * wzrost) - (6.775 * wiek) Kobiety: 655.1 + (9.563 * waga) + (1.85 * wzrost)-(4.676 * wiek)
                 double DzienneZapotrzebowanie = 0;
@@ -210,8 +215,6 @@ namespace AplikacjaDietetyczna.UserControls
 
                 message = ex.Message.ToString();
             }
-
-
         }
 
         private void PlusDay(object sender, RoutedEventArgs e)

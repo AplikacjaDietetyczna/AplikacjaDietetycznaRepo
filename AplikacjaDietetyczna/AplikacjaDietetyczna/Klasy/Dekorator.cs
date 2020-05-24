@@ -17,15 +17,20 @@ namespace AplikacjaDietetyczna.Klasy
             //public abstract double CalculateBialka();
             //public abstract double CalculateTluszcze();
             public abstract double CalculateWeglowodany(double IloscWeglowodany);
-            public abstract string GetName(string PosilekNazwa);
+            public abstract string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie);
 
         }
 
         public class TypPosilku : Posilek
         {
-            public override string GetName(string PosilekNazwa)
+            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
             {
-                return PosilekNazwa;
+                if (PosilekNazwa != "")
+                {
+                    return PosilekNazwa + ": ";
+                }
+                else return "";
+               
             }
 
             //public override double CalculateKalorie()
@@ -63,9 +68,9 @@ namespace AplikacjaDietetyczna.Klasy
                 _posilek = posilek;
             }
 
-            public override string GetName(string PosilekNazwa)
+            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
             {
-                return _posilek.GetName(PosilekNazwa);
+                return _posilek.GetName(PosilekNazwa, Produkty, Ilosc, Podanie);
             }
 
             //public override double CalculateKalorie()
@@ -112,9 +117,19 @@ namespace AplikacjaDietetyczna.Klasy
             //    return base.CalculateTluszcze() + IloscTluszcze;
             //}
 
-            public override string GetName(string PosilekNazwa)
+            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
             {
-                return base.GetName(PosilekNazwa)  + PosilekNazwa;
+                if (Ilosc == 0)
+                {
+                    return "";
+                }
+
+                if(Ilosc == 1)
+                {
+                    return base.GetName(PosilekNazwa, Produkty, Ilosc, Podanie) +Podanie +" "+ Produkty;
+                }
+                else
+                    return base.GetName(PosilekNazwa, Produkty, Ilosc, Podanie) + Ilosc + " x " + Podanie +" "+Produkty;
             }
 
             public override double CalculateWeglowodany(double IloscWeglowodany)

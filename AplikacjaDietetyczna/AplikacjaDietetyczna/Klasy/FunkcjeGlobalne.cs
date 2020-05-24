@@ -22,4 +22,5 @@ namespace AplikacjaDietetyczna.Klasy
 
         public static int CurrentDate { get; set; }
     }
+
 }

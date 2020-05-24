@@ -99,7 +99,7 @@
 
 
                 <TextBox FontFamily="Helvetica"
-                         x:Name="SniadanieProdukty"
+                         x:Name="SniadanieTekst"
                          FontSize="25"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -109,7 +109,7 @@
                          BorderThickness="0"
                          Width="1066"
                          Opacity="0.8"
-                         Text="Produkty:" Margin="34,120,119.8,406"
+                         Text="" Margin="34,120,119.8,406"
                          IsReadOnly="True"/>
 
 
