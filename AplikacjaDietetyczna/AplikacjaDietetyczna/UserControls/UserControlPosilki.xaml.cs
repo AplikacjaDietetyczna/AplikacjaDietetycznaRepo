@@ -43,6 +43,7 @@ namespace AplikacjaDietetyczna.UserControls
             string SniadanieNazwa = "";
             int SniadanieIlosc = 0;
             string SniadaniePodanie = "";
+            string SniadanieBebg = "";
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
@@ -61,18 +62,30 @@ namespace AplikacjaDietetyczna.UserControls
                     {
                         SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
                         Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
+                        if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
+                        {
+                            SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                            SniadanieBebg = "";
+                        }
 
                         SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
-                        SniadanieProdukty += AzureDB.rd["NazwaProduktu"].ToString();
+
+
+                        SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
                         SniadanieProdukty += ", ";
                         SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
                         SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
+                        SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                        Console.WriteLine(SniadanieBebg);
                         //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
+
+
                     }
                 }
                 AzureDB.closeConnection();
 
-                SniadanieTekst.Text = sniadanie.GetName(SniadanieNazwa, SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+
 
 
             }
@@ -121,7 +134,6 @@ namespace AplikacjaDietetyczna.UserControls
 
                 message = ex.Message.ToString();
             }
-
 
         }
 
@@ -137,6 +149,7 @@ namespace AplikacjaDietetyczna.UserControls
             string SniadanieNazwa = "";
             int SniadanieIlosc = 0;
             string SniadaniePodanie = "";
+            string SniadanieBebg = "";
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
@@ -155,18 +168,30 @@ namespace AplikacjaDietetyczna.UserControls
                     {
                         SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
                         Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
+                        if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
+                        {
+                            SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                            SniadanieBebg = "";
+                        }
 
                         SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
-                        SniadanieProdukty += AzureDB.rd["NazwaProduktu"].ToString();
+
+                    
+                        SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
                         SniadanieProdukty += ", ";
                         SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
                         SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
+                        SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                        Console.WriteLine(SniadanieBebg);
                         //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
+
+                        
                     }
                 }
                 AzureDB.closeConnection();
 
-                SniadanieTekst.Text = sniadanie.GetName(SniadanieNazwa, SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                SniadanieTekst.Text +=  sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+
 
 
             }
@@ -215,6 +240,8 @@ namespace AplikacjaDietetyczna.UserControls
 
                 message = ex.Message.ToString();
             }
+
+
         }
 
         private void PlusDay(object sender, RoutedEventArgs e)

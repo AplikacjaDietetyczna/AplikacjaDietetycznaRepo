@@ -17,20 +17,25 @@ namespace AplikacjaDietetyczna.Klasy
             //public abstract double CalculateBialka();
             //public abstract double CalculateTluszcze();
             public abstract double CalculateWeglowodany(double IloscWeglowodany);
-            public abstract string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie);
+            public abstract string GetName(string Produkty, int Ilosc, string Podanie);
 
+            public abstract string GetFullName(string PosilekNazwa, string Produkty);
         }
 
         public class TypPosilku : Posilek
         {
-            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
+            public override string GetName(string Produkty, int Ilosc, string Podanie)
+            {
+               return "";
+               
+            }
+            public override string GetFullName(string PosilekNazwa, string Produkty)
             {
                 if (PosilekNazwa != "")
                 {
                     return PosilekNazwa + ": ";
                 }
                 else return "";
-               
             }
 
             //public override double CalculateKalorie()
@@ -68,11 +73,14 @@ namespace AplikacjaDietetyczna.Klasy
                 _posilek = posilek;
             }
 
-            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
+            public override string GetName(string Produkty, int Ilosc, string Podanie)
             {
-                return _posilek.GetName(PosilekNazwa, Produkty, Ilosc, Podanie);
+                return _posilek.GetName(Produkty, Ilosc, Podanie);
             }
-
+            public override string GetFullName(string PosilekNazwa, string Produkty)
+            {
+                return _posilek.GetFullName(PosilekNazwa, Produkty);
+            }
             //public override double CalculateKalorie()
             //{
             //    return _posilek.CalculateKalorie();
@@ -117,7 +125,7 @@ namespace AplikacjaDietetyczna.Klasy
             //    return base.CalculateTluszcze() + IloscTluszcze;
             //}
 
-            public override string GetName(string PosilekNazwa, string Produkty, int Ilosc, string Podanie)
+            public override string GetName( string Produkty, int Ilosc, string Podanie)
             {
                 if (Ilosc == 0)
                 {
@@ -126,11 +134,17 @@ namespace AplikacjaDietetyczna.Klasy
 
                 if(Ilosc == 1)
                 {
-                    return base.GetName(PosilekNazwa, Produkty, Ilosc, Podanie) +Podanie +" "+ Produkty;
+                    return base.GetName(Produkty, Ilosc, Podanie) +Podanie +" "+ Produkty;
                 }
                 else
-                    return base.GetName(PosilekNazwa, Produkty, Ilosc, Podanie) + Ilosc + " x " + Podanie +" "+Produkty;
+                    return base.GetName(Produkty, Ilosc, Podanie) + Ilosc + " x " + Podanie +" "+Produkty;
             }
+
+            public override string GetFullName(string PosilekNazwa, string Produkty)
+            {
+                return base.GetFullName(PosilekNazwa, Produkty) + Produkty;
+            }
+
 
             public override double CalculateWeglowodany(double IloscWeglowodany)
             {

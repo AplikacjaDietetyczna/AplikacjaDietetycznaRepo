@@ -100,7 +100,7 @@
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieTekst"
-                         FontSize="25"
+                         FontSize="18"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
