@@ -36,6 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
+            string TypPosilku = "Sniadanie";
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
@@ -52,7 +53,7 @@ namespace AplikacjaDietetyczna.UserControls
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
                 AzureDB.openConnection();
-                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
+                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -60,8 +61,7 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
-                        Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
+                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
                         if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                         {
                             SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
@@ -76,15 +76,16 @@ namespace AplikacjaDietetyczna.UserControls
                         SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
                         SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
                         SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
-                        Console.WriteLine(SniadanieBebg);
-                        //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
+
 
 
                     }
                 }
                 AzureDB.closeConnection();
 
-                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+
 
 
 
@@ -142,6 +143,7 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
 
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
+            string TypPosilku = "Sniadanie";
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
@@ -158,7 +160,7 @@ namespace AplikacjaDietetyczna.UserControls
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
                 AzureDB.openConnection();
-                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "'";
+                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -166,8 +168,7 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        SniadanieKalorieD += Convert.ToDouble(AzureDB.rd["Kalorie"].ToString());
-                        Console.WriteLine(AzureDB.rd["Kalorie"].ToString());
+                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
                         if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                         {
                             SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
@@ -176,21 +177,25 @@ namespace AplikacjaDietetyczna.UserControls
 
                         SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
 
-                    
+
                         SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
                         SniadanieProdukty += ", ";
                         SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
                         SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
                         SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
-                        Console.WriteLine(SniadanieBebg);
-                        //SniadanieProdukty.Text = sniadanie.GetName(AzureDB.rd["NazwaProduktu"].ToString());
 
-                        
+
+
                     }
                 }
                 AzureDB.closeConnection();
 
-                SniadanieTekst.Text +=  sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+
+                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+
+
+             
 
 
 

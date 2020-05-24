@@ -150,6 +150,8 @@
 
                 <Button Content="" HorizontalAlignment="Left" Margin="1195,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay"/>
                 <Button Content="Dodaj" HorizontalAlignment="Left" Margin="1143,76,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+                <TextBlock x:Name="ObiadKalorie" HorizontalAlignment="Left" Margin="197,249,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="70" Width="160"/>
+                <TextBlock x:Name="ObiadTekst" HorizontalAlignment="Left" Margin="413,304,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="104" Width="303"/>
 
 
             </Grid>
