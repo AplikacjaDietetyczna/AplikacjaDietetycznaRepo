@@ -11,6 +11,10 @@
     <Grid>
         <StackPanel>
             <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="267*"/>
+                </Grid.ColumnDefinitions>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxCurrentDate"
@@ -23,10 +27,14 @@
                          BorderThickness="0"
                          Width="212"
                          Opacity="0.8"
-                         Text="Dzisiejsza data" Margin="504,10,503.8,505"
-                         IsReadOnly="True"/>
+                         Text="Dzisiejsza data" Margin="351.9,10,503.8,505"
+                         IsReadOnly="True" Grid.Column="1"/>
 
-                <TextBox FontFamily="Helvetica"
+                <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
                          x:Name="Sniadanie"
                          FontSize="32"
                          FontWeight="Light"
@@ -40,7 +48,7 @@
                          Text="Śniadanie" Margin="29,70,1043.8,445"
                          IsReadOnly="True"/>
 
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieKalorie"
                          FontSize="25"
                          FontWeight="Light"
@@ -54,7 +62,7 @@
                          Text="0 kcal" Margin="200,76,865.8,453"
                          IsReadOnly="True"/>
 
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieBialka"
                          FontSize="25"
                          FontWeight="Light"
@@ -68,7 +76,7 @@
                          Text="0 g" Margin="350,76,711.8,453"
                          IsReadOnly="True"/>
 
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieTluszcze"
                          FontSize="25"
                          FontWeight="Light"
@@ -82,7 +90,7 @@
                          Text="0 g" Margin="500,76,553.8,453"
                          IsReadOnly="True"/>
 
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieWeglowodany"
                          FontSize="25"
                          FontWeight="Light"
@@ -98,8 +106,100 @@
 
 
 
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieTekst"
+                         FontSize="18"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="834"
+                         Opacity="1"
+                         Text="" Margin="34,120,352,406.2"
+                         IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Lunch"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="147"
+                         Opacity="1"
+                         Text="Lunch" Margin="29,70,1043.8,445"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="LunchKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="200,76,865.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="LunchBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="350,76,711.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="LunchTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="500,76,553.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="LunchWdeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="650,76,395.8,453"
+                         IsReadOnly="True"/>
+
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="LunchTekst"
                          FontSize="18"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -107,28 +207,47 @@
                          Background="Transparent"
                          Foreground="Black"
                          BorderThickness="0"
-                         Width="1066"
+                         Width="828"
                          Opacity="0.8"
-                         Text="" Margin="34,120,119.8,406"
+                         Text="" Margin="34,120,358,406.2"
                          IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,200,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
 
 
-                <TextBox FontFamily="Helvetica"
-                         x:Name="Lunch"
-                         FontSize="25"
-                         FontWeight="Light"
-                         HorizontalAlignment="Center"
-                         HorizontalContentAlignment="Left"
-                         Background="Transparent"
-                         Foreground="Black"
-                         BorderThickness="0"
-                         Width="158"
-                         Opacity="0.8"
-                         Text="Lunch" Margin="34,226,1027.8,304"
-                         IsReadOnly="True"/>
-
-                <TextBox FontFamily="Helvetica"
+                        <TextBox FontFamily="Helvetica"
                          x:Name="Obiad"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="121"
+                         Opacity="1"
+                         Text="Obiad" Margin="29,70,1070,445.2"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="ObiadKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="200,76,865.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="ObiadBialka"
                          FontSize="25"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -138,20 +257,246 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="Obiad" Margin="34,313,1027.8,217"
+                         Text="0 g" Margin="350,76,711.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="ObiadTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="500,76,553.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="ObiadWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="650,76,395.8,453"
                          IsReadOnly="True"/>
 
 
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="ObiadTekst"
+                         FontSize="18"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="836"
+                         Opacity="0.8"
+                         Text="" Margin="34,120,350,406.2"
+                         IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Przekaska"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="136"
+                         Opacity="1"
+                         Text="Przekąska" Margin="29,70,1055,445.2"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="PrzekaskaKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="200,76,865.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="PrzekaskaBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="350,76,711.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="PrzekaskaTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="500,76,553.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="PrzekaskaWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="650,76,395.8,453"
+                         IsReadOnly="True"/>
+
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="PrzekaskaTekst"
+                         FontSize="18"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="807"
+                         Opacity="0.8"
+                         Text="" Margin="34,120,379,406.2"
+                         IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Kolacja"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="147"
+                         Opacity="1"
+                         Text="Kolacja" Margin="29,70,1043.8,445"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="200,76,865.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="350,76,711.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="500,76,553.8,453"
+                         IsReadOnly="True"/>
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="0 g" Margin="650,76,395.8,453"
+                         IsReadOnly="True"/>
+
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaTekst"
+                         FontSize="18"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="812"
+                         Opacity="0.8"
+                         Text="" Margin="34,120,374,406.2"
+                         IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
 
 
 
 
                 <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
 
-                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay"/>
-                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="1143,76,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-                <TextBlock x:Name="ObiadKalorie" HorizontalAlignment="Left" Margin="197,249,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="70" Width="160"/>
-                <TextBlock x:Name="ObiadTekst" HorizontalAlignment="Left" Margin="413,304,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="104" Width="303"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="1042.9,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay" Grid.Column="1"/>
+                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="734,72,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
 
 
             </Grid>

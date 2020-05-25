@@ -36,7 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
-            string TypPosilku = "Sniadanie";
+            int TypPosilku = 1;
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
@@ -52,40 +52,65 @@ namespace AplikacjaDietetyczna.UserControls
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
-                AzureDB.openConnection();
-                AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
-                AzureDB.cmd.CommandText = AzureDB.sql;
-                AzureDB.rd = AzureDB.cmd.ExecuteReader();
-
-                if (AzureDB.rd.HasRows)
+                while (TypPosilku < 6)
                 {
-                    while (AzureDB.rd.Read())
+
+
+
+                    AzureDB.openConnection();
+                    AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.rd = AzureDB.cmd.ExecuteReader();
+
+                    if (AzureDB.rd.HasRows)
                     {
-                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
-                        if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
+                        while (AzureDB.rd.Read())
                         {
-                            SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                            SniadanieBebg = "";
+                            SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                            SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
+                            if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
+                            {
+                                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                                SniadanieBebg = "";
+                            }
+
+                            SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
+
+
+                            SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
+                            SniadanieProdukty += ", ";
+                            SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                            SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
+                            SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+
+
+
                         }
-
-                        SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
-
-
-                        SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
-                        SniadanieProdukty += ", ";
-                        SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
-                        SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
-                        SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                    }
+                    AzureDB.closeConnection();
 
 
+                    if (TypPosilku == 3)
+                    {
+                        ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
+                        ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        TypPosilku = 6;
+                    }
 
+
+                    if (TypPosilku == 1)
+                    {
+                        SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
+                        SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        SniadanieBebg = "";
+                        SniadanieProdukty = "";
+                        SniadanieKalorieD = 0;
+                        SniadanieNazwa = "";
+                        TypPosilku = TypPosilku + 2;
                     }
                 }
-                AzureDB.closeConnection();
-
-                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-
 
 
 
@@ -141,9 +166,10 @@ namespace AplikacjaDietetyczna.UserControls
         private void MinusDay(object sender, RoutedEventArgs e)
         {
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
-
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
-            string TypPosilku = "Sniadanie";
+
+
+            int TypPosilku = 1;
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
@@ -159,6 +185,11 @@ namespace AplikacjaDietetyczna.UserControls
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
+                while(TypPosilku <6)
+                {
+
+                
+
                 AzureDB.openConnection();
                 AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
                 AzureDB.cmd.CommandText = AzureDB.sql;
@@ -168,7 +199,8 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     while (AzureDB.rd.Read())
                     {
-                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()));
+                        SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                        SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()),SniadanieIlosc);
                         if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                         {
                             SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
@@ -191,11 +223,27 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.closeConnection();
 
 
-                    SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                    SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                    if (TypPosilku == 3)
+                    {
+                        ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
+                        ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        TypPosilku =6;
+                    }
 
 
-             
+                    if (TypPosilku == 1)
+                    {
+                        SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
+                        SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        SniadanieBebg = "";
+                        SniadanieProdukty = "";
+                        SniadanieKalorieD = 0;
+                        SniadanieNazwa = "";
+                        TypPosilku = TypPosilku + 2;
+                    }
+                }
 
 
 
