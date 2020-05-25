@@ -120,15 +120,6 @@
                          Opacity="1"
                          Text="" Margin="34,120,352,406.2"
                          IsReadOnly="True"/>
-                        <ComboBox HorizontalAlignment="Left"
-                                  x:Name="SniadanieCombo"
-                                  ItemsSource="{Binding cbItems}"
-                                  SelectedItem="{Binding SelectedcbItem}"
-                                  Height="30"
-                                  Margin="730,76,0,0"
-                                  VerticalAlignment="Top"
-                                  Width="193" 
-                                  DropDownClosed="SniadanieCombo_DropDownClosed"/>
                     </Grid>
                 </StackPanel>
 
@@ -221,14 +212,6 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,358,406.2"
                          IsReadOnly="True"/>
-                        <ComboBox HorizontalAlignment="Left"                                  
-                                  ItemsSource="{Binding cbItems}"
-                                  SelectedItem="{Binding SelectedcbItem}"
-                                  x:Name="LunchCombo"
-                                  Height="30"
-                                  Margin="730,76,0,0"
-                                  VerticalAlignment="Top"
-                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -321,14 +304,6 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,350,406.2"
                          IsReadOnly="True"/>
-                        <ComboBox HorizontalAlignment="Left"
-                                  ItemsSource="{Binding cbItems}"
-                                  SelectedItem="{Binding SelectedcbItem}"
-                                  x:Name="ObiadCombo"
-                                  Height="30"
-                                  Margin="730,76,0,0"
-                                  VerticalAlignment="Top"
-                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -421,14 +396,6 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,379,406.2"
                          IsReadOnly="True"/>
-                        <ComboBox HorizontalAlignment="Left"
-                                  ItemsSource="{Binding cbItems}"
-                                  SelectedItem="{Binding SelectedcbItem}"
-                                  x:Name="PrzekaskaCombo"
-                                  Height="30"
-                                  Margin="730,76,0,0"
-                                  VerticalAlignment="Top"
-                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -521,14 +488,6 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,374,406.2"
                          IsReadOnly="True"/>
-                        <ComboBox HorizontalAlignment="Left"
-                                  ItemsSource="{Binding cbItems}"
-                                  SelectedItem="{Binding SelectedcbItem}"
-                                  x:Name="KolacjaCombo"
-                                  Height="30"
-                                  Margin="730,76,0,0"
-                                  VerticalAlignment="Top"
-                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
