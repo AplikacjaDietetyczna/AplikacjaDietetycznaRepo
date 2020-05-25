@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -401,7 +402,7 @@ namespace AplikacjaDietetyczna.UserControls
             SelectedcbItem = cbItem;
             cbItems.Add(cbItem);
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Produkty";
+            AzureDB.sql = "Select * from Posilki";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
@@ -409,14 +410,31 @@ namespace AplikacjaDietetyczna.UserControls
             AzureDB.da.Fill(AzureDB.dt);
             foreach (DataRow dataRow in AzureDB.dt.Rows)
             {
-                cbItems.Add(new ComboBoxItem { Content = dataRow["NazwaProduktu"].ToString() });
+                cbItems.Add(new ComboBoxItem { Content = dataRow["Nazwa"].ToString() });
             }
             AzureDB.closeConnection();
 
         }
-        private void SniadanieCombo_MouseDown(object sender, MouseButtonEventArgs e)
-        {
 
+
+        private void SniadanieCombo_DropDownClosed(object sender, EventArgs e)
+        {
+            AzureDB.openConnection();
+            //mnozenie wszystkich Produktów posilków
+            AzureDB.sql = "SELECT SUM(Kalorie*Ilosc) as Kalorie, SUM(Weglowodany*Ilosc) as Weglowodany, SUM(Bialka*Ilosc) as Bialka, SUM(Tluszcze*Ilosc) as Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Nazwa='" + SniadanieCombo.Text.ToString() + "' group by Nazwa";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                SniadanieKalorie.Text = AzureDB.dt.Rows[0]["Kalorie"].ToString() + "kcal";
+                SniadanieBialka.Text = AzureDB.dt.Rows[0]["Bialka"].ToString() + " g";
+                SniadanieTluszcze.Text = AzureDB.dt.Rows[0]["Tluszcze"].ToString() + "g";
+                SniadanieWeglowodany.Text = AzureDB.dt.Rows[0]["Weglowodany"].ToString() + "g";
+            }
+            AzureDB.closeConnection();
         }
     }
 }

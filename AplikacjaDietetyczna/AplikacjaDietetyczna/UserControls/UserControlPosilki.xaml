@@ -122,13 +122,13 @@
                          IsReadOnly="True"/>
                         <ComboBox HorizontalAlignment="Left"
                                   x:Name="SniadanieCombo"
-                                  MouseDown="SniadanieCombo_MouseDown"
                                   ItemsSource="{Binding cbItems}"
                                   SelectedItem="{Binding SelectedcbItem}"
                                   Height="30"
                                   Margin="730,76,0,0"
                                   VerticalAlignment="Top"
-                                  Width="193"/>
+                                  Width="193" 
+                                  DropDownClosed="SniadanieCombo_DropDownClosed"/>
                     </Grid>
                 </StackPanel>
 
