@@ -58,7 +58,7 @@
                                   Margin="230,76,0,0"
                                   VerticalAlignment="Top"
                                   Width="193" 
-                                  RenderTransformOrigin="-0.462,0.607"/>
+                                  RenderTransformOrigin="-0.462,0.607" DropDownClosed="ProduktCombo_DropDownClosed"/>
                     </Grid>
                 </StackPanel>
 
@@ -83,9 +83,9 @@
 
 
                         <ComboBox HorizontalAlignment="Left"                                  
-                                  ItemsSource="{Binding cbItems2}"
-                                  SelectedItem="{Binding SelectedcbItem2}"
+                                  SelectedIndex="0"
                                   x:Name="IloscCombo"
+                                  IsSynchronizedWithCurrentItem="True"
                                   Height="30"
                                   Margin="230,76,0,0"
                                   VerticalAlignment="Top"

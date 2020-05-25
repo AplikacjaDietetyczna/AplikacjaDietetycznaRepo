@@ -26,6 +26,7 @@ namespace AplikacjaDietetyczna.UserControls
     {
         public ObservableCollection<ComboBoxItem> cbItems1 { get; set; }//potrzebne do uzupełniania comboboxow
         public ComboBoxItem SelectedcbItem1 { get; set; }//potrzebne do uzupełniania comboboxow
+
         private void UzupelnijComboBoxy()
         {
             DataContext = this;
@@ -51,6 +52,30 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
             UzupelnijComboBoxy();
+        }
+
+        private void ProduktCombo_DropDownClosed(object sender, EventArgs e)
+        {
+            IloscCombo.Items.Clear();
+            String podanie = "";
+            AzureDB.openConnection();
+            AzureDB.sql = "Select Podanie from Produkty WHERE NazwaProduktu='"+ProduktCombo.Text.ToString()+"'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                podanie = AzureDB.dt.Rows[0]["Podanie"].ToString();
+            }
+            AzureDB.closeConnection();
+            IloscCombo.Items.Add("Ilośćx(" + podanie + ")");
+            for(int i=1;i<11;i++)
+            {
+                IloscCombo.Items.Add(new ComboBoxItem { Content = i});
+            }
+            IloscCombo.SelectedIndex = 0;
         }
     }
 }
