@@ -106,6 +106,7 @@
 
 
 
+
                         <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieTekst"
                          FontSize="18"
@@ -119,6 +120,15 @@
                          Opacity="1"
                          Text="" Margin="34,120,352,406.2"
                          IsReadOnly="True"/>
+                        <ComboBox HorizontalAlignment="Left"
+                                  x:Name="SniadanieCombo"
+                                  MouseDown="SniadanieCombo_MouseDown"
+                                  ItemsSource="{Binding cbItems}"
+                                  SelectedItem="{Binding SelectedcbItem}"
+                                  Height="30"
+                                  Margin="730,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -211,6 +221,14 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,358,406.2"
                          IsReadOnly="True"/>
+                        <ComboBox HorizontalAlignment="Left"                                  
+                                  ItemsSource="{Binding cbItems}"
+                                  SelectedItem="{Binding SelectedcbItem}"
+                                  x:Name="LunchCombo"
+                                  Height="30"
+                                  Margin="730,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -303,6 +321,14 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,350,406.2"
                          IsReadOnly="True"/>
+                        <ComboBox HorizontalAlignment="Left"
+                                  ItemsSource="{Binding cbItems}"
+                                  SelectedItem="{Binding SelectedcbItem}"
+                                  x:Name="ObiadCombo"
+                                  Height="30"
+                                  Margin="730,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -395,6 +421,14 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,379,406.2"
                          IsReadOnly="True"/>
+                        <ComboBox HorizontalAlignment="Left"
+                                  ItemsSource="{Binding cbItems}"
+                                  SelectedItem="{Binding SelectedcbItem}"
+                                  x:Name="PrzekaskaCombo"
+                                  Height="30"
+                                  Margin="730,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -487,6 +521,14 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,374,406.2"
                          IsReadOnly="True"/>
+                        <ComboBox HorizontalAlignment="Left"
+                                  ItemsSource="{Binding cbItems}"
+                                  SelectedItem="{Binding SelectedcbItem}"
+                                  x:Name="KolacjaCombo"
+                                  Height="30"
+                                  Margin="730,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
                     </Grid>
                 </StackPanel>
 
@@ -496,7 +538,7 @@
                 <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
 
                 <Button Content="" HorizontalAlignment="Left" Margin="1042.9,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay" Grid.Column="1"/>
-                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="734,72,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
+                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="933,470,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
 
 
             </Grid>

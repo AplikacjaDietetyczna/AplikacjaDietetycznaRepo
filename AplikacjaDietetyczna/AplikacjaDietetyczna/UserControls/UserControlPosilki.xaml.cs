@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AplikacjaDietetyczna.Klasy;
+using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -21,9 +25,13 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlPosilki : UserControl
     {
+        public ObservableCollection<ComboBoxItem> cbItems { get; set; }//potrzebne do uzupełniania comboboxow
+        public ComboBoxItem SelectedcbItem { get; set; }//potrzebne do uzupełniania comboboxow
         public UserControlPosilki()
         {
             InitializeComponent();
+            UzupelnijComboBoxy();
+
         }
 
       
@@ -381,6 +389,33 @@ namespace AplikacjaDietetyczna.UserControls
 
         //        message = ex.Message.ToString();
         //    }
+
+        }
+        private void UzupelnijComboBoxy()
+        {
+
+            DataContext = this;
+
+            cbItems = new ObservableCollection<ComboBoxItem>();
+            var cbItem = new ComboBoxItem { Content = "Wybierz" };
+            SelectedcbItem = cbItem;
+            cbItems.Add(cbItem);
+            AzureDB.openConnection();
+            AzureDB.sql = "Select * from Produkty";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            foreach (DataRow dataRow in AzureDB.dt.Rows)
+            {
+                cbItems.Add(new ComboBoxItem { Content = dataRow["NazwaProduktu"].ToString() });
+            }
+            AzureDB.closeConnection();
+
+        }
+        private void SniadanieCombo_MouseDown(object sender, MouseButtonEventArgs e)
+        {
 
         }
     }

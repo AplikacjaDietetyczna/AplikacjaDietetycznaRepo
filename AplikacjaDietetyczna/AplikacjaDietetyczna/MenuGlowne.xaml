@@ -54,12 +54,6 @@
                         </ListViewItem>
                         <ListViewItem x:Name="Dodaj"  Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Wyświetl tabele" VerticalAlignment="Center" Margin="20 10"/>
-                                <iconPacks:PackIconMaterial Kind="Wrench" Height="25" Width="25" Margin="10"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem x:Name="Sql"  Height="60">
-                            <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="SQL" VerticalAlignment="Center" Margin="20 10"/>
                                 <iconPacks:PackIconMaterial Kind="Wrench" Height="25" Width="25" Margin="10"/>
                             </StackPanel>
