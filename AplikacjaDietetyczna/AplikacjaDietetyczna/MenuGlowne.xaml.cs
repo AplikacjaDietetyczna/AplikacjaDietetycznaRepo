@@ -21,8 +21,6 @@ namespace AplikacjaDietetyczna
     /// </summary>
     public partial class MenuGlowne : Window
     {
-        DataGrid grid = null;//potrzebne do wyświetlana danych
-        TextBox tekstsql;
         public MenuGlowne()
         {
             InitializeComponent();
@@ -66,14 +64,6 @@ namespace AplikacjaDietetyczna
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
-                case "Sql": //otwieranie query
-                    TextBox tekstsql = new TextBox();
-                    GridMain.Children.Add(tekstsql);
-                    tekstsql.Name = "sqlzapytanie";
-                    tekstsql.Text = "INSERT INTO [dbo].[Posilki] (Nazwa,Kalorie) VALUES('Nazwa', ilosc kalorii);";
-                    tekstsql.TextWrapping = TextWrapping.Wrap;
-                    tekstsql.KeyDown += Zatwierdz;
-                    break;
                 case "ItemPodsumowanie":
                     usc = new UserControls.UserControlPodsumowanie();
                     GridMain.Children.Add(usc);
@@ -86,6 +76,10 @@ namespace AplikacjaDietetyczna
                     UserControl calc = new UserControls.UserControlKalkulkator();
                     GridMain.Children.Add(calc);
                     break;
+                case "Nowy_Posilek":
+                    UserControl add = new UserControls.UserControlDodaj();
+                    GridMain.Children.Add(add);
+                    break;
                 case "Posilki":
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
@@ -96,35 +90,5 @@ namespace AplikacjaDietetyczna
                     break;
             }
         }
-
-        private void Zatwierdz(Object sender, KeyEventArgs e)//wykonywanie query za pomoca entera
-        {
-            if (e.Key == Key.Enter)
-            {
-                try
-                {
-                    TextBox txtbox1; //potrzebne by przenies text z elementu docelowego
-                    txtbox1 = (TextBox)e.Source;
-                    string zapytanie;
-                    zapytanie = txtbox1.Text;
-                    AzureDB.openConnection();
-                    AzureDB.sql = zapytanie;
-                    AzureDB.cmd.CommandType = CommandType.Text;
-                    AzureDB.cmd.CommandText = AzureDB.sql;
-                    AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
-                    AzureDB.closeConnection();
-                    MessageBox.Show("Komenda została wykonana poprawnie", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
-                    //czysci textboxa po poprawnym wykonaniu
-                    TextBox tb = (TextBox)sender;
-                    tb.Text = string.Empty;
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Niepoprawne Query", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-        }
-
-
     }
 }

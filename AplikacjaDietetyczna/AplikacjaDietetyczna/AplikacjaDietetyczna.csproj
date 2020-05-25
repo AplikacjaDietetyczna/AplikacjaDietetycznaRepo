@@ -111,6 +111,9 @@
     <Compile Include="SqlQuery.xaml.cs">
       <DependentUpon>SqlQuery.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlDodaj.xaml.cs">
+      <DependentUpon>UserControlDodaj.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlKalkulkator.xaml.cs">
       <DependentUpon>UserControlKalkulkator.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rejestracja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlDodaj.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

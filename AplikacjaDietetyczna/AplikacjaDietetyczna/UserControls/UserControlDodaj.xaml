@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="AplikacjaDietetyczna.UserControls.UserControlDodaj"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1220">
+
+    <Grid>
+        <StackPanel>
+            <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="267*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox FontFamily="Helvetica"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="308"
+                         Opacity="0.8"
+                         Text="Dodawanie Posiłków" Margin="352,10,408,505"
+                         IsReadOnly="True" Grid.Column="1"/>
+
+                <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Sniadanie"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="147"
+                         Opacity="0.8"
+                         Text="Produkt" Margin="29,70,1043.8,445"
+                         IsReadOnly="True"/>
+
+
+
+
+
+                        <ComboBox HorizontalAlignment="Left"
+                                  x:Name="ProduktCombo"
+                                  ItemsSource="{Binding cbItems1}"
+                                  SelectedItem="{Binding SelectedcbItem1}"
+                                  Height="30"
+                                  Margin="230,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193" 
+                                  RenderTransformOrigin="-0.462,0.607"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Lunch"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="147"
+                         Opacity="1"
+                         Text="Ilość" Margin="29,70,1043.8,445"
+                         IsReadOnly="True"/>
+
+
+
+                        <ComboBox HorizontalAlignment="Left"                                  
+                                  ItemsSource="{Binding cbItems2}"
+                                  SelectedItem="{Binding SelectedcbItem2}"
+                                  x:Name="IloscCombo"
+                                  Height="30"
+                                  Margin="230,76,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="193"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,200,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid/>
+                </StackPanel>
+
+                <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid/>
+                </StackPanel>
+
+                <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="KolacjaTekst"
+                         FontSize="18"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="812"
+                         Opacity="0.8"
+                         Text="" Margin="34,120,374,406.2"
+                         IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+                <Button Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="-120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
+                <Button Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="300,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.ColumnSpan="2"/>
+
+
+            </Grid>
+
+
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+</UserControl>
