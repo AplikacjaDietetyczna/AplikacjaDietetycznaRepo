@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\
 AplikacjaDietetyczna
 none
 false
 DEBUG;TRACE
-C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
-9290547972
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
+10-977027915
 
-151146055621
-27-948788595
-SqlQuery.xaml;Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlKalkulkator.xaml;UserControls\UserControlPodsumowanie.xaml;UserControls\UserControlPosilki.xaml;UserControls\UserControlSQL.xaml;
+16252846503
+271194468898
+SqlQuery.xaml;Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlDodaj.xaml;UserControls\UserControlKalkulkator.xaml;UserControls\UserControlPodsumowanie.xaml;UserControls\UserControlPosilki.xaml;UserControls\UserControlSQL.xaml;
 
 False
 

@@ -106,6 +106,7 @@
 
 
 
+
                         <TextBox FontFamily="Helvetica"
                          x:Name="SniadanieTekst"
                          FontSize="18"
@@ -496,7 +497,6 @@
                 <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
 
                 <Button Content="" HorizontalAlignment="Left" Margin="1042.9,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay" Grid.Column="1"/>
-                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="734,72,0,0" VerticalAlignment="Top" Width="50" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
 
 
             </Grid>
