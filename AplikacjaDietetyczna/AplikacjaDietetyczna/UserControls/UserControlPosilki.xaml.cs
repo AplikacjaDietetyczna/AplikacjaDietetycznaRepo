@@ -60,6 +60,7 @@ namespace AplikacjaDietetyczna.UserControls
             int SniadanieIlosc = 0;
             string SniadaniePodanie = "";
             string SniadanieBebg = "";
+            string Dwa = ""; //Jak są przynajmniej dwa posiłki w trakcie jednego np. obiadu to służy do łączenia
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
@@ -86,13 +87,10 @@ namespace AplikacjaDietetyczna.UserControls
                             SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
                             if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                             {
-                                SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                                Dwa += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                                 SniadanieBebg = "";
                             }
-
                             SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
-
-
                             SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
                             SniadanieProdukty += ", ";
                             SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
@@ -106,30 +104,78 @@ namespace AplikacjaDietetyczna.UserControls
                     AzureDB.closeConnection();
 
 
+                    if (TypPosilku == 5)
+                    {
+                        KolacjaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        if (KolacjaTekst.Text != "")
+                        {
+                            KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
+                        }
+                        KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
+                        KolacjaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+
+                        TypPosilku++;
+                    }
+
+
+
+                    if (TypPosilku == 4)
+                    {
+                        PrzekaskaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        if (PrzekaskaTekst.Text != "")
+                        {
+                            PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
+                        }
+                        PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
+                        PrzekaskaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+
+                        TypPosilku++;
+                    }
+
+
                     if (TypPosilku == 3)
                     {
+                        ObiadTekst.Text += Dwa;
                         ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        if (ObiadTekst.Text != "")
+                        {
+                            //ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
+                        }
                         ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
                         ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        SniadanieBebg = "";
-                        SniadanieProdukty = "";
-                        SniadanieKalorieD = 0;
-                        SniadanieNazwa = "";
-                        TypPosilku = 6;
+
+                        TypPosilku++;
+                    }
+
+
+                    if (TypPosilku == 2)
+                    {
+                        LunchTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        if(LunchTekst.Text != "")
+                        {
+                            LunchTekst.Text = LunchTekst.Text.Remove(LunchTekst.Text.Length - 2);
+                        }
+                       
+                        LunchKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        TypPosilku++;
                     }
 
 
                     if (TypPosilku == 1)
                     {
+                        SniadanieTekst.Text += Dwa;
                         SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
                         SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        SniadanieBebg = "";
-                        SniadanieProdukty = "";
-                        SniadanieKalorieD = 0;
-                        SniadanieNazwa = "";
-                        TypPosilku = TypPosilku + 2;
+                        TypPosilku++;
                     }
+
+
+                    SniadanieBebg = "";
+                    SniadanieProdukty = "";
+                    SniadanieKalorieD = 0;
+                    SniadanieNazwa = "";
+
                 }
 
 
