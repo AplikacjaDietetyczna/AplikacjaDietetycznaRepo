@@ -16,18 +16,14 @@
                 </LinearGradientBrush>
 
             </Border.Background>
-            
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="53" Margin="448,354,0,0" VerticalAlignment="Top" Width="95"/>
+
         </Border>
 
         <StackPanel VerticalAlignment="Center" Height="185" Margin="0,27,0,428">
-            <iconPacks:PackIconMaterial Kind="Food"
-                                 VerticalAlignment="Center"
-                                 HorizontalAlignment="Center"
-                                 Foreground="White" Height="100"
-                                 Width="200"/>
             <TextBlock Text="Kalkulator BMI" FontWeight="Light"
-                                FontFamily="hervetica" FontSize="40" Foreground="White"
-                                HorizontalAlignment="Center" Height="66" Margin="60,0,0,0" Width="300" />
+                                FontFamily="hervetica" FontSize="66" Foreground="White"
+                                HorizontalAlignment="Center" Height="115" Margin="200,0,312,0" Width="418" />
         </StackPanel>
 
         <StackPanel RenderTransformOrigin="0.501,0.556" Margin="0,193,0,0">
@@ -156,7 +152,7 @@
                          Height="30"
                          Margin="400,0,0,0"
                          IsReadOnly="True"/>
-                
+
             </StackPanel>
             <Border Width="250"
                         Height="2"
@@ -237,7 +233,7 @@
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
-                
+
             </StackPanel>
 
             <Border Width="250"
@@ -249,7 +245,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,-10,0,0" Height="50"/>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="69" RenderTransformOrigin="0.502,0.232">
                 <Button x:Name="policzBMI" Width="160" Height="55" Content="Policz BMI" FontSize="25" Margin="300,0,30,0" Click="policzBMI_Click"/>
-                <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0"/>
+                <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0" Click="pobierzDane_Click"/>
 
             </StackPanel>
 

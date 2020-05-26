@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplikacjaDietetyczna.Klasy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AplikacjaDietetyczna;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -94,10 +98,12 @@ namespace AplikacjaDietetyczna.UserControls
                 otyloscII.Background = Brushes.Transparent;
             }
 
-            //float Waga = float.Parse(waga.Text);
-            //float Wzrost = float.Parse(wzrost.Text);
-            //float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
-            //wynik.Text = Convert.ToString(Wynik);
+        }
+
+        private void pobierzDane_Click(object sender, RoutedEventArgs e)
+        {
+
+
         }
     }
 }
