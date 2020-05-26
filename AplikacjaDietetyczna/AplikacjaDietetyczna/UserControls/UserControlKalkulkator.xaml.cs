@@ -42,10 +42,56 @@ namespace AplikacjaDietetyczna.UserControls
                 float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
                 wynik.Text = Convert.ToString(Wynik);
                 poleError.Text = "";
+                if(Wynik < 18.5)
+                {
+                    niedowaga.Background = Brushes.Red;
+                }
+                else
+                {
+                    niedowaga.Background = Brushes.Transparent;
+                }
+                if (Wynik >= 18.5 && Wynik < 24.9)
+                {
+                    norma.Background = Brushes.Green;
+                }
+                else
+                {
+                    norma.Background = Brushes.Transparent;
+                }
+                if (Wynik >= 25.0 && Wynik < 29.9)
+                {
+                    nadwaga.Background = Brushes.Red;
+                }
+                else
+                {
+                    nadwaga.Background = Brushes.Transparent;
+                }
+                if (Wynik >= 30 && Wynik < 34.9)
+                {
+                    otyloscI.Background = Brushes.Red;
+                }
+                else
+                {
+                    otyloscI.Background = Brushes.Transparent;
+                }
+                if (Wynik >= 35)
+                {
+                    otyloscII.Background = Brushes.Red;
+                }
+                else
+                {
+                    otyloscII.Background = Brushes.Transparent;
+                }
+
             }
             else
             {
                 poleError.Text = "Źle podana waga lub wzrost!";
+                niedowaga.Background = Brushes.Transparent;
+                norma.Background = Brushes.Transparent;
+                nadwaga.Background = Brushes.Transparent;
+                otyloscI.Background = Brushes.Transparent;
+                otyloscII.Background = Brushes.Transparent;
             }
 
             //float Waga = float.Parse(waga.Text);
