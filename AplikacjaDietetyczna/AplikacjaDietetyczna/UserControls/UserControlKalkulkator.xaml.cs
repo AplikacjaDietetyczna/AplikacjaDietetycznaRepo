@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,18 +30,28 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void policzBMI_Click(object sender, RoutedEventArgs e)
         {
-            Type t = typeof(string);
-            if (waga.Text.GetType() == t || wzrost.Text.GetType() == t)
-            {
-                poleError.Text = "Źle podana waga lub wzrost!";
-            }
-            else
+            
+            Regex wagaRegex = new Regex(@"^[0-9]*$");
+            Match wagaMatch = wagaRegex.Match(waga.Text);
+            Regex wzrostRegex = new Regex(@"^[0-9]*$");
+            Match wzrostMatch = wzrostRegex.Match(wzrost.Text);
+            if ( wagaMatch.Success || wzrostMatch.Success)
             {
                 float Waga = float.Parse(waga.Text);
                 float Wzrost = float.Parse(wzrost.Text);
                 float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
                 wynik.Text = Convert.ToString(Wynik);
+                poleError.Text = "";
             }
+            else
+            {
+                poleError.Text = "Źle podana waga lub wzrost!";
+            }
+
+            //float Waga = float.Parse(waga.Text);
+            //float Wzrost = float.Parse(wzrost.Text);
+            //float Wynik = Waga / ((Wzrost / 10000) * Wzrost);
+            //wynik.Text = Convert.ToString(Wynik);
         }
     }
 }
