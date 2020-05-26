@@ -39,10 +39,18 @@ namespace AplikacjaDietetyczna.UserControls
             return dateTime;
         }
 
+        private void Czyszczenie()
+        {
+            SniadanieTekst.Text = "  ";
+            ObiadTekst.Text = "  ";
+            SniadanieKalorie.Text = "0 kcal";
+            ObiadKalorie.Text = "0 kcal";
 
+        }
 
         private void Posilki()
         {
+
             int TypPosilku = 1;
             double SniadanieKalorieD = 0;
             SniadanieKalorie.Text = "0 kcal";
@@ -56,12 +64,13 @@ namespace AplikacjaDietetyczna.UserControls
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
             {
+               
                 Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
                 sniadanie = new Dekorator.ProduktDekorator(sniadanie);
 
                 while (TypPosilku < 6)
                 {
-
+                    
 
 
                     AzureDB.openConnection();
@@ -102,6 +111,10 @@ namespace AplikacjaDietetyczna.UserControls
                         ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
                         ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        SniadanieBebg = "";
+                        SniadanieProdukty = "";
+                        SniadanieKalorieD = 0;
+                        SniadanieNazwa = "";
                         TypPosilku = 6;
                     }
 
@@ -183,6 +196,7 @@ namespace AplikacjaDietetyczna.UserControls
         {
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
+            Czyszczenie();
             Posilki();
             
            
@@ -194,7 +208,7 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
 
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate + 1);
-
+           Czyszczenie();
             Posilki();
 
 
