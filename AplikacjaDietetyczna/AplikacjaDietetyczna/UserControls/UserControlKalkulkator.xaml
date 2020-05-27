@@ -16,18 +16,14 @@
                 </LinearGradientBrush>
 
             </Border.Background>
-            
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="53" Margin="448,354,0,0" VerticalAlignment="Top" Width="95"/>
+
         </Border>
 
         <StackPanel VerticalAlignment="Center" Height="185" Margin="0,27,0,428">
-            <iconPacks:PackIconMaterial Kind="Food"
-                                 VerticalAlignment="Center"
-                                 HorizontalAlignment="Center"
-                                 Foreground="White" Height="100"
-                                 Width="200"/>
             <TextBlock Text="Kalkulator BMI" FontWeight="Light"
-                                FontFamily="hervetica" FontSize="40" Foreground="White"
-                                HorizontalAlignment="Center" Height="66" Margin="60,0,0,0" Width="300" />
+                                FontFamily="hervetica" FontSize="66" Foreground="White"
+                                HorizontalAlignment="Center" Height="115" Margin="200,0,312,0" Width="418" />
         </StackPanel>
 
         <StackPanel RenderTransformOrigin="0.501,0.556" Margin="0,193,0,0">
@@ -53,6 +49,21 @@
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
+                <TextBox x:Name="niedowaga" FontFamily="Helvetica"              
+                         Text="Niedowaga: poniżej 18,5"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="400,0,0,0"
+                         IsReadOnly="True"/>
             </StackPanel>
 
             <Border Width="250"
@@ -82,7 +93,21 @@
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
 
-
+                <TextBox x:Name="norma" FontFamily="Helvetica"              
+                         Text="Norma: 18,5 - 24,9"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="400,0,0,0"
+                         IsReadOnly="True"/>
             </StackPanel>
 
             <Border Width="250"
@@ -112,12 +137,28 @@
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
+                <TextBox x:Name="nadwaga" FontFamily="Helvetica"              
+                         Text="Nadwaga: 25,0 - 19,9"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="400,0,0,0"
+                         IsReadOnly="True"/>
+
             </StackPanel>
             <Border Width="250"
                         Height="2"
                         Background="White"
                         Opacity="0.6" Margin="-885,0,0,0"/>
-            <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
                 <TextBox x:Name="poleError" FontFamily="Helvetica"              
                          Text=""
@@ -134,11 +175,45 @@
                          Height="30"
                          Margin="40,0,0,0"
                          IsReadOnly="True"/>
+                <TextBox x:Name="otyloscI" FontFamily="Helvetica"              
+                         Text="Otyłość I: 30,0 - 34,9"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="416,0,0,0"
+                         IsReadOnly="True"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="otyloscII" FontFamily="Helvetica"              
+                         Text="Otyłość II: powyżej 35"
+                        
+                         FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="235"
+                         Opacity="0.9"
+                         Height="30"
+                         Margin="693,0,0,0"
+                         IsReadOnly="True"/>
+
 
 
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,60,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
 
                 <TextBox x:Name="wynik" FontFamily="Helvetica"
                          Text="Wynik"
@@ -158,6 +233,7 @@
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
+
             </StackPanel>
 
             <Border Width="250"
@@ -166,10 +242,10 @@
                         Opacity="0.6" Margin="-885,0,0,0"/>
 
 
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="50"/>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="128" RenderTransformOrigin="0.501,0.453">
+            <StackPanel Orientation="Horizontal" Margin="0,-10,0,0" Height="50"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="69" RenderTransformOrigin="0.502,0.232">
                 <Button x:Name="policzBMI" Width="160" Height="55" Content="Policz BMI" FontSize="25" Margin="300,0,30,0" Click="policzBMI_Click"/>
-                <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0"/>
+                <Button x:Name="pobierzDane" Width="250" Height="55" Content="Pobierz dane z profilu" FontSize="25" Margin="-700,0,0,0" Click="pobierzDane_Click"/>
 
             </StackPanel>
 
