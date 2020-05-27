@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
 
@@ -15,7 +15,7 @@
                     <ColumnDefinition Width="267*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox FontFamily="Helvetica"
+                <TextBox x:Name="NowyPosilek" FontFamily="Helvetica"
                          FontSize="32"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -23,9 +23,9 @@
                          Background="Transparent"
                          Foreground="Black"
                          BorderThickness="0"
-                         Width="308"
+                         Width="706"
                          Opacity="0.8"
-                         Text="Dodawanie Posiłków" Margin="352,10,408,505"
+                         Text="Twoj nowy Posiłek: " Margin="352,10,10,587"
                          IsReadOnly="True" Grid.Column="1"/>
 
                 <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
@@ -101,35 +101,68 @@
                     <Grid/>
                 </StackPanel>
 
-                <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
-                    <Grid>
 
+                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="-120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click"/>
+                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.Column="1" Click="DodajPosilek_Click"/>
+                <TextBox FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="209"
+                    Opacity="0.8"
+                    Text="Nazwa posiłku:" Margin="10,334,1001,268"
+                    IsReadOnly="True" Grid.ColumnSpan="2"/>
+                <TextBox FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="209"
+                    Opacity="0.8"
+                    Text="Rodzaj posiłku:" Margin="10,377,1001,225"
+                    IsReadOnly="True" Grid.ColumnSpan="2"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText"
+                    Watermark="Wprowadź nazwe"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                         Height="38" Margin="72,334,744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <ComboBox HorizontalAlignment="Left"                                  
+                    SelectedIndex="0"
+                    x:Name="RodzajPosilku"
+                    IsSynchronizedWithCurrentItem="True"
+                    Height="30"
+                    Margin="77,385,0,0"
+                    VerticalAlignment="Top"
+                    Width="193" Grid.Column="1" DropDownClosed="RodzajPosilku_Drop">
+                    <ComboBoxItem Tag="1">Śniadanie</ComboBoxItem>
+                    <ComboBoxItem Tag="2">Lunch</ComboBoxItem>
+                    <ComboBoxItem Tag="3">Obiad</ComboBoxItem>
+                    <ComboBoxItem Tag="4">Przekąska</ComboBoxItem>
+                    <ComboBoxItem Tag="5">Kolacja</ComboBoxItem>
 
-
-                        <TextBox FontFamily="Helvetica"
-                         x:Name="KolacjaTekst"
-                         FontSize="18"
-                         FontWeight="Light"
-                         HorizontalAlignment="Center"
-                         HorizontalContentAlignment="Left"
-                         Background="Transparent"
-                         Foreground="Black"
-                         BorderThickness="0"
-                         Width="812"
-                         Opacity="0.8"
-                         Text="" Margin="34,120,374,406.2"
-                         IsReadOnly="True"/>
-                    </Grid>
-                </StackPanel>
-                <Button Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="-120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466"/>
-                <Button Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="300,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.ColumnSpan="2"/>
+                </ComboBox>
 
 
             </Grid>
 
 
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
+        <TextBlock x:Name="Podsumowanie" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
 
 
 
