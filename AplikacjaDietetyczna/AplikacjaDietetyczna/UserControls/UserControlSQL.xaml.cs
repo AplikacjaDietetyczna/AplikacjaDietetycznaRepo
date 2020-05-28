@@ -22,6 +22,8 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlSQL : UserControl
     {
+
+
         public UserControlSQL()
         {
             InitializeComponent();
@@ -55,6 +57,11 @@ namespace AplikacjaDietetyczna.UserControls
             {
                 MessageBox.Show("Błąd: "+ex.Message, "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ZapisaneSQL_closing(object sender, EventArgs e)
+        {
+            Select.Text = ((ComboBoxItem)ZapisaneSQL.SelectedItem).Tag.ToString();
         }
     }
 }

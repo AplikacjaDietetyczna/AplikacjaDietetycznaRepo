@@ -33,7 +33,7 @@ namespace AplikacjaDietetyczna.UserControls
         public List<string> ProduktIlosc = new List<string>();
 
 
-        private void UzupelnijComboBoxy()
+        private void UzupelnijComboBoxy()//uzupelnia combobox produktow wszystkimi dostepnymi w bazie danych produktami
         {
             DataContext = this;
             cbItems1 = new ObservableCollection<ComboBoxItem>();
@@ -60,7 +60,7 @@ namespace AplikacjaDietetyczna.UserControls
             UzupelnijComboBoxy();
         }
 
-        private void ProduktCombo_DropDownClosed(object sender, EventArgs e)
+        private void ProduktCombo_DropDownClosed(object sender, EventArgs e)//uzupelnia pierwsze pole ilosci jak liczona jest ilosc danego produktu
         {
             IloscCombo.Items.Clear();
             String podanie = "";
@@ -90,20 +90,33 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void DodajProdukt_Click(object sender, RoutedEventArgs e)
         {
-            if(ProduktCombo.SelectedIndex!=0&&IloscCombo.SelectedIndex!=0)
+            ProduktID.Add(((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString());
+            ProduktIlosc.Add(IloscCombo.Text);
+            if (ProduktID.Count != ProduktID.Distinct().Count())//wymagane bo klucz glowny na polach(id_produktu i idposilku) nie przepuszcza 2 takich samych produktow do posilku
             {
-                Podsumowanie.Text += "Produkt: " + ProduktCombo.Text.ToString()+"\n";
-                Podsumowanie.Text += "Ilość: " + IloscCombo.Text.ToString() + "\n\n";
-                ProduktID.Add(((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString());
-                ProduktIlosc.Add(IloscCombo.Text);
-                IloscCombo.SelectedIndex = 0;
-                ProduktCombo.SelectedIndex = 0;
+                ProduktID.RemoveAt(ProduktID.Count - 1);
+                ProduktIlosc.RemoveAt(ProduktIlosc.Count - 1);
+                MessageBox.Show("W posiłku nie mogą być 2 takie same produkty", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                if (ProduktCombo.SelectedIndex != 0 && IloscCombo.SelectedIndex != 0)
+                {
+                    Podsumowanie.Text += "Produkt: " + ProduktCombo.Text.ToString() + "\n";
+                    Podsumowanie.Text += "Ilość: " + IloscCombo.Text.ToString() + "\n\n";
+                    IloscCombo.SelectedIndex = 0;
+                    ProduktCombo.SelectedIndex = 0;
+                }
+                else
+                {
+                    MessageBox.Show("Prosze wybrać poprawną ilość lub produkt", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
         private void DodajPosilek_Click(object sender, RoutedEventArgs e)
         {
-            if (NazwaPosilkuText.Text != ""&&Podsumowanie.Text!="")
+            if (NazwaPosilkuText.Text != ""&&Podsumowanie.Text!=""&& ((ComboBoxItem)RodzajPosilku.SelectedItem).Tag.ToString()!="0")
             {
                 try
                 {
@@ -114,7 +127,7 @@ namespace AplikacjaDietetyczna.UserControls
                     AzureDB.sql = zapytaniePosilek;
                     AzureDB.cmd.CommandType = CommandType.Text;
                     AzureDB.cmd.CommandText = AzureDB.sql;
-                    AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                    AzureDB.cmd.ExecuteNonQuery();
                     AzureDB.closeConnection();
                     AzureDB.openConnection();
                     AzureDB.sql = "SELECT TOP 1 * FROM Posilki ORDER BY ID_Posilku DESC";
@@ -135,7 +148,7 @@ namespace AplikacjaDietetyczna.UserControls
                         AzureDB.sql = zapytanieProdukty;
                         AzureDB.cmd.CommandType = CommandType.Text;
                         AzureDB.cmd.CommandText = AzureDB.sql;
-                        AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                        AzureDB.cmd.ExecuteNonQuery();
                     }
                     AzureDB.closeConnection();
                     MessageBox.Show("Posiłek został prawidołowo dodany", "Posiłek", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -147,6 +160,10 @@ namespace AplikacjaDietetyczna.UserControls
                 {
                     MessageBox.Show("Błąd: " + ex.Message, "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Prosze podaj nazwę/rodzaj posiłku lub dodaj conajmniej 1 produkt", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

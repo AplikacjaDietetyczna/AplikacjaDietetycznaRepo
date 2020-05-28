@@ -16,6 +16,13 @@
                 </LinearGradientBrush>
 
             </Border.Background>
+            <ComboBox x:Name="ZapisaneSQL" HorizontalAlignment="Left" Height="30" Margin="958,46,0,0" VerticalAlignment="Top" Width="252" SelectedIndex="0" DropDownClosed="ZapisaneSQL_closing">
+                <ComboBoxItem Tag="select * from Posilki">Wyświetl Posilki</ComboBoxItem>
+                <ComboBoxItem Tag="select * from Produkty">Wyświetl Produkty</ComboBoxItem>
+                <ComboBoxItem Tag="select * from Users">Wyświetl Użtkowników</ComboBoxItem>
+                <ComboBoxItem Tag="INSERT INTO Produkty (Kalorie,Bialka,Tluszcze,Weglowodany,Podanie,NazwaProduktu,Zatwierdzone) VALUES ([int], [int], [int], [int],'[varchar(255)]','[varchar(255)]',1);">Dodaj Produkt</ComboBoxItem>
+                <ComboBoxItem Tag="UPDATE Produkty SET Kalorie/Bialka/Tluszcze/Weglowodany/Podanie/NazwaProduktu/Zatwierdzone = [wartosc] WHERE ID_Produktu = [int];">Modyfikuj Produkt</ComboBoxItem>
+            </ComboBox>
 
         </Border>
 
@@ -36,14 +43,15 @@
                          Background="Transparent"
                          Foreground="White"
                          BorderThickness="0"
-                         Width="235"
+                         Width="800"
                          Opacity="0.9"
                          Height="60"
                          Margin="40,0,0,0"
-                         AcceptsReturn="True"/>
-                <Button x:Name="policzBMI" Width="200" Height="60" Content="Wykonaj" FontSize="25" Margin="700,0,0,0" Click="Click_sql"/>
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"/>
+                <Button x:Name="policzBMI" Width="115" Height="60" Content="Wykonaj" FontSize="25" Margin="0,0,0,0" Click="Click_sql"/>
             </StackPanel>
-            
+
 
             <Border Width="1220"
                         Height="2"
