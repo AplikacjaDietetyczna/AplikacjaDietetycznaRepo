@@ -43,9 +43,14 @@ namespace AplikacjaDietetyczna.UserControls
         {
             SniadanieTekst.Text = "  ";
             ObiadTekst.Text = "  ";
+            LunchTekst.Text = "  ";
+            KolacjaTekst.Text = "  ";
+            PrzekaskaTekst.Text = "  ";
             SniadanieKalorie.Text = "0 kcal";
             ObiadKalorie.Text = "0 kcal";
-
+            LunchKalorie.Text = "0 kcal";
+            PrzekaskaKalorie.Text = "0 kcal";
+            KolacjaKalorie.Text = "0 kcal";
         }
 
         private void Posilki()
@@ -106,12 +111,13 @@ namespace AplikacjaDietetyczna.UserControls
 
                     if (TypPosilku == 5)
                     {
+                        KolacjaTekst.Text += Dwa;
                         KolacjaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         if (KolacjaTekst.Text != "")
                         {
                             KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
                         }
-                        KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
+                       // KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
                         KolacjaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
 
                         TypPosilku++;
@@ -121,12 +127,13 @@ namespace AplikacjaDietetyczna.UserControls
 
                     if (TypPosilku == 4)
                     {
+                        PrzekaskaTekst.Text += Dwa;
                         PrzekaskaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         if (PrzekaskaTekst.Text != "")
                         {
                             PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
                         }
-                        PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
+                        //PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
                         PrzekaskaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
 
                         TypPosilku++;
@@ -139,9 +146,9 @@ namespace AplikacjaDietetyczna.UserControls
                         ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         if (ObiadTekst.Text != "")
                         {
-                            //ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
+                            ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
                         }
-                        ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
+                        
                         ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
 
                         TypPosilku++;
@@ -150,6 +157,7 @@ namespace AplikacjaDietetyczna.UserControls
 
                     if (TypPosilku == 2)
                     {
+                        LunchTekst.Text += Dwa;
                         LunchTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         if(LunchTekst.Text != "")
                         {
@@ -175,7 +183,7 @@ namespace AplikacjaDietetyczna.UserControls
                     SniadanieProdukty = "";
                     SniadanieKalorieD = 0;
                     SniadanieNazwa = "";
-
+                    Dwa = "";
                 }
 
 
