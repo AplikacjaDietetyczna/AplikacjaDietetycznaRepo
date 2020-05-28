@@ -90,28 +90,31 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void DodajProdukt_Click(object sender, RoutedEventArgs e)
         {
-            ProduktID.Add(((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString());
-            ProduktIlosc.Add(IloscCombo.Text);
-            if (ProduktID.Count != ProduktID.Distinct().Count())//wymagane bo klucz glowny na polach(id_produktu i idposilku) nie przepuszcza 2 takich samych produktow do posilku
-            {
-                ProduktID.RemoveAt(ProduktID.Count - 1);
-                ProduktIlosc.RemoveAt(ProduktIlosc.Count - 1);
-                MessageBox.Show("W posiłku nie mogą być 2 takie same produkty", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            {
+
+
                 if (ProduktCombo.SelectedIndex != 0 && IloscCombo.SelectedIndex != 0)
+                {
+                    ProduktID.Add(((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString());
+                    ProduktIlosc.Add(IloscCombo.Text);
+                if (ProduktID.Count != ProduktID.Distinct().Count())//wymagane bo klucz glowny na polach(id_produktu i idposilku) nie przepuszcza 2 takich samych produktow do posilku
+                {
+                    ProduktID.RemoveAt(ProduktID.Count - 1);
+                    ProduktIlosc.RemoveAt(ProduktIlosc.Count - 1);
+                    MessageBox.Show("W posiłku nie mogą być 2 takie same produkty", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
                 {
                     Podsumowanie.Text += "Produkt: " + ProduktCombo.Text.ToString() + "\n";
                     Podsumowanie.Text += "Ilość: " + IloscCombo.Text.ToString() + "\n\n";
                     IloscCombo.SelectedIndex = 0;
                     ProduktCombo.SelectedIndex = 0;
                 }
+                }
                 else
                 {
                     MessageBox.Show("Prosze wybrać poprawną ilość lub produkt", "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-            }
+
         }
 
         private void DodajPosilek_Click(object sender, RoutedEventArgs e)
@@ -155,6 +158,9 @@ namespace AplikacjaDietetyczna.UserControls
                     Podsumowanie.Text = "";
                     ProduktID.Clear();
                     ProduktIlosc.Clear();
+                    NowyPosilek.Text = "";
+                    ProduktCombo.SelectedIndex = 0;
+                    IloscCombo.SelectedIndex = 0;
                 }
                 catch(Exception ex)
                 {
