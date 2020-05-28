@@ -24,11 +24,6 @@ namespace AplikacjaDietetyczna.Klasy
         public static SqlDataReader rd;
         public static DataTable dt;
         public static SqlDataAdapter da;
-        public static string InfoMessage;
-        void myConnection_InfoMessage(object sender, SqlInfoMessageEventArgs e)
-        {
-            myStringBuilderDefinedAsClassVariable.AppendLine(e.Message);
-        }
         public static void openConnection()
         {
             try
