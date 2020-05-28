@@ -22,6 +22,8 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlSQL : UserControl
     {
+
+
         public UserControlSQL()
         {
             InitializeComponent();
@@ -49,12 +51,18 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.dt = new DataTable();
                 AzureDB.da.Fill(AzureDB.dt);
                 SelectDataGrid.ItemsSource = AzureDB.dt.DefaultView;
+                MessageBox.Show(AzureDB.InfoMessage, "Edycja", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 AzureDB.closeConnection();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Błąd: "+ex.Message, "Edycja", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ZapisaneSQL_closing(object sender, EventArgs e)
+        {
+            Select.Text = ((ComboBoxItem)ZapisaneSQL.SelectedItem).Tag.ToString();
         }
     }
 }

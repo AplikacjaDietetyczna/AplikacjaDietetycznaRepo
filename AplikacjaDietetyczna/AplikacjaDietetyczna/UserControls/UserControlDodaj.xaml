@@ -149,6 +149,7 @@
                     Margin="77,385,0,0"
                     VerticalAlignment="Top"
                     Width="193" Grid.Column="1" DropDownClosed="RodzajPosilku_Drop">
+                    <ComboBoxItem Tag="0">Wybierz rodzaj</ComboBoxItem>
                     <ComboBoxItem Tag="1">Śniadanie</ComboBoxItem>
                     <ComboBoxItem Tag="2">Lunch</ComboBoxItem>
                     <ComboBoxItem Tag="3">Obiad</ComboBoxItem>
