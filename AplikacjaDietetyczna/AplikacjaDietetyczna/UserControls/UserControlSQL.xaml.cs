@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -22,12 +23,16 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlSQL : UserControl
     {
-
-
-        public UserControlSQL()
+        private void conn_InfoMessage(object sender, SqlInfoMessageEventArgs e)
         {
-            InitializeComponent();
+            txtMessages.Text = "\n" + e.Message;
+        }
+        private void Start()
+        {
+
             AzureDB.openConnection();
+            AzureDB.con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
+            AzureDB.con.FireInfoMessageEventOnUserErrors = true;
             AzureDB.sql = Select.Text;
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
@@ -35,15 +40,21 @@ namespace AplikacjaDietetyczna.UserControls
             AzureDB.dt = new DataTable();
             AzureDB.da.Fill(AzureDB.dt);
             SelectDataGrid.ItemsSource = AzureDB.dt.DefaultView;
-            AzureDB.closeConnection();
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Start();
+        }
 
+        public UserControlSQL()
+        {
+            InitializeComponent();
         }
        
         private void Click_sql(object sender, RoutedEventArgs e)
         {
             try
             {
-                AzureDB.openConnection();
                 AzureDB.sql = Select.Text;
                 AzureDB.cmd.CommandType = CommandType.Text;
                 AzureDB.cmd.CommandText = AzureDB.sql;
@@ -51,7 +62,6 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.dt = new DataTable();
                 AzureDB.da.Fill(AzureDB.dt);
                 SelectDataGrid.ItemsSource = AzureDB.dt.DefaultView;
-                AzureDB.closeConnection();
             }
             catch (Exception ex)
             {
