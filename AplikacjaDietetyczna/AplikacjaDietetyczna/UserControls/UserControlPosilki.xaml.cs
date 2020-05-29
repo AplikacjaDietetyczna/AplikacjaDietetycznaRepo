@@ -217,10 +217,10 @@ namespace AplikacjaDietetyczna.UserControls
 
                 message2 = ex.Message.ToString();
             }
+        }
 
-
-
-
+        private void Zapotrzebowanie()
+        {
 
 
             //Zapotrzebowanie dzienne
@@ -262,10 +262,10 @@ namespace AplikacjaDietetyczna.UserControls
 
 
 
-
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
             Posilki();
+            Zapotrzebowanie();
 
         }
 
@@ -275,6 +275,7 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate - 1);
             Czyszczenie();
             Posilki();
+            Zapotrzebowanie();
             
            
 
@@ -285,8 +286,9 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
 
             FunkcjeGlobalne.Data = Convert.ToString(FunkcjeGlobalne.CurrentDate + 1);
-           Czyszczenie();
+            Czyszczenie();
             Posilki();
+            Zapotrzebowanie();
 
 
         }
