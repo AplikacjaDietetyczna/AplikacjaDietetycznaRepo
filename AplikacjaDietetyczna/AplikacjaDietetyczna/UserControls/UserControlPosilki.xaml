@@ -125,6 +125,10 @@
 
                 <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="171*"/>
+                            <ColumnDefinition Width="134*"/>
+                        </Grid.ColumnDefinitions>
 
 
                         <TextBox FontFamily="Helvetica"
@@ -138,7 +142,7 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
-                         Text="Lunch" Margin="29,70,1043.8,445"
+                         Text="Lunch" Margin="29,70,507.7,444.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -152,7 +156,7 @@
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="200,76,865.8,453"
+                         Text="0 kcal" Margin="197,76,326.7,452.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -166,7 +170,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="350,76,711.8,453"
+                         Text="0 g" Margin="350,76,175.7,452.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -180,11 +184,11 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="500,76,553.8,453"
+                         Text="0 g" Margin="504,76,21.7,452.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
-                         x:Name="LunchWdeglowodany"
+                         x:Name="LunchWeglowodany"
                          FontSize="25"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -194,8 +198,8 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="650,76,395.8,453"
-                         IsReadOnly="True"/>
+                         Text="0 g" Margin="658,76,404,452.2"
+                         IsReadOnly="True" Grid.ColumnSpan="2"/>
 
 
 
@@ -211,7 +215,7 @@
                          Width="828"
                          Opacity="0.8"
                          Text="" Margin="34,120,358,406.2"
-                         IsReadOnly="True"/>
+                         IsReadOnly="True" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
 

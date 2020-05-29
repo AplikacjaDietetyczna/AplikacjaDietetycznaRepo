@@ -58,7 +58,10 @@ namespace AplikacjaDietetyczna.UserControls
 
             int TypPosilku = 1;
             double SniadanieKalorieD = 0;
-            SniadanieKalorie.Text = "0 kcal";
+            double SniadanieWeglowodanyD = 0;
+            double SniadanieBialkaD = 0;
+            double SniadanieTluszczeD = 0;
+
             string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
             string SniadanieProdukty = "";
             string SniadanieNazwa = "";
@@ -89,7 +92,10 @@ namespace AplikacjaDietetyczna.UserControls
                         while (AzureDB.rd.Read())
                         {
                             SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
-                            SniadanieKalorieD += sniadanie.CalculateKalorie(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
+                            SniadanieKalorieD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
+                            SniadanieWeglowodanyD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Weglowodany"].ToString()), SniadanieIlosc);
+                            SniadanieBialkaD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Bialka"].ToString()), SniadanieIlosc);
+                            SniadanieTluszczeD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Tluszcze"].ToString()), SniadanieIlosc);
                             if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
                             {
                                 Dwa += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
@@ -119,6 +125,9 @@ namespace AplikacjaDietetyczna.UserControls
                         }
                        // KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
                         KolacjaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        KolacjaWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
+                        KolacjaTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
+                        KolacjaBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
 
                         TypPosilku++;
                     }
@@ -135,6 +144,9 @@ namespace AplikacjaDietetyczna.UserControls
                         }
                         //PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
                         PrzekaskaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        PrzekaskaWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
+                        PrzekaskaTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
+                        PrzekaskaBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
 
                         TypPosilku++;
                     }
@@ -150,7 +162,9 @@ namespace AplikacjaDietetyczna.UserControls
                         }
                         
                         ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-
+                        ObiadWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
+                        ObiadTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
+                        ObiadBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
                         TypPosilku++;
                     }
 
@@ -165,6 +179,9 @@ namespace AplikacjaDietetyczna.UserControls
                         }
                        
                         LunchKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        LunchWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
+                        LunchTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
+                        LunchBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
                         TypPosilku++;
                     }
 
@@ -175,6 +192,9 @@ namespace AplikacjaDietetyczna.UserControls
                         SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
                         SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
                         SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
+                        SniadanieWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
+                        SniadanieTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
+                        SniadanieBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
                         TypPosilku++;
                     }
 
@@ -183,6 +203,9 @@ namespace AplikacjaDietetyczna.UserControls
                     SniadanieProdukty = "";
                     SniadanieKalorieD = 0;
                     SniadanieNazwa = "";
+                    SniadanieWeglowodanyD = 0;
+                    SniadanieBialkaD = 0;
+                    SniadanieTluszczeD = 0;
                     Dwa = "";
                 }
 
