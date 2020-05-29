@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="1220">
+             d:DesignHeight="640" d:DesignWidth="1220"
+             Loaded="Window_Loaded"
+             >
     <Grid>
         <Border CornerRadius="5"  Height="640" VerticalAlignment="Bottom">
             <Border.Background>
@@ -45,7 +47,7 @@
                          BorderThickness="0"
                          Width="800"
                          Opacity="0.9"
-                         Height="60"
+                         Height="80"
                          Margin="40,0,0,0"
                          AcceptsReturn="True"
                          TextWrapping="Wrap"/>
@@ -69,9 +71,18 @@
                          Foreground="Black"
                          BorderThickness="0"
                          Width="1220"
-                         Height="565"
+                         Height="265"
                          Margin="0,0,0,0"/>
             </StackPanel>
+            <TextBlock x:Name="txtMessages" TextWrapping="Wrap" Text=""
+                            FontSize="20"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         Background="Transparent"
+                         Foreground="Black"
+                         Width="1220"
+                         Height="265"
+                         Margin="0,0,0,0"/>
 
 
 
