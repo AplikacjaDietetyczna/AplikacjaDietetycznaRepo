@@ -47,7 +47,7 @@
                          BorderThickness="0"
                          Width="800"
                          Opacity="0.9"
-                         Height="60"
+                         Height="80"
                          Margin="40,0,0,0"
                          AcceptsReturn="True"
                          TextWrapping="Wrap"/>

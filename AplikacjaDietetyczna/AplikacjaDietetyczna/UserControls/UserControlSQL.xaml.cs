@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AplikacjaDietetyczna.Klasy;
+using Microsoft.SqlServer;
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -29,7 +30,6 @@ namespace AplikacjaDietetyczna.UserControls
         }
         private void Start()
         {
-
             AzureDB.openConnection();
             AzureDB.con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
             AzureDB.con.FireInfoMessageEventOnUserErrors = true;
