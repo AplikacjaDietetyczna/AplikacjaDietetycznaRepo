@@ -277,6 +277,16 @@ namespace AplikacjaDietetyczna.UserControls
                 TextBoxTluszcze.Text = "Tłuszcze: " + TluszczeZjedzone + " / " + Tluszcze + " g";
                 TextBoxWeglowodany.Text = "Węglowodany: " + WeglowodanyZjedzone + " / " + Weglowodany + " g";
 
+
+                if((KalorieZjedzone + 100 > Kalorie))
+                {
+                    TextBoxKalorie.BorderThickness = new Thickness(1);
+                    TextBoxKalorie.BorderBrush = Brushes.Red;
+                    TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych kalorii";
+                }
+
+
+
             }
             catch (Exception ex)
             {
