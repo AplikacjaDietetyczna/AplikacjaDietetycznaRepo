@@ -73,7 +73,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="White"
+                         Foreground="Black"
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
@@ -90,6 +90,58 @@
                                   Margin="230,76,0,0"
                                   VerticalAlignment="Top"
                                   Width="193"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Weglowodany_Podsumowanie"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="367"
+                            Opacity="1"
+                            Text="Węglowodany: " Margin="507,410,346,105"
+                            IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Kalorie_Podsumowanie"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="372"
+                            Opacity="1"
+                            Text="Kalorie: " Margin="507,453,341,62"
+                            IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Tluszcze_Podsumowanie"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="331"
+                            Opacity="1"
+                            Text="Tłuszcze: " Margin="879,410,10,105"
+                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Białko_Podsumowanie"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="331"
+                            Opacity="1"
+                            Text="Białko: " Margin="879,453,10,62"
+                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553"/>
                     </Grid>
                 </StackPanel>
 
@@ -103,7 +155,7 @@
 
 
                 <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="-120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click"/>
-                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.Column="1" Click="DodajPosilek_Click"/>
+                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="32,415,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajPosilek_Click" Grid.ColumnSpan="2"/>
                 <TextBox FontFamily="Helvetica"
                     FontSize="32"
                     FontWeight="Light"
@@ -148,7 +200,7 @@
                     Height="30"
                     Margin="77,385,0,0"
                     VerticalAlignment="Top"
-                    Width="193" Grid.Column="1" DropDownClosed="RodzajPosilku_Drop">
+                    Width="193" Grid.Column="1">
                     <ComboBoxItem Tag="0">Wybierz rodzaj</ComboBoxItem>
                     <ComboBoxItem Tag="1">Śniadanie</ComboBoxItem>
                     <ComboBoxItem Tag="2">Lunch</ComboBoxItem>
@@ -157,6 +209,7 @@
                     <ComboBoxItem Tag="5">Kolacja</ComboBoxItem>
 
                 </ComboBox>
+                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.Column="1"/>
 
 
             </Grid>
