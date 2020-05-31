@@ -31,6 +31,11 @@ namespace AplikacjaDietetyczna.UserControls
         public string zapytanieProdukty = "";
         public List<string> ProduktID = new List<string>();
         public List<string> ProduktIlosc = new List<string>();
+        public int Kalorie, Weglowodany, Tluszcze, Bialka;
+        public int Kalorie_P = 0;
+        public int Weglowodany_P = 0;
+        public int Tluszcze_P = 0;
+        public int Bialka_P = 0;
 
 
         private void UzupelnijComboBoxy()//uzupelnia combobox produktow wszystkimi dostepnymi w bazie danych produktami
@@ -41,7 +46,7 @@ namespace AplikacjaDietetyczna.UserControls
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Produkty";
+            AzureDB.sql = "Select * from Produkty order by NazwaProduktu";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
@@ -83,9 +88,28 @@ namespace AplikacjaDietetyczna.UserControls
             }
             IloscCombo.SelectedIndex = 0;
         }
-
-        private void RodzajPosilku_Drop(object sender, EventArgs e)
+        private void ClearFields()
         {
+            IloscCombo.SelectedIndex = 0;
+            ProduktCombo.SelectedIndex = 0;
+            RodzajPosilku.SelectedIndex = 0;
+            ProduktID.Clear();
+            ProduktIlosc.Clear();
+            Podsumowanie.Text = "";
+            Białko_Podsumowanie.Text = "Białko: ";
+            Kalorie_Podsumowanie.Text = "Kalorie: ";
+            Tluszcze_Podsumowanie.Text = "Tłuszcze: ";
+            Weglowodany_Podsumowanie.Text = "Węglowodany: ";
+            Kalorie_P = 0;
+            Weglowodany_P = 0;
+            Bialka_P = 0;
+            Tluszcze_P = 0;
+    }
+
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            ClearFields();
         }
 
         private void DodajProdukt_Click(object sender, RoutedEventArgs e)
@@ -104,10 +128,35 @@ namespace AplikacjaDietetyczna.UserControls
                 }
                 else
                 {
+                    AzureDB.openConnection();
+                    AzureDB.sql = "Select * from Produkty WHERE NazwaProduktu='" + ProduktCombo.Text.ToString() + "'";
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                    AzureDB.dt = new DataTable();
+                    AzureDB.da.Fill(AzureDB.dt);
+                    if (AzureDB.dt.Rows.Count > 0)
+                    {
+                        Kalorie = Convert.ToInt16(AzureDB.dt.Rows[0]["Kalorie"]) * Convert.ToInt16(IloscCombo.Text);
+                        Weglowodany = Convert.ToInt16(AzureDB.dt.Rows[0]["Weglowodany"]) * Convert.ToInt16(IloscCombo.Text);
+                        Tluszcze = Convert.ToInt16(AzureDB.dt.Rows[0]["Tluszcze"]) * Convert.ToInt16(IloscCombo.Text);
+                        Bialka = Convert.ToInt16(AzureDB.dt.Rows[0]["Bialka"]) * Convert.ToInt16(IloscCombo.Text);
+                    }
+                    AzureDB.closeConnection();
                     Podsumowanie.Text += "Produkt: " + ProduktCombo.Text.ToString() + "\n";
-                    Podsumowanie.Text += "Ilość: " + IloscCombo.Text.ToString() + "\n\n";
+                    Podsumowanie.Text += "Ilość: " + IloscCombo.Text.ToString() + "\n";
+                    Podsumowanie.Text += "Wartości odżywcze: Białko: "+Bialka+" Węglowodany: "+Weglowodany+" Tłuszcze: "+Tluszcze+" Kalorie: "+Kalorie+"\n\n";
                     IloscCombo.SelectedIndex = 0;
                     ProduktCombo.SelectedIndex = 0;
+                    Kalorie_P += Kalorie;
+                    Weglowodany_P += Weglowodany;
+                    Bialka_P +=Bialka;
+                    Tluszcze_P +=Tluszcze;
+                    Białko_Podsumowanie.Text = "Białko: "+Bialka_P+"g";
+                    Kalorie_Podsumowanie.Text = "Kalorie: "+Kalorie_P+"kcal";
+                    Tluszcze_Podsumowanie.Text = "Tłuszcze: "+Tluszcze_P+"g";
+                    Weglowodany_Podsumowanie.Text = "Węglowodany: "+Weglowodany_P+"g";
+
                 }
                 }
                 else
@@ -155,12 +204,7 @@ namespace AplikacjaDietetyczna.UserControls
                     }
                     AzureDB.closeConnection();
                     MessageBox.Show("Posiłek został prawidołowo dodany", "Posiłek", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Podsumowanie.Text = "";
-                    ProduktID.Clear();
-                    ProduktIlosc.Clear();
-                    NowyPosilek.Text = "";
-                    ProduktCombo.SelectedIndex = 0;
-                    IloscCombo.SelectedIndex = 0;
+                    ClearFields();
                 }
                 catch(Exception ex)
                 {
