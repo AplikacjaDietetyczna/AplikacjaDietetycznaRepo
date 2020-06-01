@@ -70,7 +70,7 @@
 
               <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
                 <TextBox FontFamily="Helvetica"
-                 x:Name="Plec"
+                 x:Name="Wiek"
                  FontSize="12"
                  FontWeight="Light"
                  HorizontalAlignment="Center"
@@ -84,7 +84,7 @@
                   <!-- IsReadOnly="True"-->
                 </TextBox>
                 <TextBox FontFamily="Helvetica"
-                 x:Name="UżytkownikPlec"
+                 x:Name="UżytkownikWiek"
                  FontSize="12"
                  FontWeight="Light"
                  HorizontalAlignment="Center"
@@ -94,7 +94,7 @@
                  BorderThickness="0"
                  Width="147"
                  Opacity="0.8"
-                 Text="TestPlec" Margin="29,70,1043.8,445"
+                 Text="TestWiek" Margin="29,70,1043.8,445"
                   <!-- IsReadOnly="True"-->
                 </TextBox>
               </StackPanel>
