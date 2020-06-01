@@ -102,7 +102,8 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void pobierzDane_Click(object sender, RoutedEventArgs e)
         {
-
+            waga.Text = FunkcjeGlobalne.Waga;
+            wzrost.Text = FunkcjeGlobalne.Wzrost;
 
         }
     }
