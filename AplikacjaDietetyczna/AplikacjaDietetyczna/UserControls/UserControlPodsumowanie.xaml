@@ -6,7 +6,190 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="AntiqueWhite">
-            
+  <Grid>
+    <StackPanel>
+      <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="38*"/>
+          <ColumnDefinition Width="267*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+          <Grid>
+
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="Uzytkownik"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="147"
+             Opacity="0.8"
+             Text="Użytkownik:" Margin="29,70,1043.8,445"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikLogin"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="160"
+             Opacity="0.8"
+             Text="UserLoginTest" Margin="197,70,865.8,453"
+             IsReadOnly="True"/>
+          </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="171*"/>
+              <ColumnDefinition Width="134*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="Plec"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="147"
+             Opacity="1"
+             Text="Płeć:" Margin="29,70,507.7,444.2"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikPlec"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="160"
+             Opacity="0.8"
+             Text="UserPlecTest" Margin="197,70,326.7,452.2"
+             IsReadOnly="True"/>
+          </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="0,200,-0.2,0" Grid.ColumnSpan="2">
+          <Grid>
+
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="Wiek"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="121"
+             Opacity="1"
+             Text="Wiek:" Margin="29,70,1070,445.2"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikWiek"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="160"
+             Opacity="0.8"
+             Text="UserWiekTest" Margin="200,70,865.8,453"
+             IsReadOnly="True"/>
+
+          </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
+          <Grid>
+
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="Wzrost"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="136"
+             Opacity="1"
+             Text="Wzrost:" Margin="29,70,1055,445.2"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikWzrost"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="160"
+             Opacity="0.8"
+             Text="UserWzrostTest" Margin="200,70,865.8,453"
+             IsReadOnly="True"/>
+          </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
+          <Grid>
+
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="Waga"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="147"
+             Opacity="1"
+             Text="Waga:" Margin="29,70,1043.8,445"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikWaga"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="160"
+             Opacity="0.8"
+             Text="UserTestWaga" Margin="200,70,865.8,453"
+             IsReadOnly="True"/>
+          </Grid>
+        </StackPanel>
+
+      </Grid>
+    </StackPanel>
     </Grid>
 </UserControl>
