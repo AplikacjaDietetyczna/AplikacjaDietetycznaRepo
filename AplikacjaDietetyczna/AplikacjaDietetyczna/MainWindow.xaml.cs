@@ -59,11 +59,11 @@ namespace AplikacjaDietetyczna
                 AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
                 AzureDB.dt = new DataTable();
                 AzureDB.da.Fill(AzureDB.dt);
-                if (AzureDB.dt.Rows.Count > 0)
-                {
-                    TextBoxUser.Text = AzureDB.dt.Rows[0]["Login"].ToString();
-                    TextBoxPassword.Password = AzureDB.dt.Rows[0]["Password"].ToString();
-                }
+                //if (AzureDB.dt.Rows.Count > 0)
+                //{
+                //    TextBoxUser.Text = AzureDB.dt.Rows[0]["Nazwa użytkownika"].ToString();
+                //    TextBoxPassword.Password = AzureDB.dt.Rows[0]["Password"].ToString();
+                //}
                 AzureDB.closeConnection();
             }
             catch (Exception ex)
