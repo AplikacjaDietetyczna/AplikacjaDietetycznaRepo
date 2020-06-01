@@ -19,53 +19,45 @@
                BorderThickness="0"
                Width="147"
                Opacity="0.8"
-               Text="Użytkownik:" Margin="29,70,1043.8,445"
-               <!-- IsReadOnly="True"-->
-               </TextBox>
+               Text="Użytkownik:" Margin="29,70,1043.8,445"></TextBox>
               <TextBox FontFamily="Helvetica"
-               x:Name="UżytkownikLogin"
-               FontSize="12"
-               FontWeight="Light"
-               HorizontalAlignment="Center"
-               HorizontalContentAlignment="Left"
-               Background="Transparent"
-               Foreground="Black"
-               BorderThickness="0"
-               Width="147"
-               Opacity="0.8"
-               Text="TestLogin" Margin="29,70,1043.8,445"
-                <!-- IsReadOnly="True"-->
-              </TextBox>
+             x:Name="UżytkownikLogin"
+             FontSize="12"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="147"
+             Opacity="0.8"
+             Text="TestLogin" Margin="29,70,1043.8,445"></TextBox>
               </StackPanel>
               <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
-              <TextBox FontFamily="Helvetica"
-               x:Name="Plec"
-               FontSize="12"
-               FontWeight="Light"
-               HorizontalAlignment="Center"
-               HorizontalContentAlignment="Left"
-               Background="Transparent"
-               Foreground="Black"
-               BorderThickness="0"
-               Width="147"
-               Opacity="0.8"
-               Text="Płeć:" Margin="29,70,1043.8,445"
-              <!-- IsReadOnly="True"-->
-              </TextBox>
-               <TextBox FontFamily="Helvetica"
-                x:Name="UżytkownikPlec"
-                FontSize="12"
-                FontWeight="Light"
-                HorizontalAlignment="Center"
-                HorizontalContentAlignment="Left"
-                Background="Transparent"
-                Foreground="Black"
-                BorderThickness="0"
-                Width="147"
-                Opacity="0.8"
-                Text="TestPlec" Margin="29,70,1043.8,445"
-                 <!-- IsReadOnly="True"-->
-               </TextBox>
+                <TextBox FontFamily="Helvetica"
+                 x:Name="Plec"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="Płeć:" Margin="29,70,1043.8,445"></TextBox>
+                <TextBox FontFamily="Helvetica"
+                 x:Name="UżytkownikPlec"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="TestPlec" Margin="29,70,1043.8,445"></TextBox>
                </StackPanel>
 
               <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
@@ -80,9 +72,7 @@
                  BorderThickness="0"
                  Width="147"
                  Opacity="0.8"
-                 Text="Płeć:" Margin="29,70,1043.8,445"
-                  <!-- IsReadOnly="True"-->
-                </TextBox>
+                 Text="Wiek:" Margin="29,70,1043.8,445"></TextBox>
                 <TextBox FontFamily="Helvetica"
                  x:Name="UżytkownikWiek"
                  FontSize="12"
@@ -94,103 +84,61 @@
                  BorderThickness="0"
                  Width="147"
                  Opacity="0.8"
-                 Text="TestWiek" Margin="29,70,1043.8,445"
-                  <!-- IsReadOnly="True"-->
-                </TextBox>
+                 Text="TestWiek" Margin="29,70,1043.8,445"></TextBox>
+              </StackPanel>
+
+              <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+                <TextBox FontFamily="Helvetica"
+                 x:Name="Wzrost"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="Wzrost:" Margin="29,70,1043.8,445"></TextBox>
+                <TextBox FontFamily="Helvetica"
+                 x:Name="UżytkownikWzrost"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="TestWzrost" Margin="29,70,1043.8,445"></TextBox>
+              </StackPanel>
+
+              <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+                <TextBox FontFamily="Helvetica"
+                 x:Name="Waga"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="Waga:" Margin="29,70,1043.8,445"></TextBox>
+                <TextBox FontFamily="Helvetica"
+                 x:Name="UżytkownikWaga"
+                 FontSize="12"
+                 FontWeight="Light"
+                 HorizontalAlignment="Center"
+                 HorizontalContentAlignment="Left"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Width="147"
+                 Opacity="0.8"
+                 Text="TestWaga" Margin="29,70,1043.8,445"></TextBox>
               </StackPanel>
     </Grid>
 </UserControl>
-
-
-<StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
-  <Grid>
-
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="Sniadanie"
-     FontSize="32"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="Black"
-     BorderThickness="0"
-     Width="147"
-     Opacity="0.8"
-     Text="Śniadanie" Margin="29,70,1043.8,445"
-     IsReadOnly="True"/>
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="SniadanieKalorie"
-     FontSize="25"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="Black"
-     BorderThickness="0"
-     Width="160"
-     Opacity="0.8"
-     Text="0 kcal" Margin="200,76,865.8,453"
-     IsReadOnly="True"/>
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="SniadanieBialka"
-     FontSize="25"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="Black"
-     BorderThickness="0"
-     Width="158"
-     Opacity="0.8"
-     Text="0 g" Margin="350,76,711.8,453"
-     IsReadOnly="True"/>
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="SniadanieTluszcze"
-     FontSize="25"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="Black"
-     BorderThickness="0"
-     Width="158"
-     Opacity="0.8"
-     Text="0 g" Margin="500,76,553.8,453"
-     IsReadOnly="True"/>
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="SniadanieWeglowodany"
-     FontSize="25"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="Black"
-     BorderThickness="0"
-     Width="158"
-     Opacity="0.8"
-     Text="0 g" Margin="650,76,395.8,453"
-     IsReadOnly="True"/>
-
-
-
-
-    <TextBox FontFamily="Helvetica"
-     x:Name="SniadanieTekst"
-     FontSize="18"
-     FontWeight="Light"
-     HorizontalAlignment="Center"
-     HorizontalContentAlignment="Left"
-     Background="Transparent"
-     Foreground="White"
-     BorderThickness="0"
-     Width="834"
-     Opacity="1"
-     Text="" Margin="34,120,352,406.2"
-     IsReadOnly="True"/>
-  </Grid>
-</StackPanel>
