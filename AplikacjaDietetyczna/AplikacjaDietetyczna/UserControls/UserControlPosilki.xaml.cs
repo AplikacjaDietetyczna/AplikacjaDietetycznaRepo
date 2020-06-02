@@ -277,13 +277,90 @@ namespace AplikacjaDietetyczna.UserControls
                 TextBoxTluszcze.Text = "Tłuszcze: " + TluszczeZjedzone + " / " + Tluszcze + " g";
                 TextBoxWeglowodany.Text = "Węglowodany: " + WeglowodanyZjedzone + " / " + Weglowodany + " g";
 
+                //Dodatkowe wyświetlanie czy user je zdrowo
 
-                if((KalorieZjedzone + 100 > Kalorie))
+                if((KalorieZjedzone > Kalorie + 200))
                 {
                     TextBoxKalorie.BorderThickness = new Thickness(1);
                     TextBoxKalorie.BorderBrush = Brushes.Red;
                     TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych kalorii";
                 }
+
+                if ((KalorieZjedzone < Kalorie + 200 && KalorieZjedzone > Kalorie - 200))
+                {
+                    TextBoxKalorie.BorderThickness = new Thickness(1);
+                    TextBoxKalorie.BorderBrush = Brushes.Green;
+                    TextBoxKalorie.ToolTip = new ToolTip().Content = "Trzymaj tak dalej";
+                }
+
+                else if (KalorieZjedzone < Kalorie)
+                {
+                    TextBoxKalorie.BorderThickness = new Thickness(0);
+                    TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                }
+
+                if ((BialkaZjedzone > Bialka + 55))
+                {
+                    TextBoxBialka.BorderThickness = new Thickness(1);
+                    TextBoxBialka.BorderBrush = Brushes.Red;
+                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanego białka";
+                }
+
+                if ((BialkaZjedzone < Bialka + 55 && BialkaZjedzone > Bialka - 55))
+                {
+                    TextBoxBialka.BorderThickness = new Thickness(1);
+                    TextBoxBialka.BorderBrush = Brushes.Green;
+                    TextBoxBialka.ToolTip = new ToolTip().Content = "Trzymaj tak dalej";
+                }
+
+                else if (BialkaZjedzone < Bialka)
+                {
+                    TextBoxBialka.BorderThickness = new Thickness(0);
+                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                }
+
+
+                if ((TluszczeZjedzone > Tluszcze + 15))
+                {
+                    TextBoxTluszcze.BorderThickness = new Thickness(1);
+                    TextBoxTluszcze.BorderBrush = Brushes.Red;
+                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych tłuszczy";
+                }
+
+                if ((TluszczeZjedzone < Tluszcze + 15 && TluszczeZjedzone > Tluszcze - 15))
+                {
+                    TextBoxTluszcze.BorderThickness = new Thickness(1);
+                    TextBoxTluszcze.BorderBrush = Brushes.Green;
+                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Trzymaj tak dalej";
+                }
+
+                else if (TluszczeZjedzone < Tluszcze)
+                {
+                    TextBoxTluszcze.BorderThickness = new Thickness(0);
+                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                }
+
+                if ((WeglowodanyZjedzone > Weglowodany + 170))
+                {
+                    TextBoxWeglowodany.BorderThickness = new Thickness(1);
+                    TextBoxWeglowodany.BorderBrush = Brushes.Red;
+                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych węglowodanów";
+                }
+
+                if ((WeglowodanyZjedzone < Weglowodany + 170 && WeglowodanyZjedzone > Weglowodany - 170))
+                {
+                    TextBoxWeglowodany.BorderThickness = new Thickness(1);
+                    TextBoxWeglowodany.BorderBrush = Brushes.Green;
+                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Trzymaj tak dalej";
+                }
+
+                else if (WeglowodanyZjedzone < Weglowodany)
+                {
+                    TextBoxWeglowodany.BorderThickness = new Thickness(0);
+                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                }
+
+
 
 
 
