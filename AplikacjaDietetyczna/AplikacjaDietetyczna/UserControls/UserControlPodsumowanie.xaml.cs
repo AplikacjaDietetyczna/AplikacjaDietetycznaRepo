@@ -55,6 +55,12 @@ namespace AplikacjaDietetyczna.UserControls
             AzureDB.closeConnection();
         }
 
-        
+        private void PrzeniesAktualWagi(object sender, RoutedEventArgs e)
+        {
+            UserControl wag = new UserControlWaga();
+            wag.s
+        }
+
+
     }
 }

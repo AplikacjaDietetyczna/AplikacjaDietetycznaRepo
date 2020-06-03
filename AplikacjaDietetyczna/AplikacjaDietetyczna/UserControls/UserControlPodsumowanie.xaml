@@ -152,7 +152,18 @@
              Opacity="0.8"
              Text="UserWzrostTest" Margin="200,70,865.8,453"
              IsReadOnly="True"/>
-          </Grid>
+
+            <Button
+                HorizontalAlignment="Center"
+                FontWeight="Light"
+                FontSize="25"
+                Foreground="White"
+                Margin="300,70,600,400" 
+                Width="200" Height="60" 
+                Content="Aktualizuj Wagę" 
+                Click="PrzeniesAktualWagi"
+                />
+            </Grid>
         </StackPanel>
 
         <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">

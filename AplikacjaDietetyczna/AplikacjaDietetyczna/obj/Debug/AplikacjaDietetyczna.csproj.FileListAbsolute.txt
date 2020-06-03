@@ -245,3 +245,5 @@ C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\Aplika
 C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.GenerateResource.cache
 C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CoreCompileInputs.cache
 C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\AplikacjaDietetyczna.csproj.CopyComplete
+C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.g.cs
+C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.baml
