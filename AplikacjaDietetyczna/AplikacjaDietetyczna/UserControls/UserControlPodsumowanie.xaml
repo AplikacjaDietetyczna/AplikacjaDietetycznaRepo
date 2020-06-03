@@ -186,6 +186,34 @@
              Opacity="0.8"
              Text="UserTestWaga" Margin="200,70,865.8,453"
              IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="DataWazenia"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+             Width="158"
+             Opacity="0.8"
+             Text="Data Ważenia:" Margin="350,76,711.8,453"
+             IsReadOnly="True"/>
+
+            <TextBox FontFamily="Helvetica"
+             x:Name="UzytkownikDataWazenia"
+             FontSize="25"
+             FontWeight="Light"
+             HorizontalAlignment="Center"
+             HorizontalContentAlignment="Left"
+             Background="Transparent"
+             Foreground="Black"
+             BorderThickness="0"
+             Width="250"
+             Opacity="0.8"
+             Text="TestUserDataWaz" Margin="520,76,453.8,453"
+             IsReadOnly="True"/>
           </Grid>
         </StackPanel>
 
