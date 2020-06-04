@@ -89,7 +89,7 @@
                                   Height="30"
                                   Margin="230,76,0,0"
                                   VerticalAlignment="Top"
-                                  Width="193"/>
+                                  Width="193" DropDownClosed="IloscCombo_DropDownClosed"/>
                         <TextBox FontFamily="Helvetica"
                             x:Name="Weglowodany_Podsumowanie"
                             FontSize="32"
@@ -209,7 +209,8 @@
                     <ComboBoxItem Tag="5">Kolacja</ComboBoxItem>
 
                 </ComboBox>
-                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.Column="1"/>
+                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,511,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="Cofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.Column="1"/>
 
 
             </Grid>
@@ -217,6 +218,7 @@
 
         </StackPanel>
         <TextBlock x:Name="Podsumowanie" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
+        <TextBlock x:Name="Podsumowanie_Ghost" HorizontalAlignment="Left" Foreground="Gray" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
 
 
 
