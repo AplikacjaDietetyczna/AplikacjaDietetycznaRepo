@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kFXAbRx0B3907DnEo5rACM4NJ52RlZQCYkS4n2yLoQzXmweFFLqOrkbproRSAHhAZ7Aimw0tAySI7YNHoKsKvQ==",
+  "dgSpecHash": "poYz1iDYjlw5zMvJH6wdJQemZZ+mZj9GQmS7tNZ+RJ1cVq32qNs9bLdjKdbScV+N7Id73f9VhxPiH0G+4Xn29A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,6 @@
     "C:\\Users\\Buchy\\.nuget\\packages\\microsoft.testplatform.testhost\\16.4.0\\microsoft.testplatform.testhost.16.4.0.nupkg.sha512",
     "C:\\Users\\Buchy\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Buchy\\.nuget\\packages\\microsoft.win32.registry\\4.3.0\\microsoft.win32.registry.4.3.0.nupkg.sha512",
-    "C:\\Users\\Buchy\\.nuget\\packages\\mstest.testframework\\2.1.1\\mstest.testframework.2.1.1.nupkg.sha512",
     "C:\\Users\\Buchy\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\Buchy\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Buchy\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
