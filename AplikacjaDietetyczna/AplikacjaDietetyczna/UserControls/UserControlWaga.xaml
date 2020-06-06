@@ -3,10 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="567*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <xctk:WatermarkTextBox
+                            FontFamily="Helvetica"
+                            Watermark="Nowa Waga"
+                            Name="TextBoxWagaNowa"
+                            FontSize="20"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Width="235"
+                            Opacity="0.9"
+                            Text=""
+                            Height="30"
+                            Margin="333,50,0,0"
+                        />
+                        <iconPacks:PackIconMaterial Kind="Account"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"
+                        />
+                    </StackPanel>
+                </StackPanel>
+                    
+
+            </Grid>
+        </StackPanel>
     </Grid>
 </UserControl>
