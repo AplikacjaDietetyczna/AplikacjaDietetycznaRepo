@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+using AplikacjaDietetyczna.Klasy;
+using AplikacjaDietetyczna;
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -23,6 +27,33 @@ namespace AplikacjaDietetyczna.UserControls
         public UserControlPodsumowanie()
         {
             InitializeComponent();
+
+            //Pobranie nazwy użytkownika w celu użycia jej w zapytaniu
+            string NazwaUzytkownika = FunkcjeGlobalne.Login;
+
+            //Połączenie z bazą i pobranie danych z zapytania
+            AzureDB.openConnection();
+            AzureDB.sql = "SELECT Login, Plec, Wiek, Wzrost, Waga, Data FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='"+NazwaUzytkownika+"'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+
+            //Wyświetlanie danych
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                UzytkownikLogin.Text = AzureDB.dt.Rows[0]["Login"].ToString();
+                UzytkownikPlec.Text = AzureDB.dt.Rows[0]["Plec"].ToString();
+                UzytkownikWiek.Text = AzureDB.dt.Rows[0]["Wiek"].ToString();
+                UzytkownikWzrost.Text = AzureDB.dt.Rows[0]["Wzrost"].ToString();
+                UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
+                UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
+            }
+            //Zamknięcie połączenia z bazą
+            AzureDB.closeConnection();
         }
+
     }
 }

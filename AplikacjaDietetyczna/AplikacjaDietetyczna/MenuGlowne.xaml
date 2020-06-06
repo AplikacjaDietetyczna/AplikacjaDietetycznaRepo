@@ -71,7 +71,12 @@
                                 <TextBlock Text="Kalkulator BMI" VerticalAlignment="Center" Margin="20 10"/>
                                 <iconPacks:PackIconMaterial Kind="Calculator" Height="25" Width="25" Margin="10"/>
                             </StackPanel>
-
+                        </ListViewItem>
+                        <ListViewItem x:Name="AktualWage" Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Aktualizuj Wagę" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                            </StackPanel>
                         </ListViewItem>
                     </ListView>
                 </StackPanel>

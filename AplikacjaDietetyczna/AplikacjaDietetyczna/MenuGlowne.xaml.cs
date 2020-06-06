@@ -84,6 +84,10 @@ namespace AplikacjaDietetyczna
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
                     break;
+                case "AktualWage":
+                    usc = new UserControls.UserControlWaga();
+                    GridMain.Children.Add(usc);
+                    break;
                 default:
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
