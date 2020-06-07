@@ -76,10 +76,6 @@ namespace AplikacjaDietetyczna
                     UserControl calc = new UserControls.UserControlKalkulkator();
                     GridMain.Children.Add(calc);
                     break;
-                case "Nowy_Posilek":
-                    UserControl add = new UserControls.UserControlDodaj();
-                    GridMain.Children.Add(add);
-                    break;
                 case "Posilki":
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
