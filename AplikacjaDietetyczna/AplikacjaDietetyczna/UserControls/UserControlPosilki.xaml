@@ -24,7 +24,7 @@
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
                          Foreground="White"
-                         BorderThickness="1"
+                         BorderThickness="0"
                          Width="231"
                          Opacity="0.8"
                          Text="Dzisiejsza data" Margin="352,10,485,505"
@@ -121,6 +121,12 @@
                          Opacity="1"
                          Text="" Margin="34,120,352,406.2"
                          IsReadOnly="True"/>
+
+                        <Button x:Name="SniadanieDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,66,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
+                        <Button x:Name="LunchDodaj" Content="Dodaj" Grid.Column="3" HorizontalAlignment="Left" FontSize="28" Margin="1000,166,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
+                        <Button x:Name="ObiadDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,266,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
+                        <Button x:Name="PrzekaskaDodaj" Content="Dodaj" Grid.Column="1" HorizontalAlignment="Left" FontSize="28" Margin="1000,366,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
+                        <Button x:Name="KolacjaDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,466,0,0" VerticalAlignment="Top" Width="120" Height="50" />
                     </Grid>
                 </StackPanel>
 
@@ -130,7 +136,9 @@
                             <ColumnDefinition Width="67*"/>
                             <ColumnDefinition Width="42*"/>
                             <ColumnDefinition Width="575*"/>
-                            <ColumnDefinition Width="536*"/>
+                            <ColumnDefinition Width="369*"/>
+                            <ColumnDefinition Width="32*"/>
+                            <ColumnDefinition Width="135*"/>
                         </Grid.ColumnDefinitions>
 
 
@@ -145,7 +153,7 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
-                         Text="Lunch" Margin="29,70,508,443.6"
+                         Text="Lunch" Margin="29,70,508,441.6"
                          IsReadOnly="True" Grid.ColumnSpan="3"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -159,7 +167,7 @@
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="88.1,76,327,451.6"
+                         Text="0 kcal" Margin="89.2,76,326,449.6"
                          IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -173,7 +181,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="241.1,76,176,451.6"
+                         Text="0 g" Margin="242.2,76,175,449.6"
                          IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -187,7 +195,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="395.1,76,22,451.6"
+                         Text="0 g" Margin="395.2,76,22,449.6"
                          IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -201,7 +209,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="549.1,76,404,451.6"
+                         Text="0 g" Margin="549.2,76,236.8,451.6"
                          IsReadOnly="True" Grid.ColumnSpan="2" Grid.Column="2"/>
 
 
@@ -218,8 +226,11 @@
                          BorderThickness="0"
                          Width="828"
                          Opacity="0.8"
-                         Text="" Margin="34,120,358,405.6"
+                         Text="" Margin="34,120,190.8,405.6"
                          IsReadOnly="True" Grid.ColumnSpan="4"/>
+
+
+
                     </Grid>
                 </StackPanel>
 
@@ -313,6 +324,10 @@
                          Opacity="0.8"
                          Text="" Margin="34,120,350,406.2"
                          IsReadOnly="True"/>
+
+
+
+
                     </Grid>
                 </StackPanel>
 
@@ -320,7 +335,9 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="533*"/>
-                            <ColumnDefinition Width="688*"/>
+                            <ColumnDefinition Width="527*"/>
+                            <ColumnDefinition Width="24*"/>
+                            <ColumnDefinition Width="136*"/>
                         </Grid.ColumnDefinitions>
 
 
@@ -335,7 +352,7 @@
                          BorderThickness="0"
                          Width="136"
                          Opacity="1"
-                         Text="Przekąska" Margin="29,70,367.5,445.2"
+                         Text="Przekąska" Margin="29,70,367.8,444.6"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -349,7 +366,7 @@
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="197,76,175.5,452.2"
+                         Text="0 kcal" Margin="197,76,175.8,451.6"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -363,7 +380,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="350,76,24.5,452.2"
+                         Text="0 g" Margin="350,76,24.8,451.6"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -377,7 +394,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="504,76,558,452.2"
+                         Text="0 g" Margin="504,76,398.2,451.6"
                          IsReadOnly="True" Grid.ColumnSpan="2"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -391,7 +408,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="125.5,76,404,452.2"
+                         Text="0 g" Margin="125.2,76,244.2,451.6"
                          IsReadOnly="True" Grid.Column="1"/>
 
 
@@ -408,13 +425,25 @@
                          BorderThickness="0"
                          Width="807"
                          Opacity="0.8"
-                         Text="" Margin="34,120,379,406.2"
+                         Text="" Margin="34,120,219.2,405.6"
                          IsReadOnly="True" Grid.ColumnSpan="2"/>
+
+
+
+
                     </Grid>
+
+
+
                 </StackPanel>
 
                 <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="526*"/>
+                            <ColumnDefinition Width="19*"/>
+                            <ColumnDefinition Width="65*"/>
+                        </Grid.ColumnDefinitions>
 
 
                         <TextBox FontFamily="Helvetica"
@@ -428,7 +457,7 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
-                         Text="Kolacja" Margin="29,70,1043.8,445"
+                         Text="Kolacja" Margin="29,70,876.4,443.4"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -442,7 +471,7 @@
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="200,76,865.8,453"
+                         Text="0 kcal" Margin="197,76,695.4,451.4"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -456,7 +485,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="350,76,711.8,453"
+                         Text="0 g" Margin="350,76,544.4,451.4"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -470,7 +499,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="500,76,553.8,453"
+                         Text="0 g" Margin="504,76,390.4,451.4"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -484,7 +513,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="650,76,395.8,453"
+                         Text="0 g" Margin="658,76,236.4,451.4"
                          IsReadOnly="True"/>
 
 
@@ -501,8 +530,10 @@
                          BorderThickness="0"
                          Width="812"
                          Opacity="0.8"
-                         Text="" Margin="34,120,374,406.2"
+                         Text="" Margin="34,120,206.4,405.4"
                          IsReadOnly="True"/>
+
+
                     </Grid>
                 </StackPanel>
 
@@ -512,6 +543,7 @@
                 <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="MinusDay"/>
 
                 <Button Content="" HorizontalAlignment="Left" Margin="1042.9,249,-0.2,0" VerticalAlignment="Top" Width="25" Height="124" Click="PlusDay" Grid.Column="1"/>
+
 
 
             </Grid>
@@ -575,6 +607,7 @@
                          Text="Weglowodany:"
                          Height="25" Margin="823,26,98,24" 
                          IsReadOnly="True"/>
+
 
             </Grid>
 
