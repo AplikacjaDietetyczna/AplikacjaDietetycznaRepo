@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l8U8X6XZbKMsZ066Bc6fwOy/fbuvv2zTxDL949cJDjCjIQwME6qxJBy9W67WGYvMwXZ6TpdgD2cHrM4eLKxnqQ==",
+  "dgSpecHash": "MHWHnvkKYJz3C35+z2DNv8dv/cKizmnqztWnM30Wg6U6FFomo7qluRaA/QWwYeZTkyKgw/eSKiVVLoAweRBx8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sasek\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
