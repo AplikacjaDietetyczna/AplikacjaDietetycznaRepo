@@ -86,5 +86,11 @@ namespace AplikacjaDietetyczna
                     break;
             }
         }
+
+        private void Profil_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = new UserControls.UserControlProfil();
+            GridMain.Children.Add(usc);
+        }
     }
 }

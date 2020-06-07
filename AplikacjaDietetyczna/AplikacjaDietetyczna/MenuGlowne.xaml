@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaDietetyczna"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MenuGlowne" Height="700" Width="1400"
         AllowsTransparency="True" Background="Transparent"
@@ -30,10 +31,26 @@
 
             <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
                 <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
-                <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="813,10,0,-16" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
+                <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="780,23,0,-29" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
+                        <StackPanel Width="150" Background="AntiqueWhite" >
+                            <Button Content="Profil" Click="Profil_Click"/>
+                            <Button Content="O nas"/>
+                            <Separator/>
+                            <Button Content="Wyloguj"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                </StackPanel>
+
             </Grid>
 
             <Grid x:Name="GridMenu" Width="180" HorizontalAlignment="Left" Background="#FF5C99D6">
+
+  
+
                 <StackPanel>
                     <Grid Height="150" Background="#FF5C99D6" RenderTransformOrigin="0.5,0.5">
                         <iconPacks:PackIconMaterial Kind="Food" Height="118" Width="160" Margin="10,10,0,0"/>
@@ -68,6 +85,13 @@
 
                         </ListViewItem>
                     </ListView>
+
+                  
+                 
+                      
+                
+
+
                 </StackPanel>
             </Grid>
         </Grid>
