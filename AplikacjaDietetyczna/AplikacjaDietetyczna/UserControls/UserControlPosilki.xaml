@@ -19,15 +19,15 @@
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxCurrentDate"
                          FontSize="32"
-                         FontWeight="Light"
+                         FontWeight="Bold"
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
-                         BorderThickness="0"
-                         Width="212"
+                         Foreground="White"
+                         BorderThickness="1"
+                         Width="231"
                          Opacity="0.8"
-                         Text="Dzisiejsza data" Margin="351.9,10,503.8,505"
+                         Text="Dzisiejsza data" Margin="352,10,485,505"
                          IsReadOnly="True" Grid.Column="1"/>
 
                 <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
@@ -41,10 +41,10 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="147"
-                         Opacity="0.8"
+                         Opacity="1"
                          Text="Śniadanie" Margin="29,70,1043.8,445"
                          IsReadOnly="True"/>
 
@@ -55,7 +55,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
@@ -69,7 +69,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -83,7 +83,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -97,7 +97,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -127,8 +127,10 @@
                 <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="171*"/>
-                            <ColumnDefinition Width="134*"/>
+                            <ColumnDefinition Width="67*"/>
+                            <ColumnDefinition Width="42*"/>
+                            <ColumnDefinition Width="575*"/>
+                            <ColumnDefinition Width="536*"/>
                         </Grid.ColumnDefinitions>
 
 
@@ -143,8 +145,8 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
-                         Text="Lunch" Margin="29,70,507.7,444.2"
-                         IsReadOnly="True"/>
+                         Text="Lunch" Margin="29,70,508,443.6"
+                         IsReadOnly="True" Grid.ColumnSpan="3"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="LunchKalorie"
@@ -153,12 +155,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="197,76,326.7,452.2"
-                         IsReadOnly="True"/>
+                         Text="0 kcal" Margin="88.1,76,327,451.6"
+                         IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="LunchBialka"
@@ -167,12 +169,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="350,76,175.7,452.2"
-                         IsReadOnly="True"/>
+                         Text="0 g" Margin="241.1,76,176,451.6"
+                         IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="LunchTluszcze"
@@ -181,12 +183,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="504,76,21.7,452.2"
-                         IsReadOnly="True"/>
+                         Text="0 g" Margin="395.1,76,22,451.6"
+                         IsReadOnly="True" Grid.Column="2"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="LunchWeglowodany"
@@ -195,12 +197,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="658,76,404,452.2"
-                         IsReadOnly="True" Grid.ColumnSpan="2"/>
+                         Text="0 g" Margin="549.1,76,404,451.6"
+                         IsReadOnly="True" Grid.ColumnSpan="2" Grid.Column="2"/>
 
 
 
@@ -216,8 +218,8 @@
                          BorderThickness="0"
                          Width="828"
                          Opacity="0.8"
-                         Text="" Margin="34,120,358,406.2"
-                         IsReadOnly="True" Grid.ColumnSpan="2"/>
+                         Text="" Margin="34,120,358,405.6"
+                         IsReadOnly="True" Grid.ColumnSpan="4"/>
                     </Grid>
                 </StackPanel>
 
@@ -246,7 +248,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
@@ -260,7 +262,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -274,7 +276,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -288,7 +290,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -316,6 +318,10 @@
 
                 <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="533*"/>
+                            <ColumnDefinition Width="688*"/>
+                        </Grid.ColumnDefinitions>
 
 
                         <TextBox FontFamily="Helvetica"
@@ -329,7 +335,7 @@
                          BorderThickness="0"
                          Width="136"
                          Opacity="1"
-                         Text="Przekąska" Margin="29,70,1055,445.2"
+                         Text="Przekąska" Margin="29,70,367.5,445.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -339,11 +345,11 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="200,76,865.8,453"
+                         Text="0 kcal" Margin="197,76,175.5,452.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -353,11 +359,11 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="350,76,711.8,453"
+                         Text="0 g" Margin="350,76,24.5,452.2"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -367,12 +373,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="500,76,553.8,453"
-                         IsReadOnly="True"/>
+                         Text="0 g" Margin="504,76,558,452.2"
+                         IsReadOnly="True" Grid.ColumnSpan="2"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="PrzekaskaWeglowodany"
@@ -381,12 +387,12 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="0 g" Margin="650,76,395.8,453"
-                         IsReadOnly="True"/>
+                         Text="0 g" Margin="125.5,76,404,452.2"
+                         IsReadOnly="True" Grid.Column="1"/>
 
 
 
@@ -403,7 +409,7 @@
                          Width="807"
                          Opacity="0.8"
                          Text="" Margin="34,120,379,406.2"
-                         IsReadOnly="True"/>
+                         IsReadOnly="True" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
 
@@ -432,7 +438,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
@@ -446,7 +452,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -460,7 +466,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
@@ -474,7 +480,7 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                         Foreground="Black"
+                          Foreground="White"
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"

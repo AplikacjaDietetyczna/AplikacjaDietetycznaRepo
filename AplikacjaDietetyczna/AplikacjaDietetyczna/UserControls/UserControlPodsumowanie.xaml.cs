@@ -58,7 +58,7 @@ namespace AplikacjaDietetyczna.UserControls
         private void PrzeniesAktualWagi(object sender, RoutedEventArgs e)
         {
             UserControl wag = new UserControlWaga();
-            wag.s
+           // wag.s
         }
 
 
