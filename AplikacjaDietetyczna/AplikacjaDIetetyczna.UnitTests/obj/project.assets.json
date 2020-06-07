@@ -4643,23 +4643,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sasek\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Pajfu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
       "projectName": "AplikacjaDIetetyczna.UnitTests",
-      "projectPath": "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Sasek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Pajfu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sasek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pajfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4672,8 +4668,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
-              "projectPath": "C:\\Users\\Sasek\\source\\repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+            "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+              "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
             }
           }
         }
@@ -4715,7 +4711,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

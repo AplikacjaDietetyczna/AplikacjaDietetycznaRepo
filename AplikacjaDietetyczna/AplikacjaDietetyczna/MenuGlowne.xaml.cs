@@ -76,10 +76,6 @@ namespace AplikacjaDietetyczna
                     UserControl calc = new UserControls.UserControlKalkulkator();
                     GridMain.Children.Add(calc);
                     break;
-                case "Nowy_Posilek":
-                    UserControl add = new UserControls.UserControlDodaj();
-                    GridMain.Children.Add(add);
-                    break;
                 case "Posilki":
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
@@ -89,6 +85,12 @@ namespace AplikacjaDietetyczna
                     GridMain.Children.Add(usc);
                     break;
             }
+        }
+
+        private void Profil_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = new UserControls.UserControlProfil();
+            GridMain.Children.Add(usc);
         }
     }
 }
