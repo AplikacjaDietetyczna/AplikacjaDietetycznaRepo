@@ -289,6 +289,34 @@ namespace AplikacjaDietetyczna.UserControls
             }
 
         }
+
+        private void TypPosilku_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            TypPosilku.Text = "Dodajesz ";
+
+            if(FunkcjeGlobalne.SelectedPosilek == 1)
+            {
+                TypPosilku.Text += "sniadanie";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 2)
+            {
+                TypPosilku.Text += "lunch";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 3)
+            {
+                TypPosilku.Text += "obiad";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 4)
+            {
+                TypPosilku.Text += "przekąskę";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 5)
+            {
+                TypPosilku.Text += "kolację";
+            }
+
+        }
     }
 }
 
