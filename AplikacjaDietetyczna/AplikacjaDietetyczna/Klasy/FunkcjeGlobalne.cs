@@ -21,6 +21,10 @@ namespace AplikacjaDietetyczna.Klasy
         public static string Data { get; set; }
 
         public static int CurrentDate { get; set; }
+
+        public static string SelectedDate { get; set; }
+
+        public static int SelectedPosilek { get; set; }
     }
 
 }

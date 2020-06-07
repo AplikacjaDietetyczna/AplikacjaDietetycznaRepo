@@ -412,5 +412,17 @@ namespace AplikacjaDietetyczna.UserControls
 
 
         }
+
+        private void SniadanieDodaj_Click(object sender, RoutedEventArgs e)
+        {
+
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 1;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+
+
+        }
     }
 }
