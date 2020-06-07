@@ -206,7 +206,7 @@ namespace AplikacjaDietetyczna.UserControls
                 try
                 {
                     string IdPosilku = "";
-                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + FunkcjeGlobalne.SelectedPosilek + ", GETDATE());";
+                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + FunkcjeGlobalne.SelectedPosilek + ",'"+FunkcjeGlobalne.SelectedDate +"')";
                     zapytanieProdukty = "";
                     AzureDB.openConnection();
                     AzureDB.sql = zapytaniePosilek;
