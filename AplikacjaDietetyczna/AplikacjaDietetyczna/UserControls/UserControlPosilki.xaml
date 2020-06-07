@@ -123,10 +123,10 @@
                          IsReadOnly="True"/>
 
                         <Button x:Name="SniadanieDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,66,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="SniadanieDodaj_Click"/>
-                        <Button x:Name="LunchDodaj" Content="Dodaj" Grid.Column="3" HorizontalAlignment="Left" FontSize="28" Margin="1000,166,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
-                        <Button x:Name="ObiadDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,266,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
-                        <Button x:Name="PrzekaskaDodaj" Content="Dodaj" Grid.Column="1" HorizontalAlignment="Left" FontSize="28" Margin="1000,366,0,0" VerticalAlignment="Top" Width="120" Height="50"/>
-                        <Button x:Name="KolacjaDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,466,0,0" VerticalAlignment="Top" Width="120" Height="50" />
+                        <Button x:Name="LunchDodaj" Content="Dodaj" Grid.Column="3" HorizontalAlignment="Left" FontSize="28" Margin="1000,166,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="LunchDodaj_Click"/>
+                        <Button x:Name="ObiadDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,266,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="ObiadDodaj_Click"/>
+                        <Button x:Name="PrzekaskaDodaj" Content="Dodaj" Grid.Column="1" HorizontalAlignment="Left" FontSize="28" Margin="1000,366,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="PrzekaskaDodaj_Click"/>
+                        <Button x:Name="KolacjaDodaj" Content="Dodaj" HorizontalAlignment="Left" FontSize="28" Margin="1000,466,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="KolacjaDodaj_Click" />
                     </Grid>
                 </StackPanel>
 

@@ -86,7 +86,7 @@ namespace AplikacjaDietetyczna.UserControls
 
 
                     AzureDB.openConnection();
-                    AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
+                    AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = '" +FunkcjeGlobalne.ID+"' AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
                     AzureDB.cmd.CommandText = AzureDB.sql;
                     AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -423,6 +423,42 @@ namespace AplikacjaDietetyczna.UserControls
             GridMain.Children.Add(add);
 
 
+        }
+
+        private void LunchDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 2;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void ObiadDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 3;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void PrzekaskaDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 4;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void KolacjaDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 5;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
         }
     }
 }

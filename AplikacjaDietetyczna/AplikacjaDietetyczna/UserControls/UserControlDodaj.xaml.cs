@@ -101,7 +101,6 @@ namespace AplikacjaDietetyczna.UserControls
         {
             IloscCombo.SelectedIndex = 0;
             ProduktCombo.SelectedIndex = 0;
-            RodzajPosilku.SelectedIndex = 0;
             ProduktID.Clear();
             ProduktNazwa.Clear();
             ProduktIlosc.Clear();
@@ -202,12 +201,12 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void DodajPosilek_Click(object sender, RoutedEventArgs e)
         {
-            if (NazwaPosilkuText.Text != "" && Podsumowanie.Text != "" && ((ComboBoxItem)RodzajPosilku.SelectedItem).Tag.ToString() != "0")
+            if (NazwaPosilkuText.Text != "" && Podsumowanie.Text != "")
             {
                 try
                 {
                     string IdPosilku = "";
-                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + ((ComboBoxItem)RodzajPosilku.SelectedItem).Tag.ToString() + ", GETDATE());";
+                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + FunkcjeGlobalne.SelectedPosilek + ", GETDATE());";
                     zapytanieProdukty = "";
                     AzureDB.openConnection();
                     AzureDB.sql = zapytaniePosilek;

@@ -168,18 +168,7 @@
                     Opacity="0.8"
                     Text="Nazwa posiłku:" Margin="10,334,1001,268"
                     IsReadOnly="True" Grid.ColumnSpan="2"/>
-                <TextBox FontFamily="Helvetica"
-                    FontSize="32"
-                    FontWeight="Light"
-                    HorizontalAlignment="Center"
-                    HorizontalContentAlignment="Left"
-                    Background="Transparent"
-                    Foreground="Black"
-                    BorderThickness="0"
-                    Width="209"
-                    Opacity="0.8"
-                    Text="Rodzaj posiłku:" Margin="10,377,1001,225"
-                    IsReadOnly="True" Grid.ColumnSpan="2"/>
+            
                 <xctk:WatermarkTextBox x:Name="NazwaPosilkuText"
                     Watermark="Wprowadź nazwe"
                     FontFamily="Helvetica"
@@ -192,23 +181,8 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                         Height="38" Margin="72,334,744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <ComboBox HorizontalAlignment="Left"                                  
-                    SelectedIndex="0"
-                    x:Name="RodzajPosilku"
-                    IsSynchronizedWithCurrentItem="True"
-                    Height="30"
-                    Margin="77,385,0,0"
-                    VerticalAlignment="Top"
-                    Width="193" Grid.Column="1">
-                    <ComboBoxItem Tag="0">Wybierz rodzaj</ComboBoxItem>
-                    <ComboBoxItem Tag="1">Śniadanie</ComboBoxItem>
-                    <ComboBoxItem Tag="2">Lunch</ComboBoxItem>
-                    <ComboBoxItem Tag="3">Obiad</ComboBoxItem>
-                    <ComboBoxItem Tag="4">Przekąska</ComboBoxItem>
-                    <ComboBoxItem Tag="5">Kolacja</ComboBoxItem>
-
-                </ComboBox>
+                    Height="38" Margin="72,334,744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+               
                 <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,511,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
                 <Button x:Name="Cofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.Column="1"/>
 
