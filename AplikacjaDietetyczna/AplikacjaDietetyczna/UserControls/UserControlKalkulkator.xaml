@@ -16,7 +16,6 @@
                 </LinearGradientBrush>
 
             </Border.Background>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="53" Margin="448,354,0,0" VerticalAlignment="Top" Width="95"/>
 
         </Border>
 
