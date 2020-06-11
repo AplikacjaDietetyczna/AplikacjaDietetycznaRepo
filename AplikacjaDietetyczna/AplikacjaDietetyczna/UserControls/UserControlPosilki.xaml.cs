@@ -32,12 +32,7 @@ namespace AplikacjaDietetyczna.UserControls
         }
 
       
-        public DateTime GetDate(int n)
-        {
 
-            DateTime dateTime = DateTime.Now.AddDays(n);
-            return dateTime;
-        }
 
         private void Czyszczenie()
         {
@@ -65,7 +60,7 @@ namespace AplikacjaDietetyczna.UserControls
             double WeglowodanyZjedzone = 0;
             double KalorieZjedzone = 0;
             double TluszczeZjedzone = 0;
-            string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
+            string sqlFormattedDate = DateKlasa.GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
             string SniadanieProdukty = "";
             string SniadanieNazwa = "";
             int SniadanieIlosc = 0;

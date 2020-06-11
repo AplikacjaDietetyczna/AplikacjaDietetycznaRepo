@@ -112,6 +112,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Klasy\DateKlasa.cs" />
     <Compile Include="Klasy\Dekorator.cs" />
     <Compile Include="Klasy\PobieranieDanych.cs" />
     <Compile Include="Klasy\WyrażeniaRegularne.cs" />

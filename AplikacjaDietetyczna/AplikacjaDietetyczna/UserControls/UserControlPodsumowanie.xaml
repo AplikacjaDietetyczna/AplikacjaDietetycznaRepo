@@ -5,7 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="1220">
+             d:DesignHeight="640" d:DesignWidth="1220"
+             Loaded="Window_Loaded">
+    
+    
     <Grid x:Name="GridMain">
         <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
             <TextBox FontFamily="Helvetica"
@@ -110,11 +113,6 @@
                          Opacity="0.8"
                          Text="Spełnione zapotrzebowanie" Margin="66,518,963,53"
                          IsReadOnly="True"/>
-
-
-
-
-
 
 
 
