@@ -248,15 +248,10 @@ namespace AplikacjaDietetyczna.UserControls
 
               double DzienneZapotrzebowanie =  Zapotrzebowanie.GetZapotrzebowanie();
 
-
-                //Do drugiego miejsca po przecinku
-                double Bialka = Math.Round((Double)DzienneZapotrzebowanie * 0.15, 2);
-                double Kalorie = Math.Round((Double)DzienneZapotrzebowanie, 2);
-                double Tluszcze = Math.Round((Double)DzienneZapotrzebowanie * 0.30, 2);
-                double Weglowodany = Math.Round((Double)DzienneZapotrzebowanie * 0.55, 2);
-
-
-
+                double Kalorie = Zapotrzebowanie.GetKalorie();
+                double Bialka = Zapotrzebowanie.GetBialka();
+                double Tluszcze = Zapotrzebowanie.GetTluszcze();
+                double Weglowodany = Zapotrzebowanie.GetWeglowodany();
 
                 TextBoxKalorie.Text = "Kalorie: " + KalorieZjedzone + " / " + Kalorie + " kcal";
                 TextBoxBialka.Text = "Białka: "+BialkaZjedzone+" / " + Bialka + " g";

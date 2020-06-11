@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AplikacjaDietetyczna.Klasy
 {
-   public class Zapotrzebowanie
+    public class Zapotrzebowanie
     {
 
 
@@ -27,6 +27,41 @@ namespace AplikacjaDietetyczna.Klasy
             return DzienneZapotrzebowanie;
 
         }
+
+
+
+
+        //Do drugiego miejsca po przecinku
+
+        public static double GetBialka ()
+            {
+          double Bialka = Math.Round((Double)Zapotrzebowanie.GetZapotrzebowanie() * 0.15, 2);
+            return Bialka;
+        }
+
+        public static double GetKalorie()
+        {
+            double Kalorie = Math.Round((Double)GetZapotrzebowanie(), 2);
+            return Kalorie;
+        }
+
+        public static double GetTluszcze()
+        {
+            double Tluszcze = Math.Round((Double)GetZapotrzebowanie() * 0.30, 2);
+            return Tluszcze;
+        }
+
+        public static double GetWeglowodany()
+        {
+            double Weglowodany = Math.Round((Double)GetZapotrzebowanie() * 0.55, 2);
+            return Weglowodany;
+        }
+
+
+        
+        
+       
+      
 
 
 
