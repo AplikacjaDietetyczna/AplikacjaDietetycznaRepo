@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220"
              Loaded="Window_Loaded">
-    
-    
+
+
     <Grid x:Name="GridMain">
         <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
             <TextBox FontFamily="Helvetica"
@@ -125,9 +125,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="160"
+                         Width="186"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="290,174,770,428"
+                         Text="0 kcal" Margin="290,174,744,428"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
