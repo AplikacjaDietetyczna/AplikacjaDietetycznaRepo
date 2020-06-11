@@ -116,6 +116,7 @@
     <Compile Include="Klasy\Dekorator.cs" />
     <Compile Include="Klasy\PobieranieDanych.cs" />
     <Compile Include="Klasy\WyrażeniaRegularne.cs" />
+    <Compile Include="Klasy\Zapotrzebowanie.cs" />
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
