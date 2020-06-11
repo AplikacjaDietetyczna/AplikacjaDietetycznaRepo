@@ -6,7 +6,196 @@
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
-    <Grid Background="AliceBlue">
+    <Grid x:Name="GridMain">
+        <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
+            <TextBox FontFamily="Helvetica"
+                         x:Name="TextBoxNazwa"
+                         FontSize="32"
+                         FontWeight="Bold"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="231"
+                         Opacity="0.8"
+                         Text="Podsumowanie" Margin="502,10,486.8,505"
+                         IsReadOnly="True"/>
+
+
+            <Grid>
+
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="Sniadanie"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="1"
+                         Text="Dzienne" Margin="142,85,920,503"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneKalorieNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="Jedzenie (kcal)" Margin="66,174,994,428"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneBialkaNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Białka (g)" Margin="66,258,996,342"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneTluszczeNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Tłuszcze (g)" Margin="66,350,996,237"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneWeglowodanyNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="194"
+                         Opacity="0.8"
+                         Text="Węglowodany (g)" Margin="66,438,960,156"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneSpelnioneNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="191"
+                         TextWrapping="Wrap"
+                         Opacity="0.8"
+                         Text="Spełnione zapotrzebowanie" Margin="66,518,963,53"
+                         IsReadOnly="True"/>
+
+
+
+
+
+
+
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="0 kcal" Margin="290,174,770,428"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="186"
+                         Opacity="0.8"
+                         Text="0 g" Margin="290,258,744,342"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="186"
+                         Opacity="0.8"
+                         Text="0 g" Margin="290,346,744,250"
+                         IsReadOnly="True" RenderTransformOrigin="0.335,0.418"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="206"
+                         Opacity="0.8"
+                         Text="0 g" Margin="290,438,724,156"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneZapotrzebowanie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="206"
+                         Opacity="0.8"
+                         Text="0 razy" Margin="290,528,724,66"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
+
+            </Grid>
+
+
+
+        </Grid>
+
+
+
 
     </Grid>
 </UserControl>
