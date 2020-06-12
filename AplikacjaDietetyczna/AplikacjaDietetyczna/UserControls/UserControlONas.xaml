@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="AplikacjaDietetyczna.UserControls.UserControlONas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1220">
+    <Grid>
+        <Border CornerRadius="5"  Height="640" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#1225ff" Offset="1.5"/>
+                </LinearGradientBrush>
+
+            </Border.Background>
+
+        </Border>
+
+        <StackPanel VerticalAlignment="Center" Height="284" Margin="230,27,0,329">
+            <TextBlock Text="O nas" FontWeight="Light"
+                                FontFamily="hervetica" FontSize="66" Foreground="White"
+                                HorizontalAlignment="Center" Height="115" Margin="200,0,312,0" Width="418" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-300,0,0">
+
+
+            <TextBox x:Name="Członkowie_grupy" FontFamily="Helvetica"              
+                         Text="Członkowie grupy:"
+                        
+                         FontSize="30"
+                         FontWeight="Bold"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="300"
+                         Opacity="0.9"
+                         Margin="30,455,0,443"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-230,0,0">
+
+
+            <TextBox x:Name="Kuba" FontFamily="Helvetica"              
+                         Text="Jakub Piecuch"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="300"
+                         Opacity="0.9"
+                         Margin="30,455,0,380"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-190,0,0">
+
+
+            <TextBox x:Name="Mikołaj" FontFamily="Helvetica"              
+                         Text="Mikołaj Pawełek"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="300"
+                         Opacity="0.9"
+                         Margin="30,455,0,338"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-150,0,0">
+
+
+            <TextBox x:Name="Jurek" FontFamily="Helvetica"              
+                         Text="Jerzy Augustyniak"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="300"
+                         Opacity="0.9"
+                         Margin="30,455,0,295"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-110,0,0">
+
+
+            <TextBox x:Name="Przemek" FontFamily="Helvetica"              
+                         Text="Przemysław Mielnicki"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="300"
+                         Opacity="0.9"
+                         Margin="30,455,0,255"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,-30,0,0">
+
+
+            <TextBox x:Name="inf" FontFamily="Helvetica"              
+                         Text="Informatyka 2019/2020, semestr VI,"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="418"
+                         Opacity="0.9"
+                         Margin="30,455,0,187"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+
+
+            <TextBox x:Name="ATH" FontFamily="Helvetica"              
+                         Text="Akademia Techniczno-Humanistyczna w Bielsku-Białej."
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="644"
+                         Opacity="0.9"
+                         Margin="30,455,0,150"
+                         IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+
+
+            <TextBox x:Name="Version" FontFamily="Helvetica"              
+                         Text="Version 1.0.0"
+                        
+                         FontSize="25"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="301"
+                         Opacity="0.9"
+                         Margin="30,455,0,100"
+                         IsReadOnly="True" RenderTransformOrigin="0.498,1.571"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
