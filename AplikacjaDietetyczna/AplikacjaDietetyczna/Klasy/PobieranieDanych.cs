@@ -52,7 +52,7 @@ namespace AplikacjaDietetyczna.Klasy
         {
             int id = 0;
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Produkty where NazwaProduktu='" + user + "'";
+            AzureDB.sql = "Select * from Users where ID_User='" + user + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
@@ -60,7 +60,7 @@ namespace AplikacjaDietetyczna.Klasy
             AzureDB.da.Fill(AzureDB.dt);
             if (AzureDB.dt.Rows.Count > 0)
             {
-                id = Convert.ToInt16(AzureDB.dt.Rows[0]["ID_Produktu"]);
+                id = Convert.ToInt16(AzureDB.dt.Rows[0]["ID_User"]);
 
             }
             AzureDB.closeConnection();
@@ -70,7 +70,7 @@ namespace AplikacjaDietetyczna.Klasy
         {
             int waga = 0;
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Waga where ID_Waga='" + id + "'";
+            AzureDB.sql = "Select * from Waga where ID_User='" + id + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);

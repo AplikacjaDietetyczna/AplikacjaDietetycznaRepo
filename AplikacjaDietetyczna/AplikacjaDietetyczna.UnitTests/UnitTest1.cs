@@ -24,7 +24,7 @@ namespace AplikacjaDIetetyczna.UnitTests
         {
 
             string MaksEmail = "qwertyuiopasdfghjklqwertyuiopasdfghjklqwertyuiopadsdfghjklqwedd@gmailddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd.pld";
-            AplikacjaDietetyczna.Klasy.Wyra¿eniaRegularne.EmailRegex();
+           AplikacjaDietetyczna.Klasy.Wyra¿eniaRegularne.EmailRegex();
             
             
            Assert.That("pajfu@gmail.com", Does.Match(AplikacjaDietetyczna.Klasy.Wyra¿eniaRegularne.EmailRegex()));
