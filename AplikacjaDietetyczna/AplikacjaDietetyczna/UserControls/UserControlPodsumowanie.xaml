@@ -123,11 +123,11 @@
                          HorizontalAlignment="Center"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
-                          Foreground="White"
+                         Foreground="White"
                          BorderThickness="0"
                          Width="186"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="290,174,744,428"
+                         Text="0" Margin="290,174,744,428"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -141,7 +141,7 @@
                          BorderThickness="0"
                          Width="186"
                          Opacity="0.8"
-                         Text="0 g" Margin="290,258,744,342"
+                         Text="0" Margin="290,258,744,342"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -155,7 +155,7 @@
                          BorderThickness="0"
                          Width="186"
                          Opacity="0.8"
-                         Text="0 g" Margin="290,346,744,250"
+                         Text="0" Margin="290,346,744,250"
                          IsReadOnly="True" RenderTransformOrigin="0.335,0.418"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -169,7 +169,7 @@
                          BorderThickness="0"
                          Width="206"
                          Opacity="0.8"
-                         Text="0 g" Margin="290,438,724,156"
+                         Text="0" Margin="290,438,724,156"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -182,9 +182,8 @@
                           Foreground="White"
                          BorderThickness="0"
                          Width="206"
-                         Opacity="0.8"
-                         Text="0 razy" Margin="290,518,724,76"
-                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
+                         Opacity="0.8" Margin="290,518,724,76"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
 
             </Grid>
 
