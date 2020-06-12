@@ -51,38 +51,42 @@ namespace AplikacjaDietetyczna
         {
 
 
+            if (File.Exists(@"C:\Users\Public\AplikacjaDietetyczna\Login.txt"))
+            {
+                string loginRead = Read.ReadFromFile();
+                TextBoxUser.Text = loginRead;
+            }
+
+
+            //Stare logowanie użytkownika Login    
+            //String message = "Nie udało połączyć się z bazą danych"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
+            ////To jest testowo, by się szybciej logować. Potem trzeba będzie to usunąć
+            //try
+            //{
+            //    AzureDB.openConnection();
+            //    AzureDB.sql = "select top 1 * from Users";
+            //    AzureDB.cmd.CommandType = CommandType.Text;
+            //    AzureDB.cmd.CommandText = AzureDB.sql;
+            //    AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            //    AzureDB.dt = new DataTable();
+            //    AzureDB.da.Fill(AzureDB.dt);
+            //    if (AzureDB.dt.Rows.Count > 0)
+            //    {
+            //        TextBoxUser.Text = AzureDB.dt.Rows[0]["Login"].ToString();
+            //        TextBoxPassword.Password = AzureDB.dt.Rows[0]["Password"].ToString();
+            //    }
+            //    AzureDB.closeConnection();
 
 
 
-        //Stare logowanie użytkownika Login    
-                      //String message = "Nie udało połączyć się z bazą danych"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
-                      ////To jest testowo, by się szybciej logować. Potem trzeba będzie to usunąć
-                      //try
-                      //{
-                      //    AzureDB.openConnection();
-                      //    AzureDB.sql = "select top 1 * from Users";
-                      //    AzureDB.cmd.CommandType = CommandType.Text;
-                      //    AzureDB.cmd.CommandText = AzureDB.sql;
-                      //    AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
-                      //    AzureDB.dt = new DataTable();
-                      //    AzureDB.da.Fill(AzureDB.dt);
-                      //    if (AzureDB.dt.Rows.Count > 0)
-                      //    {
-                      //        TextBoxUser.Text = AzureDB.dt.Rows[0]["Login"].ToString();
-                      //        TextBoxPassword.Password = AzureDB.dt.Rows[0]["Password"].ToString();
-                      //    }
-                      //    AzureDB.closeConnection();
-                      
-                          
-                      
-                      
-                      
-                      //}
-                      //catch (Exception ex)
-                      //{
-                      
-                      //    message = ex.Message.ToString();
-                      //}
+
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    message = ex.Message.ToString();
+            //}
 
 
 
