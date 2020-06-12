@@ -119,7 +119,9 @@
     <Compile Include="Klasy\Dekorator.cs" />
     <Compile Include="Klasy\FunkcjeZerowanie.cs" />
     <Compile Include="Klasy\PobieranieDanych.cs" />
+    <Compile Include="Klasy\Read.cs" />
     <Compile Include="Klasy\Singleton.cs" />
+    <Compile Include="Klasy\Write.cs" />
     <Compile Include="Klasy\WyrażeniaRegularne.cs" />
     <Compile Include="Klasy\Zapotrzebowanie.cs" />
     <Compile Include="Rejestracja.xaml.cs">

@@ -54,10 +54,11 @@
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
                          Foreground="White"
+                         Text="Nazwa Użytkownika"
                          BorderThickness="0"
                          Width="235"
                          Opacity="0.5"
-                         Text="Nazwa użytkownika"
+                         
                          Height="25"
                          Margin="63,0,0,0"/>
 

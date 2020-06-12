@@ -15,7 +15,7 @@ namespace AplikacjaDietetyczna.Klasy
             FunkcjeGlobalne.Wiek = "";
             FunkcjeGlobalne.Wzrost = "";
             FunkcjeGlobalne.Waga = "";
-            FunkcjeGlobalne.Login = "";
+            //FunkcjeGlobalne.Login = "";
             FunkcjeGlobalne.Email = "";
 
         }
