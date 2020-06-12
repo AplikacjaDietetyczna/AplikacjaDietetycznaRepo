@@ -25,7 +25,7 @@ namespace AplikacjaDietetyczna.Klasy
 
         public static string WeightRegex()
         {
-            string waga = "";
+            string waga = @"^\d+$";
 
             return waga;
         }
