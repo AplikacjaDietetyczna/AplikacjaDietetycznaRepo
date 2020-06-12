@@ -101,5 +101,13 @@ namespace AplikacjaDietetyczna
             UserControl onas = new UserControls.UserControlONas();
             GridMain.Children.Add(onas);
         }
+
+        private void Wyloguj_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow logowanie = new MainWindow();
+            logowanie.Show();
+            this.Close();
+            FunkcjeZerowanie.ZerownaieFunkcji();
+        }
     }
 }
