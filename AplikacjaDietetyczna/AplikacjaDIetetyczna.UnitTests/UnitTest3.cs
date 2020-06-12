@@ -21,6 +21,8 @@ namespace AplikacjaDIetetyczna.UnitTests
         {
             Assert.That("11", Does.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.WeightRegex()));
             Assert.That("11asd", Does.Not.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.WeightRegex()));
+            Assert.That("230", Does.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.HeightRegex()));
+            Assert.That("a2a30", Does.Not.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.HeightRegex()));
 
             // Assert.IsInstanceOf<int>(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzWage(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzIDUsera("29")));
         }
