@@ -30,7 +30,12 @@ namespace AplikacjaDietetyczna.Klasy
             return waga;
         }
 
+        public static string HeightRegex()
+        {
+            string wzrost = @"^\d+$";
 
+            return wzrost;
+        }
 
 
     }
