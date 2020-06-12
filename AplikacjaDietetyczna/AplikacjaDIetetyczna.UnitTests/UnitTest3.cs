@@ -19,8 +19,11 @@ namespace AplikacjaDIetetyczna.UnitTests
         [Test]
         public void PobieranieWagiTest()
         {
-            var obj = new PobieranieDanych();
-            Assert.IsInstanceOf<int>(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzWage(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzIdProduktu()));
+            Assert.That("11", Does.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.WeightRegex()));
+            Assert.That("11asd", Does.Not.Match(AplikacjaDietetyczna.Klasy.WyrażeniaRegularne.WeightRegex()));
+
+            // Assert.IsInstanceOf<int>(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzWage(AplikacjaDietetyczna.Klasy.PobieranieDanych.PobierzIDUsera("29")));
         }
+
     }
 }

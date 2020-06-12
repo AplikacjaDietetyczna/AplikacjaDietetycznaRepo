@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using AplikacjaDietetyczna.UserControls;
+
 namespace AplikacjaDietetyczna.Klasy
 {
   public  class WyrażeniaRegularne
@@ -21,6 +23,12 @@ namespace AplikacjaDietetyczna.Klasy
 
         }
 
+        public static string WeightRegex()
+        {
+            string waga = @"^\d+$";
+
+            return waga;
+        }
 
 
 
