@@ -111,7 +111,7 @@
                          Width="191"
                          TextWrapping="Wrap"
                          Opacity="0.8"
-                         Text="Spełnione zapotrzebowanie" Margin="66,518,963,53"
+                         Text="Spełnione zapotrzebowanie kaloryczne" Margin="66,496,963,50"
                          IsReadOnly="True"/>
 
 
@@ -183,7 +183,7 @@
                          BorderThickness="0"
                          Width="206"
                          Opacity="0.8"
-                         Text="0 razy" Margin="290,528,724,66"
+                         Text="0 razy" Margin="290,518,724,76"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
 
             </Grid>
