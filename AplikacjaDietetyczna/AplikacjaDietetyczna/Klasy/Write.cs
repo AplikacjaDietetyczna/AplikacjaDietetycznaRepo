@@ -11,6 +11,9 @@ namespace AplikacjaDietetyczna.Klasy
 {
     class Write
     {
-
+        public static void WriteToFile(string login)
+        {
+            System.IO.File.WriteAllText(@"C:\Users\Public\AplikacjaDietetyczna\Login.txt", login);
+        }
     }
 }
