@@ -34,11 +34,10 @@
                 <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="780,23,0,-29" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-
-                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
+                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White" Width="35" FontSize="14">
                         <StackPanel Width="150" Background="AntiqueWhite" >
                             <Button Content="Profil" Click="Profil_Click"/>
-                            <Button Content="O nas"/>
+                            <Button x:Name="ONas" Content="O nas" Click="Button_Click"/>
                             <Separator/>
                             <Button Content="Wyloguj"/>
                         </StackPanel>
@@ -49,7 +48,7 @@
 
             <Grid x:Name="GridMenu" Width="180" HorizontalAlignment="Left" Background="#FF5C99D6">
 
-  
+
 
                 <StackPanel>
                     <Grid Height="150" Background="#FF5C99D6" RenderTransformOrigin="0.5,0.5">
@@ -86,10 +85,10 @@
                         </ListViewItem>
                     </ListView>
 
-                  
-                 
-                      
-                
+
+
+
+
 
 
                 </StackPanel>

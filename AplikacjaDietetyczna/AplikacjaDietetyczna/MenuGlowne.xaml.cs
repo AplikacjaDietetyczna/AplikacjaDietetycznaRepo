@@ -95,5 +95,11 @@ namespace AplikacjaDietetyczna
             UserControl usc = new UserControls.UserControlProfil();
             GridMain.Children.Add(usc);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl onas = new UserControls.UserControlONas();
+            GridMain.Children.Add(onas);
+        }
     }
 }
