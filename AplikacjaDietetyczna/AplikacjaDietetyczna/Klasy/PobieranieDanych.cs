@@ -48,6 +48,23 @@ namespace AplikacjaDietetyczna.Klasy
             return nazwa;
         }
 
+        public static int PobierzWage(int id)
+        {
+            int waga = 0;
+            AzureDB.openConnection();
+            AzureDB.sql = "Select * from Waga where ID_Waga='" + id + "'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                waga = Convert.ToInt32(AzureDB.dt.Rows[0]["Waga"]);
 
+            }
+            AzureDB.closeConnection();
+            return waga;
+        }
     }
 }
