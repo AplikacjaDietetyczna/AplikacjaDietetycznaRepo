@@ -107,6 +107,7 @@ namespace AplikacjaDietetyczna
             MainWindow logowanie = new MainWindow();
             logowanie.Show();
             this.Close();
+            FunkcjeZerowanie.ZerownaieFunkcji();
         }
     }
 }
