@@ -13,7 +13,7 @@ namespace AplikacjaDietetyczna.Klasy
     {
         public static void WriteToFile(string login)
         {
-            System.IO.File.WriteAllText(@"C:\Users\Public\AplikacjaDietetyczna\Login.txt", login);
+            System.IO.File.WriteAllText("./Login.txt", login);
         }
     }
 }

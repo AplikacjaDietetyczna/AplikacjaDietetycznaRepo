@@ -219,3 +219,6 @@ C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Aplikac
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\bin\Debug\netcoreapp3.1\EO.WebBrowser.dll
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\bin\Debug\netcoreapp3.1\EO.WebEngine.dll
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\obj\Debug\netcoreapp3.1\AplikacjaDIetetyczna.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\bin\Debug\netcoreapp3.1\EO.Base.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\bin\Debug\netcoreapp3.1\EO.WebBrowser.dll
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDIetetyczna.UnitTests\bin\Debug\netcoreapp3.1\EO.WebEngine.dll

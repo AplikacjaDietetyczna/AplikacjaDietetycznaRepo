@@ -267,3 +267,5 @@ C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Aplikac
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.baml
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.g.cs
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.baml

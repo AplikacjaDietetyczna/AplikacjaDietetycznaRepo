@@ -10,7 +10,7 @@ namespace AplikacjaDietetyczna.Klasy
     {
         public static string ReadFromFile()
         {
-            string loginRead = System.IO.File.ReadAllText(@"C:\Users\Public\AplikacjaDietetyczna\Login.txt");
+            string loginRead = System.IO.File.ReadAllText(@"./Login.txt");
 
             return loginRead;
         }

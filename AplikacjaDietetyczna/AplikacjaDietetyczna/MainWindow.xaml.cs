@@ -51,7 +51,7 @@ namespace AplikacjaDietetyczna
         {
 
 
-            if (File.Exists(@"C:\Users\Public\AplikacjaDietetyczna\Login.txt"))
+            if (File.Exists("./Login.txt"))
             {
                 string loginRead = Read.ReadFromFile();
                 TextBoxUser.Text = loginRead;

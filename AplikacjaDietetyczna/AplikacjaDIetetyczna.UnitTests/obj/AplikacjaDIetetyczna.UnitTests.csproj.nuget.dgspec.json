@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {}
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
         "projectName": "AplikacjaDIetetyczna.UnitTests",
-        "projectPath": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\KUBA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
+        "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Pajfu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KUBA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pajfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
-                "projectPath": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+              "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+                "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
               }
             }
           }
@@ -74,16 +74,16 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
+        "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
         "projectName": "AplikacjaDietetyczna",
-        "projectPath": "C:\\Users\\KUBA\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+        "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
       },
       "frameworks": {
         "net472": {}
