@@ -256,3 +256,12 @@ C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\Aplika
 C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.g.cs
 C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.baml
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignColors.dll
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignColors.pdb
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.g.cs
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.g.cs
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.baml
+C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.baml
