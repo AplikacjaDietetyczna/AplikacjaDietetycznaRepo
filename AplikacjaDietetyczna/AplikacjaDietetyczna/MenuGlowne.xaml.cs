@@ -108,6 +108,7 @@ namespace AplikacjaDietetyczna
             logowanie.Show();
             this.Close();
             FunkcjeZerowanie.ZerownaieFunkcji();
+            
         }
     }
 }
