@@ -39,7 +39,7 @@
                             <Button Content="Profil" Click="Profil_Click"/>
                             <Button x:Name="ONas" Content="O nas" Click="Button_Click"/>
                             <Separator/>
-                            <Button Content="Wyloguj"/>
+                            <Button x:Name="Wyloguj" Content="Wyloguj" Click="Wyloguj_Click"/>
                         </StackPanel>
                     </materialDesign:PopupBox>
                 </StackPanel>
