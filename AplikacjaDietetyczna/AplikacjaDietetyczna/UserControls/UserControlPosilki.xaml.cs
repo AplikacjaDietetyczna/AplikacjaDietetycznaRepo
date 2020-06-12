@@ -260,14 +260,14 @@ namespace AplikacjaDietetyczna.UserControls
 
                 //Dodatkowe wyświetlanie czy user je zdrowo
 
-                if((KalorieZjedzone > Kalorie + 200))
+                if((KalorieZjedzone > Kalorie + 800))
                 {
                     TextBoxKalorie.BorderThickness = new Thickness(1);
                     TextBoxKalorie.BorderBrush = Brushes.Red;
                     TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych kalorii";
                 }
 
-                if ((KalorieZjedzone < Kalorie + 200 && KalorieZjedzone > Kalorie - 200))
+                if ((KalorieZjedzone < Kalorie + 800 && KalorieZjedzone > Kalorie - 200))
                 {
                     TextBoxKalorie.BorderThickness = new Thickness(1);
                     TextBoxKalorie.BorderBrush = Brushes.Green;
@@ -280,14 +280,14 @@ namespace AplikacjaDietetyczna.UserControls
                     TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
                 }
 
-                if ((BialkaZjedzone > Bialka + 55))
+                if ((BialkaZjedzone > Bialka + 90))
                 {
                     TextBoxBialka.BorderThickness = new Thickness(1);
                     TextBoxBialka.BorderBrush = Brushes.Red;
                     TextBoxBialka.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanego białka";
                 }
 
-                if ((BialkaZjedzone < Bialka + 55 && BialkaZjedzone > Bialka - 55))
+                if ((BialkaZjedzone < Bialka + 90 && BialkaZjedzone > Bialka - 55))
                 {
                     TextBoxBialka.BorderThickness = new Thickness(1);
                     TextBoxBialka.BorderBrush = Brushes.Green;
@@ -297,11 +297,11 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (BialkaZjedzone < Bialka)
                 {
                     TextBoxBialka.BorderThickness = new Thickness(0);
-                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
 
-                if ((TluszczeZjedzone > Tluszcze + 15))
+                if ((TluszczeZjedzone > Tluszcze + 50))
                 {
                     TextBoxTluszcze.BorderThickness = new Thickness(1);
                     TextBoxTluszcze.BorderBrush = Brushes.Red;
@@ -318,17 +318,17 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (TluszczeZjedzone < Tluszcze)
                 {
                     TextBoxTluszcze.BorderThickness = new Thickness(0);
-                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
-                if ((WeglowodanyZjedzone > Weglowodany + 170))
+                if ((WeglowodanyZjedzone > Weglowodany + 400))
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(1);
                     TextBoxWeglowodany.BorderBrush = Brushes.Red;
                     TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych węglowodanów";
                 }
 
-                if ((WeglowodanyZjedzone < Weglowodany + 170 && WeglowodanyZjedzone > Weglowodany - 170))
+                if ((WeglowodanyZjedzone < Weglowodany + 400 && WeglowodanyZjedzone > Weglowodany - 170))
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(1);
                     TextBoxWeglowodany.BorderBrush = Brushes.Green;
@@ -338,7 +338,7 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (WeglowodanyZjedzone < Weglowodany)
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(0);
-                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
 
