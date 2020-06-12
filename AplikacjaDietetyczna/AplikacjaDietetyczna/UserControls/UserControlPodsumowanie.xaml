@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220"
              Loaded="Window_Loaded">
-    
-    
+
+
     <Grid x:Name="GridMain">
         <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
             <TextBox FontFamily="Helvetica"
@@ -111,7 +111,7 @@
                          Width="191"
                          TextWrapping="Wrap"
                          Opacity="0.8"
-                         Text="Spełnione zapotrzebowanie" Margin="66,518,963,53"
+                         Text="Spełnione zapotrzebowanie kaloryczne" Margin="66,496,963,50"
                          IsReadOnly="True"/>
 
 
@@ -125,9 +125,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="160"
+                         Width="186"
                          Opacity="0.8"
-                         Text="0 kcal" Margin="290,174,770,428"
+                         Text="0 kcal" Margin="290,174,744,428"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -183,7 +183,7 @@
                          BorderThickness="0"
                          Width="206"
                          Opacity="0.8"
-                         Text="0 razy" Margin="290,528,724,66"
+                         Text="0 razy" Margin="290,518,724,76"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
 
             </Grid>

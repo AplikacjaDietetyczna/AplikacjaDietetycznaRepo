@@ -50,7 +50,10 @@ namespace AplikacjaDietetyczna
         }
         private void PokazAdmin_Loaded(object sender, RoutedEventArgs e)
         {
-            if (FunkcjeGlobalne.IsAdmin == "1")
+            Singleton singleton = Singleton.Instance;
+           
+
+            if (singleton.CheckIfUserIsAdmin() == "1")
             {
 
                 PokazAdmin.Text = "User jest adminem";

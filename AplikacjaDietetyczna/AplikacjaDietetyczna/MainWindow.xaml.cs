@@ -90,12 +90,12 @@ namespace AplikacjaDietetyczna
                 if (AzureDB.rd.Read())
                 {
                     FunkcjeGlobalne.ID = AzureDB.rd["ID_User"].ToString();
-                    FunkcjeGlobalne.IsAdmin = AzureDB.rd["IsAdmin"].ToString();
                     FunkcjeGlobalne.Login = AzureDB.rd["Login"].ToString();
                     FunkcjeGlobalne.Wiek = AzureDB.rd["Wiek"].ToString();
                     FunkcjeGlobalne.Wzrost = AzureDB.rd["Wzrost"].ToString();
                     FunkcjeGlobalne.Waga = AzureDB.rd["Waga"].ToString();
                     FunkcjeGlobalne.Plec = AzureDB.rd["Plec"].ToString();
+                    FunkcjeGlobalne.Email = AzureDB.rd["Email"].ToString();
                     FunkcjeGlobalne.Data = "0";
                     message = "1";
                 }
