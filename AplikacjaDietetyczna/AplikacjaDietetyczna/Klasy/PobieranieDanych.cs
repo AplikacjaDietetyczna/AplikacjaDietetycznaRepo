@@ -47,5 +47,7 @@ namespace AplikacjaDietetyczna.Klasy
             AzureDB.closeConnection();
             return nazwa;
         }
+
+
     }
 }
