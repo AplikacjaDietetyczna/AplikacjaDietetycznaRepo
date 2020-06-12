@@ -25,12 +25,15 @@ namespace AplikacjaDietetyczna.Klasy
             }
         }
 
-        public int CheckIfUserIsAdmin()
+        public string CheckIfUserIsAdmin()
         {
-            int IsAdmin = 0;
-            String message = "Podano nieprawidłowe dane logowania!"; //To trzeba zmienić na tekst wyświetlający się gdzieś na ekranie logowania
+
+            String message = "Nie udało połączyć się z bazą danych";
+            string IsAdmin = "";
             try
             {
+
+                
                 AzureDB.openConnection();
 
                 AzureDB.sql = ("SELECT TOP 1 * FROM USERS where Login =  '" + FunkcjeGlobalne.Login + "'  AND ID_User = '" + FunkcjeGlobalne.ID + "'");
@@ -39,13 +42,14 @@ namespace AplikacjaDietetyczna.Klasy
                 AzureDB.rd = AzureDB.cmd.ExecuteReader();
                 if (AzureDB.rd.Read())
                 {
-                    IsAdmin = Convert.ToInt32(AzureDB.rd["IsAdmin"].ToString());
+                    IsAdmin = AzureDB.rd["IsAdmin"].ToString();
                 }
 
                 AzureDB.closeConnection();
             }
             catch (Exception ex)
             {
+
                 message = ex.Message.ToString();
             }
             return IsAdmin;

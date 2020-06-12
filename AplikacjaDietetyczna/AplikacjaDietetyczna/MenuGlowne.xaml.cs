@@ -53,7 +53,7 @@ namespace AplikacjaDietetyczna
             Singleton singleton = Singleton.Instance;
            
 
-            if (singleton.CheckIfUserIsAdmin() == 1)
+            if (singleton.CheckIfUserIsAdmin() == "1")
             {
 
                 PokazAdmin.Text = "User jest adminem";
