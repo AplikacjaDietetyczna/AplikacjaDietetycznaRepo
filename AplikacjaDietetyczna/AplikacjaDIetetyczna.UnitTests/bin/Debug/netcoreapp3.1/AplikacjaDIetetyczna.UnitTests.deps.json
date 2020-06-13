@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "AplikacjaDIetetyczna.UnitTests/1.0.0": {
+      "AplikacjaDietetyczna.UnitTests/1.0.0": {
         "dependencies": {
           "AplikacjaDietetyczna": "1.0.0",
           "EO.WebBrowser": "20.1.45",
@@ -15,7 +15,7 @@
           "NUnit": "3.12.0"
         },
         "runtime": {
-          "AplikacjaDIetetyczna.UnitTests.dll": {}
+          "AplikacjaDietetyczna.UnitTests.dll": {}
         }
       },
       "EO.WebBrowser/20.1.45": {
@@ -899,7 +899,7 @@
     }
   },
   "libraries": {
-    "AplikacjaDIetetyczna.UnitTests/1.0.0": {
+    "AplikacjaDietetyczna.UnitTests/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

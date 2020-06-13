@@ -127,7 +127,7 @@
                          BorderThickness="0"
                          Width="186"
                          Opacity="0.8"
-                         Text="0" Margin="290,174,744,428"
+                         Text="0" Margin="290,174,744,414"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"

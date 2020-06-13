@@ -63,6 +63,7 @@ namespace AplikacjaDietetyczna.UserControls
             {
 
                 message = ex.Message.ToString();
+                DzienneKalorie.Text = "0";
             }
 
             DzienneKalorie.Text += "/"+Zapotrzebowanie.GetKalorie()+" kcal";
