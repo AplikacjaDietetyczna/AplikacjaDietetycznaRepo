@@ -33,6 +33,21 @@
 
 
                         <TextBox FontFamily="Helvetica"
+                         x:Name="TypPosilku"
+                         FontSize="32"
+                         FontWeight="DemiBold"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="394"
+                         Opacity="0.8"
+                         Text="TypPosilku" Margin="29,11,797,483.6"
+                         IsReadOnly="True" Loaded="TypPosilku_Loaded"/>
+
+
+                        <TextBox FontFamily="Helvetica"
                          x:Name="Sniadanie"
                          FontSize="32"
                          FontWeight="Light"
@@ -43,7 +58,7 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="0.8"
-                         Text="Produkt" Margin="29,70,1043.8,445"
+                         Text="Produkt" Margin="29,155,1044,359.8"
                          IsReadOnly="True"/>
 
 
@@ -55,7 +70,7 @@
                                   ItemsSource="{Binding cbItems1}"
                                   SelectedItem="{Binding SelectedcbItem1}"
                                   Height="30"
-                                  Margin="230,76,0,0"
+                                  Margin="252,155,0,0"
                                   VerticalAlignment="Top"
                                   Width="193" 
                                   RenderTransformOrigin="-0.462,0.607" DropDownClosed="ProduktCombo_DropDownClosed"/>
@@ -64,6 +79,10 @@
 
                 <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="447*"/>
+                        </Grid.ColumnDefinitions>
 
 
                         <TextBox FontFamily="Helvetica"
@@ -77,7 +96,7 @@
                          BorderThickness="0"
                          Width="147"
                          Opacity="1"
-                         Text="Ilość" Margin="29,70,1043.8,445"
+                         Text="Ilość" Margin="31,136,148.4,378.8"
                          IsReadOnly="True"/>
 
 
@@ -87,9 +106,9 @@
                                   x:Name="IloscCombo"
                                   IsSynchronizedWithCurrentItem="True"
                                   Height="30"
-                                  Margin="230,76,0,0"
+                                  Margin="255,136,0,0"
                                   VerticalAlignment="Top"
-                                  Width="193"/>
+                                  Width="193" DropDownClosed="IloscCombo_DropDownClosed" Grid.ColumnSpan="2"/>
                         <TextBox FontFamily="Helvetica"
                             x:Name="Weglowodany_Podsumowanie"
                             FontSize="32"
@@ -101,8 +120,8 @@
                             BorderThickness="0"
                             Width="367"
                             Opacity="1"
-                            Text="Węglowodany: " Margin="507,410,346,105"
-                            IsReadOnly="True"/>
+                            Text="Węglowodany: " Margin="181.433,410,346,104.6"
+                            IsReadOnly="True" Grid.Column="1"/>
                         <TextBox FontFamily="Helvetica"
                             x:Name="Kalorie_Podsumowanie"
                             FontSize="32"
@@ -114,8 +133,8 @@
                             BorderThickness="0"
                             Width="372"
                             Opacity="1"
-                            Text="Kalorie: " Margin="507,453,341,62"
-                            IsReadOnly="True"/>
+                            Text="Kalorie: " Margin="181.433,453,341,61.6"
+                            IsReadOnly="True" Grid.Column="1"/>
                         <TextBox FontFamily="Helvetica"
                             x:Name="Tluszcze_Podsumowanie"
                             FontSize="32"
@@ -127,8 +146,8 @@
                             BorderThickness="0"
                             Width="331"
                             Opacity="1"
-                            Text="Tłuszcze: " Margin="879,410,10,105"
-                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553"/>
+                            Text="Tłuszcze: " Margin="553.433,410,10,104.6"
+                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553" Grid.Column="1"/>
                         <TextBox FontFamily="Helvetica"
                             x:Name="Białko_Podsumowanie"
                             FontSize="32"
@@ -140,8 +159,8 @@
                             BorderThickness="0"
                             Width="331"
                             Opacity="1"
-                            Text="Białko: " Margin="879,453,10,62"
-                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553"/>
+                            Text="Białko: " Margin="553.433,453,10,61.6"
+                            IsReadOnly="True" RenderTransformOrigin="1.003,0.553" Grid.Column="1"/>
                     </Grid>
                 </StackPanel>
 
@@ -154,8 +173,8 @@
                 </StackPanel>
 
 
-                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="-120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click"/>
-                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="32,415,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajPosilek_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="120,300,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click"/>
+                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="120,558,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajPosilek_Click" Grid.Column="1"/>
                 <TextBox FontFamily="Helvetica"
                     FontSize="32"
                     FontWeight="Light"
@@ -166,20 +185,9 @@
                     BorderThickness="0"
                     Width="209"
                     Opacity="0.8"
-                    Text="Nazwa posiłku:" Margin="10,334,1001,268"
+                    Text="Nazwa posiłku:" Margin="27,71,984,531"
                     IsReadOnly="True" Grid.ColumnSpan="2"/>
-                <TextBox FontFamily="Helvetica"
-                    FontSize="32"
-                    FontWeight="Light"
-                    HorizontalAlignment="Center"
-                    HorizontalContentAlignment="Left"
-                    Background="Transparent"
-                    Foreground="Black"
-                    BorderThickness="0"
-                    Width="209"
-                    Opacity="0.8"
-                    Text="Rodzaj posiłku:" Margin="10,377,1001,225"
-                    IsReadOnly="True" Grid.ColumnSpan="2"/>
+
                 <xctk:WatermarkTextBox x:Name="NazwaPosilkuText"
                     Watermark="Wprowadź nazwe"
                     FontFamily="Helvetica"
@@ -192,24 +200,10 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                         Height="38" Margin="72,334,744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <ComboBox HorizontalAlignment="Left"                                  
-                    SelectedIndex="0"
-                    x:Name="RodzajPosilku"
-                    IsSynchronizedWithCurrentItem="True"
-                    Height="30"
-                    Margin="77,385,0,0"
-                    VerticalAlignment="Top"
-                    Width="193" Grid.Column="1">
-                    <ComboBoxItem Tag="0">Wybierz rodzaj</ComboBoxItem>
-                    <ComboBoxItem Tag="1">Śniadanie</ComboBoxItem>
-                    <ComboBoxItem Tag="2">Lunch</ComboBoxItem>
-                    <ComboBoxItem Tag="3">Obiad</ComboBoxItem>
-                    <ComboBoxItem Tag="4">Przekąska</ComboBoxItem>
-                    <ComboBoxItem Tag="5">Kolacja</ComboBoxItem>
+                         Height="38" Margin="89,71,727,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
 
-                </ComboBox>
-                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="120,250,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.Column="1"/>
+                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,558,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="Cofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="32,300,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.ColumnSpan="2"/>
 
 
             </Grid>
@@ -217,6 +211,7 @@
 
         </StackPanel>
         <TextBlock x:Name="Podsumowanie" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
+        <TextBlock x:Name="Podsumowanie_Ghost" HorizontalAlignment="Left" Foreground="Gray" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="499,69,0,0" Height="432" Width="721"/>
 
 
 

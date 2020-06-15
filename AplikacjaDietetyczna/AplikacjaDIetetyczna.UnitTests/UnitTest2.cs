@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using AplikacjaDIetetyczna;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Assert = NUnit.Framework.Assert;
 
 namespace AplikacjaDIetetyczna.UnitTests

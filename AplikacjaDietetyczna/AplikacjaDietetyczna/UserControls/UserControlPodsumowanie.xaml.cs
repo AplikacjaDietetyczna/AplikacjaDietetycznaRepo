@@ -28,39 +28,149 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
 
-            //Pobranie nazwy użytkownika w celu użycia jej w zapytaniu
-            string NazwaUzytkownika = FunkcjeGlobalne.Login;
 
-            //Połączenie z bazą i pobranie danych z zapytania
-            AzureDB.openConnection();
-            AzureDB.sql = "SELECT Login, Plec, Wiek, Wzrost, Waga, Data FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='"+NazwaUzytkownika+"'";
-            AzureDB.cmd.CommandType = CommandType.Text;
-            AzureDB.cmd.CommandText = AzureDB.sql;
-            //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
-            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
-            AzureDB.dt = new DataTable();
-            AzureDB.da.Fill(AzureDB.dt);
-
-            //Wyświetlanie danych
-            if (AzureDB.dt.Rows.Count > 0)
-            {
-                UzytkownikLogin.Text = AzureDB.dt.Rows[0]["Login"].ToString();
-                UzytkownikPlec.Text = AzureDB.dt.Rows[0]["Plec"].ToString();
-                UzytkownikWiek.Text = AzureDB.dt.Rows[0]["Wiek"].ToString();
-                UzytkownikWzrost.Text = AzureDB.dt.Rows[0]["Wzrost"].ToString();
-                UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
-                UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
-            }
-            //Zamknięcie połączenia z bazą
-            AzureDB.closeConnection();
         }
 
-        private void PrzeniesAktualWagi(object sender, RoutedEventArgs e)
+        private void Podsumowanie(int IloscDni)
         {
-            UserControl wag = new UserControlWaga();
-            wag.s
+            FunkcjeGlobalne.Data = "0";
+            int SpelnioneZapotrzebowanie = 0;
+            int CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
+            int DataTydzien = CurrentDate - IloscDni;
+            if (IloscDni == 0)
+            {
+                CurrentDate = CurrentDate + 1;
+            }
+            double KalorieRazem = 0;
+            double BialkaRazem = 0;
+            double TluszczeRazem = 0;
+            double WeglowodanyRazem = 0;
+            double Weglowodany = 0;
+            double Tluszcze = 0;
+            double Bialka = 0;
+            while (DataTydzien != CurrentDate)
+            {
+
+
+
+                string sqlFormattedDate = DateKlasa.GetDate(Convert.ToInt32(DataTydzien)).ToString("yyyy-MM-dd");
+                String message = "Nie udało połączyć się z bazą danych";
+                double Kalorie = 0;
+                try
+                {
+                    AzureDB.openConnection();
+                    AzureDB.sql = "SELECT SUM((Ilosc * Kalorie)) AS KalorieRazem, SUM((Ilosc * Bialka)) AS BialkaRazem, SUM((Ilosc * Tluszcze)) AS TluszczeRazem, SUM((Ilosc * Weglowodany)) AS WeglowodanyRazem  FROM Users   INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Data = '" + sqlFormattedDate + "' AND Users.ID_User = '" + FunkcjeGlobalne.ID + "'";
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                    AzureDB.dt = new DataTable();
+                    AzureDB.da.Fill(AzureDB.dt);
+                    if (AzureDB.dt.Rows.Count > 0)
+                    {
+                        DzienneKalorie.Text = AzureDB.dt.Rows[0]["KalorieRazem"].ToString();
+                        Kalorie = Convert.ToDouble(AzureDB.dt.Rows[0]["KalorieRazem"].ToString());
+                        Bialka = Convert.ToDouble(AzureDB.dt.Rows[0]["BialkaRazem"].ToString());
+                        Tluszcze = Convert.ToDouble(AzureDB.dt.Rows[0]["TluszczeRazem"].ToString());
+                        Weglowodany = Convert.ToDouble(AzureDB.dt.Rows[0]["WeglowodanyRazem"].ToString());
+                    }
+                    AzureDB.closeConnection();
+                }
+                catch (Exception ex)
+                {
+
+                    message = ex.Message.ToString();
+                    DzienneKalorie.Text = "0";
+                }
+                KalorieRazem += Kalorie;
+                BialkaRazem += Bialka;
+                TluszczeRazem += Tluszcze;
+                WeglowodanyRazem += Weglowodany;
+
+                if(IloscDni != 0)
+                {
+                    DzienneKalorie.Text = KalorieRazem + "/" + Zapotrzebowanie.GetKalorie() * IloscDni + " kcal";
+                    DzienneBialka.Text = BialkaRazem + "/" + Zapotrzebowanie.GetBialka() * IloscDni + " g";
+                    DzienneTluszcze.Text = TluszczeRazem + "/" + Zapotrzebowanie.GetTluszcze() * IloscDni + " g";
+                    DzienneWeglowodany.Text = WeglowodanyRazem + "/" + Zapotrzebowanie.GetWeglowodany() * IloscDni + " g";
+                }
+               
+                else
+                {
+                    DzienneKalorie.Text = KalorieRazem + "/" + Zapotrzebowanie.GetKalorie() + " kcal";
+                    DzienneBialka.Text = BialkaRazem + "/" + Zapotrzebowanie.GetBialka() + " g";
+                    DzienneTluszcze.Text = TluszczeRazem + "/" + Zapotrzebowanie.GetTluszcze() + " g";
+                    DzienneWeglowodany.Text = WeglowodanyRazem + "/" + Zapotrzebowanie.GetWeglowodany() + " g";
+                }
+                if (Kalorie >= Zapotrzebowanie.GetKalorie())
+                {
+                    SpelnioneZapotrzebowanie++;
+                    DzienneZapotrzebowanie.Text = Convert.ToString(SpelnioneZapotrzebowanie);
+                }
+                DataTydzien++;
+
+            }
+
+
         }
 
 
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.Tryb = "Tygodniowe";
+            FunkcjeGlobalne.Data = "0";
+            Podsumowanie(7);
+
+        }
+
+        private void Dzienne(object sender, RoutedEventArgs e)
+        {
+
+           
+
+            if (FunkcjeGlobalne.Tryb == "Tygodniowe")
+            {
+                Nazwa.Text = "Dzienne";
+                Podsumowanie(0);
+                FunkcjeGlobalne.Tryb = "Dzienne";
+            }
+
+            if (FunkcjeGlobalne.Tryb == "Miesieczne")
+            {
+                Nazwa.Text = "Tygodniowe";
+                Podsumowanie(7);
+                FunkcjeGlobalne.Tryb = "Tygodniowe";
+            }
+
+
+        }
+
+
+        private void Miesieczne(object sender, RoutedEventArgs e)
+        {
+            if(FunkcjeGlobalne.Tryb == "Tygodniowe")
+            {
+                Podsumowanie(31);
+                Nazwa.Text = "Miesięczne";
+                FunkcjeGlobalne.Tryb = "Miesieczne";
+            }
+
+            if (FunkcjeGlobalne.Tryb == "Dzienne")
+            {
+                Nazwa.Text = "Tygodniowe";
+                Podsumowanie(7);
+                FunkcjeGlobalne.Tryb = "Tygodniowe";
+            }
+
+
+        }
+
+        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(Kalendarz.SelectedDate);
+            //var dateString = Kalendarz.SelectedDate;
+            //DateTime date1 = DateTime.Parse(dateString,
+            //              System.Globalization.CultureInfo.InvariantCulture);
+        }
     }
 }

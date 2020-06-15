@@ -5,230 +5,201 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-  <Grid>
-    <StackPanel>
-      <Grid Background="#7aa9f6" Height="565" Margin="0,0,0.2,0">
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="38*"/>
-          <ColumnDefinition Width="267*"/>
-        </Grid.ColumnDefinitions>
-
-        <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
-          <Grid>
+             d:DesignHeight="640" d:DesignWidth="1220"
+             Loaded="Window_Loaded">
 
 
+    <Grid x:Name="GridMain">
+        <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
             <TextBox FontFamily="Helvetica"
-             x:Name="Uzytkownik"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="147"
-             Opacity="0.8"
-             Text="Użytkownik:" Margin="29,70,1043.8,445"
-             IsReadOnly="True"/>
-
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikLogin"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="160"
-             Opacity="0.8"
-             Text="UserLoginTest" Margin="197,70,865.8,453"
-             IsReadOnly="True"/>
-          </Grid>
-        </StackPanel>
-
-        <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
-          <Grid>
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="171*"/>
-              <ColumnDefinition Width="134*"/>
-            </Grid.ColumnDefinitions>
+                         x:Name="TextBoxNazwa"
+                         FontSize="32"
+                         FontWeight="Bold"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="231"
+                         Opacity="0.8"
+                         Text="Podsumowanie" Margin="502,10,486.8,505"
+                         IsReadOnly="True"/>
 
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="Plec"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="147"
-             Opacity="1"
-             Text="Płeć:" Margin="29,70,507.7,444.2"
-             IsReadOnly="True"/>
-
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikPlec"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="160"
-             Opacity="0.8"
-             Text="UserPlecTest" Margin="197,70,326.7,452.2"
-             IsReadOnly="True"/>
-          </Grid>
-        </StackPanel>
-
-        <StackPanel Margin="0,200,-0.2,0" Grid.ColumnSpan="2">
-          <Grid>
+            <Grid >
 
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="Wiek"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="121"
-             Opacity="1"
-             Text="Wiek:" Margin="29,70,1070,445.2"
-             IsReadOnly="True"/>
+                <Button Content="Dzienne" FontSize="28" HorizontalAlignment="Left" Margin="34,530,0,0" VerticalAlignment="Top" Width="151" Height="60" Click="Dzienne"/>
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikWiek"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="160"
-             Opacity="0.8"
-             Text="UserWiekTest" Margin="200,70,865.8,453"
-             IsReadOnly="True"/>
+                <Button Content="Miesięczne" FontSize="28" HorizontalAlignment="Left" Margin="244,530,0,0" VerticalAlignment="Top" Width="151" Height="59" Click="Miesieczne"/>
 
-          </Grid>
-        </StackPanel>
+                <TextBox FontFamily="Helvetica"
+                         x:Name="Nazwa"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="198"
+                         Opacity="1"
+                         Text="Tygodniowe" Margin="525,68,497,520"
+                         IsReadOnly="True"/>
 
-        <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
-          <Grid>
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneKalorieNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="160"
+                         Opacity="0.8"
+                         Text="Jedzenie (kcal)" Margin="469,174,591,428"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneBialkaNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Białka (g)" Margin="469,252,593,348"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneTluszczeNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="158"
+                         Opacity="0.8"
+                         Text="Tłuszcze (g)" Margin="469,337,593,250"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneWeglowodanyNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="194"
+                         Opacity="0.8"
+                         Text="Węglowodany (g)" Margin="469,416,557,178"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneSpelnioneNazwa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="191"
+                         TextWrapping="Wrap"
+                         Opacity="0.8"
+                         Text="Spełnione zapotrzebowanie kaloryczne" Margin="469,474,560,72"
+                         IsReadOnly="True"/>
 
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="Wzrost"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="136"
-             Opacity="1"
-             Text="Wzrost:" Margin="29,70,1055,445.2"
-             IsReadOnly="True"/>
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikWzrost"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="160"
-             Opacity="0.8"
-             Text="UserWzrostTest" Margin="200,70,865.8,453"
-             IsReadOnly="True"/>
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneKalorie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Width="239"
+                         Opacity="0.8"
+                         Text="0" Margin="751,174,230,414"
+                         IsReadOnly="True"/>
 
-            <Button
-                HorizontalAlignment="Center"
-                FontWeight="Light"
-                FontSize="25"
-                Foreground="White"
-                Margin="300,70,600,400" 
-                Width="200" Height="60" 
-                Content="Aktualizuj Wagę" 
-                Click="PrzeniesAktualWagi"
-                />
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneBialka"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="239"
+                         Opacity="0.8"
+                         Text="0" Margin="751,252,230,348"
+                         IsReadOnly="True"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneTluszcze"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="239"
+                         Opacity="0.8"
+                         Text="0" Margin="751,337,230,259"
+                         IsReadOnly="True" RenderTransformOrigin="0.335,0.418"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneWeglowodany"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="239"
+                         Opacity="0.8"
+                         Text="0" Margin="751,416,230,178"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DzienneZapotrzebowanie"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="239"
+                         Opacity="0.8" Margin="751,496,230,98"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
+                <Viewbox Margin="75,174,854,212">
+                    <Calendar x:Name="Kalendarz" SelectionMode="SingleDate" SelectedDatesChanged="Calendar_SelectedDatesChanged" />
+                </Viewbox>
+
             </Grid>
-        </StackPanel>
-
-        <StackPanel Margin="0,400,-0.2,0" Grid.ColumnSpan="2">
-          <Grid>
 
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="Waga"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="147"
-             Opacity="1"
-             Text="Waga:" Margin="29,70,1043.8,445"
-             IsReadOnly="True"/>
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikWaga"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="160"
-             Opacity="0.8"
-             Text="UserTestWaga" Margin="200,70,865.8,453"
-             IsReadOnly="True"/>
+        </Grid>
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="DataWazenia"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="White"
-             BorderThickness="0"
-             Width="158"
-             Opacity="0.8"
-             Text="Data Ważenia:" Margin="350,76,711.8,453"
-             IsReadOnly="True"/>
 
-            <TextBox FontFamily="Helvetica"
-             x:Name="UzytkownikDataWazenia"
-             FontSize="25"
-             FontWeight="Light"
-             HorizontalAlignment="Center"
-             HorizontalContentAlignment="Left"
-             Background="Transparent"
-             Foreground="Black"
-             BorderThickness="0"
-             Width="250"
-             Opacity="0.8"
-             Text="TestUserDataWaz" Margin="520,76,453.8,453"
-             IsReadOnly="True"/>
-          </Grid>
-        </StackPanel>
 
-      </Grid>
-    </StackPanel>
+
     </Grid>
 </UserControl>

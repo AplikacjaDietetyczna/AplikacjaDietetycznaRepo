@@ -34,12 +34,17 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void policzBMI_Click(object sender, RoutedEventArgs e)
         {
-            
-            Regex wagaRegex = new Regex(@"^[0-9]*$");
+
+            //Regex wagaRegex = new Regex(@"^[0-9]*$");
+            //Match wagaMatch = wagaRegex.Match(waga.Text);
+            //Regex wzrostRegex = new Regex(@"^[0-9]*$");
+            //Match wzrostMatch = wzrostRegex.Match(wzrost.Text);
+            Regex wagaRegex = new Regex(@"^\d+$");
             Match wagaMatch = wagaRegex.Match(waga.Text);
-            Regex wzrostRegex = new Regex(@"^[0-9]*$");
+            Regex wzrostRegex = new Regex(@"^\d+$");
             Match wzrostMatch = wzrostRegex.Match(wzrost.Text);
-            if ( wagaMatch.Success || wzrostMatch.Success)
+
+            if ( wagaMatch.Success && wzrostMatch.Success)
             {
                 float Waga = float.Parse(waga.Text);
                 float Wzrost = float.Parse(wzrost.Text);
@@ -102,7 +107,8 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void pobierzDane_Click(object sender, RoutedEventArgs e)
         {
-
+            waga.Text = FunkcjeGlobalne.Waga;
+            wzrost.Text = FunkcjeGlobalne.Wzrost;
 
         }
     }
