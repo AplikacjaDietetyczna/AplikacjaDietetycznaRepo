@@ -269,3 +269,16 @@ C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\Aplikac
 C:\Users\KUBA\Source\Repos\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.baml
 C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.g.cs
 C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.baml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignColors.dll
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.g.cs
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.g.cs
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.g.cs
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlONas.baml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlProfil.baml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.baml
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.g.cs
+C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.baml
