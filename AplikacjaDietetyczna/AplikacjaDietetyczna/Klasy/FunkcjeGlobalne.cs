@@ -26,6 +26,8 @@ namespace AplikacjaDietetyczna.Klasy
         public static string SelectedDate { get; set; }
 
         public static int SelectedPosilek { get; set; }
+
+        public static string Tryb { get; set; }
     }
 
 }

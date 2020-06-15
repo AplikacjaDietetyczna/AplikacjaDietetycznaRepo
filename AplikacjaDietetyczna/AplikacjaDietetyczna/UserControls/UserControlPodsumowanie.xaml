@@ -29,12 +29,12 @@
             <Grid >
 
 
-                <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Miesieczne"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Dzienne"/>
 
-                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Dzienne"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Miesieczne"/>
 
                 <TextBox FontFamily="Helvetica"
-                         x:Name="Sniadanie"
+                         x:Name="Nazwa"
                          FontSize="32"
                          FontWeight="Light"
                          HorizontalAlignment="Center"
@@ -42,9 +42,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="158"
+                         Width="198"
                          Opacity="1"
-                         Text="Dzienne" Margin="142,85,920,503"
+                         Text="Tygodniowe" Margin="142,85,880,503"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -129,9 +129,9 @@
                          Background="Transparent"
                          Foreground="White"
                          BorderThickness="0"
-                         Width="186"
+                         Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,174,744,414"
+                         Text="0" Margin="290,174,691,414"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -143,9 +143,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="186"
+                         Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,258,744,342"
+                         Text="0" Margin="290,258,691,342"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -157,9 +157,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="186"
+                         Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,346,744,250"
+                         Text="0" Margin="290,346,691,250"
                          IsReadOnly="True" RenderTransformOrigin="0.335,0.418"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -171,9 +171,9 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="206"
+                         Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,438,724,156"
+                         Text="0" Margin="290,438,691,156"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -185,8 +185,8 @@
                          Background="Transparent"
                           Foreground="White"
                          BorderThickness="0"
-                         Width="206"
-                         Opacity="0.8" Margin="290,518,724,76"
+                         Width="239"
+                         Opacity="0.8" Margin="290,518,691,76"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
 
             </Grid>
