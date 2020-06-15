@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Release\
+C:\Users\Buchy\source\repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Release\
 AplikacjaDietetyczna
 none
 false
 TRACE
-C:\Users\Sasek\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
-11-1872580992
+C:\Users\Buchy\source\repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\App.xaml
+13-1747798169
 
-19830400734
-27559466634
-SqlQuery.xaml;Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlDodaj.xaml;UserControls\UserControlKalkulkator.xaml;UserControls\UserControlPodsumowanie.xaml;UserControls\UserControlPosilki.xaml;UserControls\UserControlSQL.xaml;UserControls\UserControlWaga.xaml;
+27-2098562682
+29-1873246833
+SqlQuery.xaml;Style\ButtonModern.xaml;MainWindow.xaml;MenuGlowne.xaml;Rejestracja.xaml;UserControls\UserControlDodaj.xaml;UserControls\UserControlKalkulkator.xaml;UserControls\UserControlONas.xaml;UserControls\UserControlPodsumowanie.xaml;UserControls\UserControlPosilki.xaml;UserControls\UserControlProfil.xaml;UserControls\UserControlSQL.xaml;UserControls\UserControlWaga.xaml;
 
 True
 

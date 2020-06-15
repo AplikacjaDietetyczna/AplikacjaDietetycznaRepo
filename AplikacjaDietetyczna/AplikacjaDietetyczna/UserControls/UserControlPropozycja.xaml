@@ -1,0 +1,233 @@
+﻿<UserControl x:Class="AplikacjaDietetyczna.UserControls.UserControlPropozycja"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1220">
+
+    <Grid>
+        <StackPanel>
+            <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="267*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
+                    <Grid>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="TypPosilku"
+                         FontSize="32"
+                         FontWeight="DemiBold"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="394"
+                         Opacity="0.8"
+                         Text="Zaproponuj produkt" Margin="29,11,797,483.6"
+                         IsReadOnly="True" Loaded="TypPosilku_Loaded"/>
+
+
+                        <TextBox FontFamily="Helvetica"
+                         x:Name="Sniadanie"
+                         FontSize="32"
+                         FontWeight="Light"
+                         HorizontalAlignment="Left"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                         Foreground="Black"
+                         BorderThickness="0"
+                         Width="229"
+                         Opacity="0.8"
+                         Text="Sposób podania:" Margin="29,107,0,407"
+                         IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Sniadanie_Copy"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="229"
+                            Opacity="0.8"
+                            Text="Białka:" Margin="29,183,0,331"
+                            IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Sniadanie_Copy1"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="229"
+                            Opacity="0.8"
+                            Text="Kalorie:" Margin="29,145,0,369"
+                            IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Sniadanie_Copy2"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="229"
+                            Opacity="0.8"
+                            Text="Tłuszcze:" Margin="29,221,0,293"
+                            IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Sniadanie_Copy3"
+                            FontSize="32"
+                            FontWeight="Light"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="229"
+                            Opacity="0.8"
+                            Text="Węglowodany:" Margin="29,259,0,255"
+                            IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,100,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="447*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="0,200,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid/>
+                </StackPanel>
+
+                <StackPanel Margin="0,300,-0.2,0" Grid.ColumnSpan="2">
+                    <Grid/>
+                </StackPanel>
+
+
+                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="27,330,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click" Grid.ColumnSpan="2"/>
+                <TextBox FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="241"
+                    Opacity="0.8"
+                    Text="Nazwa Produktu:" Margin="27,71,952,531"
+                    IsReadOnly="True" Grid.ColumnSpan="2"/>
+
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText"
+                    Watermark="Wprowadź nazwe"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                         Height="38" Margin="116,71,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <Button x:Name="Cofnij" Content="Powrót" HorizontalAlignment="Left" Margin="27,416,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.ColumnSpan="2"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy"
+                    Watermark="Sztuka,100g,15ml"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                    Height="38" Margin="116,109,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy1"
+                    Watermark="0-999kcal"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                    Height="38" Margin="116,147,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy2"
+                    Watermark="0-999g"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                    Height="38" Margin="116,261,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy3"
+                    Watermark="0-999g"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                    Height="38" Margin="116,223,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy4"
+                    Watermark="0-999g"
+                    FontFamily="Helvetica"
+                    FontSize="32"
+                    FontWeight="Light"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Opacity="0.8"
+                         
+                    Height="38" Margin="116,185,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+
+
+            </Grid>
+
+
+        </StackPanel>
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+</UserControl>

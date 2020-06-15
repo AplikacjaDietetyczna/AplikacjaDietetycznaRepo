@@ -148,6 +148,9 @@
     <Compile Include="UserControls\UserControlProfil.xaml.cs">
       <DependentUpon>UserControlProfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlPropozycja.xaml.cs">
+      <DependentUpon>UserControlPropozycja.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlSQL.xaml.cs">
       <DependentUpon>UserControlSQL.xaml</DependentUpon>
     </Compile>
@@ -205,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControlProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlPropozycja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
