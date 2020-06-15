@@ -29,9 +29,9 @@
             <Grid >
 
 
-                <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Dzienne"/>
+                <Button Content="Dzienne" FontSize="28" HorizontalAlignment="Left" Margin="34,530,0,0" VerticalAlignment="Top" Width="151" Height="60" Click="Dzienne"/>
 
-                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Miesieczne"/>
+                <Button Content="Miesięczne" FontSize="28" HorizontalAlignment="Left" Margin="244,530,0,0" VerticalAlignment="Top" Width="151" Height="59" Click="Miesieczne"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="Nazwa"
@@ -44,7 +44,7 @@
                          BorderThickness="0"
                          Width="198"
                          Opacity="1"
-                         Text="Tygodniowe" Margin="142,85,880,503"
+                         Text="Tygodniowe" Margin="525,68,497,520"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -58,7 +58,7 @@
                          BorderThickness="0"
                          Width="160"
                          Opacity="0.8"
-                         Text="Jedzenie (kcal)" Margin="66,174,994,428"
+                         Text="Jedzenie (kcal)" Margin="469,174,591,428"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -72,7 +72,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="Białka (g)" Margin="66,258,996,342"
+                         Text="Białka (g)" Margin="469,252,593,348"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -86,7 +86,7 @@
                          BorderThickness="0"
                          Width="158"
                          Opacity="0.8"
-                         Text="Tłuszcze (g)" Margin="66,350,996,237"
+                         Text="Tłuszcze (g)" Margin="469,337,593,250"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -100,7 +100,7 @@
                          BorderThickness="0"
                          Width="194"
                          Opacity="0.8"
-                         Text="Węglowodany (g)" Margin="66,438,960,156"
+                         Text="Węglowodany (g)" Margin="469,416,557,178"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -115,7 +115,7 @@
                          Width="191"
                          TextWrapping="Wrap"
                          Opacity="0.8"
-                         Text="Spełnione zapotrzebowanie kaloryczne" Margin="66,496,963,50"
+                         Text="Spełnione zapotrzebowanie kaloryczne" Margin="469,474,560,72"
                          IsReadOnly="True"/>
 
 
@@ -131,7 +131,7 @@
                          BorderThickness="0"
                          Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,174,691,414"
+                         Text="0" Margin="751,174,230,414"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -145,7 +145,7 @@
                          BorderThickness="0"
                          Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,258,691,342"
+                         Text="0" Margin="751,252,230,348"
                          IsReadOnly="True"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -159,7 +159,7 @@
                          BorderThickness="0"
                          Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,346,691,250"
+                         Text="0" Margin="751,337,230,259"
                          IsReadOnly="True" RenderTransformOrigin="0.335,0.418"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -173,7 +173,7 @@
                          BorderThickness="0"
                          Width="239"
                          Opacity="0.8"
-                         Text="0" Margin="290,438,691,156"
+                         Text="0" Margin="751,416,230,178"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457"/>
 
                 <TextBox FontFamily="Helvetica"
@@ -186,8 +186,11 @@
                           Foreground="White"
                          BorderThickness="0"
                          Width="239"
-                         Opacity="0.8" Margin="290,518,691,76"
+                         Opacity="0.8" Margin="751,496,230,98"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
+                <Viewbox Margin="75,174,854,212">
+                    <Calendar x:Name="Kalendarz" SelectionMode="SingleDate" SelectedDatesChanged="Calendar_SelectedDatesChanged" />
+                </Viewbox>
 
             </Grid>
 

@@ -165,6 +165,12 @@ namespace AplikacjaDietetyczna.UserControls
 
         }
 
-
+        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(Kalendarz.SelectedDate);
+            //var dateString = Kalendarz.SelectedDate;
+            //DateTime date1 = DateTime.Parse(dateString,
+            //              System.Globalization.CultureInfo.InvariantCulture);
+        }
     }
 }
