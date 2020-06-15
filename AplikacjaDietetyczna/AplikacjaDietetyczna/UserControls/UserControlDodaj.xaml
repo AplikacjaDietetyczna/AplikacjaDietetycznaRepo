@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
 
-    <Grid>
+    <Grid x:Name="GridMain">
         <StackPanel>
             <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
                 <Grid.ColumnDefinitions>
@@ -161,6 +161,20 @@
                             Opacity="1"
                             Text="Białko: " Margin="553.433,453,10,61.6"
                             IsReadOnly="True" RenderTransformOrigin="1.003,0.553" Grid.Column="1"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Lunch_Copy"
+                            FontSize="22"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            Width="218"
+                            Opacity="1"
+                            Text="Nie widzisz produktu którego szukasz ? Zaproponuj własny!" Margin="31,279,77,191"
+                            TextWrapping="Wrap"
+                            IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
 
@@ -204,6 +218,7 @@
 
                 <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,558,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
                 <Button x:Name="Cofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="32,300,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="ZaproponujProdukt" Content="Zaproponuj Produkt" HorizontalAlignment="Left" Margin="32,467,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="ZaproponujProdukt_Click" Grid.ColumnSpan="2"/>
 
 
             </Grid>

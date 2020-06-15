@@ -51,7 +51,7 @@ namespace AplikacjaDietetyczna.UserControls
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Produkty order by NazwaProduktu";
+            AzureDB.sql = "Select * from Produkty Where ID_User="+IDUzytkownika+ " OR Zatwierdzone=1 order by NazwaProduktu";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
@@ -316,6 +316,12 @@ namespace AplikacjaDietetyczna.UserControls
                 TypPosilku.Text += "kolację";
             }
 
+        }
+
+        private void ZaproponujProdukt_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControls.UserControlPropozycja();
+            GridMain.Children.Add(add);
         }
     }
 }

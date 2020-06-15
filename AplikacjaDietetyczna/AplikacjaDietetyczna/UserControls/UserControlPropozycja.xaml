@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
 
-    <Grid>
+    <Grid x:Name="GridMain">
         <StackPanel>
             <Grid Background="#7aa9f6" Height="640" Margin="0,0,0.2,0">
                 <Grid.ColumnDefinitions>
@@ -31,7 +31,7 @@
                          Width="394"
                          Opacity="0.8"
                          Text="Zaproponuj produkt" Margin="29,11,797,483.6"
-                         IsReadOnly="True" Loaded="TypPosilku_Loaded"/>
+                         IsReadOnly="True"/>
 
 
                         <TextBox FontFamily="Helvetica"
@@ -120,7 +120,7 @@
                 </StackPanel>
 
 
-                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="27,330,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="27,330,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.ColumnSpan="2" Click="DodajProdukt_Click"/>
                 <TextBox FontFamily="Helvetica"
                     FontSize="32"
                     FontWeight="Light"
@@ -135,6 +135,8 @@
                     IsReadOnly="True" Grid.ColumnSpan="2"/>
 
                 <xctk:WatermarkTextBox x:Name="NazwaPosilkuText"
+                    PreviewTextInput="NumberAndLettersValidationTextBox"
+                    MaxLength="55"
                     Watermark="Wprowadź nazwe"
                     FontFamily="Helvetica"
                     FontSize="32"
@@ -146,10 +148,12 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                         Height="38" Margin="116,71,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <Button x:Name="Cofnij" Content="Powrót" HorizontalAlignment="Left" Margin="27,416,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.ColumnSpan="2"/>
-                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy"
+                         Height="38" Margin="116,71,61,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="891" Grid.Column="1"/>
+                <Button x:Name="Cofnij" Content="Powrót" HorizontalAlignment="Left" Margin="27,416,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Grid.ColumnSpan="2" Click="Cofnij_Click"/>
+                <xctk:WatermarkTextBox x:Name="SposobPodaniaText"
+                    PreviewTextInput="NumberAndLettersValidationTextBox"
                     Watermark="Sztuka,100g,15ml"
+                    MaxLength="20"
                     FontFamily="Helvetica"
                     FontSize="32"
                     FontWeight="Light"
@@ -160,8 +164,9 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                    Height="38" Margin="116,109,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy1"
+                    Height="38" Margin="116,109,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1"/>
+                <xctk:WatermarkTextBox x:Name="KalorieText"
+                    MaxLength="3"
                     Watermark="0-999kcal"
                     FontFamily="Helvetica"
                     FontSize="32"
@@ -172,9 +177,11 @@
                     Foreground="Black"
                     BorderThickness="0"
                     Opacity="0.8"
-                         
-                    Height="38" Margin="116,147,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy2"
+                    PreviewTextInput="NumberValidationTextBox"
+                    Height="38" Margin="116,147,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1"/>
+                <xctk:WatermarkTextBox x:Name="WeglowodanyText"
+                    PreviewTextInput="NumberValidationTextBox"
+                    MaxLength="3"
                     Watermark="0-999g"
                     FontFamily="Helvetica"
                     FontSize="32"
@@ -186,8 +193,10 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                    Height="38" Margin="116,261,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy3"
+                    Height="38" Margin="116,261,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1"/>
+                <xctk:WatermarkTextBox x:Name="TluszczeText"
+                    PreviewTextInput="NumberValidationTextBox"
+                    MaxLength="3"
                     Watermark="0-999g"
                     FontFamily="Helvetica"
                     FontSize="32"
@@ -199,8 +208,10 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                    Height="38" Margin="116,223,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
-                <xctk:WatermarkTextBox x:Name="NazwaPosilkuText_Copy4"
+                    Height="38" Margin="116,223,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1"/>
+                <xctk:WatermarkTextBox x:Name="BialkaText"
+                    PreviewTextInput="NumberValidationTextBox"
+                    MaxLength="3"
                     Watermark="0-999g"
                     FontFamily="Helvetica"
                     FontSize="32"
@@ -212,7 +223,7 @@
                     BorderThickness="0"
                     Opacity="0.8"
                          
-                    Height="38" Margin="116,185,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
+                    Height="38" Margin="116,185,700,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1"/>
 
 
             </Grid>
