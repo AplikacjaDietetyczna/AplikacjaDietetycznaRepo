@@ -32,12 +32,7 @@ namespace AplikacjaDietetyczna.UserControls
         }
 
       
-        public DateTime GetDate(int n)
-        {
 
-            DateTime dateTime = DateTime.Now.AddDays(n);
-            return dateTime;
-        }
 
         private void Czyszczenie()
         {
@@ -57,28 +52,28 @@ namespace AplikacjaDietetyczna.UserControls
         {
 
             int TypPosilku = 1;
-            double SniadanieKalorieD = 0;
-            double SniadanieWeglowodanyD = 0;
-            double SniadanieBialkaD = 0;
-            double SniadanieTluszczeD = 0;
+            double PosilekKalorieD = 0;
+            double PosilekWeglowodanyD = 0;
+            double PosilekBialkaD = 0;
+            double PosilekTluszczeD = 0;
             double BialkaZjedzone = 0;
             double WeglowodanyZjedzone = 0;
             double KalorieZjedzone = 0;
             double TluszczeZjedzone = 0;
-            string sqlFormattedDate = GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
-            string SniadanieProdukty = "";
-            string SniadanieNazwa = "";
-            int SniadanieIlosc = 0;
-            string SniadaniePodanie = "";
-            string SniadanieBebg = "";
+            string sqlFormattedDate = DateKlasa.GetDate(Convert.ToInt32(FunkcjeGlobalne.Data)).ToString("yyyy-MM-dd");
+            string PosilekProdukty = "";
+            string PosilekNazwa = "";
+            int PosilekIlosc = 0;
+            string PosilekPodanie = "";
+            string PosilekLaczenie = "";
             string Dwa = ""; //Jak są przynajmniej dwa posiłki w trakcie jednego np. obiadu to służy do łączenia
             TextBoxCurrentDate.Text = sqlFormattedDate;
             String message2 = "Nie udalo sie pobrac danych do dekoratora";
             try
             {
                
-                Dekorator.Posilek sniadanie = new Dekorator.TypPosilku();
-                sniadanie = new Dekorator.ProduktDekorator(sniadanie);
+                Dekorator.Posilek posilek = new Dekorator.TypPosilku();
+                posilek = new Dekorator.ProduktDekorator(posilek);
 
                 while (TypPosilku < 6)
                 {
@@ -86,7 +81,7 @@ namespace AplikacjaDietetyczna.UserControls
 
 
                     AzureDB.openConnection();
-                    AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = 20 AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
+                    AzureDB.sql = "SELECT Nazwa, NazwaProduktu, Podanie, Ilosc, Kalorie,TypPosilku, Weglowodany, Bialka, Tluszcze FROM Users  INNER JOIN Posilki ON Posilki.ID_User = Users.ID_User INNER JOIN PosilkiProdukty ON Posilki.ID_Posilku = PosilkiProdukty.ID_Posilku INNER JOIN Produkty ON Produkty.ID_Produktu = PosilkiProdukty.ID_Produktu WHERE Users.ID_User = '" +FunkcjeGlobalne.ID+"' AND Data = '" + sqlFormattedDate + "' AND TypPosilku = '" + TypPosilku + "' ";
                     AzureDB.cmd.CommandText = AzureDB.sql;
                     AzureDB.rd = AzureDB.cmd.ExecuteReader();
 
@@ -94,22 +89,22 @@ namespace AplikacjaDietetyczna.UserControls
                     {
                         while (AzureDB.rd.Read())
                         {
-                            SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
-                            SniadanieKalorieD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), SniadanieIlosc);
-                            SniadanieWeglowodanyD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Weglowodany"].ToString()), SniadanieIlosc);
-                            SniadanieBialkaD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Bialka"].ToString()), SniadanieIlosc);
-                            SniadanieTluszczeD += sniadanie.Calculate(Convert.ToDouble(AzureDB.rd["Tluszcze"].ToString()), SniadanieIlosc);
-                            if (SniadanieNazwa != AzureDB.rd["Nazwa"].ToString())
+                            PosilekIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                            PosilekKalorieD += posilek.Calculate(Convert.ToDouble(AzureDB.rd["Kalorie"].ToString()), PosilekIlosc);
+                            PosilekWeglowodanyD += posilek.Calculate(Convert.ToDouble(AzureDB.rd["Weglowodany"].ToString()), PosilekIlosc);
+                            PosilekBialkaD += posilek.Calculate(Convert.ToDouble(AzureDB.rd["Bialka"].ToString()), PosilekIlosc);
+                            PosilekTluszczeD += posilek.Calculate(Convert.ToDouble(AzureDB.rd["Tluszcze"].ToString()), PosilekIlosc);
+                            if (PosilekNazwa != AzureDB.rd["Nazwa"].ToString())
                             {
-                                Dwa += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
-                                SniadanieBebg = "";
+                                Dwa += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
+                                PosilekLaczenie = "";
                             }
-                            SniadanieNazwa = AzureDB.rd["Nazwa"].ToString();
-                            SniadanieProdukty = AzureDB.rd["NazwaProduktu"].ToString();
-                            SniadanieProdukty += ", ";
-                            SniadanieIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
-                            SniadaniePodanie = AzureDB.rd["Podanie"].ToString();
-                            SniadanieBebg += sniadanie.GetName(SniadanieProdukty, SniadanieIlosc, SniadaniePodanie);
+                            PosilekNazwa = AzureDB.rd["Nazwa"].ToString();
+                            PosilekProdukty = AzureDB.rd["NazwaProduktu"].ToString();
+                            PosilekProdukty += ", ";
+                            PosilekIlosc = Convert.ToInt32(AzureDB.rd["Ilosc"].ToString());
+                            PosilekPodanie = AzureDB.rd["Podanie"].ToString();
+                            PosilekLaczenie += posilek.GetName(PosilekProdukty, PosilekIlosc, PosilekPodanie);
 
 
 
@@ -121,20 +116,20 @@ namespace AplikacjaDietetyczna.UserControls
                     if (TypPosilku == 5)
                     {
                         KolacjaTekst.Text += Dwa;
-                        KolacjaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        KolacjaTekst.Text += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
                         if (KolacjaTekst.Text != "")
                         {
                             KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
                         }
                        // KolacjaTekst.Text = KolacjaTekst.Text.Remove(KolacjaTekst.Text.Length - 2);
-                        KolacjaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        KolacjaWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
-                        KolacjaTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
-                        KolacjaBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
-                        BialkaZjedzone += SniadanieBialkaD;
-                        WeglowodanyZjedzone += SniadanieWeglowodanyD;
-                        KalorieZjedzone += SniadanieKalorieD;
-                        TluszczeZjedzone += SniadanieTluszczeD;
+                        KolacjaKalorie.Text = Convert.ToString(PosilekKalorieD) + " kcal";
+                        KolacjaWeglowodany.Text = Convert.ToString(PosilekWeglowodanyD) + " g";
+                        KolacjaTluszcze.Text = Convert.ToString(PosilekTluszczeD) + " g";
+                        KolacjaBialka.Text = Convert.ToString(PosilekBialkaD) + " g";
+                        BialkaZjedzone += PosilekBialkaD;
+                        WeglowodanyZjedzone += PosilekWeglowodanyD;
+                        KalorieZjedzone += PosilekKalorieD;
+                        TluszczeZjedzone += PosilekTluszczeD;
 
                         TypPosilku++;
                     }
@@ -144,20 +139,20 @@ namespace AplikacjaDietetyczna.UserControls
                     if (TypPosilku == 4)
                     {
                         PrzekaskaTekst.Text += Dwa;
-                        PrzekaskaTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        PrzekaskaTekst.Text += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
                         if (PrzekaskaTekst.Text != "")
                         {
                             PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
                         }
                         //PrzekaskaTekst.Text = PrzekaskaTekst.Text.Remove(PrzekaskaTekst.Text.Length - 2);
-                        PrzekaskaKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        PrzekaskaWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
-                        PrzekaskaTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
-                        PrzekaskaBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
-                        BialkaZjedzone += SniadanieBialkaD;
-                        WeglowodanyZjedzone += SniadanieWeglowodanyD;
-                        KalorieZjedzone += SniadanieKalorieD;
-                        TluszczeZjedzone += SniadanieTluszczeD; ;
+                        PrzekaskaKalorie.Text = Convert.ToString(PosilekKalorieD) + " kcal";
+                        PrzekaskaWeglowodany.Text = Convert.ToString(PosilekWeglowodanyD) + " g";
+                        PrzekaskaTluszcze.Text = Convert.ToString(PosilekTluszczeD) + " g";
+                        PrzekaskaBialka.Text = Convert.ToString(PosilekBialkaD) + " g";
+                        BialkaZjedzone += PosilekBialkaD;
+                        WeglowodanyZjedzone += PosilekWeglowodanyD;
+                        KalorieZjedzone += PosilekKalorieD;
+                        TluszczeZjedzone += PosilekTluszczeD; ;
 
                         TypPosilku++;
                     }
@@ -166,20 +161,20 @@ namespace AplikacjaDietetyczna.UserControls
                     if (TypPosilku == 3)
                     {
                         ObiadTekst.Text += Dwa;
-                        ObiadTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        ObiadTekst.Text += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
                         if (ObiadTekst.Text != "")
                         {
                             ObiadTekst.Text = ObiadTekst.Text.Remove(ObiadTekst.Text.Length - 2);
                         }
                         
-                        ObiadKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        ObiadWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
-                        ObiadTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
-                        ObiadBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
-                        BialkaZjedzone += SniadanieBialkaD;
-                        WeglowodanyZjedzone += SniadanieWeglowodanyD;
-                        KalorieZjedzone += SniadanieKalorieD;
-                        TluszczeZjedzone += SniadanieTluszczeD;
+                        ObiadKalorie.Text = Convert.ToString(PosilekKalorieD) + " kcal";
+                        ObiadWeglowodany.Text = Convert.ToString(PosilekWeglowodanyD) + " g";
+                        ObiadTluszcze.Text = Convert.ToString(PosilekTluszczeD) + " g";
+                        ObiadBialka.Text = Convert.ToString(PosilekBialkaD) + " g";
+                        BialkaZjedzone += PosilekBialkaD;
+                        WeglowodanyZjedzone += PosilekWeglowodanyD;
+                        KalorieZjedzone += PosilekKalorieD;
+                        TluszczeZjedzone += PosilekTluszczeD;
                         TypPosilku++;
                     }
 
@@ -187,20 +182,20 @@ namespace AplikacjaDietetyczna.UserControls
                     if (TypPosilku == 2)
                     {
                         LunchTekst.Text += Dwa;
-                        LunchTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        LunchTekst.Text += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
                         if(LunchTekst.Text != "")
                         {
                             LunchTekst.Text = LunchTekst.Text.Remove(LunchTekst.Text.Length - 2);
                         }
                        
-                        LunchKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        LunchWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
-                        LunchTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
-                        LunchBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
-                        BialkaZjedzone += SniadanieBialkaD;
-                        WeglowodanyZjedzone += SniadanieWeglowodanyD;
-                        KalorieZjedzone += SniadanieKalorieD;
-                        TluszczeZjedzone += SniadanieTluszczeD;
+                        LunchKalorie.Text = Convert.ToString(PosilekKalorieD) + " kcal";
+                        LunchWeglowodany.Text = Convert.ToString(PosilekWeglowodanyD) + " g";
+                        LunchTluszcze.Text = Convert.ToString(PosilekTluszczeD) + " g";
+                        LunchBialka.Text = Convert.ToString(PosilekBialkaD) + " g";
+                        BialkaZjedzone += PosilekBialkaD;
+                        WeglowodanyZjedzone += PosilekWeglowodanyD;
+                        KalorieZjedzone += PosilekKalorieD;
+                        TluszczeZjedzone += PosilekTluszczeD;
                         TypPosilku++;
                     }
 
@@ -208,31 +203,31 @@ namespace AplikacjaDietetyczna.UserControls
                     if (TypPosilku == 1)
                     {
                         SniadanieTekst.Text += Dwa;
-                        SniadanieTekst.Text += sniadanie.GetFullName(SniadanieNazwa, SniadanieBebg);
+                        SniadanieTekst.Text += posilek.GetFullName(PosilekNazwa, PosilekLaczenie);
                         if (SniadanieTekst.Text != "")
                         {
                             SniadanieTekst.Text = SniadanieTekst.Text.Remove(SniadanieTekst.Text.Length - 2);
                         }
 
-                        SniadanieKalorie.Text = Convert.ToString(SniadanieKalorieD) + " kcal";
-                        SniadanieWeglowodany.Text = Convert.ToString(SniadanieWeglowodanyD) + " g";
-                        SniadanieTluszcze.Text = Convert.ToString(SniadanieTluszczeD) + " g";
-                        SniadanieBialka.Text = Convert.ToString(SniadanieBialkaD) + " g";
-                        BialkaZjedzone += SniadanieBialkaD;
-                        WeglowodanyZjedzone += SniadanieWeglowodanyD;
-                        KalorieZjedzone += SniadanieKalorieD;
-                        TluszczeZjedzone += SniadanieTluszczeD;
+                        SniadanieKalorie.Text = Convert.ToString(PosilekKalorieD) + " kcal";
+                        SniadanieWeglowodany.Text = Convert.ToString(PosilekWeglowodanyD) + " g";
+                        SniadanieTluszcze.Text = Convert.ToString(PosilekTluszczeD) + " g";
+                        SniadanieBialka.Text = Convert.ToString(PosilekBialkaD) + " g";
+                        BialkaZjedzone += PosilekBialkaD;
+                        WeglowodanyZjedzone += PosilekWeglowodanyD;
+                        KalorieZjedzone += PosilekKalorieD;
+                        TluszczeZjedzone += PosilekTluszczeD;
                         TypPosilku++;
                     }
 
 
-                    SniadanieBebg = "";
-                    SniadanieProdukty = "";
-                    SniadanieKalorieD = 0;
-                    SniadanieNazwa = "";
-                    SniadanieWeglowodanyD = 0;
-                    SniadanieBialkaD = 0;
-                    SniadanieTluszczeD = 0;
+                    PosilekLaczenie = "";
+                    PosilekProdukty = "";
+                    PosilekKalorieD = 0;
+                    PosilekNazwa = "";
+                    PosilekWeglowodanyD = 0;
+                    PosilekBialkaD = 0;
+                    PosilekTluszczeD = 0;
                     Dwa = "";
                 }
 
@@ -251,26 +246,12 @@ namespace AplikacjaDietetyczna.UserControls
             try
             {
 
+              double DzienneZapotrzebowanie =  Zapotrzebowanie.GetZapotrzebowanie();
 
-                //Harris-Benedict
-                //Mężczyźni: 66.5 + (13.75 * waga) + (5.003 * wzrost) - (6.775 * wiek) Kobiety: 655.1 + (9.563 * waga) + (1.85 * wzrost)-(4.676 * wiek)
-                double DzienneZapotrzebowanie = 0;
-                if (FunkcjeGlobalne.Plec == "M")
-                {
-                    DzienneZapotrzebowanie = 66.5 + (13.75 * Convert.ToDouble(FunkcjeGlobalne.Waga)) + (5.003 * Convert.ToDouble(FunkcjeGlobalne.Wzrost)) - (6.775 * Convert.ToDouble(FunkcjeGlobalne.Wiek));
-                }
-                else
-                {
-                    DzienneZapotrzebowanie = 655.1 + (9.563 * Convert.ToDouble(FunkcjeGlobalne.Waga)) + (1.85 * Convert.ToDouble(FunkcjeGlobalne.Wzrost)) - (4.676 * Convert.ToDouble(FunkcjeGlobalne.Wiek));
-                }
-                //Do drugiego miejsca po przecinku
-                double Bialka = Math.Round((Double)DzienneZapotrzebowanie * 0.15, 2);
-                double Kalorie = Math.Round((Double)DzienneZapotrzebowanie, 2);
-                double Tluszcze = Math.Round((Double)DzienneZapotrzebowanie * 0.30, 2);
-                double Weglowodany = Math.Round((Double)DzienneZapotrzebowanie * 0.55, 2);
-
-
-
+                double Kalorie = Zapotrzebowanie.GetKalorie();
+                double Bialka = Zapotrzebowanie.GetBialka();
+                double Tluszcze = Zapotrzebowanie.GetTluszcze();
+                double Weglowodany = Zapotrzebowanie.GetWeglowodany();
 
                 TextBoxKalorie.Text = "Kalorie: " + KalorieZjedzone + " / " + Kalorie + " kcal";
                 TextBoxBialka.Text = "Białka: "+BialkaZjedzone+" / " + Bialka + " g";
@@ -279,14 +260,14 @@ namespace AplikacjaDietetyczna.UserControls
 
                 //Dodatkowe wyświetlanie czy user je zdrowo
 
-                if((KalorieZjedzone > Kalorie + 200))
+                if((KalorieZjedzone > Kalorie + 800))
                 {
                     TextBoxKalorie.BorderThickness = new Thickness(1);
                     TextBoxKalorie.BorderBrush = Brushes.Red;
                     TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych kalorii";
                 }
 
-                if ((KalorieZjedzone < Kalorie + 200 && KalorieZjedzone > Kalorie - 200))
+                if ((KalorieZjedzone < Kalorie + 800 && KalorieZjedzone > Kalorie - 200))
                 {
                     TextBoxKalorie.BorderThickness = new Thickness(1);
                     TextBoxKalorie.BorderBrush = Brushes.Green;
@@ -299,14 +280,14 @@ namespace AplikacjaDietetyczna.UserControls
                     TextBoxKalorie.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
                 }
 
-                if ((BialkaZjedzone > Bialka + 55))
+                if ((BialkaZjedzone > Bialka + 90))
                 {
                     TextBoxBialka.BorderThickness = new Thickness(1);
                     TextBoxBialka.BorderBrush = Brushes.Red;
                     TextBoxBialka.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanego białka";
                 }
 
-                if ((BialkaZjedzone < Bialka + 55 && BialkaZjedzone > Bialka - 55))
+                if ((BialkaZjedzone < Bialka + 90 && BialkaZjedzone > Bialka - 55))
                 {
                     TextBoxBialka.BorderThickness = new Thickness(1);
                     TextBoxBialka.BorderBrush = Brushes.Green;
@@ -316,11 +297,11 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (BialkaZjedzone < Bialka)
                 {
                     TextBoxBialka.BorderThickness = new Thickness(0);
-                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxBialka.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
 
-                if ((TluszczeZjedzone > Tluszcze + 15))
+                if ((TluszczeZjedzone > Tluszcze + 50))
                 {
                     TextBoxTluszcze.BorderThickness = new Thickness(1);
                     TextBoxTluszcze.BorderBrush = Brushes.Red;
@@ -337,17 +318,17 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (TluszczeZjedzone < Tluszcze)
                 {
                     TextBoxTluszcze.BorderThickness = new Thickness(0);
-                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxTluszcze.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
-                if ((WeglowodanyZjedzone > Weglowodany + 170))
+                if ((WeglowodanyZjedzone > Weglowodany + 400))
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(1);
                     TextBoxWeglowodany.BorderBrush = Brushes.Red;
                     TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeśli chcesz utrzymać swoją obecną wagę musisz ograniczyć ilość spożywanych węglowodanów";
                 }
 
-                if ((WeglowodanyZjedzone < Weglowodany + 170 && WeglowodanyZjedzone > Weglowodany - 170))
+                if ((WeglowodanyZjedzone < Weglowodany + 400 && WeglowodanyZjedzone > Weglowodany - 170))
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(1);
                     TextBoxWeglowodany.BorderBrush = Brushes.Green;
@@ -357,7 +338,7 @@ namespace AplikacjaDietetyczna.UserControls
                 else if (WeglowodanyZjedzone < Weglowodany)
                 {
                     TextBoxWeglowodany.BorderThickness = new Thickness(0);
-                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeszcze nie udało Ci się zjeść wystarczająco";
+                    TextBoxWeglowodany.ToolTip = new ToolTip().Content = "Jeszcze nie udało ci się zjeść wystarczająco";
                 }
 
 
@@ -411,6 +392,54 @@ namespace AplikacjaDietetyczna.UserControls
             Posilki();
 
 
+        }
+
+        private void SniadanieDodaj_Click(object sender, RoutedEventArgs e)
+        {
+
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 1;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+
+
+        }
+
+        private void LunchDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 2;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void ObiadDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 3;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void PrzekaskaDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 4;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
+        }
+
+        private void KolacjaDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            FunkcjeGlobalne.SelectedDate = TextBoxCurrentDate.Text;
+            FunkcjeGlobalne.SelectedPosilek = 5;
+
+            UserControl add = new UserControls.UserControlDodaj();
+            GridMain.Children.Add(add);
         }
     }
 }

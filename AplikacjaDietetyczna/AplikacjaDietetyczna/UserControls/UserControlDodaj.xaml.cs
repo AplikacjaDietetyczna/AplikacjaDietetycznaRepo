@@ -101,7 +101,6 @@ namespace AplikacjaDietetyczna.UserControls
         {
             IloscCombo.SelectedIndex = 0;
             ProduktCombo.SelectedIndex = 0;
-            RodzajPosilku.SelectedIndex = 0;
             ProduktID.Clear();
             ProduktNazwa.Clear();
             ProduktIlosc.Clear();
@@ -202,12 +201,12 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void DodajPosilek_Click(object sender, RoutedEventArgs e)
         {
-            if (NazwaPosilkuText.Text != "" && Podsumowanie.Text != "" && ((ComboBoxItem)RodzajPosilku.SelectedItem).Tag.ToString() != "0")
+            if (NazwaPosilkuText.Text != "" && Podsumowanie.Text != "")
             {
                 try
                 {
                     string IdPosilku = "";
-                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + ((ComboBoxItem)RodzajPosilku.SelectedItem).Tag.ToString() + ", GETDATE());";
+                    zapytaniePosilek = "INSERT INTO Posilki (ID_User,Nazwa,TypPosilku,Data) VALUES("+IDUzytkownika+", '" + NazwaPosilkuText.Text + "', " + FunkcjeGlobalne.SelectedPosilek + ",'"+FunkcjeGlobalne.SelectedDate +"')";
                     zapytanieProdukty = "";
                     AzureDB.openConnection();
                     AzureDB.sql = zapytaniePosilek;
@@ -287,6 +286,34 @@ namespace AplikacjaDietetyczna.UserControls
                     Podsumowanie_Ghost.Text += "Wartości odżywcze: Białko: " + IloscCombo.SelectedIndex * Convert.ToInt32(AzureDB.dt.Rows[0]["Bialka"]) + " Węglowodany: " + IloscCombo.SelectedIndex * Convert.ToInt32(AzureDB.dt.Rows[0]["Weglowodany"]) + " Tłuszcze: " + IloscCombo.SelectedIndex * Convert.ToInt32(AzureDB.dt.Rows[0]["Tluszcze"]) + " Kalorie: " + IloscCombo.SelectedIndex * Convert.ToInt32(AzureDB.dt.Rows[0]["Kalorie"]) + "\n\n";
                 }
                 AzureDB.closeConnection();
+            }
+
+        }
+
+        private void TypPosilku_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            TypPosilku.Text = "Dodajesz ";
+
+            if(FunkcjeGlobalne.SelectedPosilek == 1)
+            {
+                TypPosilku.Text += "śniadanie";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 2)
+            {
+                TypPosilku.Text += "lunch";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 3)
+            {
+                TypPosilku.Text += "obiad";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 4)
+            {
+                TypPosilku.Text += "przekąskę";
+            }
+            if (FunkcjeGlobalne.SelectedPosilek == 5)
+            {
+                TypPosilku.Text += "kolację";
             }
 
         }

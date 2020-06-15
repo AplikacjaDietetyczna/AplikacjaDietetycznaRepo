@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "EO.WebBrowser/20.1.45": {
+        "type": "package",
+        "compile": {
+          "lib/EO.Base.dll": {},
+          "lib/EO.WebBrowser.dll": {},
+          "lib/EO.WebEngine.dll": {}
+        },
+        "runtime": {
+          "lib/EO.Base.dll": {},
+          "lib/EO.WebBrowser.dll": {},
+          "lib/EO.WebEngine.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.4.0": {
         "type": "package",
         "compile": {
@@ -1238,6 +1251,25 @@
     }
   },
   "libraries": {
+    "EO.WebBrowser/20.1.45": {
+      "sha512": "Lzf5QksM+rVa25qyK7M2R54NXyDp0e+2JtNvImdV6C+LDUiaqMQmGKX/mOKumQAzY8OH2/GcQpE1VUrsR+BOXg==",
+      "type": "package",
+      "path": "eo.webbrowser/20.1.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "eo.webbrowser.20.1.45.nupkg.sha512",
+        "eo.webbrowser.nuspec",
+        "lib/EO.Base.dll",
+        "lib/EO.Base.xml",
+        "lib/EO.WebBrowser.dll",
+        "lib/EO.WebBrowser.xml",
+        "lib/EO.WebEngine.dll",
+        "lib/EO.WebEngine.xml",
+        "lib/GACTools.exe",
+        "lib/eowp.exe"
+      ]
+    },
     "Microsoft.CodeCoverage/16.4.0": {
       "sha512": "qb7PMVZMAY5iUCvB/kDUEt9xqazWKZoKY/sGpAJO4VtwgN5IcEgipCu3n0i1GPCwGbWVL6k4a8a9F+FqmADJng==",
       "type": "package",
@@ -4637,31 +4669,27 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AplikacjaDietetyczna >= 1.0.0",
+      "EO.WebBrowser >= 20.1.45",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit3TestAdapter >= 3.15.1",
       "nunit >= 3.12.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Buchy\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Pajfu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-      "projectName": "AplikacjaDIetetyczna.UnitTests",
-      "projectPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Buchy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
+      "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+      "projectName": "AplikacjaDietetyczna.UnitTests",
+      "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Pajfu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Buchy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Pajfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4673,8 +4701,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
-              "projectPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+            "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+              "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
             }
           }
         }
@@ -4688,6 +4716,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "EO.WebBrowser": {
+            "target": "Package",
+            "version": "[20.1.45, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.4.0, )"
@@ -4716,8 +4748,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „EO.WebBrowser 20.1.45” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8” zamiast platformy docelowej projektu „.NETCoreApp,Version=v3.1”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "EO.WebBrowser",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

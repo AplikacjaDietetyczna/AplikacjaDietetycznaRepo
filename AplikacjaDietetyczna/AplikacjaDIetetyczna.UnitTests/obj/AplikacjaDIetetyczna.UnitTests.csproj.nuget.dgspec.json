@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {}
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj": {
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-        "projectName": "AplikacjaDIetetyczna.UnitTests",
-        "projectPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDIetetyczna.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Buchy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
+        "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+        "projectName": "AplikacjaDietetyczna.UnitTests",
+        "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Pajfu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Buchy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Pajfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
-                "projectPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+              "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+                "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
               }
             }
           }
@@ -46,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EO.WebBrowser": {
+              "target": "Package",
+              "version": "[20.1.45, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.4.0, )"
@@ -74,16 +74,16 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+    "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
+        "projectUniqueName": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
         "projectName": "AplikacjaDietetyczna",
-        "projectPath": "C:\\Users\\Buchy\\Source\\Repos\\AplikacjaDietetycznaGitTest\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+        "projectPath": "C:\\Users\\Pajfu\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
       },
       "frameworks": {
         "net472": {}

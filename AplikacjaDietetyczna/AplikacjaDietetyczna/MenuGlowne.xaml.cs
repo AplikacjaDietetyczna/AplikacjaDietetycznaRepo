@@ -50,7 +50,10 @@ namespace AplikacjaDietetyczna
         }
         private void PokazAdmin_Loaded(object sender, RoutedEventArgs e)
         {
-            if (FunkcjeGlobalne.IsAdmin == "1")
+            Singleton singleton = Singleton.Instance;
+           
+
+            if (singleton.CheckIfUserIsAdmin() == "1")
             {
 
                 PokazAdmin.Text = "User jest adminem";
@@ -76,10 +79,6 @@ namespace AplikacjaDietetyczna
                     UserControl calc = new UserControls.UserControlKalkulkator();
                     GridMain.Children.Add(calc);
                     break;
-                case "Nowy_Posilek":
-                    UserControl add = new UserControls.UserControlDodaj();
-                    GridMain.Children.Add(add);
-                    break;
                 case "Posilki":
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
@@ -89,6 +88,27 @@ namespace AplikacjaDietetyczna
                     GridMain.Children.Add(usc);
                     break;
             }
+        }
+
+        private void Profil_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = new UserControls.UserControlProfil();
+            GridMain.Children.Add(usc);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl onas = new UserControls.UserControlONas();
+            GridMain.Children.Add(onas);
+        }
+
+        private void Wyloguj_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow logowanie = new MainWindow();
+            logowanie.Show();
+            this.Close();
+            FunkcjeZerowanie.ZerownaieFunkcji();
+            
         }
     }
 }
