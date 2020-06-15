@@ -15,6 +15,24 @@ namespace AplikacjaDietetyczna.Klasy
             return dateTime;
         }
 
+        public static int GetCalendarDate(DateTime PodanaData)
+        {
+            int IleDni = 0;
+            DateTime dateTime = DateTime.Now;
+            var dateWithoutTime = dateTime.Date;
+
+            while (PodanaData != dateWithoutTime)
+            {
+              PodanaData =  PodanaData.AddDays(1);
+                IleDni++;
+            }
+
+            return IleDni;
+
+        }
+
+
+
 
     }
 }

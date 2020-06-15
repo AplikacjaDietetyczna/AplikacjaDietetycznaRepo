@@ -29,9 +29,9 @@
             <Grid >
 
 
-                <Button Content="Dzienne" FontSize="28" HorizontalAlignment="Left" Margin="34,530,0,0" VerticalAlignment="Top" Width="151" Height="60" Click="Dzienne"/>
-
-                <Button Content="Miesięczne" FontSize="28" HorizontalAlignment="Left" Margin="244,530,0,0" VerticalAlignment="Top" Width="151" Height="59" Click="Miesieczne"/>
+                <Button Content="Dzienne" FontSize="28" HorizontalAlignment="Left" Margin="10,474,0,0" VerticalAlignment="Top" Width="145" Height="60" Click="Dzienne"/>
+                <Button Content="Tygodniowe" FontSize="28" HorizontalAlignment="Left" Margin="160,475,0,0" VerticalAlignment="Top" Width="145" Height="59" Click="Tygodniowe"/>
+                <Button Content="Miesięczne" FontSize="28" HorizontalAlignment="Left" Margin="310,475,0,0" VerticalAlignment="Top" Width="145" Height="59" Click="Miesieczne"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="Nazwa"
@@ -188,6 +188,20 @@
                          Width="239"
                          Opacity="0.8" Margin="751,496,230,98"
                          IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
+
+                <TextBox FontFamily="Helvetica"
+                         x:Name="DataStartowa"
+                         FontSize="25"
+                         FontWeight="Light"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Background="Transparent"
+                          Foreground="White"
+                         BorderThickness="0"
+                         Width="321"
+                         Opacity="0.8" Margin="75,123,824,471"
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Data startowa: 15.06.2020"/>
+
                 <Viewbox Margin="75,174,854,212">
                     <Calendar x:Name="Kalendarz" SelectionMode="SingleDate" SelectedDatesChanged="Calendar_SelectedDatesChanged" />
                 </Viewbox>

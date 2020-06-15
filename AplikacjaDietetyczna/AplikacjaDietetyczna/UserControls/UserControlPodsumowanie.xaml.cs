@@ -28,12 +28,11 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
 
-
         }
 
         private void Podsumowanie(int IloscDni)
         {
-            FunkcjeGlobalne.Data = "0";
+            
             int SpelnioneZapotrzebowanie = 0;
             int CurrentDate = Convert.ToInt32(FunkcjeGlobalne.Data);
             int DataTydzien = CurrentDate - IloscDni;
@@ -101,11 +100,30 @@ namespace AplikacjaDietetyczna.UserControls
                     DzienneTluszcze.Text = TluszczeRazem + "/" + Zapotrzebowanie.GetTluszcze() + " g";
                     DzienneWeglowodany.Text = WeglowodanyRazem + "/" + Zapotrzebowanie.GetWeglowodany() + " g";
                 }
-                if (Kalorie >= Zapotrzebowanie.GetKalorie())
+
+                if(FunkcjeGlobalne.Tryb == "Dzienne")
                 {
-                    SpelnioneZapotrzebowanie++;
-                    DzienneZapotrzebowanie.Text = Convert.ToString(SpelnioneZapotrzebowanie);
+                    if (Kalorie >= Zapotrzebowanie.GetKalorie())
+                    {
+                        SpelnioneZapotrzebowanie++;
+                        DzienneZapotrzebowanie.Text = "Tak";
+                    }
+                    else
+                    {
+                        DzienneZapotrzebowanie.Text = "Nie";
+                    }
                 }
+
+                else
+                {
+                    if (Kalorie >= Zapotrzebowanie.GetKalorie())
+                    {
+                        SpelnioneZapotrzebowanie++;
+                        DzienneZapotrzebowanie.Text = SpelnioneZapotrzebowanie +" razy";
+                    }
+                }
+
+              
                 DataTydzien++;
 
             }
@@ -120,27 +138,20 @@ namespace AplikacjaDietetyczna.UserControls
             FunkcjeGlobalne.Tryb = "Tygodniowe";
             FunkcjeGlobalne.Data = "0";
             Podsumowanie(7);
+            DataStartowa.Text = "Wybrana data:  " + DateTime.Now.ToString("dd/MM/yyyy");
 
         }
 
         private void Dzienne(object sender, RoutedEventArgs e)
         {
 
-           
 
-            if (FunkcjeGlobalne.Tryb == "Tygodniowe")
-            {
+
+                FunkcjeGlobalne.Tryb = "Dzienne";
                 Nazwa.Text = "Dzienne";
                 Podsumowanie(0);
-                FunkcjeGlobalne.Tryb = "Dzienne";
-            }
+                
 
-            if (FunkcjeGlobalne.Tryb == "Miesieczne")
-            {
-                Nazwa.Text = "Tygodniowe";
-                Podsumowanie(7);
-                FunkcjeGlobalne.Tryb = "Tygodniowe";
-            }
 
 
         }
@@ -148,29 +159,61 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Miesieczne(object sender, RoutedEventArgs e)
         {
-            if(FunkcjeGlobalne.Tryb == "Tygodniowe")
-            {
-                Podsumowanie(31);
                 Nazwa.Text = "Miesięczne";
                 FunkcjeGlobalne.Tryb = "Miesieczne";
-            }
+                Podsumowanie(31);
+              
 
-            if (FunkcjeGlobalne.Tryb == "Dzienne")
-            {
-                Nazwa.Text = "Tygodniowe";
-                Podsumowanie(7);
-                FunkcjeGlobalne.Tryb = "Tygodniowe";
-            }
+
+
 
 
         }
 
+
+
+        private void Tygodniowe(object sender, RoutedEventArgs e)
+        {
+                FunkcjeGlobalne.Tryb = "Tygodniowe";
+                Podsumowanie(7);
+                Nazwa.Text = "Tygodniowe";
+                
+
+
+
+
+        }
+
+
         private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
             Console.WriteLine(Kalendarz.SelectedDate);
-            //var dateString = Kalendarz.SelectedDate;
-            //DateTime date1 = DateTime.Parse(dateString,
-            //              System.Globalization.CultureInfo.InvariantCulture);
+            DateTime date = DateTime.Now;
+            var datebez = date.Date;
+            DataStartowa.Text = "Wybrana data " + Kalendarz.SelectedDate.Value.ToString("dd/MM/yyyy");
+
+            int IloscDni = DateKlasa.GetCalendarDate(Kalendarz.SelectedDate.Value);
+            FunkcjeGlobalne.Data = Convert.ToString(-IloscDni + 1);
+
+            if (FunkcjeGlobalne.Tryb == "Tygodniowe")
+            {
+                Nazwa.Text = "Tygodniowe";
+                Podsumowanie(7);
+            }
+
+            if (FunkcjeGlobalne.Tryb == "Dzienne")
+            {
+                Nazwa.Text = "Dzienne";
+                Podsumowanie(1);
+            }
+
+            if (FunkcjeGlobalne.Tryb == "Miesieczne")
+            {
+                Nazwa.Text = "Miesieczne";
+                Podsumowanie(31);
+            }
+
+
         }
     }
 }
