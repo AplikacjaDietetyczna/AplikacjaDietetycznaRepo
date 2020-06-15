@@ -297,7 +297,7 @@ namespace AplikacjaDietetyczna.UserControls
 
             if(FunkcjeGlobalne.SelectedPosilek == 1)
             {
-                TypPosilku.Text += "posilek";
+                TypPosilku.Text += "śniadanie";
             }
             if (FunkcjeGlobalne.SelectedPosilek == 2)
             {

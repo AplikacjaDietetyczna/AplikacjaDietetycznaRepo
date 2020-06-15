@@ -26,8 +26,12 @@
                          IsReadOnly="True"/>
 
 
-            <Grid>
+            <Grid >
 
+
+                <Button Content="" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Miesieczne"/>
+
+                <Button Content="" HorizontalAlignment="Left" Margin="1195,249,0,0" VerticalAlignment="Top" Width="25" Height="124" Click="Dzienne"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="Sniadanie"
