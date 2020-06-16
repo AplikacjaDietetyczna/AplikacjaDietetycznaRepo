@@ -95,8 +95,8 @@ namespace AplikacjaDietetyczna.UserControls
         }
         private void Click_ZmianaWzrost(object sender, RoutedEventArgs e)
         {
-            //UserControl add = new UserControlZmianaWzrostu();
-            //GridMain.Children.Add(add);
+            UserControl add = new UserControlZmianaWzrostu();
+            GridMain.Children.Add(add);
         }
 
         private void Click_ZmianaWaga(object sender, RoutedEventArgs e)
