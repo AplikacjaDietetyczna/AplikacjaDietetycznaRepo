@@ -36,7 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
             //Połączenie z bazą i pobranie danych z zapytania
             AzureDB.openConnection();
-            AzureDB.sql = "SELECT Login, Plec, Wiek, Wzrost, Waga, Data FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "'";
+            AzureDB.sql = "SELECT Login, Email, Plec, Wiek, Wzrost, Waga, Data FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
@@ -53,13 +53,15 @@ namespace AplikacjaDietetyczna.UserControls
                 UzytkownikWzrost.Text = AzureDB.dt.Rows[0]["Wzrost"].ToString();
                 UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
                 UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
+                UzytkownikEmail.Text = AzureDB.dt.Rows[0]["Email"].ToString();
             }
+            DataPierwszegoWazenia();
 
             //Zamknięcie połączenia z bazą
             AzureDB.closeConnection();
         }
 
-        private void DataPierwszegoWarzenia()
+        private void DataPierwszegoWazenia()
         {
             //Pobranie nazwy użytkownika w celu użycia jej w zapytaniu
             string NazwaUzytkownika = FunkcjeGlobalne.Login;
@@ -67,7 +69,7 @@ namespace AplikacjaDietetyczna.UserControls
 
             //Połączenie z bazą i pobranie danych z zapytania
             AzureDB.openConnection();
-            AzureDB.sql = "SELECT TOP 1 MAX(Data) AS 'DataRejestracji' FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "' AND ";
+            AzureDB.sql = "SELECT TOP 1 Data AS 'DataRejestracji' FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "' ORDER BY DataRejestracji ASC";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
@@ -77,9 +79,15 @@ namespace AplikacjaDietetyczna.UserControls
 
             if (AzureDB.dt.Rows.Count > 0)
             {
-                //string dataRejestracji = Convert
-                //UzytkownikDataRejestracji.Text=AzureDB.dt.Rows[0]["DataRejestracji"]
+                DateTime wartosc = Convert.ToDateTime(AzureDB.dt.Rows[0]["DataRejestracji"]);
+                UzytkownikDataRejestracji.Text = AzureDB.dt.Rows[0]["DataRejestracji"].ToString();
+                UzytkownikIleJestes.Text = DateKlasa.GetCalendarDate(wartosc).ToString();
+                
+                //DateKlasa.GetCalendarDate();
+
             }
+
+            AzureDB.closeConnection();
         }
 
         private void Click_ZmianaEmail(object sender, RoutedEventArgs e)

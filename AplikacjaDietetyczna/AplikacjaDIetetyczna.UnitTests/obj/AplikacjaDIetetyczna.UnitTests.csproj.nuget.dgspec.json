@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {}
+    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {
+    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
         "projectName": "AplikacjaDietetyczna.UnitTests",
-        "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
+        "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\AplikacjaDietetyczna.UnitTests.csproj",
         "packagesPath": "C:\\Users\\Sasek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDIetetyczna.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
-                "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+              "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+                "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
               }
             }
           }
@@ -81,12 +81,12 @@
         }
       }
     },
-    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
+    "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
+        "projectUniqueName": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj",
         "projectName": "AplikacjaDietetyczna",
-        "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
+        "projectPath": "C:\\Users\\Sasek\\Source\\Repos\\AplikacjaDietetyczna\\AplikacjaDietetycznaRepo\\AplikacjaDietetyczna\\AplikacjaDietetyczna\\AplikacjaDietetyczna.csproj"
       },
       "frameworks": {
         "net472": {}
