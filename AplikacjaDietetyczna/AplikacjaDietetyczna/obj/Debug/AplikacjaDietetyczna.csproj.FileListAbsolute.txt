@@ -282,3 +282,5 @@ C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\Apl
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlWaga.baml
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.g.cs
 C:\Users\Buchy\Source\Repos\AplikacjaDietetycznaGitTest\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.baml
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.g.cs
+C:\Users\Pajfu\Source\Repos\AplikacjaDietetyczna\AplikacjaDietetycznaRepo\AplikacjaDietetyczna\AplikacjaDietetyczna\obj\Debug\UserControls\UserControlPropozycja.baml

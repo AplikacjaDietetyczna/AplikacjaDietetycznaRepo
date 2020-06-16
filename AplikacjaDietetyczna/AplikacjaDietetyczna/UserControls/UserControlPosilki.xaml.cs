@@ -368,6 +368,7 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Window_LoadedZapotrzebowanie(object sender, RoutedEventArgs e)
         {
+            FunkcjeGlobalne.Data = "0";
             Posilki();
 
         }
