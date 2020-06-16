@@ -382,6 +382,8 @@
                     VerticalAlignment="Top"
                     Width="262" 
                     RenderTransformOrigin="-0.462,0.607" DropDownClosed="ProduktCombo_DownClosed"/>
+                <Button x:Name="ZmienProdukt" Content="Zatwierdź zmiany" HorizontalAlignment="Left" Margin="604,330,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="ZmienProdukt_Click"/>
+                <Button x:Name="UsunProdukt" Content="Usuń" HorizontalAlignment="Left" Margin="854,330,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="UsunProdukt_Click"/>
 
 
             </Grid>

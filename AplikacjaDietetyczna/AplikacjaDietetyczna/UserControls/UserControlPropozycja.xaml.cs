@@ -28,10 +28,12 @@ namespace AplikacjaDietetyczna.UserControls
         public ComboBoxItem SelectedcbItem1 { get; set; }//potrzebne do uzupełniania comboboxow
         string IDUzytkownika = FunkcjeGlobalne.ID;
 
+
         private void UzupelnijComboBox()//uzupelnia combobox produktow wszystkimi dostepnymi w bazie danych produktami
         {
             DataContext = this;
             cbItems1 = new ObservableCollection<ComboBoxItem>();
+            cbItems1.Clear();
             var cbItem1 = new ComboBoxItem { Content = "Wybierz produkt" };
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
@@ -100,7 +102,6 @@ namespace AplikacjaDietetyczna.UserControls
                     WeglowodanyText.Text = "";
                     SposobPodaniaText.Text = "";
                     NazwaPosilkuText.Text = "";
-                    UzupelnijComboBox();
                 }
                 catch (Exception ex)
                 {
@@ -131,6 +132,81 @@ namespace AplikacjaDietetyczna.UserControls
                     WeglowodanyText_Copy.Text = AzureDB.dt.Rows[0]["Weglowodany"].ToString();
                 }
                 AzureDB.closeConnection();
+            }
+            else
+            {
+                SposobPodaniaText_Copy.Text = "";
+                KalorieText_Copy.Text = "";
+                BialkaText_Copy.Text = "";
+                TluszczeText_Copy.Text = "";
+                WeglowodanyText_Copy.Text = "";
+            }
+        }
+
+        private void ZmienProdukt_Click(object sender, RoutedEventArgs e)
+        {
+            if (KalorieText_Copy.Text == "" ||
+           BialkaText_Copy.Text == "" ||
+           TluszczeText_Copy.Text == "" ||
+           WeglowodanyText_Copy.Text == "" ||
+           SposobPodaniaText_Copy.Text == "" ||
+           ProduktCombo.SelectedIndex == 0)
+            {
+                MessageBox.Show("Prosze wypełnić wszystkie pola lub wybrać produkt", "Modyfikacja", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                try
+                {
+                    AzureDB.openConnection();
+                    AzureDB.sql = "UPDATE Produkty " +
+                        "SET Kalorie="+ KalorieText_Copy.Text + ", Bialka="+ BialkaText_Copy.Text + ", Tluszcze="+ TluszczeText_Copy.Text + ", Weglowodany="+ WeglowodanyText_Copy.Text + ", Podanie='"+ SposobPodaniaText_Copy.Text + "' " +
+                        "WHERE ID_Produktu="+((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString()+";";
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.cmd.ExecuteNonQuery(); //to wykonuje inserta :P
+                    AzureDB.closeConnection();
+                    MessageBox.Show("Produkt został pozytywnie zmieniony", "Modyfikacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                    KalorieText_Copy.Text = "";
+                    BialkaText_Copy.Text = "";
+                    TluszczeText_Copy.Text = "";
+                    WeglowodanyText_Copy.Text = "";
+                    SposobPodaniaText_Copy.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Błąd przy modyfikacji"
+                                      + Environment.NewLine + "opis: " + ex.Message.ToString(), "Dodawanie"
+                                      , MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void UsunProdukt_Click(object sender, RoutedEventArgs e)
+        {
+            if (ProduktCombo.SelectedIndex != 0)
+            {
+                try
+                {
+                    AzureDB.openConnection();
+                    AzureDB.sql = "DELETE FROM Produkty WHERE ID_Produktu=" + ((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString();
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                    AzureDB.cmd.ExecuteNonQuery();
+                    AzureDB.closeConnection();
+                    MessageBox.Show("Produkt usunięty pomyślnie", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Błąd przy Usuwaniu"
+                                      + Environment.NewLine + "opis: " + ex.Message.ToString(), "Usuwanie"
+                                      , MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nie wybrano Produktu do usunięcia", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
