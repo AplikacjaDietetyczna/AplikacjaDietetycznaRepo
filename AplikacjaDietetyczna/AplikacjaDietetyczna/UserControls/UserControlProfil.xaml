@@ -30,7 +30,7 @@
                          Width="200"
                          Opacity="0.8"
                          Text="Użytkownik:" 
-                         Margin="20,40,0,445"
+                         Margin="380,40,0,445"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -45,7 +45,7 @@
                         Width="250"
                         Opacity="0.8"
                         Text="UserLoginTest" 
-                        Margin="255,40,0,453"
+                        Margin="656,40,0,453"
                         IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
@@ -65,7 +65,7 @@
                             Width="200"
                             Opacity="0.8"
                             Text="Email:"
-                            Margin="20,40,0,445"
+                            Margin="380,40,0,445"
                             IsReadOnly="True"
                         />
                         <TextBox
@@ -79,7 +79,7 @@
                             BorderThickness="0"
                             Opacity="0.8"
                             Text="TestUserEmail"
-                            Margin="255,40,716,453"
+                            Margin="656,40,0,453"
                             IsReadOnly="True"
                         />
 
@@ -107,23 +107,21 @@
                          Width="200"
                          Opacity="1"
                          Text="Płeć:" 
-                         Margin="20,40,0,444"
+                         Margin="380,40,0,445"
                          IsReadOnly="True" Grid.Column="1"/>
 
                         <TextBox FontFamily="Helvetica"
                          x:Name="UzytkownikPlec"
                          FontSize="25"
                          FontWeight="Light"
-                         HorizontalAlignment="Left"
                          HorizontalContentAlignment="Left"
                          Background="Transparent"
                          Foreground="Black"
                          BorderThickness="0"
-                         Width="250"
                          Opacity="0.8"
                          Text="UserPlecTest"
-                         Margin="255,40,0,452"
-                         IsReadOnly="True" Grid.Column="1"/>
+                         Margin="656,40,314,453"
+                         IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackPanel>
 
@@ -143,7 +141,7 @@
                          Width="200"
                          Opacity="1"
                          Text="Wiek:"
-                         Margin="20,40,0,445"
+                         Margin="380,40,0,445"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -158,7 +156,7 @@
                          Width="250"
                          Opacity="0.8"
                          Text="UserWiekTest" 
-                         Margin="255,40,0,453"
+                         Margin="656,40,0,453"
                          IsReadOnly="True"/>
 
                     </Grid>
@@ -180,7 +178,7 @@
                          Width="200"
                          Opacity="1"
                          Text="Wzrost:" 
-                         Margin="20,40,0,445"
+                         Margin="380,40,0,445"
                          IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -195,7 +193,7 @@
                          Width="250"
                          Opacity="0.8"
                          Text="UserWzrostTest" 
-                         Margin="255,40,0,453"
+                         Margin="656,40,0,453"
                          IsReadOnly="True"/>
 
 
@@ -218,7 +216,7 @@
                              Width="200"
                              Opacity="1"
                              Text="Waga:" 
-                             Margin="20,40,0,445"
+                             Margin="380,40,0,445"
                              IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -233,7 +231,7 @@
                              Width="250"
                              Opacity="0.8"
                              Text="UserTestWaga"
-                             Margin="255,40,0,453"
+                             Margin="656,40,0,453"
                              IsReadOnly="True"/>
 
 
@@ -252,7 +250,7 @@
                              BorderThickness="0"
                              Opacity="0.8"
                              Text="Data Ost. Ważenia:" 
-                             Margin="20,40,985,453"
+                             Margin="380,40,0,445"
                              IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -267,7 +265,7 @@
                              Width="250"
                              Opacity="0.8"
                              Text="TestUserDataWaz"
-                             Margin="255,40,0,453"
+                             Margin="656,40,0,453"
                              IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
@@ -284,7 +282,7 @@
                              BorderThickness="0"
                              Opacity="0.8"
                              Text="Data Rejestracji:" 
-                             Margin="20,40,985,453"
+                             Margin="380,40,0,445"
                              IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -299,7 +297,7 @@
                              Width="250"
                              Opacity="0.8"
                              Text="TestUserDataRejestracji"
-                             Margin="255,40,0,453"
+                             Margin="656,40,0,453"
                              IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
@@ -316,7 +314,7 @@
                              BorderThickness="0"
                              Opacity="0.8"
                              Text="Ile już jesteś z nami:" 
-                             Margin="20,40,985,453"
+                             Margin="380,40,0,445"
                              IsReadOnly="True"/>
 
                         <TextBox FontFamily="Helvetica"
@@ -331,7 +329,7 @@
                              Width="250"
                              Opacity="0.8"
                              Text="TestUserIleJestes"
-                             Margin="255,40,0,453"
+                             Margin="656,40,0,453"
                              IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
@@ -346,7 +344,7 @@
                         Width="250" Height="60" 
                         Content="Zmień adres email" 
                         Click="Click_ZmianaEmail" 
-                        Margin="50,548,-150,-548"
+                        Margin="100,548,-198,-548"
                         />
                         <Button
                         FontWeight="Light"
@@ -354,7 +352,7 @@
                         Foreground="White" Height="60" 
                         Content="Zmień hasło" 
                         Click="Click_ZmianaHaslo" 
-                        Margin="350,548,-398,-548" HorizontalAlignment="Left" Width="200"
+                        Margin="404,548,-452,-548" HorizontalAlignment="Left" Width="200"
                         />
                         <Button
                         FontWeight="Light"
@@ -362,7 +360,7 @@
                         Foreground="White" Height="60" 
                         Content="Zmiana Wzrostu" 
                         Click="Click_ZmianaWzrost" 
-                        Margin="600,548,-651,-548" HorizontalAlignment="Left" Width="200"
+                        Margin="658,548,-706,-548" HorizontalAlignment="Left" Width="200"
                         />
                         <Button
                         FontWeight="Light"
@@ -370,7 +368,7 @@
                         Foreground="White" Height="60" 
                         Content="Zmiana Wagi" 
                         Click="Click_ZmianaWaga" 
-                        Margin="850,548,-900,-548" HorizontalAlignment="Left" Width="200"
+                        Margin="904,548,-952,-548" HorizontalAlignment="Left" Width="200"
                         />
                     </Grid>
                 </StackPanel>
