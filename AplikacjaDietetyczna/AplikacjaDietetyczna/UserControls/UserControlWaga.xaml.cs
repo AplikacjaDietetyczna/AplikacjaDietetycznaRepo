@@ -24,5 +24,17 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
         }
+
+        private void Click_Wroc(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlProfil();
+            GridMain.Children.Add(add);
+        }
+
+        private void Click_ZmianaWaga(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlProfil();
+            GridMain.Children.Add(add);
+        }
     }
 }
