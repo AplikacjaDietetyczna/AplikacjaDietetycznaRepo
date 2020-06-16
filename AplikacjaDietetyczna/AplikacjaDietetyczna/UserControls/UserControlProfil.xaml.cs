@@ -90,8 +90,8 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Click_ZmianaHaslo(object sender, RoutedEventArgs e)
         {
-            //UserControl add = new UserControlZmianaHasla();
-            //GridMain.Children.Add(add);
+            UserControl add = new UserControlZmianaHasla();
+            GridMain.Children.Add(add);
         }
         private void Click_ZmianaWzrost(object sender, RoutedEventArgs e)
         {
