@@ -101,8 +101,8 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Click_ZmianaWaga(object sender, RoutedEventArgs e)
         {
-            //UserControl add = new UserControlWaga();
-            //GridMain.Children.Add(add);
+            UserControl add = new UserControlWaga();
+            GridMain.Children.Add(add);
         }
 
 
