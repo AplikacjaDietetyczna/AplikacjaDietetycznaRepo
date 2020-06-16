@@ -33,7 +33,6 @@ namespace AplikacjaDietetyczna.UserControls
         {
             DataContext = this;
             cbItems1 = new ObservableCollection<ComboBoxItem>();
-            cbItems1.Clear();
             var cbItem1 = new ComboBoxItem { Content = "Wybierz produkt" };
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
@@ -196,6 +195,12 @@ namespace AplikacjaDietetyczna.UserControls
                     AzureDB.cmd.ExecuteNonQuery();
                     AzureDB.closeConnection();
                     MessageBox.Show("Produkt usunięty pomyślnie", "Usuwanie", MessageBoxButton.OK, MessageBoxImage.Error);
+                    KalorieText_Copy.Text = "";
+                    BialkaText_Copy.Text = "";
+                    TluszczeText_Copy.Text = "";
+                    WeglowodanyText_Copy.Text = "";
+                    SposobPodaniaText_Copy.Text = "";
+                    ProduktCombo.SelectedIndex = 0;
                 }
                 catch (Exception ex)
                 {
