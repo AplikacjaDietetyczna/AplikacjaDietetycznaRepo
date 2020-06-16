@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +16,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data;
-using System.Data.SqlClient;
 using AplikacjaDietetyczna.Klasy;
-using AplikacjaDietetyczna;
+using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
+
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -51,14 +54,55 @@ namespace AplikacjaDietetyczna.UserControls
                 UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
                 UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
             }
+
             //Zamknięcie połączenia z bazą
             AzureDB.closeConnection();
         }
 
-        private void PrzeniesAktualWagi(object sender, RoutedEventArgs e)
+        private void DataPierwszegoWarzenia()
         {
-            UserControl wag = new UserControlWaga();
-            // wag.s
+            //Pobranie nazwy użytkownika w celu użycia jej w zapytaniu
+            string NazwaUzytkownika = FunkcjeGlobalne.Login;
+            int DataTeraz = FunkcjeGlobalne.CurrentDate;
+
+            //Połączenie z bazą i pobranie danych z zapytania
+            AzureDB.openConnection();
+            AzureDB.sql = "SELECT TOP 1 MAX(Data) AS 'DataRejestracji' FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "' AND ";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                //string dataRejestracji = Convert
+                //UzytkownikDataRejestracji.Text=AzureDB.dt.Rows[0]["DataRejestracji"]
+            }
+        }
+
+        private void Click_ZmianaEmail(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlZmianaEmail();
+            GridMain.Children.Add(add);
+        }
+
+        private void Click_ZmianaHaslo(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlZmianaHasla();
+            GridMain.Children.Add(add);
+        }
+        private void Click_ZmianaWzrost(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlZmianaWzrostu();
+            GridMain.Children.Add(add);
+        }
+
+        private void Click_ZmianaWaga(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlWaga();
+            GridMain.Children.Add(add);
         }
 
 
