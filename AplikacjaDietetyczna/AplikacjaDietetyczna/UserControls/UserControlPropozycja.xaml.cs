@@ -24,10 +24,35 @@ namespace AplikacjaDietetyczna.UserControls
     /// </summary>
     public partial class UserControlPropozycja : UserControl
     {
+        public ObservableCollection<ComboBoxItem> cbItems1 { get; set; }//potrzebne do uzupełniania comboboxow
+        public ComboBoxItem SelectedcbItem1 { get; set; }//potrzebne do uzupełniania comboboxow
         string IDUzytkownika = FunkcjeGlobalne.ID;
+
+        private void UzupelnijComboBox()//uzupelnia combobox produktow wszystkimi dostepnymi w bazie danych produktami
+        {
+            DataContext = this;
+            cbItems1 = new ObservableCollection<ComboBoxItem>();
+            var cbItem1 = new ComboBoxItem { Content = "Wybierz produkt" };
+            SelectedcbItem1 = cbItem1;
+            cbItems1.Add(cbItem1);
+            AzureDB.openConnection();
+            AzureDB.sql = "Select * from Produkty Where ID_User=" + IDUzytkownika + " order by NazwaProduktu";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            foreach (DataRow dataRow in AzureDB.dt.Rows)
+            {
+                cbItems1.Add(new ComboBoxItem { Content = dataRow["NazwaProduktu"].ToString(), Tag = dataRow["ID_Produktu"].ToString() });
+            }
+            AzureDB.closeConnection();
+
+        }
         public UserControlPropozycja()
         {
             InitializeComponent();
+            UzupelnijComboBox();
         }
 
         private void Cofnij_Click(object sender, RoutedEventArgs e)
@@ -75,6 +100,7 @@ namespace AplikacjaDietetyczna.UserControls
                     WeglowodanyText.Text = "";
                     SposobPodaniaText.Text = "";
                     NazwaPosilkuText.Text = "";
+                    UzupelnijComboBox();
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +108,29 @@ namespace AplikacjaDietetyczna.UserControls
                                       + Environment.NewLine + "opis: " + ex.Message.ToString(), "Dodawanie"
                                       , MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+        }
+
+        private void ProduktCombo_DownClosed(object sender, EventArgs e)
+        {
+            if (ProduktCombo.SelectedIndex != 0)
+            {
+                AzureDB.openConnection();
+                AzureDB.sql = "Select * from Produkty WHERE ID_Produktu=" + ((ComboBoxItem)ProduktCombo.SelectedItem).Tag.ToString() + "";
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+                AzureDB.dt = new DataTable();
+                AzureDB.da.Fill(AzureDB.dt);
+                if (AzureDB.dt.Rows.Count > 0)
+                {
+                    SposobPodaniaText_Copy.Text = AzureDB.dt.Rows[0]["Podanie"].ToString();
+                    KalorieText_Copy.Text = AzureDB.dt.Rows[0]["Kalorie"].ToString();
+                    BialkaText_Copy.Text = AzureDB.dt.Rows[0]["Bialka"].ToString();
+                    TluszczeText_Copy.Text = AzureDB.dt.Rows[0]["Tluszcze"].ToString();
+                    WeglowodanyText_Copy.Text = AzureDB.dt.Rows[0]["Weglowodany"].ToString();
+                }
+                AzureDB.closeConnection();
             }
         }
     }
