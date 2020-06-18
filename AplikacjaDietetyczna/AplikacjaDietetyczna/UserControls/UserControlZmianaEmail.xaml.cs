@@ -32,7 +32,8 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Click_ZmianaEmailWroc(object sender, RoutedEventArgs e)
         {
-            
+            UserControl add = new UserControlProfil();
+            GridMain.Children.Add(add);
         }
     }
 }
