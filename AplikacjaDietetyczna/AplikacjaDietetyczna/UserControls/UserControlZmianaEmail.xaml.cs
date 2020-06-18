@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AplikacjaDietetyczna.Klasy;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +29,13 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Click_ZmianaEmail(object sender, RoutedEventArgs e)
         {
-
+            AzureDB.openConnection();
+            AzureDB.sql = "UPDATE Users SET Email='"+TextBoxEmail.Text+"' WHERE ID_User='"+FunkcjeGlobalne.ID+"'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.cmd.ExecuteNonQuery();
+            AzureDB.closeConnection();
+            MessageBoxResult rezultat = MessageBox.Show("Dodano nowy email dla usera: " + FunkcjeGlobalne.ID + " o wartości: " + TextBoxEmail.Text + " .", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Click_ZmianaEmailWroc(object sender, RoutedEventArgs e)

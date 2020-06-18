@@ -39,7 +39,7 @@
 
             <xctk:WatermarkTextBox
                 FontFamily="Helvetica"
-                x:Name="TextBoxEmail"
+                Name="TextBoxEmail"
                 FontSize="40"
                 FontWeight="Light"
                 HorizontalAlignment="Left"

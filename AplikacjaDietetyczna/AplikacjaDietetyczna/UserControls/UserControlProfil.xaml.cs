@@ -52,7 +52,6 @@ namespace AplikacjaDietetyczna.UserControls
                 UzytkownikWiek.Text = AzureDB.dt.Rows[0]["Wiek"].ToString();
                 UzytkownikWzrost.Text = AzureDB.dt.Rows[0]["Wzrost"].ToString();
                 UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
-                //UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
                 UzytkownikEmail.Text = AzureDB.dt.Rows[0]["Email"].ToString();
             }
             DataPierwszegoWazenia();

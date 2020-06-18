@@ -37,16 +37,12 @@ namespace AplikacjaDietetyczna.UserControls
         {
             DateTime aktualnaData = DateTime.Now;
             string sqlFormattedDate=aktualnaData.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            //int waga = Convert.ToInt32(Waga.Text);
             AzureDB.openConnection();
-            //AzureDB.sql="SELECT"
-            //AzureDB.openConnection();
             AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + FunkcjeGlobalne.ID + "','" + TextBoxWaga.Text + "','" + aktualnaData + "')";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.cmd.ExecuteNonQuery();
             AzureDB.closeConnection();
-            //Testowe
             MessageBoxResult rezultat = MessageBox.Show("Dodano nową wagę dla usera: " + FunkcjeGlobalne.ID + " w dacie: " + aktualnaData + " o wartości: " + TextBoxWaga.Text + " .", "Waga", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
