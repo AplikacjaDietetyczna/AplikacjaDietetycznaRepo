@@ -24,5 +24,15 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
         }
+
+        private void Click_ZmianaHasla(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_ZmianaHaslaWroc(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
