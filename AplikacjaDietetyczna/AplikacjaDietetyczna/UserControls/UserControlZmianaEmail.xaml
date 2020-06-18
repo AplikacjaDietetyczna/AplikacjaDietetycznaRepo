@@ -4,9 +4,71 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="640" d:DesignWidth="1220">
+    <Grid x:Name="GridMain" Background="#7aa9f6">
+        <StackPanel>
+            <TextBox
+                FontFamily="Helvetica"
+                FontSize="50"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Opacity="0.8"
+                Text="Aktualizacja Adresu Email"
+                IsReadOnly="True" HorizontalAlignment="Left" Width="560"
+                Margin="350,150,0,0"
+            />
+            <TextBox
+                FontFamily="Helvetica"
+                FontSize="30"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Opacity="0.8"
+                Text="Podaj nowy adres email:"
+                IsReadOnly="True" HorizontalAlignment="Left" Width="300"
+                Margin="460,60,0,0"
+            />
+
+            <xctk:WatermarkTextBox
+                FontFamily="Helvetica"
+                Name="TextBoxEmail"
+                FontSize="40"
+                FontWeight="Light"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Width="400"
+                Text="Testowy"
+                Margin="410,10,0,0" RenderTransformOrigin="0.193,0.564"
+            />
+
+            <Button
+                FontWeight="Light"
+                FontSize="25"
+                Foreground="White" Height="60" 
+                Content="Zmień adres Email" 
+                
+                Margin="485,20,0,0" HorizontalAlignment="Left" Width="250" Click="Click_ZmianaEmail"
+            />
+
+            <Button
+                FontWeight="Light"
+                FontSize="25"
+                Foreground="White" Height="60" 
+                Content="Wróć" 
+                
+                Margin="545,20,0,0" HorizontalAlignment="Left" Width="130" Click="Click_ZmianaEmailWroc"
+            />
+        </StackPanel>
     </Grid>
 </UserControl>
