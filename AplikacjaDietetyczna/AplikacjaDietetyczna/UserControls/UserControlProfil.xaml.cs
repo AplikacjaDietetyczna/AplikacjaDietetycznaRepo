@@ -36,7 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
             //Połączenie z bazą i pobranie danych z zapytania
             AzureDB.openConnection();
-            AzureDB.sql = "SELECT Login, Email, Plec, Wiek, Wzrost, Waga, Data FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "'";
+            AzureDB.sql = "SELECT Login, Email, Plec, Wiek, Wzrost, Waga FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
@@ -52,10 +52,11 @@ namespace AplikacjaDietetyczna.UserControls
                 UzytkownikWiek.Text = AzureDB.dt.Rows[0]["Wiek"].ToString();
                 UzytkownikWzrost.Text = AzureDB.dt.Rows[0]["Wzrost"].ToString();
                 UzytkownikWaga.Text = AzureDB.dt.Rows[0]["Waga"].ToString();
-                UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
+                //UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["Data"].ToString();
                 UzytkownikEmail.Text = AzureDB.dt.Rows[0]["Email"].ToString();
             }
             DataPierwszegoWazenia();
+            DataOstatniegoWazenia();
 
             //Zamknięcie połączenia z bazą
             AzureDB.closeConnection();
@@ -87,6 +88,24 @@ namespace AplikacjaDietetyczna.UserControls
 
             }
 
+            AzureDB.closeConnection();
+        }
+        
+        private void DataOstatniegoWazenia()
+        {
+            AzureDB.openConnection();
+            AzureDB.sql = "SELECT TOP 1 Data AS 'DataOstWaz' FROM Waga WHERE ID_User='" + FunkcjeGlobalne.ID + "' ORDER BY DataOstWaz DESC";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+
+            if (AzureDB.dt.Rows.Count > 0)
+            {
+                UzytkownikDataWazenia.Text = AzureDB.dt.Rows[0]["DataOstWaz"].ToString();
+            }
             AzureDB.closeConnection();
         }
 
