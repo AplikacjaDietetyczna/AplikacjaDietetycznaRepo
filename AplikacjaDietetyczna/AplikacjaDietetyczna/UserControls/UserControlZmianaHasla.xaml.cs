@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,13 +31,14 @@ namespace AplikacjaDietetyczna.UserControls
         private void Click_ZmianaHasla(object sender, RoutedEventArgs e)
         {
             AzureDB.openConnection();
-            AzureDB.sql = "UPDATE Users SET Email='" + TextBoxHaslo.Text + "' WHERE ID_User='" + FunkcjeGlobalne.ID + "'";
+            AzureDB.sql = "UPDATE Users SET Password='" + TextBoxHaslo.Text + "' WHERE ID_User='" + FunkcjeGlobalne.ID + "'";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.cmd.ExecuteNonQuery();
             AzureDB.closeConnection();
-            MessageBoxResult rezultat = MessageBox.Show("Dodano nowy email dla usera: " + FunkcjeGlobalne.ID + " o wartości: " + TextBoxHaslo.Text + " .", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBoxResult rezultat = MessageBox.Show("Zmieniono Hasło.", "Hasło", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+        
 
         private void Click_ZmianaHaslaWroc(object sender, RoutedEventArgs e)
         {
