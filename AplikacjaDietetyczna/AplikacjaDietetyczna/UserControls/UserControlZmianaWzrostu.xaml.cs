@@ -1,7 +1,10 @@
-﻿using System;
+﻿using AplikacjaDietetyczna.Klasy;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +26,33 @@ namespace AplikacjaDietetyczna.UserControls
         public UserControlZmianaWzrostu()
         {
             InitializeComponent();
+        }
+
+        private void Click_ZmianaWzrostu(object sender, RoutedEventArgs e)
+        {
+            //sprawdzenie czy podany wzrost zgadza się z regexem
+            string wzrost = TextBoxWzrost.Text;
+            Regex regexWzrost = new Regex(WyrażeniaRegularne.HeightRegex());
+            Match sprawdzenieWzrost = regexWzrost.Match(wzrost);
+            if (sprawdzenieWzrost.Success) {
+                AzureDB.openConnection();
+                AzureDB.sql = "UPDATE Users SET Wzrost='" + TextBoxWzrost.Text + "' WHERE ID_User='" + FunkcjeGlobalne.ID + "'";
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.cmd.ExecuteNonQuery();
+                AzureDB.closeConnection();
+                MessageBoxResult rezultat = MessageBox.Show("Uaktualniono wzrost.", "Wzrost", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBoxResult rezultat = MessageBox.Show("Podano błędny wzrost.", "Wzrost", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void Click_Wroc(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlProfil();
+            GridMain.Children.Add(add);
         }
     }
 }

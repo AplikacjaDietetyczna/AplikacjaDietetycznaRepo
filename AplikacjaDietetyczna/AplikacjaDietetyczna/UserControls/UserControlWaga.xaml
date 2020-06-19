@@ -9,6 +9,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
     <Grid x:Name="GridMain" Background="#7aa9f6">
+
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#1225ff" Offset="1.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
         <StackPanel>
             <TextBox
                 FontFamily="Helvetica"
@@ -34,15 +44,15 @@
                 Foreground="White"
                 BorderThickness="0"
                 Opacity="0.8"
-                Text="Nowa waga:"
-                IsReadOnly="True" HorizontalAlignment="Left" Width="200"
-                Margin="200,60,0,0"
+                Text="Nowa waga(w kg):"
+                IsReadOnly="True" HorizontalAlignment="Left" Width="240"
+                Margin="170,60,0,0"
             />
 
             <xctk:WatermarkTextBox
                 FontFamily="Helvetica"
                 x:Name="TextBoxWaga"
-                FontSize="40"
+                FontSize="30"
                 FontWeight="Light"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Left"
@@ -50,8 +60,8 @@
                 Foreground="White"
                 BorderThickness="0"
                 Width="256"
-                Text="Testowy"
-                Margin="200,10,0,0" RenderTransformOrigin="0.193,0.564"
+                Watermark="example: 45"
+                Margin="170,10,0,0" RenderTransformOrigin="0.193,0.564"
             />
 
             <Button

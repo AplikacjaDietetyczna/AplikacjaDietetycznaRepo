@@ -9,20 +9,31 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
     <Grid x:Name="GridMain" Background="#7aa9f6">
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#1225ff" Offset="1.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        
         <StackPanel>
             <TextBox
                 FontFamily="Helvetica"
                 FontSize="50"
                 FontWeight="Light"
-                HorizontalContentAlignment="Left"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
                 Background="Transparent"
                 Foreground="White"
                 BorderThickness="0"
                 Opacity="0.8"
                 Text="Aktualizacja Adresu Email"
-                IsReadOnly="True" HorizontalAlignment="Left" Width="560"
-                Margin="350,150,0,0"
+                IsReadOnly="True" Width="560"
+                Margin="0,140,0,0"
             />
+            
             <TextBox
                 FontFamily="Helvetica"
                 FontSize="30"
@@ -39,17 +50,17 @@
 
             <xctk:WatermarkTextBox
                 FontFamily="Helvetica"
+                Watermark="example@email.com"
                 Name="TextBoxEmail"
                 FontSize="40"
                 FontWeight="Light"
-                HorizontalAlignment="Left"
-                HorizontalContentAlignment="Left"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
                 Background="Transparent"
                 Foreground="White"
                 BorderThickness="0"
                 Width="400"
-                Text="Testowy"
-                Margin="410,10,0,0" RenderTransformOrigin="0.193,0.564"
+                Margin="0,10,0,0" RenderTransformOrigin="0.193,0.564"
             />
 
             <Button

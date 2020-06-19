@@ -9,10 +9,14 @@
     <Grid x:Name="GridMain">
         <StackPanel>
             <Grid Background="#7aa9f6" Height="641">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="38*"/>
-                    <ColumnDefinition Width="267*"/>
-                </Grid.ColumnDefinitions>
+                <Border>
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#7be9f6" Offset="0.0"/>
+                            <GradientStop Color="#1225ff" Offset="1.5"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
 
                 <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.2,0">
                     <Grid>
