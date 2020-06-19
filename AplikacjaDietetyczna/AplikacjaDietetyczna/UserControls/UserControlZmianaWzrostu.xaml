@@ -56,9 +56,8 @@
                 FontWeight="Light"
                 FontSize="25"
                 Foreground="White" Height="60" 
-                Content="Zmiana Wagi" 
-                Click="Click_ZmianaWzrostu" 
-                Margin="520,20,0,0" HorizontalAlignment="Left" Width="200"
+                Content="Zmiana Wzrostu" 
+                Margin="520,20,0,0" HorizontalAlignment="Left" Width="200" Click="Click_ZmianaWzrostu"
             />
 
             <Button
@@ -66,7 +65,7 @@
                 FontSize="25"
                 Foreground="White" Height="60" 
                 Content="Wróć" 
-                Click="Click_Wroc" 
+                Click="Click_Wroc"
                 Margin="555,20,0,0" HorizontalAlignment="Left" Width="130"
             />
         </StackPanel>

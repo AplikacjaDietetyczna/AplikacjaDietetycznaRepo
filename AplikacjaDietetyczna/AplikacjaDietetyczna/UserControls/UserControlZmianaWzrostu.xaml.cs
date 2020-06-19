@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AplikacjaDietetyczna.Klasy;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,21 @@ namespace AplikacjaDietetyczna.UserControls
             InitializeComponent();
         }
 
+        private void Click_ZmianaWzrostu(object sender, RoutedEventArgs e)
+        {
+            AzureDB.openConnection();
+            AzureDB.sql = "UPDATE Users SET Wzrost='" + TextBoxWzrost.Text + "' WHERE ID_User='" + FunkcjeGlobalne.ID + "'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.cmd.ExecuteNonQuery();
+            AzureDB.closeConnection();
+            MessageBoxResult rezultat = MessageBox.Show("Dodano nowy wzrost dla usera: " + FunkcjeGlobalne.ID + " o wartości: " + TextBoxWzrost.Text + " .", "Wzrost", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
+        private void Click_Wroc(object sender, RoutedEventArgs e)
+        {
+            UserControl add = new UserControlProfil();
+            GridMain.Children.Add(add);
+        }
     }
 }
