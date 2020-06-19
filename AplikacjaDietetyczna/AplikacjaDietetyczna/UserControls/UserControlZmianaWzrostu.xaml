@@ -4,9 +4,71 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AplikacjaDietetyczna.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="640" d:DesignWidth="1220">
+    <Grid x:Name="GridMain" Background="#7aa9f6">
+        <StackPanel>
+            <TextBox
+                FontFamily="Helvetica"
+                FontSize="50"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Opacity="0.8"
+                Text="Aktualizacja Wzrostu"
+                IsReadOnly="True" HorizontalAlignment="Left" Width="440"
+                Margin="400,150,0,0"
+            />
+            <TextBox
+                FontFamily="Helvetica"
+                FontSize="30"
+                FontWeight="Light"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Opacity="0.8"
+                Text="Podaj nowy wzrost:"
+                IsReadOnly="True" HorizontalAlignment="Left" Width="250"
+                Margin="500,60,0,0"
+            />
+
+            <xctk:WatermarkTextBox
+                FontFamily="Helvetica"
+                x:Name="TextBoxWzrost"
+                FontSize="40"
+                FontWeight="Light"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Left"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Width="256"
+                Text="Testowy"
+                Margin="500,10,0,0" RenderTransformOrigin="0.193,0.564"
+            />
+
+            <Button
+                FontWeight="Light"
+                FontSize="25"
+                Foreground="White" Height="60" 
+                Content="Zmiana Wagi" 
+                Click="Click_ZmianaWzrostu" 
+                Margin="520,20,0,0" HorizontalAlignment="Left" Width="200"
+            />
+
+            <Button
+                FontWeight="Light"
+                FontSize="25"
+                Foreground="White" Height="60" 
+                Content="Wróć" 
+                Click="Click_Wroc" 
+                Margin="555,20,0,0" HorizontalAlignment="Left" Width="130"
+            />
+        </StackPanel>
     </Grid>
 </UserControl>

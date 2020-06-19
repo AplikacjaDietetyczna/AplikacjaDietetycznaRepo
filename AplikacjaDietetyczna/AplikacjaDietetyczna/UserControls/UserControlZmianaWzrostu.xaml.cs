@@ -24,5 +24,7 @@ namespace AplikacjaDietetyczna.UserControls
         {
             InitializeComponent();
         }
+
+
     }
 }
