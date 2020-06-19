@@ -9,6 +9,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1220">
     <Grid x:Name="GridMain" Background="#7aa9f6">
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#1225ff" Offset="1.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        
         <StackPanel>
             <TextBox
                 FontFamily="Helvetica"
@@ -22,7 +31,7 @@
                 Opacity="0.8"
                 Text="Aktualizacja Adresu Email"
                 IsReadOnly="True" Width="560"
-                Margin="0,50,0,0"
+                Margin="0,140,0,0"
             />
             
             <TextBox
