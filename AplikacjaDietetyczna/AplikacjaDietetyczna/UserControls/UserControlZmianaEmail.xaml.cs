@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,15 +29,31 @@ namespace AplikacjaDietetyczna.UserControls
             InitializeComponent();
         }
 
+       
+
         private void Click_ZmianaEmail(object sender, RoutedEventArgs e)
         {
-            AzureDB.openConnection();
-            AzureDB.sql = "UPDATE Users SET Email='"+TextBoxEmail.Text+"' WHERE ID_User='"+FunkcjeGlobalne.ID+"'";
-            AzureDB.cmd.CommandType = CommandType.Text;
-            AzureDB.cmd.CommandText = AzureDB.sql;
-            AzureDB.cmd.ExecuteNonQuery();
-            AzureDB.closeConnection();
-            MessageBoxResult rezultat = MessageBox.Show("Dodano nowy email dla usera: " + FunkcjeGlobalne.ID + " o wartości: " + TextBoxEmail.Text + " .", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
+            //sprawdzenie czy email zgadza się z regexem
+            string email = TextBoxEmail.Text;
+            Regex regexEmail = new Regex(WyrażeniaRegularne.EmailRegex());
+            Match sprawdzenieEmail = regexEmail.Match(email);
+
+            if (sprawdzenieEmail.Success )//jeżeli sprawdzenie emaila przebiegnie pomyślnie
+            {
+                //aktualizacja email
+                AzureDB.sql = "UPDATE Users SET Email='" + TextBoxEmail.Text + "' WHERE ID_User='" + FunkcjeGlobalne.ID + "'";
+                AzureDB.openConnection();
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.cmd.ExecuteNonQuery();
+                AzureDB.closeConnection();
+                //testowy messageBox jeśli wszystko się uda
+                MessageBoxResult rezultat = MessageBox.Show("Zaktualizowano Email.", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBoxResult rezultat = MessageBox.Show("Podano niepoprawny adres email.", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void Click_ZmianaEmailWroc(object sender, RoutedEventArgs e)
