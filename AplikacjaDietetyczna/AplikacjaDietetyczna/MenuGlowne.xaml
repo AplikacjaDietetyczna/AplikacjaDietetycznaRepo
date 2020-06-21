@@ -94,7 +94,7 @@
                         </ListViewItem>
 
                     </ListView>
-                    <Button x:Name="Dodaj" Width="100" Height="40" Content="Rejestracja" Margin="35,20,45,0" Click="SQL_Click"/>
+                    <Button x:Name="Dodaj" Width="100" Height="40" Content="SQL" Margin="35,20,45,0" Click="SQL_Click"/>
 
 
 

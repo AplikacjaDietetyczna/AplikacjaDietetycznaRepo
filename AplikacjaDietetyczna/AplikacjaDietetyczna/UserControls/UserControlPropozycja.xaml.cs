@@ -37,7 +37,7 @@ namespace AplikacjaDietetyczna.UserControls
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
             AzureDB.openConnection();
-            AzureDB.sql = "Select * from Produkty Where ID_User=" + IDUzytkownika + " order by NazwaProduktu";
+            AzureDB.sql = "Select * from Produkty Where ID_User=" + IDUzytkownika + " AND Zatwierdzone = 0 order by NazwaProduktu";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);

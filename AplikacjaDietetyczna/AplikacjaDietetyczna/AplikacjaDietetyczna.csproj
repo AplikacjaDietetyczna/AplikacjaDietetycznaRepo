@@ -127,9 +127,6 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SqlQuery.xaml.cs">
-      <DependentUpon>SqlQuery.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UserControlDodaj.xaml.cs">
       <DependentUpon>UserControlDodaj.xaml</DependentUpon>
     </Compile>
@@ -166,10 +163,6 @@
     <Compile Include="UserControls\UserControlZmianaWzrostu.xaml.cs">
       <DependentUpon>UserControlZmianaWzrostu.xaml</DependentUpon>
     </Compile>
-    <Page Include="SqlQuery.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
