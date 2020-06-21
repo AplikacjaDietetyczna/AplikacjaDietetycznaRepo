@@ -30,8 +30,8 @@
             <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="640" Width="1220"/>
 
             <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
-                <TextBlock x:Name="PokazID" HorizontalAlignment="Left" Margin="242,10,0,0" TextWrapping="Wrap" Text="Witaj, ID(tutaj ma być imię)" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
-                <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="780,23,0,-29" TextWrapping="Wrap" Text="Nie jesteś adminem" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
+                <TextBlock x:Name="PokazID" Foreground="White" HorizontalAlignment="Left" Margin="226,10,0,-15" TextWrapping="Wrap" Text="Witaj, Login" VerticalAlignment="Top" Height="65" Width="629" FontSize="36" Loaded="PokazID_Loaded"/>
+                <TextBlock x:Name="PokazAdmin" HorizontalAlignment="Left" Margin="780,23,0,-29" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="66" Width="474" FontSize="24" Loaded="PokazAdmin_Loaded"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White" Width="35" FontSize="14">
@@ -55,38 +55,46 @@
                         <iconPacks:PackIconMaterial Kind="Food" Height="118" Width="160" Margin="10,10,0,0"/>
                     </Grid>
 
-                    <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                    <ListView x:Name="ListViewMenu" Background="#c6edf7" Foreground="#FF5C99D6"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
                         <ListViewItem  Height="60">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Posilki" VerticalAlignment="Center" Margin="20 10"/>
-                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                            <StackPanel Orientation="Horizontal" Width="170">
+                                <TextBlock Text="Posilki"  VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="55,5"/>
+                            </StackPanel>
+                        </ListViewItem>
+
+                        <ListViewItem x:Name="Dodaj_produkt" Height="60">
+                            <StackPanel Orientation="Horizontal" Width="170">
+                                <TextBlock Text="Dodaj produkt"  VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="FoodForkDrink" Height="25" Width="25" Margin="12,5"/>
                             </StackPanel>
                         </ListViewItem>
 
                         <ListViewItem x:Name="ItemPodsumowanie"  Height="60">
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Width="170">
                                 <TextBlock Text="Podsumowanie" VerticalAlignment="Center" Margin="20 10"/>
-                                <iconPacks:PackIconMaterial Kind="Food" Height="25" Width="25" Margin="10"/>
+                                <iconPacks:PackIconMaterial Kind="FileAccount" Height="25" Width="25" Margin="9"/>
                             </StackPanel>
                         </ListViewItem>
-                        <ListViewItem x:Name="Dodaj"  Height="60">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="SQL" VerticalAlignment="Center" Margin="20 10"/>
-                                <iconPacks:PackIconMaterial Kind="Wrench" Height="25" Width="25" Margin="10"/>
+
+                        <ListViewItem x:Name="Historia_Wagi"  Height="60">
+                            <StackPanel Orientation="Horizontal" Width="170">
+                                <TextBlock Text="Historia wagi" VerticalAlignment="Center" Margin="20 10"/>
+                                <iconPacks:PackIconMaterial Kind="WeightKilogram" Height="25" Width="25" Margin="20,4"/>
                             </StackPanel>
                         </ListViewItem>
+
 
                         <ListViewItem x:Name="Kalkulator" Height="60">
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Width="170">
                                 <TextBlock Text="Kalkulator BMI" VerticalAlignment="Center" Margin="20 10"/>
-                                <iconPacks:PackIconMaterial Kind="Calculator" Height="25" Width="25" Margin="10"/>
+                                <iconPacks:PackIconMaterial Kind="Calculator" Height="25" Width="25" Margin="12"/>
                             </StackPanel>
 
                         </ListViewItem>
+
                     </ListView>
-
-
-
+                    <Button x:Name="Dodaj" Width="100" Height="40" Content="Rejestracja" Margin="35,20,45,0" Click="SQL_Click"/>
 
 
 

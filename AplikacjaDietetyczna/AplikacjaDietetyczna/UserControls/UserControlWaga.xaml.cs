@@ -66,7 +66,7 @@ namespace AplikacjaDietetyczna.UserControls
             AzureDB.openConnection();
             //AzureDB.con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
             //AzureDB.con.FireInfoMessageEventOnUserErrors = true;
-            AzureDB.sql = "Select Waga, Data FROM Waga WHERE ID_User='"+FunkcjeGlobalne.ID+"'";
+            AzureDB.sql = "Select Waga, Data FROM Waga WHERE ID_User='"+FunkcjeGlobalne.ID+"' ORDER BY Data desc";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
