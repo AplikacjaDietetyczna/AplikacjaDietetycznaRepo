@@ -15,6 +15,7 @@
                     <ColumnDefinition Width="38*"/>
                     <ColumnDefinition Width="267*"/>
                 </Grid.ColumnDefinitions>
+                
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="TextBoxCurrentDate"
