@@ -9,15 +9,8 @@
              d:DesignHeight="640" d:DesignWidth="1220"
              Loaded="Window_Loaded"
              >
-    <Grid>
-        <Border CornerRadius="5"  Height="640" VerticalAlignment="Bottom">
-            <Border.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#7be9f6" Offset="0.0"/>
-                    <GradientStop Color="#1225ff" Offset="1.5"/>
-                </LinearGradientBrush>
+    <Grid Background="#7aa9f6">
 
-            </Border.Background>
             <ComboBox x:Name="ZapisaneSQL" HorizontalAlignment="Left" Height="30" Margin="958,46,0,0" VerticalAlignment="Top" Width="252" SelectedIndex="0" DropDownClosed="ZapisaneSQL_closing">
                 <ComboBoxItem Tag="select * from Posilki">Wyświetl Posilki</ComboBoxItem>
                 <ComboBoxItem Tag="select * from Produkty">Wyświetl Produkty</ComboBoxItem>
@@ -26,7 +19,7 @@
                 <ComboBoxItem Tag="UPDATE Produkty SET Kalorie/Bialka/Tluszcze/Weglowodany/Podanie/NazwaProduktu/Zatwierdzone = [wartosc] WHERE ID_Produktu = [int];">Modyfikuj Produkt</ComboBoxItem>
             </ComboBox>
 
-        </Border>
+
 
 
 

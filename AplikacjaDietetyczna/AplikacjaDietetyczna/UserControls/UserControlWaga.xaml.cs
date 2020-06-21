@@ -46,7 +46,7 @@ namespace AplikacjaDietetyczna.UserControls
                 DateTime aktualnaData = DateTime.Now;
                 string sqlFormattedDate = aktualnaData.ToString("yyyy-MM-dd HH:mm:ss.fff");
                 AzureDB.openConnection();
-                AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + FunkcjeGlobalne.ID + "','" + TextBoxWaga.Text + "','" + aktualnaData + "')";
+                AzureDB.sql = "INSERT INTO Waga (ID_User, Waga, Data) VALUES ('" + FunkcjeGlobalne.ID + "','" + Convert.ToInt32(waga) + "','" + sqlFormattedDate + "')";
                 AzureDB.cmd.CommandType = CommandType.Text;
                 AzureDB.cmd.CommandText = AzureDB.sql;
                 AzureDB.cmd.ExecuteNonQuery();

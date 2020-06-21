@@ -36,7 +36,7 @@ namespace AplikacjaDietetyczna.UserControls
 
             //Połączenie z bazą i pobranie danych z zapytania
             AzureDB.openConnection();
-            AzureDB.sql = "SELECT Login, Email, Plec, Wiek, Wzrost, Waga FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "'";
+            AzureDB.sql = "SELECT Login, Email, Plec, Wiek, Wzrost,Data, Waga FROM Users INNER JOIN Waga ON Users.ID_User=Waga.ID_User WHERE Users.Login='" + NazwaUzytkownika + "' ORDER BY Data desc";
             AzureDB.cmd.CommandType = CommandType.Text;
             AzureDB.cmd.CommandText = AzureDB.sql;
             //Tworzenie tabeli tymczasowej z pobranymi danymi i zapełnienie jej tymi danymi
