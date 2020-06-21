@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace AplikacjaDietetyczna.UserControls
 {
@@ -26,6 +27,7 @@ namespace AplikacjaDietetyczna.UserControls
         public UserControlWaga()
         {
             InitializeComponent();
+            HistoriaWagi();
         }
 
         private void Click_Wroc(object sender, RoutedEventArgs e)
@@ -50,11 +52,27 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.cmd.ExecuteNonQuery();
                 AzureDB.closeConnection();
                 MessageBoxResult rezultat = MessageBox.Show("Uaktualniono wagę.", "Waga", MessageBoxButton.OK, MessageBoxImage.Information);
+                HistoriaWagi();
             }
             else
             {
                 MessageBoxResult rezultat = MessageBox.Show("Podano niepoprawną wagę.", "Waga", MessageBoxButton.OK, MessageBoxImage.Information);
+                HistoriaWagi();
             }
+        }
+
+        private void HistoriaWagi()
+        {
+            AzureDB.openConnection();
+            //AzureDB.con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
+            //AzureDB.con.FireInfoMessageEventOnUserErrors = true;
+            AzureDB.sql = "Select Waga, Data FROM Waga WHERE ID_User='"+FunkcjeGlobalne.ID+"'";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            HistoriaWagDataGrid.ItemsSource = AzureDB.dt.DefaultView;
         }
     }
 }
