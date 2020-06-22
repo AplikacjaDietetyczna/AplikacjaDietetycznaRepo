@@ -85,7 +85,12 @@ namespace AplikacjaDietetyczna.UserControls
                 TluszczeRazem += Tluszcze;
                 WeglowodanyRazem += Weglowodany;
 
-                if(IloscDni != 0)
+
+                Kalorie = 0;
+                Bialka = 0;
+                Tluszcze = 0;
+                Weglowodany = 0;
+                if (IloscDni != 0)
                 {
                     DzienneKalorie.Text = KalorieRazem + "/" + Zapotrzebowanie.GetKalorie() * IloscDni + " kcal";
                     DzienneBialka.Text = BialkaRazem + "/" + Zapotrzebowanie.GetBialka() * IloscDni + " g";
