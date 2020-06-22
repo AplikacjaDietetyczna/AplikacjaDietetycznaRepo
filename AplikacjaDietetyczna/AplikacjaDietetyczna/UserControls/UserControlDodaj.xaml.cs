@@ -302,14 +302,23 @@ namespace AplikacjaDietetyczna.UserControls
 
         private void Cofnij_Click(object sender, RoutedEventArgs e)
         {
-            ProduktID.RemoveAt(ProduktID.Count - 1);
-            ProduktIlosc.RemoveAt(ProduktIlosc.Count - 1);
-            ProduktNazwa.RemoveAt(ProduktNazwa.Count - 1);
-            Kalorie.RemoveAt(Kalorie.Count - 1);
-            Weglowodany.RemoveAt(Weglowodany.Count - 1);
-            Tluszcze.RemoveAt(Tluszcze.Count - 1);
-            Bialka.RemoveAt(Bialka.Count - 1);
-            FillFields();
+            try
+            {
+                ProduktID.RemoveAt(ProduktID.Count - 1);
+                ProduktIlosc.RemoveAt(ProduktIlosc.Count - 1);
+                ProduktNazwa.RemoveAt(ProduktNazwa.Count - 1);
+                Kalorie.RemoveAt(Kalorie.Count - 1);
+                Weglowodany.RemoveAt(Weglowodany.Count - 1);
+                Tluszcze.RemoveAt(Tluszcze.Count - 1);
+                Bialka.RemoveAt(Bialka.Count - 1);
+                FillFields();
+            }
+
+            catch
+            {
+                
+            }
+         
 
         }
 
