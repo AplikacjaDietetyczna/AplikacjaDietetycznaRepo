@@ -19,23 +19,31 @@ namespace AplikacjaDietetyczna.Klasy
         {
 
             int IleDni = 0;
-            DateTime dateTime = DateTime.Now;
-            var dateWithoutTime = dateTime.Date;
-            var PodanaDataWithoutTime = PodanaData.Date;
-            Console.WriteLine(dateWithoutTime);
-            Console.WriteLine(PodanaData);
-            if (PodanaDataWithoutTime != dateWithoutTime)
+            try
             {
-                while (PodanaDataWithoutTime != dateWithoutTime)
+                DateTime dateTime = DateTime.Now;
+                var dateWithoutTime = dateTime.Date;
+                var PodanaDataWithoutTime = PodanaData.Date;
+                Console.WriteLine(dateWithoutTime);
+                Console.WriteLine(PodanaData);
+                if (PodanaDataWithoutTime != dateWithoutTime)
                 {
-                    PodanaDataWithoutTime = PodanaDataWithoutTime.AddDays(1);
-                    IleDni++;
+                    while (PodanaDataWithoutTime != dateWithoutTime)
+                    {
+                        PodanaDataWithoutTime = PodanaDataWithoutTime.AddDays(1);
+                        IleDni++;
+                    }
+                }
+
+                else
+                {
+                    IleDni = 0;
                 }
             }
 
-            else
+            catch
             {
-                IleDni = 0;
+
             }
 
 

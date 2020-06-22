@@ -136,10 +136,11 @@ namespace AplikacjaDietetyczna.UserControls
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             FunkcjeGlobalne.Tryb = "Tygodniowe";
-            FunkcjeGlobalne.Data = "0";
+            FunkcjeGlobalne.Data = "1";
             Podsumowanie(7);
             DataStartowa.Text = "Wybrana data:  " + DateTime.Now.ToString("dd/MM/yyyy");
-
+            CalendarDateRange cdr = new CalendarDateRange(DateTime.Today.AddDays(1), DateTime.Today.AddMonths(24));
+            Kalendarz.BlackoutDates.Add(cdr);
         }
 
         private void Dzienne(object sender, RoutedEventArgs e)
@@ -149,7 +150,7 @@ namespace AplikacjaDietetyczna.UserControls
 
                 FunkcjeGlobalne.Tryb = "Dzienne";
                 Nazwa.Text = "Dzienne";
-                Podsumowanie(0);
+                Podsumowanie(1);
                 
 
 
