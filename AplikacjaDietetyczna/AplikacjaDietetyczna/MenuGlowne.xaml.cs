@@ -37,15 +37,13 @@ namespace AplikacjaDietetyczna
         private void PokazID_Loaded(object sender, RoutedEventArgs e)
         {
             PokazID.Text = "Witaj, " + FunkcjeGlobalne.Login;
-            /*
-            if(FunkcjeGlobalne.IsAdmin != "1")
+            Singleton singleton = Singleton.Instance;
+            if (singleton.CheckIfUserIsAdmin() != "1")
             {
                 Dodaj.IsEnabled = false;
                 Dodaj.Opacity = 0;
-                SQL.IsEnabled = false;
-                SQL.Opacity = 0;
             }
-            */
+
 
         }
         private void PokazAdmin_Loaded(object sender, RoutedEventArgs e)
@@ -83,13 +81,21 @@ namespace AplikacjaDietetyczna
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
                     break;
+                case "Dodaj_produkt":
+                    usc = new UserControls.UserControlPropozycja();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "Historia_Wagi":
+                    usc = new UserControls.UserControlWaga();
+                    GridMain.Children.Add(usc);
+                    break;
+
                 default:
                     usc = new UserControls.UserControlPosilki();
                     GridMain.Children.Add(usc);
                     break;
             }
         }
-
         private void Profil_Click(object sender, RoutedEventArgs e)
         {
             UserControl usc = new UserControls.UserControlProfil();
@@ -110,5 +116,14 @@ namespace AplikacjaDietetyczna
             FunkcjeZerowanie.ZerownaieFunkcji();
             
         }
+
+        private void SQL_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl SQL = new UserControls.UserControlSQL();
+            GridMain.Children.Add(SQL);
+
+        }
+
+
     }
 }

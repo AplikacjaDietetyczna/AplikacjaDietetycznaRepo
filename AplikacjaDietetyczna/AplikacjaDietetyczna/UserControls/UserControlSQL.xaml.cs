@@ -62,6 +62,27 @@ namespace AplikacjaDietetyczna.UserControls
                 AzureDB.dt = new DataTable();
                 AzureDB.da.Fill(AzureDB.dt);
                 SelectDataGrid.ItemsSource = AzureDB.dt.DefaultView;
+
+                if (Select.Text != "SELECT ID_Produktu, Users.ID_User,NazwaProduktu, Kalorie, Bialka, Tluszcze, Weglowodany, Podanie, Zatwierdzone FROM Produkty INNER JOIN Users ON Produkty.ID_User = Users.ID_User WHERE Zatwierdzone=0")
+                {
+                    DoZatwierdzenia.Opacity = 0;
+                    DoZatwierdzenia.IsEnabled = false;
+                    DoZatwierdzeniaTekst.Opacity = 0;
+                    DoZatwierdzeniaTekst.IsEnabled = false;
+                    Zatwierdz.Opacity = 0;
+                    Zatwierdz.IsEnabled = false;
+                }
+
+                else
+                {
+                    DoZatwierdzenia.Opacity = 1;
+                    DoZatwierdzenia.IsEnabled = true;
+                    DoZatwierdzeniaTekst.Opacity = 1;
+                    DoZatwierdzeniaTekst.IsEnabled = true;
+                    Zatwierdz.Opacity = 1;
+                    Zatwierdz.IsEnabled = true;
+                }
+
             }
             catch (Exception ex)
             {
@@ -72,6 +93,32 @@ namespace AplikacjaDietetyczna.UserControls
         private void ZapisaneSQL_closing(object sender, EventArgs e)
         {
             Select.Text = ((ComboBoxItem)ZapisaneSQL.SelectedItem).Tag.ToString();
+        }
+
+        private void Zatwierdz_Click(object sender, RoutedEventArgs e)
+        {
+            int ID_Produktu = Convert.ToInt32(DoZatwierdzenia.Text);
+
+            try
+            {
+               
+                AzureDB.openConnection();
+                AzureDB.sql = "UPDATE Produkty SET Zatwierdzone = 1 WHERE ID_Produktu = '"+ID_Produktu+"'";
+                AzureDB.cmd.CommandType = CommandType.Text;
+                AzureDB.cmd.CommandText = AzureDB.sql;
+                AzureDB.cmd.ExecuteNonQuery(); 
+                AzureDB.closeConnection();
+                MessageBox.Show("Dodano produkt " + ID_Produktu + " do głównej bazy produktów", "aktualizacja", MessageBoxButton.OK, MessageBoxImage.Information);
+                Start();
+            }
+            catch (Exception ex)//jesli baza nie dziala
+            {
+                MessageBox.Show("Błąd przy aktualizacji"
+                   + Environment.NewLine + "opis: " + ex.Message.ToString(), "aktualizacja"
+                   , MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
         }
     }
 }

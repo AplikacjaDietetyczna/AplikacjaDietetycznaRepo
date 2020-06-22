@@ -127,9 +127,6 @@
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SqlQuery.xaml.cs">
-      <DependentUpon>SqlQuery.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UserControlDodaj.xaml.cs">
       <DependentUpon>UserControlDodaj.xaml</DependentUpon>
     </Compile>
@@ -157,10 +154,15 @@
     <Compile Include="UserControls\UserControlWaga.xaml.cs">
       <DependentUpon>UserControlWaga.xaml</DependentUpon>
     </Compile>
-    <Page Include="SqlQuery.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="UserControls\UserControlZmianaEmail.xaml.cs">
+      <DependentUpon>UserControlZmianaEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlZmianaHasla.xaml.cs">
+      <DependentUpon>UserControlZmianaHasla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlZmianaWzrostu.xaml.cs">
+      <DependentUpon>UserControlZmianaWzrostu.xaml</DependentUpon>
+    </Compile>
     <Page Include="Style\ButtonModern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,6 +222,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UserControlWaga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlZmianaEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlZmianaHasla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlZmianaWzrostu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
