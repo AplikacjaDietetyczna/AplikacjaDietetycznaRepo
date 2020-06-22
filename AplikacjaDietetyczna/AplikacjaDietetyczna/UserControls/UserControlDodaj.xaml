@@ -172,7 +172,7 @@
                             BorderThickness="0"
                             Width="218"
                             Opacity="1"
-                            Text="Nie widzisz produktu którego szukasz ? Zaproponuj własny!" Margin="31,279,77,191"
+                            Text="Nie widzisz produktu którego szukasz? Zaproponuj własny!" Margin="31,279,77,191"
                             TextWrapping="Wrap"
                             IsReadOnly="True"/>
                         <TextBox FontFamily="Helvetica"
@@ -187,7 +187,7 @@
                             BorderThickness="0"
                             Width="187"
                             Opacity="1"
-                            Text="Chcesz usunąć któryś posiłek ?" Margin="31,423,108,83"
+                            Text="Chcesz usunąć któryś posiłek?" Margin="31,423,108,83"
                             IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
