@@ -175,6 +175,20 @@
                             Text="Nie widzisz produktu którego szukasz ? Zaproponuj własny!" Margin="31,279,77,191"
                             TextWrapping="Wrap"
                             IsReadOnly="True"/>
+                        <TextBox FontFamily="Helvetica"
+                            x:Name="Lunch_Copy1"
+                            FontSize="18"
+                            FontWeight="Light"
+                                 TextWrapping="Wrap"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Width="187"
+                            Opacity="1"
+                            Text="Chcesz usunąć któryś posiłek ?" Margin="31,423,108,83"
+                            IsReadOnly="True"/>
                     </Grid>
                 </StackPanel>
 
@@ -188,7 +202,7 @@
 
 
                 <Button x:Name="DodajProdukt" Content="Dodaj Produkt" HorizontalAlignment="Left" Margin="120,300,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.Column="1" RenderTransformOrigin="-0.22,0.466" Click="DodajProdukt_Click"/>
-                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="120,558,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajPosilek_Click" Grid.Column="1"/>
+                <Button x:Name="DodajPosilek" Content="Utwórz Posiłek" HorizontalAlignment="Left" Margin="120,470,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="DodajPosilek_Click" Grid.Column="1"/>
                 <TextBox FontFamily="Helvetica"
                     FontSize="32"
                     FontWeight="Light"
@@ -216,9 +230,19 @@
                          
                          Height="38" Margin="89,71,727,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Grid.Column="1" TextChanged="NazwaPosilkuText_TextChanged"/>
 
-                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,558,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="Reset" Content="Wyczyść" HorizontalAlignment="Left" Margin="32,470,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Reset_Click" Grid.ColumnSpan="2"/>
                 <Button x:Name="Cofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="32,300,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="Cofnij_Click" Grid.ColumnSpan="2"/>
-                <Button x:Name="ZaproponujProdukt" Content="Zaproponuj Produkt" HorizontalAlignment="Left" Margin="32,467,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="ZaproponujProdukt_Click" Grid.ColumnSpan="2"/>
+                <Button x:Name="ZaproponujProdukt" Content="Zaproponuj Produkt" HorizontalAlignment="Left" Margin="120,377,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="ZaproponujProdukt_Click" Grid.Column="1"/>
+                <ComboBox HorizontalAlignment="Left"
+                    x:Name="PosilekCombo"
+                    ItemsSource="{Binding cbItems2}"
+                    SelectedItem="{Binding SelectedcbItem2}"
+                    Height="30"
+                    Margin="27,562,0,0"
+                    VerticalAlignment="Top"
+                    Width="193" 
+                    RenderTransformOrigin="-0.462,0.607" Grid.ColumnSpan="2"/>
+                <Button x:Name="UsunPosilek" Content="Usuń Posiłek" HorizontalAlignment="Left" Margin="120,542,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="-0.22,0.466" Click="UsunPosilek_Click" Grid.Column="1"/>
 
 
             </Grid>
