@@ -27,6 +27,8 @@ namespace AplikacjaDietetyczna.UserControls
     {
         public ObservableCollection<ComboBoxItem> cbItems1 { get; set; }//potrzebne do uzupełniania comboboxow
         public ComboBoxItem SelectedcbItem1 { get; set; }//potrzebne do uzupełniania comboboxow
+        public ObservableCollection<ComboBoxItem> cbItems2 { get; set; }//potrzebne do uzupełniania comboboxow
+        public ComboBoxItem SelectedcbItem2 { get; set; }//potrzebne do uzupełniania comboboxow
         public string zapytaniePosilek = "";
         public string zapytanieProdukty = "";
         public List<string> ProduktID = new List<string>();
@@ -50,6 +52,10 @@ namespace AplikacjaDietetyczna.UserControls
             var cbItem1 = new ComboBoxItem { Content = "Wybierz produkt" };
             SelectedcbItem1 = cbItem1;
             cbItems1.Add(cbItem1);
+            cbItems2 = new ObservableCollection<ComboBoxItem>();
+            var cbItem2 = new ComboBoxItem { Content = "Wybierz posiłek" };
+            SelectedcbItem2 = cbItem2;
+            cbItems2.Add(cbItem2);
             AzureDB.openConnection();
             AzureDB.sql = "Select * from Produkty Where ID_User="+IDUzytkownika+ " OR Zatwierdzone=1 order by NazwaProduktu";
             AzureDB.cmd.CommandType = CommandType.Text;
@@ -60,6 +66,16 @@ namespace AplikacjaDietetyczna.UserControls
             foreach (DataRow dataRow in AzureDB.dt.Rows)
             {
                 cbItems1.Add(new ComboBoxItem { Content = dataRow["NazwaProduktu"].ToString(), Tag = dataRow["ID_Produktu"].ToString() });
+            }
+            AzureDB.sql = "Select * from Posilki Where ID_User=" + IDUzytkownika + " order by Nazwa";
+            AzureDB.cmd.CommandType = CommandType.Text;
+            AzureDB.cmd.CommandText = AzureDB.sql;
+            AzureDB.da = new SqlDataAdapter(AzureDB.cmd);
+            AzureDB.dt = new DataTable();
+            AzureDB.da.Fill(AzureDB.dt);
+            foreach (DataRow dataRow in AzureDB.dt.Rows)
+            {
+                cbItems2.Add(new ComboBoxItem { Content = dataRow["Nazwa"].ToString(), Tag = dataRow["ID_Posilku"].ToString() });
             }
             AzureDB.closeConnection();
 
@@ -101,6 +117,7 @@ namespace AplikacjaDietetyczna.UserControls
         {
             IloscCombo.SelectedIndex = 0;
             ProduktCombo.SelectedIndex = 0;
+            PosilekCombo.SelectedIndex = 0;
             ProduktID.Clear();
             ProduktNazwa.Clear();
             ProduktIlosc.Clear();
@@ -250,6 +267,34 @@ namespace AplikacjaDietetyczna.UserControls
             }
         }
 
+        private void UsunPosilek_Click(object sender, RoutedEventArgs e)
+        {
+            if (PosilekCombo.SelectedIndex!=0)
+            {
+                try
+                {
+                    AzureDB.openConnection();
+                    AzureDB.sql = "Delete from PosilkiProdukty Where ID_Posilku=" + ((ComboBoxItem)PosilekCombo.SelectedItem).Tag.ToString() +";";
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.cmd.ExecuteNonQuery();
+                    AzureDB.closeConnection();
+                    AzureDB.openConnection();
+                    AzureDB.sql = "Delete from Posilki Where ID_Posilku="+ ((ComboBoxItem)PosilekCombo.SelectedItem).Tag.ToString() + " AND ID_User= "+ IDUzytkownika + ";";
+                    AzureDB.cmd.CommandType = CommandType.Text;
+                    AzureDB.cmd.CommandText = AzureDB.sql;
+                    AzureDB.cmd.ExecuteNonQuery();
+                    AzureDB.closeConnection();
+                    ClearFields();
+                    MessageBox.Show("Usuwanie powiodło się", "Usuwanie posiłku", MessageBoxButton.OK, MessageBoxImage.Error);
+                    UzupelnijComboBoxy();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Błąd: " + ex.Message, "Usuwanie posiłku", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
         private void NazwaPosilkuText_TextChanged(object sender, TextChangedEventArgs e)
         {
             NowyPosilek.Text = "Twoj nowy Posiłek: " + NazwaPosilkuText.Text;
