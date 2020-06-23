@@ -187,7 +187,7 @@
                          BorderThickness="0"
                          Width="239"
                          Opacity="0.8" Margin="751,496,230,98"
-                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="Tak"/>
+                         IsReadOnly="True" RenderTransformOrigin="0.38,0.457" Text="0 razy"/>
 
                 <TextBox FontFamily="Helvetica"
                          x:Name="DataStartowa"

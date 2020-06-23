@@ -86,10 +86,7 @@ namespace AplikacjaDietetyczna.UserControls
                 WeglowodanyRazem += Weglowodany;
 
 
-                Kalorie = 0;
-                Bialka = 0;
-                Tluszcze = 0;
-                Weglowodany = 0;
+             
                 if (IloscDni != 0)
                 {
                     DzienneKalorie.Text = KalorieRazem + "/" + Zapotrzebowanie.GetKalorie() * IloscDni + " kcal";
@@ -119,8 +116,9 @@ namespace AplikacjaDietetyczna.UserControls
                     }
                 }
 
-                else
+                else if(FunkcjeGlobalne.Tryb != "Dzienne")
                 {
+                    DzienneZapotrzebowanie.Text = SpelnioneZapotrzebowanie + " razy";
                     if (Kalorie >= Zapotrzebowanie.GetKalorie())
                     {
                         SpelnioneZapotrzebowanie++;
@@ -128,12 +126,15 @@ namespace AplikacjaDietetyczna.UserControls
                     }
                 }
 
-              
+                Kalorie = 0;
+                Bialka = 0;
+                Tluszcze = 0;
+                Weglowodany = 0;
                 DataTydzien++;
 
             }
 
-
+            SpelnioneZapotrzebowanie = 0;
         }
 
 
